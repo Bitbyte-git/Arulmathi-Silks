@@ -3,57 +3,14 @@ import { getIzhamathiCollection } from '../data/izhamathiProducts'
 
 export default function CollectionDesigns({ collectionSlug }) {
   const collection = getIzhamathiCollection(collectionSlug)
-  const designSlides = useMemo(() => {
-    if (!collection) return {}
 
-    return collection.designs.reduce((slides, design, index) => {
-      const orderedImages = [
-        design.image,
-        collection.designs[(index + 1) % collection.designs.length]?.image,
-        collection.designs[(index + 2) % collection.designs.length]?.image,
-        collection.designs[(index + 3) % collection.designs.length]?.image,
-        collection.heroImage,
-      ].filter(Boolean)
-
-      slides[design.slug] = [...new Set(orderedImages)].slice(0, 4)
-      return slides
-    }, {})
-  }, [collection])
-
-  const [activeSlides, setActiveSlides] = useState({})
   const [heroSlide, setHeroSlide] = useState(0)
   const heroImages = useMemo(() => {
     if (!collection) return []
     return [...new Set([collection.heroImage, ...collection.designs.map((design) => design.image)])].filter(Boolean).slice(0, 4)
   }, [collection])
 
-  useEffect(() => {
-    if (!collection) return undefined
 
-    setActiveSlides((current) => (
-      collection.designs.reduce((nextSlides, design) => {
-        nextSlides[design.slug] = current[design.slug] || 0
-        return nextSlides
-      }, {})
-    ))
-  }, [collection])
-
-  useEffect(() => {
-    if (!collection) return undefined
-
-    const timer = window.setInterval(() => {
-      setActiveSlides((current) => (
-        collection.designs.reduce((nextSlides, design) => {
-          const images = designSlides[design.slug] || []
-          const currentIndex = current[design.slug] || 0
-          nextSlides[design.slug] = images.length > 0 ? (currentIndex + 1) % images.length : 0
-          return nextSlides
-        }, {})
-      ))
-    }, 5500)
-
-    return () => window.clearInterval(timer)
-  }, [collection, designSlides])
 
 
   useEffect(() => {
@@ -66,17 +23,7 @@ export default function CollectionDesigns({ collectionSlug }) {
     return () => window.clearInterval(timer)
   }, [heroImages])
 
-
-  const moveSlide = (designSlug, direction) => {
-    const images = designSlides[designSlug] || []
-    if (images.length === 0) return
-
-    setActiveSlides((current) => {
-      const currentIndex = current[designSlug] || 0
-      const nextIndex = (currentIndex + direction + images.length) % images.length
-      return { ...current, [designSlug]: nextIndex }
-    })
-  }
+
 
 
   if (!collection) {
@@ -107,8 +54,8 @@ export default function CollectionDesigns({ collectionSlug }) {
             <h1 className="mt-4 font-serif text-[46px] font-normal leading-[1.08] text-white sm:text-[62px] lg:text-[74px]">{collection.name}</h1>
             <p className="mt-5 max-w-[560px] font-sans text-[13px] leading-[1.9] text-white/62">{collection.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">{collection.designs.length} Designs</span>
-              <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">Color Variants</span>
+              <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">{collection.designs.length} Saree Designs Available</span>
+              <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">Website Color Palette</span>
             </div>
           </div>
           <div className="collection-hero-frame group relative overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a] shadow-[0_24px_70px_rgba(0,0,0,0.42),0_0_28px_rgba(201,147,58,0.14)]">
@@ -124,48 +71,20 @@ export default function CollectionDesigns({ collectionSlug }) {
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">Available Designs</p>
-              <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c] sm:text-[50px]">Choose Your Saree</h2>
+              <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">Available Saree Designs</p>
+              <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c] sm:text-[50px]">Sarees Available in {collection.name}</h2>
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {collection.designs.map((design, index) => {
-              const images = designSlides[design.slug] || [design.image]
-              const activeIndex = activeSlides[design.slug] || 0
-              const activeImage = images[activeIndex] || design.image
+              const activeImage = design.image
 
               return (
                 <article key={design.slug} className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]" style={{ animationDelay: `${index * 90}ms` }}>
                   <div className="premium-saree-media group relative h-[290px] overflow-hidden bg-[#e8ddcf]">
                     <img src={activeImage} alt={design.name} className="premium-saree-image h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105" />
-                    <span className="absolute left-3 top-3 rounded bg-[#17131c]/82 px-3 py-1.5 font-sans text-[10px] font-bold uppercase tracking-[1.4px] text-[#f3d18a]">{design.code}</span>
-
-                    <button
-                      type="button"
-                      onClick={() => moveSlide(design.slug, -1)}
-                      className="absolute left-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center text-[#9a6720] drop-shadow-[0_2px_8px_rgba(255,250,242,0.85)] transition hover:scale-110 hover:text-[#f3d18a]"
-                      aria-label={`Previous image for ${design.name}`}
-                    >
-                      <i className="fas fa-chevron-left text-[12px]" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveSlide(design.slug, 1)}
-                      className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center text-[#17131c] drop-shadow-[0_2px_8px_rgba(255,250,242,0.85)] transition hover:scale-110 hover:text-[#f3d18a]"
-                      aria-label={`Next image for ${design.name}`}
-                    >
-                      <i className="fas fa-chevron-right text-[12px]" />
-                    </button>
-
-                    <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2">
-                      {[0, 1, 2].map((dotIndex) => (
-                        <span
-                          key={dotIndex}
-                          className={`h-2 rounded-full transition-all duration-300 ${dotIndex === activeIndex % 3 ? 'w-7 bg-[#d4a21f]' : 'w-2 bg-[#d9d9d9]'}`}
-                        />
-                      ))}
-                    </div>
+                    <span className="absolute left-3 right-3 top-3 rounded bg-[#17131c]/86 px-3 py-1.5 font-sans text-[9px] font-bold uppercase leading-[1.5] tracking-[1px] text-[#f3d18a]">{design.code}</span>
                   </div>
                   <div className="p-5">
                     <h3 className="premium-saree-title font-serif text-[24px] font-normal leading-tight text-[#17131c]">{design.name}</h3>

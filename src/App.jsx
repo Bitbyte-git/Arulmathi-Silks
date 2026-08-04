@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Collections from './components/Collections'
 import KanchipuramSilk from './components/KanchipuramSilk'
+import SailaPattu from './components/SailaPattu'
 import CollectionDesigns from './components/CollectionDesigns'
 import SareeDetail from './components/SareeDetail'
 import BanarasiSilk from './components/BanarasiSilk'
@@ -57,6 +58,7 @@ export default function App() {
   const pages = {
     '/izhamathi-pattu': <KanchipuramSilk />,
     '/kanchipuram-silk': <KanchipuramSilk />,
+    '/saila-pattu': <SailaPattu />,
     '/banarasi-silk': <BanarasiSilk />,
     '/mysore-silk': <MysoreSilk />,
     '/tussar-silk': <TussarSilk />,

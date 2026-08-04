@@ -1,44 +1,96 @@
 
 > Arulmathi-react@0.0.0 dev
-> vite --host 127.0.0.1
+> vite --host 127.0.0.1 --port 5174
 
-Port 5173 is in use, trying another one...
 
-  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m467[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m336[22m[2m[0m ms[22m
 
   [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/[39m
-[2m12:18:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:19:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:19:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:27:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:27:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m12:28:14 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m12:29:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:29:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m12:32:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:32:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:32:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:32:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:32:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:32:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:33:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:38:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
-[2m12:39:18 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:39:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m12:40:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m12:52:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:05:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:15:26 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m1:15:51 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m1:16:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m1:17:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m1:18:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:19:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:20:33 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:23:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:25:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:28:00 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:31:18 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:36:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:37:14 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
-[2m1:38:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m1:49:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:50:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:50:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:50:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:51:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:51:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:51:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:51:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:52:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:52:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
+[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:57:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m1:57:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m1:57:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m1:57:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m3:48:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:48:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m3:50:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:50:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:51:00 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:51:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:51:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:51:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:55:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:55:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m3:55:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:32:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:34:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:34:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:12 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:51 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:35:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m4:37:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:39:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:40:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:41:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:41:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:41:38 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:41:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:41:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:42:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:43:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:44:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:44:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:45:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:45:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:45:12 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m4:48:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:55:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:56:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:56:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:57:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:57:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m4:57:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m

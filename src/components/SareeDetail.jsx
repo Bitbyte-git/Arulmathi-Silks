@@ -22,7 +22,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
   const design = getIzhamathiDesign(collectionSlug, designSlug)
   const galleryImages = useMemo(() => {
     if (!collection || !design) return []
-    return [...new Set([design.image, collection.heroImage, ...collection.designs.map((item) => item.image)])].slice(0, 5)
+    return [...new Set(design.images || [design.image])].filter(Boolean)
   }, [collection, design])
   const [selectedImage, setSelectedImage] = useState(() => design?.image || '')
   const [selectedColor, setSelectedColor] = useState(() => design?.color || '')
@@ -90,6 +90,11 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
   }
 
   useEffect(() => {
+    setSelectedImage(design?.image || '')
+    setSelectedColor(design?.color || '')
+  }, [design])
+
+  useEffect(() => {
     resetZoom()
   }, [selectedImage])
 
@@ -120,8 +125,10 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
     )
   }
 
+  const productCode = design.code
+
   const specs = [
-    ['Product Code', design.code],
+    ['Product Code', productCode],
     ['Collection', collection.name],
     ['Selected Color', selectedColor],
     ['Fabric', design.fabric],
@@ -155,7 +162,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
     {
       title: 'Additional Information',
       content: [
-        `Product code: ${design.code}`,
+        `Product code: ${productCode}`,
         `Price: ${design.price}. MRP: ${design.oldPrice}. Current offer: ${design.discount}.`,
         'Shipping, pickup, blouse stitching guidance, and gifting support can be discussed with the catalogue team.',
       ],
@@ -249,7 +256,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
               <h1 className="mt-3 font-serif text-[38px] font-normal leading-[1.08] sm:text-[50px]">{design.name}</h1>
 
               <div className="mt-4 flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-[#17131c] px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.8px] text-[#f3d18a]">Code: {design.code}</span>
+                <span className="rounded bg-[#17131c] px-4 py-2 font-sans text-[10px] font-bold uppercase leading-[1.6] tracking-[1px] text-[#f3d18a]">Code: {productCode}</span>
                 <span className="font-sans text-[11px] font-semibold text-[#2f7a38]"><i className="fas fa-circle-check mr-1" /> {design.stock}</span>
               </div>
 
@@ -380,8 +387,8 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
 
         {relatedDesigns.length > 0 && (
           <div className="relative mx-auto mt-14 max-w-7xl">
-            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">You may also like</p>
-            <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">More from {collection.name}</h2>
+            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">Available in this design</p>
+            <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees Available in {collection.name}</h2>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedDesigns.map((item) => (
                 <a key={item.slug} href={`/izhamathi-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
@@ -398,7 +405,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
                     </div>
                     <div className="mt-4 flex items-center justify-between border-t border-[#e5ceb0] pt-4">
                       <span className="font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#b57922]">View Saree</span>
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#7a6f79]">{item.code}</span>
+                      <span className="max-w-[58%] text-right font-sans text-[9px] font-bold uppercase leading-[1.5] tracking-[1px] text-[#7a6f79]">{item.code}</span>
                     </div>
                   </div>
                 </a>

@@ -40,8 +40,8 @@ const collectionColumns = [
   },
 ]
 const megaCollections = [
-  { number: '01', title: 'IZHAMATHI PATTU', count: '24 DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
-  { number: '02', title: 'SAILA PATTU', count: '38 DESIGNS', icon: 'fa-seedling', href: '/#collections' },
+  { number: '01', title: 'IZHAMATHI PATTU', count: '8 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
+  { number: '02', title: 'SAILA PATTU', count: '38 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
   { number: '03', title: 'SATHURA PATTU', count: '15 DESIGNS', icon: 'fa-clover', href: '/#collections' },
   { number: '04', title: 'MAYURA PATTU', count: '42 DESIGNS', icon: 'fa-fan', href: '/#collections' },
   { number: '05', title: 'VAIBHAVA PATTU', count: '18 DESIGNS', icon: 'fa-border-all', href: '/#collections' },
@@ -54,8 +54,8 @@ const megaCollections = [
   { number: '12', title: 'MANGAI PATTU', count: '22 DESIGNS', icon: 'fa-fire-flame-curved', href: '/#collections' },
 ]
 const shoppingSteps = [
-  { icon: 'fa-bag-shopping', title: '1. CHOOSE COLLECTION', text: 'Browse our 12 exclusive collections' },
-  { icon: 'fa-table-cells-large', title: '2. EXPLORE DESIGNS', text: 'Explore 2-50 unique designs in each collection' },
+  { icon: 'fa-bag-shopping', title: '1. CHOOSE DESIGN', text: 'Browse Pushpanjali and Suvarna Thuli' },
+  { icon: 'fa-table-cells-large', title: '2. EXPLORE SAREES', text: 'View available saree designs in each family' },
   { icon: 'fa-eye', title: '3. VIEW DETAILS', text: 'Check product details, price & availability' },
   { icon: 'fa-cart-shopping', title: '4. PLACE ORDER', text: 'Add to cart and secure your order' },
 ]
@@ -69,7 +69,10 @@ const trustItems = [
 ]
 
 const searchItems = [
-  { title: 'Izhamathi Pattu', type: 'Collection', href: '/izhamathi-pattu', keywords: 'kanjivaram kanchipuram bridal zari muhurtham silk saree red blue green gold temple pure' },
+  { title: 'Izhamathi Pattu', type: 'Collection', href: '/izhamathi-pattu', keywords: 'pushpanjali suvarna thuli floral woven golden butta silk saree designs red gold cream navy green' },
+  { title: 'Pushpanjali', type: 'Design', href: '/izhamathi-pattu/pushpanjali', keywords: 'pushpanjali floral woven silk design saree ruby pastel rose emerald flower zari' },
+  { title: 'Saila Pattu', type: 'Collection', href: '/saila-pattu', keywords: 'saila pattu malar kodi thanga mayil silk saree vine motif peacock zari green pastel festive' },
+  { title: 'Suvarna Thuli', type: 'Design', href: '/izhamathi-pattu/suvarna-thuli', keywords: 'suvarna thuli golden butta silk design saree champagne cream navy sage gold' },
   { title: 'Banarasi Silk', type: 'Collection', href: '/banarasi-silk', keywords: 'banarasi brocade katan zari festive silk saree wine gold violet ivory emerald crimson peach blue' },
   { title: 'Mysore Silk', type: 'Collection', href: '/mysore-silk', keywords: 'mysore soft silk sandal palace zari saree purple crimson ivory peacock rose emerald temple' },
   { title: 'Tussar Silk', type: 'Collection', href: '/tussar-silk', keywords: 'tussar handloom honey gold natural silk saree ivory rust sage plum crimson peach blue' },
@@ -80,9 +83,9 @@ const searchItems = [
   { title: 'New Arrivals', type: 'Section', href: '/#new-arrivals', keywords: 'new arrivals latest fresh sarees maroon mehendi peacock rose emerald ivory' },
   { title: 'Wedding Sarees', type: 'Occasion', href: '/shop', keywords: 'wedding bridal marriage sarees muhurtham' },
   { title: 'Festive Drapes', type: 'Occasion', href: '/shop', keywords: 'festival festive pooja traditional sarees' },
-  { title: 'Ruby Zari Izhamathi', type: 'Saree', href: '/izhamathi-pattu', keywords: 'ruby red zari kanchipuram silk' },
+  { title: 'Ruby Floral Zari', type: 'Saree', href: '/izhamathi-pattu/pushpanjali/ruby-floral-zari', keywords: 'ruby red floral zari pushpanjali silk' },
   { title: 'Peacock Blue Bridal Silk', type: 'Saree', href: '/bridal-silks', keywords: 'peacock blue bridal kanjivaram silk' },
-  { title: 'Rose Gold Tissue Silk', type: 'Saree', href: '/izhamathi-pattu', keywords: 'rose gold tissue silk saree' },
+  { title: 'Champagne Golden Butta', type: 'Saree', href: '/izhamathi-pattu/suvarna-thuli/champagne-golden-butta', keywords: 'champagne golden butta suvarna thuli silk saree' },
   { title: 'Wine Banarasi Brocade', type: 'Saree', href: '/banarasi-silk', keywords: 'wine banarasi brocade silk' },
   { title: 'Sandal Gold Mysore Silk', type: 'Saree', href: '/mysore-silk', keywords: 'sandal gold mysore silk' },
   { title: 'Honey Gold Tussar Silk', type: 'Saree', href: '/tussar-silk', keywords: 'honey gold tussar silk' },
@@ -258,6 +261,7 @@ export default function Navbar() {
 
   const hasTransparentHeroNav = routePath === '/'
   const isIzhamathiRoute = routePath.startsWith('/izhamathi-pattu') || routePath === '/kanchipuram-silk'
+  const isSailaRoute = routePath.startsWith('/saila-pattu')
 
   const navSurfaceClass = hasTransparentHeroNav && isHeroSection
     ? 'nav-over-hero border-white/10 bg-transparent shadow-none backdrop-blur-0'
@@ -342,7 +346,7 @@ export default function Navbar() {
         })}
       </ul>
 
-      {/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ MEGA MENU ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */}
+      {/* Mega menu */}
       {isCollectionsOpen && (
         <div
           id="mega-collections-menu"
@@ -360,7 +364,7 @@ export default function Navbar() {
           <div className="absolute left-0 top-0 bottom-0 w-24 pointer-events-none opacity-20"
             style={{ background: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 400\'%3E%3Cpath d=\'M20 400 Q10 300 30 200 Q50 100 20 0\' stroke=\'%23b8882a\' stroke-width=\'1.5\' fill=\'none\'/%3E%3Ccircle cx=\'30\' cy=\'200\' r=\'4\' fill=\'%23b8882a\'/%3E%3Cpath d=\'M30 200 Q60 160 80 140\' stroke=\'%23b8882a\' stroke-width=\'1\' fill=\'none\'/%3E%3Cpath d=\'M30 200 Q55 230 70 260\' stroke=\'%23b8882a\' stroke-width=\'1\' fill=\'none\'/%3E%3C/svg%3E") no-repeat center/contain' }}
           />
-          {/* Faded saree model ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â right edge */}
+          {/* Faded saree model - right edge */}
           <div className="absolute right-0 top-0 bottom-0 w-48 pointer-events-none"
             style={{ background: 'linear-gradient(to left, rgba(184,136,42,0.12) 0%, transparent 100%)', zIndex: 0 }}
           />
@@ -368,12 +372,10 @@ export default function Navbar() {
           {/* Inner content */}
           <div className="relative" style={{ zIndex: 1, padding: '28px 48px 32px' }}>
 
-            {/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ HEADER ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */}
+            {/* Header */}
             <div className="text-center mb-5">
               <p className="font-sans text-[11px] font-semibold tracking-[4px] text-[#8b5e1a] mb-1 flex items-center justify-center gap-3">
-                <span className="text-[#b8882a]">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
                 EXPLORE OUR
-                <span className="text-[#b8882a]">ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢</span>
               </p>
               <h2 className="font-serif text-[32px] font-semibold leading-[1.1] text-[#3d1f00]">
                 12 <span style={{ fontStyle: 'italic' }}>Exclusive</span> Collections
@@ -386,15 +388,15 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 6ÃƒÆ’Ã¢â‚¬â€2 CARDS GRID ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ */}
+            {/* Cards grid */}
             <div className="grid grid-cols-6 gap-4 mb-0">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
-                  '/red-pose5.png', '/w2.png', '/3-pose2.png', '/w4.png',
+                  '/nav1.png', '/w2.png', '/3-pose2.png', '/w4.png',
                   '/image10.png', '/w3.png', '/4-pose1.png', '/viol.png',
                   '/3-pose3.png', '/w5.png', '/red-pose2.png', '/4-pose4.png',
                 ]
-                const isMegaActive = col.href === '/izhamathi-pattu' && isIzhamathiRoute
+                const isMegaActive = (col.href === '/izhamathi-pattu' && isIzhamathiRoute) || (col.href === '/saila-pattu' && isSailaRoute)
                 return (
                   <a
                     key={col.number}
