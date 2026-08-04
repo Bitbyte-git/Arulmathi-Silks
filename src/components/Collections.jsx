@@ -1,60 +1,142 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 const collections = [
   {
-    name: 'Pastel Dreams',
+    name: 'Kanjivaram Bridal Silks',
+    desc: 'Rich borders, luminous zari, and heirloom-ready drapes.',
     img: '/image9.png',
   },
   {
-    name: 'Royal Traditions',
+    name: 'Soft Silk Classics',
+    desc: 'Lightweight pure silk sarees for graceful celebrations.',
     img: '/image10.png',
   },
   {
-    name: 'Golden Hour',
+    name: 'Temple Border Edit',
+    desc: 'Traditional motifs woven for festive and family occasions.',
     img: '/image11.png',
   },
   {
-    name: 'Modern Muse',
+    name: 'Contemporary Silk Sarees',
+    desc: 'Elegant colors and refined patterns for modern wardrobes.',
     img: '/3-pose2.png',
   },
 ]
 
 export default function Collections() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const scrollerRef = useRef(null)
+  const animationRef = useRef(null)
+  const lastFrameRef = useRef(null)
+  const resumeTimerRef = useRef(null)
+  const scrollRemainderRef = useRef(0)
+  const [isPaused, setIsPaused] = useState(false)
 
-  const visibleCollections = useMemo(
-    () => collections.map((_, index) => collections[(activeIndex + index) % collections.length]),
-    [activeIndex]
-  )
+  const carouselItems = useMemo(() => [...collections, ...collections], [])
 
-  const showPrevious = () => {
-    setActiveIndex((current) => (current - 1 + collections.length) % collections.length)
+  useEffect(() => {
+    const scroller = scrollerRef.current
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (!scroller || prefersReducedMotion) {
+      return undefined
+    }
+
+    const speed = 0.03
+
+    const animate = (timestamp) => {
+      if (lastFrameRef.current === null) {
+        lastFrameRef.current = timestamp
+      }
+
+      const delta = timestamp - lastFrameRef.current
+      lastFrameRef.current = timestamp
+
+      if (!isPaused) {
+        const loopPoint = scroller.scrollWidth / 2
+        const movement = delta * speed + scrollRemainderRef.current
+        const wholePixels = Math.trunc(movement)
+        scrollRemainderRef.current = movement - wholePixels
+
+        if (wholePixels !== 0) {
+          scroller.scrollLeft += wholePixels
+        }
+
+        if (scroller.scrollLeft >= loopPoint) {
+          scroller.scrollLeft -= loopPoint
+        }
+      }
+
+      animationRef.current = requestAnimationFrame(animate)
+    }
+
+    animationRef.current = requestAnimationFrame(animate)
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current)
+      }
+      if (resumeTimerRef.current) {
+        window.clearTimeout(resumeTimerRef.current)
+      }
+      lastFrameRef.current = null
+      scrollRemainderRef.current = 0
+    }
+  }, [isPaused])
+
+  const scrollByCard = (direction) => {
+    const scroller = scrollerRef.current
+
+    if (!scroller) {
+      return
+    }
+
+    const firstCard = scroller.querySelector('[data-collection-card]')
+    const cardWidth = firstCard?.getBoundingClientRect().width || 280
+    const gap = 16
+    const scrollDistance = cardWidth + gap
+    const loopPoint = scroller.scrollWidth / 2
+
+    if (direction < 0 && scroller.scrollLeft <= scrollDistance) {
+      scroller.scrollLeft += loopPoint
+    }
+
+    if (direction > 0 && scroller.scrollLeft >= loopPoint - scrollDistance) {
+      scroller.scrollLeft -= loopPoint
+    }
+
+    setIsPaused(true)
+    scroller.scrollBy({ left: direction * scrollDistance, behavior: 'smooth' })
+
+    if (resumeTimerRef.current) {
+      window.clearTimeout(resumeTimerRef.current)
+    }
+
+    resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 1100)
   }
 
-  const showNext = () => {
-    setActiveIndex((current) => (current + 1) % collections.length)
-  }
+  const showPrevious = () => scrollByCard(-1)
+  const showNext = () => scrollByCard(1)
 
   return (
-    <section id="collections" className="section-reveal relative bg-[#f5f0e8] py-16 px-16 flex items-center gap-12 rounded-t-3xl -mt-5 z-10">
+    <section id="collections" className="section-reveal relative bg-[#13121f] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 rounded-t-3xl -mt-5 z-10">
 
       {/* Left text */}
-      <div className="flex-shrink-0 w-48">
-        <p className="font-sans text-[10px] tracking-[2.5px] text-gray-400 font-medium uppercase mb-2">
-          EXPLORE OUR
+      <div className="flex-shrink-0 w-full lg:w-56">
+        <p className="font-sans text-[10px] tracking-[2.5px] text-[#c9933a] font-medium uppercase mb-2">
+          CURATED DRAPES
         </p>
-        <h2 className="font-serif text-[42px] font-normal leading-[1.1] text-[#1a1a2e] mb-3">
-          Signature<br />Collections
+        <h2 className="font-serif text-[34px] sm:text-[42px] font-normal leading-[1.1] text-white mb-3">
+          Signature<br />Silk Collections
         </h2>
-        <p className="font-sans text-[12px] leading-[1.8] text-gray-500 font-light mb-6">
-          Handpicked sarees that<br />celebrate every you.
+        <p className="font-sans text-[12px] leading-[1.8] text-white/62 font-light mb-6 max-w-[260px]">
+          Handpicked sarees for weddings, poojas, festive gifting, and graceful everyday wear.
         </p>
         <div className="flex gap-2.5">
           <button
             type="button"
             aria-label="Show previous collection"
             onClick={showPrevious}
-            className="glow-round w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center text-[13px] text-gray-500 hover:bg-[#c9933a] hover:border-[#c9933a] hover:text-white transition-all duration-200"
+            className="glow-round w-9 h-9 rounded-full border border-white/25 flex items-center justify-center text-[13px] text-white/70 hover:bg-[#c9933a] hover:border-[#c9933a] hover:text-white transition-all duration-200"
           >
             <i className="fas fa-arrow-left" />
           </button>
@@ -69,33 +151,47 @@ export default function Collections() {
         </div>
       </div>
 
-      {/* Cards grid */}
-      <div key={activeIndex} className="collections-carousel flex-1 grid grid-cols-4 gap-3.5">
-        {visibleCollections.map((col, index) => (
-          <div
-            key={`${col.name}-${index}`}
-            className="glow-card hover-lift rounded-xl overflow-hidden cursor-pointer group"
-          >
-            <div className="overflow-hidden h-[260px]">
-              <img
-                src={col.img}
-                alt={col.name}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+      {/* Smooth auto-scroll cards */}
+      <div className="collections-carousel relative w-full flex-1 overflow-hidden">
+        <div
+          ref={scrollerRef}
+          className="collections-scroll flex gap-4 overflow-x-auto py-1 pr-12"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onFocus={() => setIsPaused(true)}
+          onBlur={() => setIsPaused(false)}
+        >
+          {carouselItems.map((col, index) => (
+            <div
+              key={`${col.name}-${index}`}
+              data-collection-card
+              className="collection-card glow-card hover-lift w-[78vw] min-w-[78vw] sm:w-[320px] sm:min-w-[320px] lg:w-[292px] lg:min-w-[292px] xl:w-[306px] xl:min-w-[306px] rounded-[15px] overflow-hidden cursor-pointer group bg-white"
+              style={{ animationDelay: `${(index % collections.length) * 130}ms` }}
+            >
+              <div className="collection-card-media overflow-hidden h-[330px] sm:h-[380px] lg:h-[390px] bg-[#eee8df]">
+                <img
+                  src={col.img}
+                  alt={col.name}
+                  className="collection-card-image w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="bg-white px-3 py-3.5">
+                <h3 className="font-serif text-[17px] font-medium text-[#1a1a2e] mb-1.5">
+                  {col.name}
+                </h3>
+                <p className="mb-3 font-sans text-[10px] leading-[1.7] text-gray-500">
+                  {col.desc}
+                </p>
+                <a
+                  href="#shop"
+                  className="font-sans text-[9px] tracking-[1.5px] text-gray-500 flex items-center gap-1.5 hover:text-[#c9933a] transition-colors duration-200"
+                >
+                  VIEW COLLECTION <i className="fas fa-arrow-right" />
+                </a>
+              </div>
             </div>
-            <div className="bg-white px-3 py-3.5">
-              <h3 className="font-serif text-[17px] font-medium text-[#1a1a2e] mb-1.5">
-                {col.name}
-              </h3>
-              <a
-                href="#shop"
-                className="font-sans text-[9px] tracking-[1.5px] text-gray-500 flex items-center gap-1.5 hover:text-[#c9933a] transition-colors duration-200"
-              >
-                VIEW COLLECTION <i className="fas fa-arrow-right" />
-              </a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Next scroll button */}
@@ -103,7 +199,7 @@ export default function Collections() {
         type="button"
         aria-label="Show next collection"
         onClick={showNext}
-        className="glow-round absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#0d0d1a] text-white flex items-center justify-center text-sm shadow-lg hover:bg-[#c9933a] transition-colors duration-200 z-10"
+        className="glow-round hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#0d0d1a] text-white items-center justify-center text-sm shadow-lg hover:bg-[#c9933a] transition-colors duration-200 z-10"
       >
         <i className="fas fa-arrow-right" />
       </button>

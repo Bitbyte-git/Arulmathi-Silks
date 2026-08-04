@@ -13,6 +13,20 @@ export default function Hero() {
     videoRef.current?.pause()
   }, [isStoryOpen])
 
+  useEffect(() => {
+    if (!isStoryOpen) return undefined
+
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') {
+        closeStory()
+      }
+    }
+
+    window.addEventListener('keydown', closeOnEscape)
+
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [isStoryOpen])
+
   const closeStory = () => {
     setIsStoryOpen(false)
     if (videoRef.current) {
@@ -22,7 +36,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative w-full" style={{ height: '100vh' }}>
+    <section id="home" className="relative w-full min-h-[680px]" style={{ minHeight: '100svh' }}>
       <img
         src="/hero-fix.png"
         alt="Hero Model"
@@ -38,7 +52,7 @@ export default function Hero() {
       />
 
       {isStoryOpen && (
-        <div className="absolute inset-0 z-10 story-video-backdrop">
+        <div className="absolute inset-0 z-40 story-video-backdrop" onClick={closeStory}>
           <video
             ref={videoRef}
             src="/video-ad.mp4"
@@ -46,12 +60,13 @@ export default function Hero() {
             controls
             playsInline
             autoPlay
+            onClick={(event) => event.stopPropagation()}
           />
           <button
             type="button"
             aria-label="Close story video"
             onClick={closeStory}
-            className="absolute top-24 right-8 w-10 h-10 rounded-full bg-black/55 border border-white/50 text-white text-2xl leading-none flex items-center justify-center hover:border-[#c9933a] hover:text-[#c9933a] hover:bg-black/75 transition-colors"
+            className="absolute top-24 right-8 z-10 w-10 h-10 rounded-full bg-black/55 border border-white/50 text-white text-2xl leading-none flex items-center justify-center hover:border-[#c9933a] hover:text-[#c9933a] hover:bg-black/75 transition-colors"
           >
             &times;
           </button>
@@ -68,21 +83,21 @@ export default function Hero() {
       <div
         className="absolute top-0 left-0 right-0 z-20"
         style={{
-          height: '90px',
-          background: 'linear-gradient(to bottom, rgba(5,3,15,0.75) 0%, transparent 100%)',
+          height: '126px',
+          background: 'linear-gradient(to bottom, rgba(5,3,15,0.82) 0%, rgba(5,3,15,0.42) 52%, transparent 100%)',
         }}
       />
 
       <div
         className={`absolute inset-0 z-20 flex items-center transition-opacity duration-500 ${isStoryOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
-        style={{ paddingTop: '64px' }}
+        style={{ paddingTop: '106px' }}
       >
-        <div className="pl-16 w-[60%]">
+        <div className="w-full px-5 sm:pl-10 sm:pr-0 md:w-[70%] lg:w-[60%] lg:pl-16">
           <p className="font-sans text-[10px] tracking-[2.5px] text-[#c9933a] font-semibold leading-[1.8] mb-4 uppercase">
             CRAFTED IN HERITAGE, DESIGNED FOR TODAY
           </p>
 
-          <h1 className="font-serif text-[68px] font-normal leading-[1.05] text-white mb-5">
+          <h1 className="font-serif text-[46px] sm:text-[56px] lg:text-[68px] font-normal leading-[1.05] text-white mb-5">
             Timeless
             <em className="italic text-[#d4a853]"> in Every</em><br />
             <em className="italic text-[#d4a853]">Weave</em>
@@ -104,28 +119,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2">
-          {[
-            { num: '01', active: true },
-            { num: '02', active: false },
-            { num: '03', active: false },
-          ].map((item, i) => (
-            <div key={item.num} className="flex flex-col items-center gap-2">
-              <span
-                className={`font-sans text-[11px] tracking-[1px] font-semibold drop-shadow-lg ${
-                  item.active ? 'text-white' : 'text-white/60'
-                }`}
-              >
-                {item.num}
-              </span>
-              {i < 2 && (
-                <span className={`block w-px h-8 ${item.active ? 'bg-[#c9933a]' : 'bg-white/40'}`} />
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="absolute bottom-10 right-20 flex flex-col items-center gap-2.5 group">
+        <div className="absolute bottom-8 right-6 sm:bottom-10 sm:right-20 flex flex-col items-center gap-2.5 group">
           <button
             type="button"
             aria-label="Watch our story video"
@@ -146,3 +140,6 @@ export default function Hero() {
     </section>
   )
 }
+
+
+

@@ -1,103 +1,95 @@
-const footerLinks = [
-  {
-    title: 'SHOP',
-    links: ['Silk Sarees', 'Wedding Edit', 'Festive Wear', 'New Arrivals'],
-  },
-  {
-    title: 'Arulmathi',
-    links: ['Our Story', 'Craftsmanship', 'Journal', 'Contact'],
-  },
-  {
-    title: 'CARE',
-    links: ['Shipping', 'Returns', 'Saree Care', 'Secure Payment'],
-  },
+const shopLinks = [
+  { label: 'Kanjivaram Silks', href: '#collections' },
+  { label: 'Bridal Sarees', href: '#shop' },
+  { label: 'Festive Drapes', href: '#shop' },
+  { label: 'New Arrivals', href: '#new-arrivals' },
+]
+
+const careLinks = [
+  { label: 'Silk Care', href: '/contact-us' },
+  { label: 'Blouse Matching', href: '/contact-us' },
+  { label: 'Catalogue Guidance', href: '/contact-us' },
+  { label: 'Visit Store', href: '/contact-us' },
 ]
 
 export default function Footer() {
   return (
-    <footer id="journal" className="section-reveal relative overflow-hidden bg-[#0b0a16] px-16 pt-16 text-white">
-      <div className="footer-weave absolute inset-0 opacity-35" />
-      <div className="relative z-10 grid grid-cols-[1.25fr_1.5fr_1fr] gap-14 border-b border-white/10 pb-12">
-        <div>
-          <div className="mb-6 flex items-center gap-3">
-            <i className="glow-icon fas fa-gem text-[#c9933a] text-xl" />
-            <div className="flex flex-col leading-tight">
-              <span className="font-serif text-[26px] font-semibold tracking-[4px] text-white">
-                Arulmathi
-              </span>
-              <span className="font-sans text-[8px] tracking-[3px] text-[#c9933a] font-normal uppercase">
-                SILK SAREES
-              </span>
-            </div>
-          </div>
-          <p className="max-w-[300px] font-sans text-[12px] leading-[1.9] text-white/58">
-            Pure silk sarees woven with heritage, quiet luxury, and modern grace for every meaningful moment.
-          </p>
-          <div className="mt-7 flex gap-3">
-            {['fab fa-instagram', 'fab fa-facebook-f', 'fab fa-pinterest-p'].map((icon) => (
-              <a
-                key={icon}
-                href="#"
-                className="footer-social"
-                aria-label="Social link"
-              >
-                <i className={icon} />
-              </a>
-            ))}
-          </div>
-        </div>
+    <footer id="contact-us" className="section-reveal relative mt-auto shrink-0 overflow-hidden bg-[#080711] px-5 pt-12 sm:px-8 lg:px-16 text-white">
+      <div className="footer-weave absolute inset-0 opacity-25" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c9933a]/75 to-transparent" />
 
-        <div className="grid grid-cols-3 gap-8">
-          {footerLinks.map((group) => (
-            <div key={group.title}>
-              <h3 className="mb-5 font-sans text-[10px] font-semibold tracking-[2.5px] text-[#c9933a]">
-                {group.title}
-              </h3>
-              <ul className="space-y-3">
-                {group.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="footer-link">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
+      <div className="relative z-10 grid grid-cols-1 gap-10 border-b border-white/10 pb-10 lg:grid-cols-[1.15fr_1fr_1fr_1.05fr]">
         <div>
-          <p className="mb-3 font-sans text-[10px] font-semibold tracking-[2.5px] text-[#c9933a]">
-            STAY CONNECTED
-          </p>
-          <h2 className="mb-5 font-serif text-[32px] font-normal leading-[1.15]">
-            Drapes, stories<br />
-            and arrivals.
-          </h2>
-          <form className="glow-field flex overflow-hidden border border-white/20 bg-white/[0.04]">
-            <input
-              type="email"
-              placeholder="Email address"
-              className="min-w-0 flex-1 bg-transparent px-4 py-3 font-sans text-[12px] text-white outline-none placeholder:text-white/35"
+          <a href="#home" className="mb-5 flex h-[104px] w-[104px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
+            <img
+              src="/arulmathi-bg.png"
+              alt="Arulmathi Silk Sarees"
+              className="h-full w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
             />
-            <button
-              type="submit"
-              className="glow-round bg-[#c9933a] px-4 text-[#0d0d1a] transition-colors duration-300 hover:bg-[#f0c36e]"
-              aria-label="Subscribe"
-            >
-              <i className="fas fa-arrow-right" />
-            </button>
-          </form>
+          </a>
+          <h2 className="font-serif text-[30px] font-normal leading-tight text-white">
+            Arulmathi<br />Silk Sarees
+          </h2>
+          <p className="mt-3 max-w-[280px] font-sans text-[12px] leading-[1.8] text-white/58">
+            Curated pure silk sarees for weddings, festivals, gifting and graceful everyday occasions.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="mb-5 font-sans text-[10px] font-semibold tracking-[2.5px] text-[#c9933a]">SHOP</h3>
+          <ul className="space-y-3">
+            {shopLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} className="footer-link">{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="mb-5 font-sans text-[10px] font-semibold tracking-[2.5px] text-[#c9933a]">SERVICE</h3>
+          <ul className="space-y-3">
+            {careLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} className="footer-link">{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="mb-5 font-sans text-[10px] font-semibold tracking-[2.5px] text-[#c9933a]">CONNECT</h3>
+          <div className="space-y-3 font-sans text-[12px] leading-[1.7] text-white/58">
+            <p className="flex gap-3"><i className="fas fa-location-dot mt-1 text-[#c9933a]" />Silk saree boutique and bridal selection support.</p>
+            <p className="flex gap-3"><i className="fas fa-phone mt-1 text-[#c9933a]" />Call for color matching and gift guidance.</p>
+          </div>
+          <a
+            href="/contact-us"
+            className="glow-cta mt-5 inline-flex max-w-[260px] items-center gap-3 rounded-lg border border-white/20 px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[1.6px] text-white/72 transition-colors hover:border-[#c9933a] hover:text-[#c9933a]"
+          >
+            Contact for Catalogue <i className="fas fa-arrow-right" />
+          </a>
         </div>
       </div>
 
-      <div className="relative z-10 flex items-center justify-between py-5 font-sans text-[10px] tracking-[1.5px] text-white/38">
-        <p>&copy; 2026 Arulmathi SILK SAREES</p>
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-[#c9933a] transition-colors">PRIVACY</a>
-          <a href="#" className="hover:text-[#c9933a] transition-colors">TERMS</a>
+      <div className="relative z-10 flex flex-col gap-4 py-5 font-sans text-[10px] tracking-[1.5px] text-white/38 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 Arulmathi Silk Sarees</p>
+        <div className="flex flex-wrap gap-5">
+          <a href="#collections" className="hover:text-[#c9933a] transition-colors">COLLECTIONS</a>
+          <a href="#shop" className="hover:text-[#c9933a] transition-colors">OCCASIONS</a>
+          <a href="#new-arrivals" className="hover:text-[#c9933a] transition-colors">ARRIVALS</a>
+        </div>
+        <div className="flex gap-3">
+          {['fab fa-instagram', 'fab fa-facebook-f', 'fab fa-pinterest-p'].map((icon) => (
+            <a key={icon} href="#" className="footer-social" aria-label="Social link">
+              <i className={icon} />
+            </a>
+          ))}
         </div>
       </div>
     </footer>
   )
 }
+
+
+

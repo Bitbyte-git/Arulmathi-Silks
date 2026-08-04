@@ -1,19 +1,19 @@
 const features = [
-  { icon: 'fa-leaf', title: 'PURE SILK', desc: '100% authentic pure silk' },
-  { icon: 'fa-hands', title: 'HANDWOVEN', desc: 'Crafted by skilled weavers' },
-  { icon: 'fa-seedling', title: 'SUSTAINABLE', desc: 'Eco-friendly dyes & processes' },
-  { icon: 'fa-shield-alt', title: 'SECURE PAYMENT', desc: 'Safe & hassle-free transactions' },
-  { icon: 'fa-truck', title: 'WORLDWIDE DELIVERY', desc: 'Delivered with care, wherever you are' },
+  { icon: 'fa-certificate', title: 'AUTHENTIC SILK', desc: 'Carefully selected pure silk sarees' },
+  { icon: 'fa-hands', title: 'WEAVER CRAFT', desc: 'Details inspired by traditional looms' },
+  { icon: 'fa-ribbon', title: 'BRIDAL READY', desc: 'Wedding, muhurtham and trousseau edits' },
+  { icon: 'fa-shield-alt', title: 'TRUSTED GUIDANCE', desc: 'Helpful support for every selection' },
+  { icon: 'fa-box-open', title: 'CATALOGUE READY', desc: 'Collections arranged for easy viewing' },
 ]
 
 export default function FeaturesBar() {
   return (
-    <div className="section-reveal bg-[#1a1830] flex items-center justify-between px-16 py-7 gap-5">
+    <div className="section-reveal bg-[#1a1830] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 px-5 sm:px-8 lg:px-16 py-7 gap-5">
       {features.map((f, i) => (
         <div
           key={f.title}
           className={`feature-pop flex items-center gap-3.5 flex-1 px-4 ${
-            i < features.length - 1 ? 'border-r border-white/[0.08]' : ''
+            i < features.length - 1 ? 'lg:border-r lg:border-white/[0.08]' : ''
           }`}
           style={{ animationDelay: `${i * 80}ms` }}
         >
@@ -31,3 +31,4 @@ export default function FeaturesBar() {
     </div>
   )
 }
+
