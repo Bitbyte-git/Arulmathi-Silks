@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 const collectionCards = [
   { title: 'Kanjivaram Silks', image: '/Arulmathi-shop2.png', href: '/kanchipuram-silk' },
   { title: 'Bridal Sarees', image: '/Arulmathi-shop3.png', href: '/bridal-silks' },
@@ -24,6 +26,45 @@ const trustItems = [
 ]
 
 export default function ShopPage() {
+  const storyVideoRef = useRef(null)
+  const hasPlayedStoryVideoRef = useRef(false)
+
+  useEffect(() => {
+    const video = storyVideoRef.current
+
+    if (!video) return undefined
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || hasPlayedStoryVideoRef.current) return
+
+        hasPlayedStoryVideoRef.current = true
+        video.currentTime = 0
+        video.play().catch(() => {})
+      },
+      { threshold: 0.45 },
+    )
+
+    observer.observe(video)
+
+    return () => observer.disconnect()
+  }, [])
+
+  const replayStoryVideo = () => {
+    const video = storyVideoRef.current
+
+    if (!video) return
+
+    video.muted = false
+    video.volume = 1
+
+    if (video.ended) {
+      video.currentTime = 0
+    }
+
+    video.play().catch(() => {})
+  }
+
   return (
     <section id="shop-page" className="bg-[#f6efe4] text-[#17131c]">
       <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-[120px] text-white sm:px-8 lg:px-16">
@@ -118,7 +159,19 @@ export default function ShopPage() {
         </div>
 
         <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg bg-[#e8ddcf] shadow-[0_18px_44px_rgba(52,36,18,0.12)]">
-          <img src="/Arulmathi-aboutus4.png" alt="Arulmathi Silks founder and showroom" className="h-full min-h-[420px] w-full object-cover object-top" />
+          <video
+            ref={storyVideoRef}
+            src="/shopvid.mp4"
+            aria-label="Arulmathi Silks showroom story"
+            className="h-full min-h-[420px] w-full object-cover object-top"
+            muted
+            playsInline
+            preload="auto"
+            onMouseEnter={replayStoryVideo}
+            onClick={replayStoryVideo}
+            onFocus={replayStoryVideo}
+            onEnded={(event) => event.currentTarget.pause()}
+          />
         </div>
       </div>
 

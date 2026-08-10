@@ -113,7 +113,7 @@ export default function StoryArrivals() {
         </div>
 
         <a
-          href="#shop"
+          href="/shop"
           className="glow-text inline-flex items-center gap-2 font-sans text-[10px] tracking-[2px] font-medium text-white border-b border-white/30 pb-0.5 self-start hover:text-[#c9933a] hover:border-[#c9933a] transition-all duration-200"
         >
           SHOP NEW ARRIVALS <i className="fas fa-arrow-right" />

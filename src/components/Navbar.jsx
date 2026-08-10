@@ -3,9 +3,39 @@
 const navLinks = [
   { label: 'COLLECTIONS', href: '/#collections' },
   { label: 'SHOP', href: '/shop' },
-  { label: 'NEW ARRIVALS', href: '/#new-arrivals' },
+  { label: 'NEW ARRIVALS', href: '/#collections' },
   { label: 'ABOUT US', href: '/about-us' },
   { label: 'CONTACT US', href: '/contact-us' },
+]
+
+const normalizePath = (pathname) => {
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    return pathname.slice(0, -1)
+  }
+
+  return pathname
+}
+
+const collectionRoutePrefixes = [
+  '/izhamathi-pattu',
+  '/kanchipuram-silk',
+  '/saila-pattu',
+  '/sathura-pattu',
+  '/mayura-pattu',
+  '/vaibhava-pattu',
+  '/noolisai-pattu',
+  '/sezhinool-pattu',
+  '/velora-pattu',
+  '/ezhil-pattu',
+  '/kaithirai-pattu',
+  '/varnika-pattu',
+  '/mangai-pattu',
+  '/banarasi-silk',
+  '/mysore-silk',
+  '/tussar-silk',
+  '/chettinad-cotton',
+  '/ilkal-sarees',
+  '/bridal-silks',
 ]
 
 const collectionRoutes = {
@@ -41,17 +71,17 @@ const collectionColumns = [
 ]
 const megaCollections = [
   { number: '01', title: 'IZHAMATHI PATTU', count: '8 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
-  { number: '02', title: 'SAILA PATTU', count: '38 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
-  { number: '03', title: 'SATHURA PATTU', count: '15 DESIGNS', icon: 'fa-clover', href: '/#collections' },
-  { number: '04', title: 'MAYURA PATTU', count: '42 DESIGNS', icon: 'fa-fan', href: '/#collections' },
-  { number: '05', title: 'VAIBHAVA PATTU', count: '18 DESIGNS', icon: 'fa-border-all', href: '/#collections' },
-  { number: '06', title: 'NOOLISAI PATTU', count: '26 DESIGNS', icon: 'fa-feather-pointed', href: '/banarasi-silk' },
-  { number: '07', title: 'SEZHINOOL PATTU', count: '11 DESIGNS', icon: 'fa-gem', href: '/bridal-silks' },
-  { number: '08', title: 'VELORA PATTU', count: '19 DESIGNS', icon: 'fa-spa', href: '/#collections' },
-  { number: '09', title: 'EZHIL PATTU', count: '20 DESIGNS', icon: 'fa-star', href: '/#collections' },
-  { number: '10', title: 'KAITHIRAI PATTU', count: '25 DESIGNS', icon: 'fa-briefcase', href: '/#collections' },
-  { number: '11', title: 'VARNIKA PATTU', count: '30 DESIGNS', icon: 'fa-sun', href: '/#collections' },
-  { number: '12', title: 'MANGAI PATTU', count: '22 DESIGNS', icon: 'fa-fire-flame-curved', href: '/#collections' },
+  { number: '02', title: 'SAILA PATTU', count: '6 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
+  { number: '03', title: 'SATHURA PATTU', count: '9 DESIGNS', icon: 'fa-clover', href: '/sathura-pattu' },
+  { number: '04', title: 'MAYURA PATTU', count: '9 DESIGNS', icon: 'fa-fan', href: '/mayura-pattu' },
+  { number: '05', title: 'VAIBHAVA PATTU', count: '9 DESIGNS', icon: 'fa-border-all', href: '/vaibhava-pattu' },
+  { number: '06', title: 'NOOLISAI PATTU', count: '9 DESIGNS', icon: 'fa-feather-pointed', href: '/noolisai-pattu' },
+  { number: '07', title: 'SEZHINOOL PATTU', count: '9 DESIGNS', icon: 'fa-gem', href: '/sezhinool-pattu' },
+  { number: '08', title: 'VELORA PATTU', count: '9 DESIGNS', icon: 'fa-spa', href: '/velora-pattu' },
+  { number: '09', title: 'EZHIL PATTU', count: '9 DESIGNS', icon: 'fa-star', href: '/ezhil-pattu' },
+  { number: '10', title: 'KAITHIRAI PATTU', count: '9 DESIGNS', icon: 'fa-briefcase', href: '/kaithirai-pattu' },
+  { number: '11', title: 'VARNIKA PATTU', count: '9 DESIGNS', icon: 'fa-sun', href: '/varnika-pattu' },
+  { number: '12', title: 'MANGAI PATTU', count: '9 DESIGNS', icon: 'fa-fire-flame-curved', href: '/mangai-pattu' },
 ]
 const shoppingSteps = [
   { icon: 'fa-bag-shopping', title: '1. CHOOSE DESIGN', text: 'Browse Pushpanjali and Suvarna Thuli' },
@@ -163,19 +193,18 @@ export default function Navbar() {
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [routePath, setRoutePath] = useState(() => window.location.pathname)
+  const [routePath, setRoutePath] = useState(() => normalizePath(window.location.pathname))
 
   useEffect(() => {
     const updateNavbar = () => {
-
-      const hero = document.getElementById('home')
+      const hero = document.querySelector('[data-nav-hero]') || document.getElementById('home')
       if (!hero) {
         setIsHeroSection(false)
         return
       }
 
       const heroBottom = hero.offsetTop + hero.offsetHeight
-      setIsHeroSection(window.scrollY < heroBottom - 92)
+      setIsHeroSection(window.scrollY < heroBottom - 68)
     }
 
     updateNavbar()
@@ -190,10 +219,10 @@ export default function Navbar() {
       window.removeEventListener('popstate', updateNavbar)
       window.removeEventListener('arulmathi:navigate', updateNavbar)
     }
-  }, [])
+  }, [routePath])
 
   useEffect(() => {
-    const updateRoutePath = () => setRoutePath(window.location.pathname)
+    const updateRoutePath = () => setRoutePath(normalizePath(window.location.pathname))
 
     window.addEventListener('popstate', updateRoutePath)
     window.addEventListener('arulmathi:navigate', updateRoutePath)
@@ -259,11 +288,9 @@ export default function Navbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const hasTransparentHeroNav = routePath === '/'
-  const isIzhamathiRoute = routePath.startsWith('/izhamathi-pattu') || routePath === '/kanchipuram-silk'
-  const isSailaRoute = routePath.startsWith('/saila-pattu')
+  const isCollectionRoute = collectionRoutePrefixes.some((prefix) => routePath === prefix || routePath.startsWith(`${prefix}/`))
 
-  const navSurfaceClass = hasTransparentHeroNav && isHeroSection
+  const navSurfaceClass = isHeroSection
     ? 'nav-over-hero border-white/10 bg-transparent shadow-none backdrop-blur-0'
     : 'nav-scrolled border-[#c9933a]/20 shadow-[0_12px_32px_rgba(13,13,26,0.22)]'
 
@@ -284,25 +311,27 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex min-h-[92px] items-center justify-between gap-5 border-b px-4 py-3 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
+      className={`fixed top-0 left-0 right-0 z-50 flex min-h-[68px] items-center justify-between gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >
-      <a href="/" className="flex min-w-[202px] shrink-0 items-center gap-1" aria-label="Arulmathi Silk Sarees home">
-        <img
-          src="/arulmathi-logo-final-nav.png"
-          alt=""
-          aria-hidden="true"
-          className="block h-[58px] w-[52px] object-contain drop-shadow-[0_0_16px_rgba(201,147,58,0.4)]"
-        />
-        <img
-          src="/arulmathi-font-nav-tight.png"
-          alt="Arulmathi Silk Sarees"
-          className="block h-[48px] w-[112px] object-contain drop-shadow-[0_0_16px_rgba(201,147,58,0.32)]"
-        />
+      <a href="/" className="nav-brand-logo flex shrink-0 items-center" aria-label="Arulmathi Silk Sarees home">
+        <span className="nav-brand-mark">
+          <img
+            src="/logo1.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </span>
+        <span className="nav-brand-wordmark">
+          <img
+            src="/logo2.png"
+            alt="Arulmathi Silk Sarees"
+          />
+        </span>
       </a>
 
       {/* Nav links */}
-      <ul className="hidden lg:flex gap-9 xl:gap-12">
+      <ul className="hidden lg:flex gap-6 xl:gap-10">
         {navLinks.map((item) => {
           const isCollections = item.label === 'COLLECTIONS'
           const isActive = item.href === routePath
@@ -318,10 +347,10 @@ export default function Navbar() {
                   aria-expanded={isCollectionsOpen}
                   aria-controls="mega-collections-menu"
                   onClick={() => setIsCollectionsOpen((v) => !v)}
-                  className={`nav-link-glow font-sans text-[11px] tracking-[2.5px] font-medium transition-colors duration-200 flex items-center gap-1 ${isCollectionsOpen || isIzhamathiRoute ? 'text-[#c9933a] after:scale-x-100' : 'text-white/78 hover:text-[#c9933a]'}`}
+                  className={`nav-link-glow font-sans text-[10px] tracking-[1.6px] font-medium transition-colors duration-200 flex items-center gap-1 ${isCollectionsOpen || isCollectionRoute ? 'is-active text-[#c9933a] after:scale-x-100' : 'text-white/78 hover:text-[#c9933a]'}`}
                 >
                   COLLECTIONS
-                  <i className={`fas fa-chevron-up text-[9px] transition-transform duration-200 ${isCollectionsOpen ? 'rotate-0' : 'rotate-180'}`} />
+                  <i className={`fas fa-chevron-up text-[8px] transition-transform duration-200 ${isCollectionsOpen ? 'rotate-0' : 'rotate-180'}`} />
                 </button>
               </li>
             )
@@ -331,9 +360,10 @@ export default function Navbar() {
             <li key={item.label}>
               <a
                 href={item.href}
-                className={`nav-link-glow font-sans text-[11px] tracking-[2.5px] font-medium transition-colors duration-200 ${isActive ? 'text-[#c9933a] after:scale-x-100' : 'text-white/78 hover:text-[#c9933a]'}`}
+                aria-current={isActive ? 'page' : undefined}
+                className={`nav-link-glow font-sans text-[10px] tracking-[1.6px] font-medium transition-colors duration-200 ${isActive ? 'is-active text-[#c9933a] after:scale-x-100' : 'text-white/78 hover:text-[#c9933a]'}`}
                 onClick={(e) => {
-                  if (item.href.startsWith('#')) {
+                  if (item.href.startsWith('#') || item.href.startsWith('/#')) {
                     e.preventDefault()
                     navigateTo(item.href)
                   }
@@ -370,7 +400,7 @@ export default function Navbar() {
           />
 
           {/* Inner content */}
-          <div className="relative" style={{ zIndex: 1, padding: '28px 48px 32px' }}>
+          <div className="relative" style={{ zIndex: 1, padding: '20px 36px 24px' }}>
 
             {/* Header */}
             <div className="text-center mb-5">
@@ -392,11 +422,11 @@ export default function Navbar() {
             <div className="grid grid-cols-6 gap-4 mb-0">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
-                  '/nav1.png', '/w2.png', '/3-pose2.png', '/w4.png',
-                  '/image10.png', '/w3.png', '/4-pose1.png', '/viol.png',
-                  '/3-pose3.png', '/w5.png', '/red-pose2.png', '/4-pose4.png',
+                  'nav-1.png', 'nav-2.png', 'nav-3.png', 'nav-4.png',
+                  'nav-5.png', 'nav-6.png', 'nav-7.png', 'nav-8.png',
+                  'nav-9.png', 'nav-10.png', 'nav-11.png', 'nav-12.png',
                 ]
-                const isMegaActive = (col.href === '/izhamathi-pattu' && isIzhamathiRoute) || (col.href === '/saila-pattu' && isSailaRoute)
+                const isMegaActive = routePath === col.href || routePath.startsWith(`${col.href}/`)
                 return (
                   <a
                     key={col.number}
@@ -415,7 +445,7 @@ export default function Navbar() {
                       }}
                     >
                       {/* Saree image */}
-                      <div className="overflow-hidden" style={{ height: '110px' }}>
+                      <div className="overflow-hidden" style={{ height: '90px' }}>
                         <img
                           src={cardImages[idx % cardImages.length]}
                           alt={col.title}
@@ -424,11 +454,11 @@ export default function Navbar() {
                       </div>
                     </div>
                     {/* Card text below image box */}
-                    <div className="pt-2 px-0.5">
-                      <p className={`inline-block border-b pb-0.5 font-sans text-[10px] font-bold tracking-[0.5px] leading-[1.3] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
+                      <div className="pt-2 px-0.5">
+                      <p className={`inline-block border-b pb-0.5 font-sans text-[9px] font-bold tracking-[0.5px] leading-[1.3] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
                         {col.title}
                       </p>
-                      <p className="font-sans text-[8.5px] text-[#8b6020] font-medium tracking-[0.5px]">
+                      <p className="font-sans text-[8px] text-[#8b6020] font-medium tracking-[0.5px]">
                         {col.count} <i className="fas fa-arrow-right text-[7px] ml-0.5" />
                       </p>
                     </div>
@@ -443,9 +473,9 @@ export default function Navbar() {
 
       {/* Search dropdown */}
       {isSearchOpen && (
-        <div className="absolute left-4 right-4 top-[92px] z-40 rounded-b-lg border border-[#c9933a]/35 bg-[#0d0d1a] p-4 shadow-[0_28px_70px_rgba(0,0,0,0.62)] sm:left-auto sm:right-8 sm:w-[440px] lg:right-16">
-          <div className="flex items-center gap-3 rounded-lg border border-[#c9933a]/35 bg-[#171527] px-4 py-3">
-            <i className="fas fa-search text-[13px] text-[#c9933a]" />
+        <div className="absolute left-4 right-4 top-[68px] z-40 rounded-b-lg border border-[#c9933a]/35 bg-[#0d0d1a] p-4 shadow-[0_28px_70px_rgba(0,0,0,0.62)] sm:left-auto sm:right-8 sm:w-[440px] lg:right-16">
+          <div className="flex items-center gap-3 rounded-lg border border-[#c9933a]/35 bg-[#171527] px-4 py-2">
+            <i className="fas fa-search text-[12px] text-[#c9933a]" />
             <input
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
@@ -456,7 +486,7 @@ export default function Navbar() {
               }}
               autoFocus
               placeholder="Search sarees, collections, colors..."
-              className="min-w-0 flex-1 bg-transparent font-sans text-[13px] text-white outline-none placeholder:text-white/62"
+              className="min-w-0 flex-1 bg-transparent font-sans text-[12px] text-white outline-none placeholder:text-white/62"
             />
             <button
               type="button"

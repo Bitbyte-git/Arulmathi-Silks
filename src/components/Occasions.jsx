@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 const occasions = [
   {
     label: 'BRIDAL',
-    img: '/d2.png',
+    img: '/circle5.png',
   },
   {
     label: 'FESTIVE',
@@ -31,23 +31,23 @@ const occasions = [
   },
   {
     label: 'ENGAGEMENT',
-    img: '/image10.png',
+    img: '/circle1.png',
   },
   {
     label: 'HOUSEWARMING',
-    img: '/image11.png',
+    img: '/circle2.png',
   },
   {
     label: 'HALDI',
-    img: '/w3.png',
+    img: '/circle3.png',
   },
   {
     label: 'SANGEET',
-    img: '/w4.png',
+    img: '/circle4.png',
   },
   {
     label: 'EVERYDAY',
-    img: '/w5.png',
+    img: '/circle8.png',
   },
 ]
 
@@ -123,7 +123,6 @@ export default function Occasions() {
         <p className="mb-5 max-w-[320px] font-sans text-[12px] leading-[1.8] text-gray-500">
           Find sarees by celebration, from grand bridal silks to easy festive pieces that feel special all day.
         </p>
-        <i className="glow-icon fas fa-gem text-[#c9933a] text-xl" />
       </div>
 
       {/* Auto-scroll occasion circles */}

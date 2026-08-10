@@ -2,24 +2,46 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const collections = [
   {
-    name: 'Kanjivaram Bridal Silks',
-    desc: 'Rich borders, luminous zari, and heirloom-ready drapes.',
-    img: '/image9.png',
-  },
-  {
-    name: 'Soft Silk Classics',
-    desc: 'Lightweight pure silk sarees for graceful celebrations.',
+    name: 'Saila Pattu',
+    desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
     img: '/image10.png',
+    href: '/saila-pattu',
   },
   {
-    name: 'Temple Border Edit',
-    desc: 'Traditional motifs woven for festive and family occasions.',
-    img: '/image11.png',
-  },
-  {
-    name: 'Contemporary Silk Sarees',
-    desc: 'Elegant colors and refined patterns for modern wardrobes.',
+    name: 'Sathura Pattu',
+    desc: 'Geometric kattam silk designs with structured festive character.',
     img: '/3-pose2.png',
+    href: '/sathura-pattu',
+  },
+  {
+    name: 'Vaibhava Pattu',
+    desc: 'Grand bridal and muhurtham silks for auspicious moments.',
+    img: '/red-pose1.png',
+    href: '/vaibhava-pattu',
+  },
+  {
+    name: 'Noolisai Pattu',
+    desc: 'Thread-inspired woven silks with refined festive texture.',
+    img: '/w2.png',
+    href: '/noolisai-pattu',
+  },
+  {
+    name: 'Sezhinool Pattu',
+    desc: 'Jewel-toned silk sarees with rich heritage motifs.',
+    img: '/viol.png',
+    href: '/sezhinool-pattu',
+  },
+  {
+    name: 'Ezhil Pattu',
+    desc: 'Graceful heritage silks with soft festive drape appeal.',
+    img: '/w4.png',
+    href: '/ezhil-pattu',
+  },
+  {
+    name: 'Kaithirai Pattu',
+    desc: 'Nature-inspired silk sarees with lotus and vine motifs.',
+    img: '/w3.png',
+    href: '/kaithirai-pattu',
   },
 ]
 
@@ -183,7 +205,7 @@ export default function Collections() {
                   {col.desc}
                 </p>
                 <a
-                  href="#shop"
+                  href={col.href}
                   className="font-sans text-[9px] tracking-[1.5px] text-gray-500 flex items-center gap-1.5 hover:text-[#c9933a] transition-colors duration-200"
                 >
                   VIEW COLLECTION <i className="fas fa-arrow-right" />

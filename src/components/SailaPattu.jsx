@@ -1,10 +1,10 @@
 const sailaDesigns = [
-  { name: 'Malar Kodi', slug: 'malar-kodi', desc: 'Vine motif silk with graceful festive texture', img: '/image10.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
-  { name: 'Thanga Mayil', slug: 'thanga-mayil', desc: 'Peacock zari silk with rich border detail', img: '/w3.png', badge: 'New', badgeIcon: 'fa-sparkles' },
-  { name: 'Pachai Valli', slug: 'pachai-valli', desc: 'Green vine woven silk for elegant occasions', img: '/w4.png' },
-  { name: 'Sandhana Malar', slug: 'sandhana-malar', desc: 'Soft sandal floral silk with luminous zari', img: '/4-pose1.png' },
-  { name: 'Neela Thogai', slug: 'neela-thogai', desc: 'Blue-toned silk with refined woven accents', img: '/3-pose3.png' },
-  { name: 'Manjal Kodi', slug: 'manjal-kodi', desc: 'Golden yellow vine silk for festive gifting', img: '/image11.png' },
+  { name: 'Malar Kodi', slug: 'malar-kodi', href: '/saila-pattu/malar-kodi', desc: 'Vine motif silk with graceful festive texture', img: '/image10.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
+  { name: 'Thanga Mayil', slug: 'thanga-mayil', href: '/saila-pattu/thanga-mayil', desc: 'Peacock zari silk with rich border detail', img: '/w3.png', badge: 'New', badgeIcon: 'fa-sparkles' },
+  { name: 'Pachai Valli', slug: 'pachai-valli', href: '/saila-pattu/pachai-valli', desc: 'Green vine woven silk for elegant occasions', img: '/w4.png' },
+  { name: 'Sandhana Malar', slug: 'sandhana-malar', href: '/saila-pattu/sandhana-malar', desc: 'Soft sandal floral silk with luminous zari', img: '/4-pose1.png' },
+  { name: 'Neela Thogai', slug: 'neela-thogai', href: '/saila-pattu/neela-thogai', desc: 'Blue-toned silk with refined woven accents', img: '/3-pose3.png' },
+  { name: 'Manjal Kodi', slug: 'manjal-kodi', href: '/saila-pattu/manjal-kodi', desc: 'Golden yellow vine silk for festive gifting', img: '/image11.png' },
 ]
 
 const sailaNotes = [
@@ -125,7 +125,7 @@ export default function SailaPattu() {
                       <i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}
                     </span>
                   )}
-                  <a href="/#shop" className="block h-[220px] overflow-hidden bg-[#e8ddcf]" aria-label={`Open ${saree.name} designs`}>
+                  <a href={saree.href} className="block h-[220px] overflow-hidden bg-[#e8ddcf]" aria-label={`Open ${saree.name} designs`}>
                     <img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </a>
                   <div className="rounded-t-lg bg-[#fffaf2] px-5 pb-5 pt-4 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
@@ -136,7 +136,7 @@ export default function SailaPattu() {
                       <i className="fas fa-spa text-[9px]" />
                       <span className="h-px flex-1 bg-[#d7b578]" />
                     </div>
-                    <a href="/#shop" className="mt-3 inline-flex items-center gap-2 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">
+                    <a href={saree.href} className="mt-3 inline-flex items-center gap-2 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">
                       Explore <i className="fas fa-arrow-right text-[10px]" />
                     </a>
                   </div>

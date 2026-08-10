@@ -36,7 +36,7 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="relative w-full min-h-[680px]" style={{ minHeight: '100svh' }}>
+    <section id="home" data-nav-hero className="relative w-full min-h-[680px]" style={{ minHeight: '100svh' }}>
       <img
         src="/hero-fix.png"
         alt="Hero Model"

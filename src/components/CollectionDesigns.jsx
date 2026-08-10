@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { getIzhamathiCollection } from '../data/izhamathiProducts'
 
-export default function CollectionDesigns({ collectionSlug }) {
-  const collection = getIzhamathiCollection(collectionSlug)
+export default function CollectionDesigns({ collectionSlug, getCollection: getCollectionProp, baseRoute: baseRouteProp }) {
+  const getCollectionFn = getCollectionProp || getIzhamathiCollection
+  const baseRoute = baseRouteProp || '/izhamathi-pattu'
+  const collection = getCollectionFn(collectionSlug)
 
   const [heroSlide, setHeroSlide] = useState(0)
   const heroImages = useMemo(() => {
@@ -23,7 +25,8 @@ export default function CollectionDesigns({ collectionSlug }) {
     return () => window.clearInterval(timer)
   }, [heroImages])
 
-
+
+
 
 
   if (!collection) {

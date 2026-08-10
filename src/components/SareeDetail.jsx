@@ -278,23 +278,6 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
 
               <p className="mt-5 font-sans text-[13px] leading-[1.85] text-[#5f5660]">{design.details}</p>
 
-              <div className="mt-6">
-                <p className="font-sans text-[10px] font-bold uppercase tracking-[2.4px] text-[#9a6720]">Color / Sub Color</p>
-                <div className="mt-3 flex flex-wrap gap-3">
-                  {design.colors.map((color) => (
-                    <button
-                      key={color}
-                      type="button"
-                      onClick={() => setSelectedColor(color)}
-                      className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 font-sans text-[11px] font-semibold transition-all ${selectedColor === color ? 'border-[#17131c] bg-[#17131c] text-white' : 'border-[#dfc49a] bg-white/70 text-[#3e3541] hover:border-[#c9933a]'}`}
-                    >
-                      <span className="h-4 w-4 rounded-full border border-black/10" style={{ backgroundColor: colorMap[color] || '#c9933a' }} />
-                      {color}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-[150px_1fr]">
                 <div>
                   <p className="font-sans text-[10px] font-bold uppercase tracking-[2.4px] text-[#9a6720]">Quantity</p>

@@ -132,7 +132,7 @@ export default function AboutUs() {
       <div className="bg-[#07110d] px-5 py-12 sm:px-8 lg:px-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 overflow-hidden rounded-lg border border-[#d2a24f]/35 bg-[rgba(13,13,26,1)] shadow-[0_28px_70px_rgba(0,0,0,0.46),0_0_0_1px_rgba(210,162,79,0.10)] lg:grid-cols-[0.42fr_0.58fr]">
           <div className="min-h-[360px] overflow-hidden">
-            <img src="/Arulmathi-aboutus4.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
+            <img src="/ownerpic.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
           </div>
           <div className="flex flex-col justify-center bg-[radial-gradient(circle_at_88%_18%,rgba(210,162,79,0.12),transparent_28%)] p-8 text-white sm:p-12 lg:p-16">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">Our Story</p>

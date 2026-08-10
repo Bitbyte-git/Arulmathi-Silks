@@ -29,17 +29,32 @@ const supportValues = [
 ]
 
 const faqs = [
-  'Can I view the latest saree catalogue?',
-  'Do you guide bridal saree selection?',
-  'Can I ask about available colors and designs?',
-  'Do you help with blouse matching?',
-  'How can I know about new arrivals?',
+  {
+    question: 'Can I view the latest saree catalogue?',
+    answer: 'Yes. Contact our team on WhatsApp or visit the store and we will share the latest available saree collections, designs, colors, and price details.',
+  },
+  {
+    question: 'Do you guide bridal saree selection?',
+    answer: 'Yes. We help brides choose sarees based on the wedding occasion, preferred color, border style, zari richness, budget, and blouse pairing.',
+  },
+  {
+    question: 'Can I ask about available colors and designs?',
+    answer: 'Of course. Share the collection or saree style you like, and our team will confirm available colors, design options, stock, and suitable alternatives.',
+  },
+  {
+    question: 'Do you help with blouse matching?',
+    answer: 'Yes. We can suggest matching or contrast blouse colors, border styles, and fabric combinations that suit the saree and occasion.',
+  },
+  {
+    question: 'How can I know about new arrivals?',
+    answer: 'You can contact us directly or follow our updates to know about new arrivals. We can also guide you to the newest sarees currently available in store.',
+  },
 ]
 
 export default function ContactUs() {
   return (
     <section id="contact-page" className="bg-[#f6efe4] text-[#17131c]">
-      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 text-white sm:px-8 lg:px-16">
+      <div data-nav-hero className="relative isolate overflow-hidden bg-[#080b12] px-5 text-white sm:px-8 lg:px-16">
         <img
           src="/Arulmathi-contact.png"
           alt="Arulmathi Silks contact welcome"
@@ -129,13 +144,13 @@ export default function ContactUs() {
           <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#a9762d]">Common Questions</p>
           <h2 className="mt-4 font-serif text-[38px] font-normal leading-[1.1] text-[#221824] sm:text-[48px]">Frequently Asked Questions</h2>
           <div className="mt-7 space-y-3">
-            {faqs.map((question, index) => (
-              <details key={question} className="contact-ref-rise group rounded border border-[#d8c7ad] bg-[#fffaf8] px-5 py-4" style={{ animationDelay: `${index * 70}ms` }}>
+            {faqs.map((item, index) => (
+              <details key={item.question} className="contact-ref-rise group rounded border border-[#d8c7ad] bg-[#fffaf8] px-5 py-4" style={{ animationDelay: `${index * 70}ms` }}>
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-[13px] font-medium text-[#221824]">
-                  {question}
+                  {item.question}
                   <i className="fas fa-chevron-down text-[11px] text-[#6b5a49] transition-transform group-open:rotate-180" />
                 </summary>
-                <p className="mt-3 font-sans text-[12px] leading-[1.7] text-[#6b5a49]">Please contact our team directly and we will guide you with the latest collection details and store assistance.</p>
+                <p className="mt-3 font-sans text-[12px] leading-[1.7] text-[#6b5a49]">{item.answer}</p>
               </details>
             ))}
           </div>
