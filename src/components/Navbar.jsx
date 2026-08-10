@@ -311,7 +311,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex min-h-[68px] items-center justify-between gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
+      className={`fixed top-0 left-0 right-0 z-50 grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >
       <a href="/" className="nav-brand-logo flex shrink-0 items-center" aria-label="Arulmathi Silk Sarees home">
@@ -331,7 +331,7 @@ export default function Navbar() {
       </a>
 
       {/* Nav links */}
-      <ul className="hidden lg:flex gap-6 xl:gap-10">
+      <ul className="hidden justify-center gap-6 lg:flex xl:gap-10">
         {navLinks.map((item) => {
           const isCollections = item.label === 'COLLECTIONS'
           const isActive = item.href === routePath
@@ -419,7 +419,7 @@ export default function Navbar() {
             </div>
 
             {/* Cards grid */}
-            <div className="grid grid-cols-6 gap-4 mb-0">
+            <div className="mb-0 grid grid-cols-6 justify-items-center gap-4">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
                   'nav-1.png', 'nav-2.png', 'nav-3.png', 'nav-4.png',
@@ -432,7 +432,7 @@ export default function Navbar() {
                     key={col.number}
                     href={col.href}
                     onClick={(e) => { e.preventDefault(); navigateTo(col.href) }}
-                    className="group cursor-pointer"
+                    className="group w-full max-w-[142px] cursor-pointer"
                     style={{ textDecoration: 'none' }}
                   >
                     <div
@@ -445,7 +445,7 @@ export default function Navbar() {
                       }}
                     >
                       {/* Saree image */}
-                      <div className="overflow-hidden" style={{ height: '90px' }}>
+                      <div className="aspect-square overflow-hidden">
                         <img
                           src={cardImages[idx % cardImages.length]}
                           alt={col.title}
@@ -526,7 +526,7 @@ export default function Navbar() {
       )}
 
       {/* Icons */}
-      <div className="flex items-center gap-4 sm:gap-6 text-white/85">
+      <div className="flex items-center justify-end gap-4 text-white/85 sm:gap-6">
         <button
           type="button"
           aria-label="Search sarees and collections"
