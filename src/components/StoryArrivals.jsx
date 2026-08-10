@@ -3,7 +3,7 @@ const arrivals = [
     name: 'Maroon Muhurtham Silk',
     price: 'From Rs. 14,500',
     note: 'Zari border',
-    img: '/red-pose5.png',
+    img: '/w4.png',
   },
   {
     name: 'Mehendi Gold Soft Silk',
@@ -21,7 +21,7 @@ const arrivals = [
     name: 'Rose Gold Tissue Silk',
     price: 'From Rs. 12,900',
     note: 'Soft shimmer',
-    img: '/red-pose2.png',
+    img: '/w3.png',
   },
   {
     name: 'Emerald Temple Silk',
@@ -33,12 +33,12 @@ const arrivals = [
     name: 'Ivory Zari Soft Silk',
     price: 'From Rs. 11,800',
     note: 'Elegant drape',
-    img: '/red-pose3.png',
+     img: '/w2.png',
   },
 ]
 export default function StoryArrivals() {
   return (
-    <section id="about" className="section-reveal grid grid-cols-1 lg:grid-cols-2 bg-[#0e0c1c] min-h-[520px]">
+    <section id="about" className="section-reveal grid min-h-[520px] grid-cols-1 bg-[#0e0c1c] pt-5 lg:grid-cols-2">
 
       {/* OUR STORY */}
       <div className="relative overflow-hidden">
@@ -84,7 +84,7 @@ export default function StoryArrivals() {
         </p>
 
         {/* Product cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5 mb-6">
+        <div className="mb-6 grid grid-cols-1 gap-3.5 pt-2.5 sm:grid-cols-2 xl:grid-cols-3">
           {arrivals.map((item) => (
             <div
               key={item.name}

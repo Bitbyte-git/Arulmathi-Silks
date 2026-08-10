@@ -18,7 +18,7 @@ const izhamathiStats = [
 export default function KanchipuramSilk() {
   return (
     <section id="izhamathi-pattu" className="section-reveal bg-[#13121f]">
-      <div className="relative overflow-hidden bg-[#13121f] px-5 pb-10 pt-28 text-white sm:px-8 lg:min-h-[calc(100vh-120px)] lg:px-16 lg:pb-12 lg:pt-28">
+      <div className="relative overflow-hidden bg-[#13121f] px-5 pb-10 pt-[152px] text-white sm:px-8 lg:min-h-[calc(100vh-120px)] lg:px-16 lg:pb-12 lg:pt-[152px]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_22%,rgba(201,147,58,0.17),transparent_27%),radial-gradient(circle_at_78%_22%,rgba(77,42,112,0.26),transparent_30%),radial-gradient(circle_at_86%_76%,rgba(201,147,58,0.10),transparent_24%),linear-gradient(135deg,#13121f_0%,#0d0d1a_54%,#18111f_100%)]" />
         <div className="footer-weave absolute inset-x-0 top-0 h-44 opacity-30" />
 
