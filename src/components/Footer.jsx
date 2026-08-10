@@ -20,16 +20,18 @@ export default function Footer() {
 
       <div className="relative z-10 grid grid-cols-1 gap-10 border-b border-white/10 pb-10 lg:grid-cols-[1.15fr_1fr_1fr_1.05fr]">
         <div>
-          <a href="#home" className="mb-5 flex h-[104px] w-[104px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
+          <a href="#home" className="mb-5 flex h-[110px] w-[110px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
             <img
-              src="/arulmathi-bg.png"
+              src="/logo1.png"
+              alt="Arulmathi Silk Sarees"
+              className="h-full w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
+            />
+             <img
+              src="/logo2.png"
               alt="Arulmathi Silk Sarees"
               className="h-full w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
             />
           </a>
-          <h2 className="font-serif text-[30px] font-normal leading-tight text-white">
-            Arulmathi<br />Silk Sarees
-          </h2>
           <p className="mt-3 max-w-[280px] font-sans text-[12px] leading-[1.8] text-white/58">
             Curated pure silk sarees for weddings, festivals, gifting and graceful everyday occasions.
           </p>
