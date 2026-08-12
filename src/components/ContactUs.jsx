@@ -108,17 +108,17 @@ export default function ContactUs() {
               <p className="mt-5 flex items-center gap-2 font-sans text-[11px] text-[#5f5145]"><i className="fas fa-shield-alt text-[#b9863c]" />Your information is safe with us. We respect your privacy.</p>
             </form>
 
-            <div className="contact-ref-rise rounded-lg border border-[#d8c7ad] bg-[#fbf7ef] p-7 shadow-[0_18px_44px_rgba(52,36,18,0.08)] sm:p-9" style={{ animationDelay: '100ms' }}>
+            <div className="contact-ref-rise rounded-lg border border-[#d8c7ad] bg-[#fbf7ef] p-7 text-left shadow-[0_18px_44px_rgba(52,36,18,0.08)] sm:p-9" style={{ animationDelay: '100ms' }}>
               <h3 className="font-serif text-[32px] font-normal leading-tight text-[#221824]">Contact Information</h3>
               <div className="mt-7 space-y-7">
                 {contactDetails.map((item, index) => (
-                  <div key={item.title} className="contact-ref-rise flex gap-5" style={{ animationDelay: `${index * 80}ms` }}>
-                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#d8b577] text-[#b9863c]">
+                  <div key={item.title} className="contact-ref-rise flex items-start md:items-center gap-4" style={{ animationDelay: `${index * 80}ms` }}>
+                    <span className="flex h-14 w-14 shrink-0 self-start md:self-center items-center justify-center rounded-full border border-[#d8b577] text-[#b9863c]">
                       <i className={`fas ${item.icon} text-[22px]`} />
                     </span>
-                    <div>
+                    <div className="flex flex-col items-start">
                       <h4 className="font-serif text-[20px] font-normal text-[#221824]">{item.title}</h4>
-                      <p className="mt-2 whitespace-pre-line font-sans text-[12px] leading-[1.75] text-[#4f463d]">{item.text}</p>
+                      <p className="mt-1 whitespace-pre-line font-sans text-[12px] leading-[1.6] text-[#4f463d]">{item.text}</p>
                     </div>
                   </div>
                 ))}

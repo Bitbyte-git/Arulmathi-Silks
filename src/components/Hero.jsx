@@ -93,14 +93,14 @@ export default function Hero() {
       <div
         className="absolute top-0 left-0 right-0 z-20"
         style={{
-          height: '126px',
+          height: 'var(--nav-height,126px)',
           background: 'linear-gradient(to bottom, rgba(5,3,15,0.82) 0%, rgba(5,3,15,0.42) 52%, transparent 100%)',
         }}
       />
 
       <div
-        className={`absolute inset-0 z-20 flex items-center transition-opacity duration-500 ${isStoryOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
-        style={{ paddingTop: '106px' }}
+        className={`absolute left-0 right-0 bottom-0 z-20 flex items-center transition-opacity duration-500 ${isStoryOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
+        style={{ top: 'calc(var(--nav-height,106px) + 10px)' }}
       >
         <div
           className="w-full max-w-[760px] px-5 sm:pl-10 sm:pr-0 md:w-[74%] lg:w-[64%] lg:pl-16 xl:pl-20"

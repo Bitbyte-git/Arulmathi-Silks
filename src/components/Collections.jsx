@@ -52,6 +52,7 @@ export default function Collections() {
   const resumeTimerRef = useRef(null)
   const scrollRemainderRef = useRef(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   const carouselItems = useMemo(() => [...collections, ...collections], [])
 
@@ -59,11 +60,34 @@ export default function Collections() {
     const scroller = scrollerRef.current
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    if (!scroller || prefersReducedMotion) {
+    // detect touch/hover capability to disable hover effects on touch devices
+    const hoverQuery = window.matchMedia('(hover: none)')
+    const updateIsTouch = () => setIsTouchDevice(hoverQuery.matches)
+    updateIsTouch()
+    hoverQuery.addEventListener?.('change', updateIsTouch)
+
+    // If user prefers reduced motion or device lacks hover (touch), don't auto-scroll
+    if (!scroller || prefersReducedMotion || hoverQuery.matches) {
+      // ensure touch detection state is set
+      if (hoverQuery.matches) setIsTouchDevice(true)
+      hoverQuery.removeEventListener?.('change', updateIsTouch)
       return undefined
     }
 
-    const speed = 0.03
+    // lower default speed for smoother auto movement
+    const speed = 0.018
+
+    // pause auto-scroll when page is hidden to avoid jumps when user returns
+    const onVisibility = () => {
+      if (document.hidden) {
+        setIsPaused(true)
+      } else {
+        // resume after a short delay so layout settles
+        if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+        resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 500)
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibility)
 
     const animate = (timestamp) => {
       if (lastFrameRef.current === null) {
@@ -97,11 +121,13 @@ export default function Collections() {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
+      document.removeEventListener('visibilitychange', onVisibility)
       if (resumeTimerRef.current) {
         window.clearTimeout(resumeTimerRef.current)
       }
       lastFrameRef.current = null
       scrollRemainderRef.current = 0
+      hoverQuery.removeEventListener?.('change', updateIsTouch)
     }
   }, [isPaused])
 
@@ -178,16 +204,37 @@ export default function Collections() {
         <div
           ref={scrollerRef}
           className="collections-scroll flex gap-4 overflow-x-auto py-1 pr-12"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          onMouseEnter={() => !isTouchDevice && setIsPaused(true)}
+          onMouseLeave={() => !isTouchDevice && setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
+          onPointerDown={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+          }}
+          onPointerUp={() => {
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
+          onTouchStart={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+          }}
+          onTouchEnd={() => {
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
+          onScroll={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
         >
           {carouselItems.map((col, index) => (
             <div
               key={`${col.name}-${index}`}
               data-collection-card
-              className="collection-card glow-card hover-lift w-[78vw] min-w-[78vw] sm:w-[320px] sm:min-w-[320px] lg:w-[292px] lg:min-w-[292px] xl:w-[306px] xl:min-w-[306px] rounded-[15px] overflow-hidden cursor-pointer group bg-white"
+              className={`collection-card glow-card ${isTouchDevice ? '' : 'hover-lift'} w-[78vw] min-w-[78vw] sm:w-[320px] sm:min-w-[320px] lg:w-[292px] lg:min-w-[292px] xl:w-[306px] xl:min-w-[306px] rounded-[15px] overflow-hidden cursor-pointer group bg-white`}
               style={{ animationDelay: `${(index % collections.length) * 130}ms` }}
             >
               <div className="collection-card-media overflow-hidden h-[330px] sm:h-[380px] lg:h-[390px] bg-[#eee8df]">

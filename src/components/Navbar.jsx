@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+﻿import { useEffect, useState, useRef } from 'react'
 
 const navLinks = [
   { label: 'COLLECTIONS', href: '/#collections' },
@@ -318,8 +318,22 @@ export default function Navbar() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    const updateNavHeight = () => {
+      const h = navRef.current?.offsetHeight || 0
+      document.documentElement.style.setProperty('--nav-height', `${h}px`)
+    }
+
+    updateNavHeight()
+    window.addEventListener('resize', updateNavHeight)
+    return () => window.removeEventListener('resize', updateNavHeight)
+  }, [isMobileMenuOpen, routePath])
+
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >

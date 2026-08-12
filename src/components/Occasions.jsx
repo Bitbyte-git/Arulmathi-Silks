@@ -57,18 +57,39 @@ export default function Occasions() {
   const lastFrameRef = useRef(null)
   const scrollRemainderRef = useRef(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   const carouselItems = useMemo(() => [...occasions, ...occasions], [])
 
   useEffect(() => {
     const scroller = scrollerRef.current
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const hoverQuery = window.matchMedia('(hover: none)')
 
+    const updateIsTouch = () => setIsTouchDevice(hoverQuery.matches)
+    updateIsTouch()
+    hoverQuery.addEventListener?.('change', updateIsTouch)
+
+    // allow auto-scroll on mobile but respect user preferences
     if (!scroller || prefersReducedMotion) {
+      if (hoverQuery.matches) setIsTouchDevice(true)
+      hoverQuery.removeEventListener?.('change', updateIsTouch)
       return undefined
     }
 
-    const speed = 0.032
+    // smoother, slower auto-scroll
+    const speed = 0.018
+
+    const onVisibility = () => {
+      if (document.hidden) setIsPaused(true)
+      else {
+        if (animationRef.current) cancelAnimationFrame(animationRef.current)
+        if (lastFrameRef.current !== null) lastFrameRef.current = null
+        if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+        resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 500)
+      }
+    }
+    document.addEventListener('visibilitychange', onVisibility)
 
     const animate = (timestamp) => {
       if (lastFrameRef.current === null) {
@@ -99,13 +120,16 @@ export default function Occasions() {
     animationRef.current = requestAnimationFrame(animate)
 
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
+      if (animationRef.current) cancelAnimationFrame(animationRef.current)
+      document.removeEventListener('visibilitychange', onVisibility)
       lastFrameRef.current = null
       scrollRemainderRef.current = 0
+      hoverQuery.removeEventListener?.('change', updateIsTouch)
     }
   }, [isPaused])
+
+  // small resume timer ref used above
+  const resumeTimerRef = useRef(null)
 
   return (
     <section id="shop" className="section-reveal bg-[#12121F] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-12">
@@ -130,15 +154,37 @@ export default function Occasions() {
         <div
           ref={scrollerRef}
           className="occasion-scroll flex gap-7 overflow-x-auto py-4 pr-10"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          onMouseEnter={() => !isTouchDevice && setIsPaused(true)}
+          onMouseLeave={() => !isTouchDevice && setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
+          onPointerDown={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+          }}
+          onPointerUp={() => {
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
+          onTouchStart={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+          }}
+          onTouchEnd={() => {
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
+          onScroll={() => {
+            setIsPaused(true)
+            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+          }}
+          style={{ WebkitOverflowScrolling: 'touch', scrollBehavior: 'smooth' }}
         >
           {carouselItems.map((o, index) => (
             <div
               key={`${o.label}-${index}`}
-              className="occasion-pop occasion-item flex w-[154px] min-w-[154px] flex-col items-center gap-3 cursor-pointer group"
+              className={`occasion-pop occasion-item flex w-[154px] min-w-[154px] flex-col items-center gap-3 cursor-pointer group ${isTouchDevice ? '' : ''}`}
               style={{ animationDelay: `${(index % occasions.length) * 180}ms` }}
             >
               <div className="occasion-circle glow-orbit w-[146px] h-[146px] rounded-full overflow-hidden border-2 border-[#c9933a]/42 bg-[#F5F0E8]/10 shadow-[0_18px_38px_rgba(0,0,0,0.28)] group-hover:border-[#c9933a] group-hover:scale-110 transition-all duration-300">
