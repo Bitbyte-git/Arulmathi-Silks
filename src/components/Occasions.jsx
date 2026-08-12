@@ -108,19 +108,19 @@ export default function Occasions() {
   }, [isPaused])
 
   return (
-    <section id="shop" className="section-reveal bg-[#f5f0e8] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-12">
+    <section id="shop" className="section-reveal bg-[#12121F] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-12">
 
       {/* Left heading */}
-      <div className="flex-shrink-0 w-full lg:w-72">
-        <p className="font-sans text-[10px] tracking-[2.5px] text-gray-400 font-medium uppercase mb-2">
+      <div className="flex-shrink-0 w-full lg:w-96">
+        <p className="font-sans text-[14px] tracking-[3.2px] text-[#c9933a] font-semibold uppercase mb-3">
           SHOP BY OCCASION
         </p>
-        <h2 className="font-serif text-[34px] sm:text-[38px] font-normal leading-[1.2] text-[#1a1a2e] mb-4">
+        <h2 className="font-serif text-[46px] sm:text-[58px] font-normal leading-[1.08] text-[#F5F0E8] mb-5">
           For Every Moment,<br />
           A{' '}
           <em className="italic text-[#c9933a]">Perfect Drape</em>
         </h2>
-        <p className="mb-5 max-w-[320px] font-sans text-[12px] leading-[1.8] text-gray-500">
+        <p className="mb-6 max-w-[380px] font-sans text-[16px] leading-[1.85] text-[#F5F0E8]/68">
           Find sarees by celebration, from grand bridal silks to easy festive pieces that feel special all day.
         </p>
       </div>
@@ -138,17 +138,17 @@ export default function Occasions() {
           {carouselItems.map((o, index) => (
             <div
               key={`${o.label}-${index}`}
-              className="occasion-pop occasion-item flex w-[118px] min-w-[118px] flex-col items-center gap-3 cursor-pointer group"
+              className="occasion-pop occasion-item flex w-[154px] min-w-[154px] flex-col items-center gap-3 cursor-pointer group"
               style={{ animationDelay: `${(index % occasions.length) * 180}ms` }}
             >
-              <div className="occasion-circle glow-orbit w-[112px] h-[112px] rounded-full overflow-hidden border-2 border-[#c9933a]/30 bg-white/60 shadow-[0_10px_26px_rgba(111,83,40,0.12)] group-hover:border-[#c9933a] group-hover:scale-110 transition-all duration-300">
+              <div className="occasion-circle glow-orbit w-[146px] h-[146px] rounded-full overflow-hidden border-2 border-[#c9933a]/42 bg-[#F5F0E8]/10 shadow-[0_18px_38px_rgba(0,0,0,0.28)] group-hover:border-[#c9933a] group-hover:scale-110 transition-all duration-300">
                 <img
                   src={o.img}
                   alt={o.label}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <p className="font-sans text-[9px] tracking-[2px] font-semibold text-gray-500 uppercase text-center group-hover:text-[#c9933a] transition-colors duration-300">
+              <p className="font-sans text-[13px] tracking-[2.2px] font-bold text-[#F5F0E8]/68 uppercase text-center group-hover:text-[#c9933a] transition-colors duration-300">
                 {o.label}
               </p>
             </div>
@@ -158,5 +158,3 @@ export default function Occasions() {
     </section>
   )
 }
-
-

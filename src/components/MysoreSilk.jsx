@@ -78,7 +78,7 @@ export default function MysoreSilk() {
 
   return (
     <section id="mysore-silk" className="section-reveal bg-[#13121f]">
-      <div className="relative overflow-hidden bg-[#13121f] px-5 pb-14 pt-32 text-white sm:px-8 lg:px-16 lg:pb-20 lg:pt-36">
+      <div className="relative overflow-hidden bg-[#13121f] px-5 pb-14 pt-10 text-white sm:px-8 lg:px-16 lg:pb-20 lg:pt-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,rgba(201,147,58,0.12),transparent_26%),radial-gradient(circle_at_86%_74%,rgba(75,26,110,0.20),transparent_28%)]" />
         <div className="footer-weave absolute inset-x-0 top-0 h-52 opacity-45" />
 

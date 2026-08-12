@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const heroBadges = [
   { icon: 'fa-spa', title: 'Pure Silk', text: 'Handpicked and tested' },
   { icon: 'fa-hands-holding-circle', title: 'Crafted', text: 'By skilled artisans' },
@@ -34,47 +36,96 @@ const craftPanels = [
 ]
 
 const milestones = [
-  { year: '2019', icon: 'fa-flag', title: 'The Beginning', text: 'Arulmathi Silks was established in Pachanampatti, Salem.' },
-  { year: '2020', icon: 'fa-users', title: 'First Customers', text: 'Started serving local customers with pure silk sarees.' },
-  { year: '2021', icon: 'fa-store', title: 'Wholesale Expansion', text: 'Grew as a saree manufacturer and wholesale supplier.' },
-  { year: '2023', icon: 'fa-star', title: 'Trusted Choice', text: 'Built recognition through quality, catalogue support, and service.' },
-  { year: '2024', icon: 'fa-award', title: 'Looking Ahead', text: 'Continuing the journey with the same trust and tradition.' },
+  { year: '1985', icon: 'fa-flag', title: 'The Beginning', text: 'The idea was born, beginning our legacy with a clear promise for silk quality.', image: '/Arulmathi-aboutus1.png' },
+  { year: '1989', icon: 'fa-handshake', title: 'Wholesale Begins', text: 'Started wholesale operations and built strong relationships with textile buyers.', image: '/Arulmathi-shop2.png' },
+  { year: '1991', icon: 'fa-border-all', title: '12 Own Handlooms', text: 'Expanded to in-house handlooms, giving our sarees a more consistent finish.', image: '/Arulmathi-aboutus2.png' },
+  { year: '1996', icon: 'fa-table-cells-large', title: '2,000 Handlooms', text: 'Reached a wider handloom network while protecting traditional weaving quality.', image: '/Arulmathi-about3.png' },
+  { year: '2001', icon: 'fa-industry', title: 'Silk Manufacturing', text: 'Built complete silk manufacturing support for dependable catalogue production.', image: '/Arulmathi-shop3.png' },
+  { year: '2006', icon: 'fa-person-dress', title: '2,000 Sarees Monthly', text: 'Reached steady monthly production and strengthened our supply capability.', image: '/circle5.png' },
+  { year: '2011', icon: 'fa-shirt', title: '4,000 Sarees Monthly', text: 'Expanded monthly saree sales with richer colors, motifs, and zari combinations.', image: '/circle1.png' },
+  { year: '2016', icon: 'fa-store', title: 'Retail Begins', text: 'Started retail operations so more families could experience our collections directly.', image: '/Arulmathi-shop1.png' },
+  { year: '2021', icon: 'fa-users', title: 'Trusted Customers', text: 'Reached a growing customer family through quality, support, and reliable service.', image: '/ownerpic.png' },
+  { year: '2026', icon: 'fa-gem', title: 'Trend Adoption', text: 'Moving with trends and creating sarees for modern preferences.', image: '/circle2.png', featured: true },
 ]
 
+const timelineRows = [
+  { key: 'top', start: 0, items: milestones.slice(0, 5), path: 'M20 70 C145 18 205 122 330 70 S525 18 665 70 S885 122 1025 70 S1220 18 1480 70' },
+  { key: 'bottom', start: 5, items: milestones.slice(5), path: 'M20 70 C145 122 225 18 350 70 S565 122 720 70 S950 18 1100 70 S1280 122 1480 70' },
+]
+
+function MilestoneWave({ rowKey, path, activePosition }) {
+  const pathId = `milestone-wave-${rowKey}`
+  const activeOffset = -activePosition * 295
+  const hasActiveSegment = activePosition >= 0
+
+  return (
+    <svg className="milestone-wave-svg" viewBox="0 0 1500 140" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <filter id={`milestone-glow-${rowKey}`} x="-20%" y="-80%" width="140%" height="260%">
+          <feGaussianBlur stdDeviation="3.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+      <path id={pathId} d={path} fill="none" stroke="transparent" />
+      <path className="timeline-wave-base" d={path} fill="none" />
+      <path className="timeline-wave" d={path} fill="none" />
+      <path className="timeline-wave-highlight" d={path} fill="none" />
+      <path className="timeline-wave-active" d={path} fill="none" style={{ opacity: hasActiveSegment ? 1 : 0, strokeDashoffset: hasActiveSegment ? activeOffset : 0 }} filter={`url(#milestone-glow-${rowKey})`} />
+      {[0, 1, 2, 3].map((particle) => (
+        <circle key={particle} className="timeline-wave-particle" r={particle % 2 === 0 ? 4 : 3}>
+          <animateMotion dur={`${7 + particle}s`} begin={`${particle * -1.4}s`} repeatCount="indefinite">
+            <mpath href={`#${pathId}`} />
+          </animateMotion>
+        </circle>
+      ))}
+    </svg>
+  )
+}
+
 export default function AboutUs() {
+  const initialMilestoneIndex = milestones.findIndex((item) => item.year === '2026')
+  const [selectedMilestoneIndex, setSelectedMilestoneIndex] = useState(initialMilestoneIndex)
+  const [hoveredMilestoneIndex, setHoveredMilestoneIndex] = useState(null)
+  const activeMilestoneIndex = hoveredMilestoneIndex
+  const activeRow = activeMilestoneIndex === null ? -1 : activeMilestoneIndex < 5 ? 0 : 1
+  const activePosition = activeMilestoneIndex === null ? -1 : activeMilestoneIndex % 5
+
   return (
     <section id="about-us" className="bg-[#f6efe4] text-[#17131c]">
-      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-[120px] text-white sm:px-8 lg:px-16">
+      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16">
         <img
           src="/Arulmathi-aboutus1.png"
           alt="Silk weaving and saree texture at Arulmathi Silks"
-          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-top opacity-62 lg:w-[58%]"
+          className="absolute inset-0 right-0 -z-20 h-full w-full object-cover object-center opacity-82 md:object-contain md:object-right"
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.97)_42%,rgba(8,11,18,0.58)_70%,rgba(8,11,18,0.18)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.95)_36%,rgba(8,11,18,0.48)_64%,rgba(8,11,18,0.08)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-36 bg-gradient-to-t from-[#080b12] to-transparent" />
 
-        <div className="mx-auto grid min-h-[560px] max-w-7xl grid-cols-1 items-center py-14 lg:grid-cols-[0.62fr_0.38fr]">
-          <div className="max-w-[640px]">
-            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">
+        <div className="mx-auto grid min-h-[650px] max-w-7xl grid-cols-1 items-center py-16 md:min-h-[720px] lg:min-h-[780px] lg:grid-cols-[0.6fr_0.4fr]">
+          <div className="max-w-[780px]">
+            <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">
               About Arulmathi Silks
             </p>
-            <h1 className="mt-5 font-serif text-[42px] font-normal leading-[1.08] text-white sm:text-[58px] lg:text-[70px]">
+            <h1 className="mt-6 font-serif text-[56px] font-normal leading-[1.04] text-white sm:text-[76px] lg:text-[92px]">
               Crafted in Tradition.<br />
               Trusted for <em className="italic text-[#d2a24f]">Generations.</em>
             </h1>
-            <p className="mt-6 max-w-[480px] font-sans text-[13px] leading-[1.9] text-white/78">
-              Arulmathi Silks is a saree manufacturer and wholesaler based in Pachanampatti, Salem. Since 2019, we have been shaping pure silk sarees that carry tradition, quality, and trust in every thread.
+            <p className="mt-7 max-w-[710px] font-sans text-[18px] leading-[1.9] text-white/82 sm:text-[20px]">
+              Arulmathi Silks is a saree manufacturer and wholesaler based in Pachanampatti, Salem. Our journey carries decades of silk tradition, quality, and trust in every thread.
             </p>
 
-            <div className="mt-10 grid max-w-[560px] grid-cols-1 gap-5 sm:grid-cols-3">
+            <div className="mt-11 grid max-w-[680px] grid-cols-1 gap-6 font-sans sm:grid-cols-3">
               {heroBadges.map((badge, index) => (
                 <div key={badge.title} className="about-ref-rise flex items-start gap-3" style={{ animationDelay: `${index * 100}ms` }}>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center text-[#d2a24f]">
-                    <i className={`fas ${badge.icon} text-[26px]`} />
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center text-[#d2a24f]">
+                    <i className={`fas ${badge.icon} text-[32px]`} />
                   </span>
                   <span>
-                    <span className="block font-sans text-[11px] font-semibold text-[#d2a24f]">{badge.title}</span>
-                    <span className="mt-1 block font-sans text-[11px] leading-[1.55] text-white/70">{badge.text}</span>
+                    <span className="block text-[16px] font-semibold text-[#d2a24f]">{badge.title}</span>
+                    <span className="mt-1 block text-[14px] leading-[1.6] text-white/72">{badge.text}</span>
                   </span>
                 </div>
               ))}
@@ -132,7 +183,7 @@ export default function AboutUs() {
       <div className="bg-[#07110d] px-5 py-12 sm:px-8 lg:px-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 overflow-hidden rounded-lg border border-[#d2a24f]/35 bg-[rgba(13,13,26,1)] shadow-[0_28px_70px_rgba(0,0,0,0.46),0_0_0_1px_rgba(210,162,79,0.10)] lg:grid-cols-[0.42fr_0.58fr]">
           <div className="min-h-[360px] overflow-hidden">
-            <img src="/ownerpic.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
+            <img src="/founderimg.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
           </div>
           <div className="flex flex-col justify-center bg-[radial-gradient(circle_at_88%_18%,rgba(210,162,79,0.12),transparent_28%)] p-8 text-white sm:p-12 lg:p-16">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">Our Story</p>
@@ -140,7 +191,7 @@ export default function AboutUs() {
               A Personal Promise of Quality
             </h2>
             <p className="mt-6 max-w-[560px] font-sans text-[13px] leading-[1.95] text-white/75">
-              Arulmathi Silks was started with a simple belief: to make pure silk sarees accessible without compromising on quality. What began as a small step in 2019 is today a trusted textile name for saree customers and wholesale buyers.
+              Arulmathi Silks was shaped by a simple belief: to make pure silk sarees accessible without compromising on quality. What began as a family textile journey is today a trusted name for saree customers and wholesale buyers.
             </p>
             <p className="mt-7 font-serif text-[28px] italic text-[#d2a24f]">Arulmathi Silks</p>
             <p className="mt-1 font-sans text-[12px] text-[#d2a24f]">Founder-led textile promise</p>
@@ -148,34 +199,92 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="relative overflow-hidden px-5 py-14 sm:px-8 lg:px-16 lg:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_10%,rgba(201,147,58,0.10),transparent_24%),radial-gradient(circle_at_86%_80%,rgba(201,147,58,0.08),transparent_26%)]" />
-        <div className="relative mx-auto max-w-7xl text-center">
-          <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#a9762d]">Our Milestones</p>
-          <h2 className="mt-3 font-serif text-[38px] font-normal leading-[1.1] text-[#221824] sm:text-[50px]">
-            Growth Rooted in Trust
+      <div className="milestone-legacy relative overflow-visible px-5 py-14 sm:px-8 lg:px-16 lg:py-20">
+        <div className="relative mx-auto max-w-[1480px] text-center">
+          <p className="font-sans text-[10px] font-bold uppercase tracking-[5px] text-[#b98335]">40 Years of Legacy</p>
+          <h2 className="mt-3 font-serif text-[42px] font-normal leading-[1.04] text-[#221824] sm:text-[58px] lg:text-[68px]">
+            Woven Through Time
           </h2>
-          <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#b9863c] to-transparent" />
-
-          <div className="relative mt-12 grid grid-cols-1 gap-8 md:grid-cols-5">
-            <div className="absolute left-[10%] right-[10%] top-8 hidden h-px bg-[#b9863c]/55 md:block" />
-            {milestones.map((item, index) => (
-              <article key={item.year} className="about-ref-rise relative" style={{ animationDelay: `${index * 110}ms` }}>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[#b9863c] bg-[#f6efe4] text-[#b9863c] shadow-[0_0_0_10px_rgba(246,239,228,0.9)]">
-                  <i className={`fas ${item.icon} text-[24px]`} />
-                </div>
-                <p className="mt-5 font-sans text-[16px] font-bold text-[#221824]">{item.year}</p>
-                <h3 className="mt-2 font-sans text-[13px] font-bold text-[#221824]">{item.title}</h3>
-                <p className="mx-auto mt-2 max-w-[170px] font-sans text-[11px] leading-[1.65] text-[#6b5a49]">{item.text}</p>
-              </article>
-            ))}
+          <div className="mx-auto mt-5 flex w-40 items-center justify-center gap-3 text-[#b98335]">
+            <span className="h-px flex-1 bg-gradient-to-r from-transparent to-[#c7974f]" />
+            <span className="h-2 w-2 rotate-45 bg-[#b98335]" />
+            <span className="h-px flex-1 bg-gradient-to-l from-transparent to-[#c7974f]" />
           </div>
 
-          <div className="mx-auto mt-12 inline-flex items-center gap-4 rounded-lg border border-[#c8ad82] bg-[#fbf7ef] px-10 py-5 text-left shadow-[0_12px_32px_rgba(52,36,18,0.08)]">
-            <i className="fas fa-users text-[30px] text-[#b9863c]" />
-            <div>
-              <p className="font-serif text-[38px] leading-none text-[#b9863c]">1000+</p>
-              <p className="mt-1 font-sans text-[12px] text-[#5f5145]">Happy Customers and Counting</p>
+          <div className="milestone-timeline mt-12">
+            {timelineRows.map((row, rowIndex) => {
+              const rowActivePosition = activeRow === rowIndex ? activePosition : -1
+
+              return (
+                <div key={row.key} className={`milestone-row milestone-row-${row.key} relative ${rowIndex === 0 ? '' : 'mt-12 lg:mt-16'}`}>
+                  <MilestoneWave rowKey={row.key} path={row.path} activePosition={rowActivePosition} />
+                  <div className="milestone-node-grid">
+                    {row.items.map((item, index) => {
+                      const absoluteIndex = row.start + index
+                      const isActive = absoluteIndex === activeMilestoneIndex
+                      const isSelected = absoluteIndex === selectedMilestoneIndex
+                      const popupAlign = index === 0 ? 'popup-align-left' : index === row.items.length - 1 ? 'popup-align-right' : 'popup-align-center'
+
+                      return (
+                        <div
+                          key={item.year}
+                          className={`about-ref-rise milestone-wrapper ${isActive ? 'is-active' : ''} ${isSelected ? 'is-selected' : ''} ${popupAlign}`}
+                          style={{ animationDelay: `${absoluteIndex * 90}ms` }}
+                          onMouseEnter={() => setHoveredMilestoneIndex(absoluteIndex)}
+                          onMouseLeave={() => setHoveredMilestoneIndex(null)}
+                        >
+                          <button
+                            type="button"
+                            className="milestone-node"
+                            aria-pressed={isSelected}
+                            aria-label={`Show milestone ${item.year}: ${item.title}`}
+                            onFocus={() => setHoveredMilestoneIndex(absoluteIndex)}
+                            onBlur={() => setHoveredMilestoneIndex(null)}
+                            onClick={() => setSelectedMilestoneIndex(absoluteIndex)}
+                          >
+                            <span className="milestone-icon mx-auto">
+                              <span className="milestone-ring milestone-ring-one" />
+                              <span className="milestone-ring milestone-ring-two" />
+                              <i className={`fas ${item.icon}`} />
+                            </span>
+                            <span className="milestone-year">{item.year}</span>
+                            <span className="milestone-title">{item.title}</span>
+                            <span className="milestone-text">{item.text}</span>
+                          </button>
+
+                          {isActive && (
+                            <div className="milestone-detail-card" role="status">
+                              <div className="milestone-content">
+                                <p className="font-serif text-[28px] leading-none text-[#b98335]">{item.year}</p>
+                                <h3 className="mt-2 font-serif text-[24px] leading-tight text-[#221824]">{item.title}</h3>
+                                <div className="mt-4 h-px w-12 bg-[#b98335]" />
+                                <p className="milestone-description milestone-preview-text mt-5 font-sans text-[12px] leading-[1.75] text-[#6b5a49]">{item.text}</p>
+                                <span className="mt-7 inline-flex items-center gap-3 border-b border-dotted border-[#b98335]/70 pb-1 font-sans text-[11px] font-semibold text-[#b98335]">
+                                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#b98335] text-white">
+                                    <i className="fas fa-arrow-right text-[9px]" />
+                                  </span>
+                                  Explore milestone
+                                </span>
+                              </div>
+                              <img className="milestone-image" src={item.image} alt={`${item.title} silk milestone`} />
+                            </div>
+                          )}
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="milestone-trust-badge about-ref-rise group">
+            <span className="trust-badge-icon">
+              <i className="fas fa-users" />
+            </span>
+            <div className="text-left">
+              <p className="trust-badge-years">40 Years</p>
+              <p className="trust-badge-text">Crafted with Trust</p>
             </div>
           </div>
         </div>

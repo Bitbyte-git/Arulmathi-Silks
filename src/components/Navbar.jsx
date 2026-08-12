@@ -99,28 +99,18 @@ const trustItems = [
 ]
 
 const searchItems = [
-  { title: 'Izhamathi Pattu', type: 'Collection', href: '/izhamathi-pattu', keywords: 'pushpanjali suvarna thuli floral woven golden butta silk saree designs red gold cream navy green' },
-  { title: 'Pushpanjali', type: 'Design', href: '/izhamathi-pattu/pushpanjali', keywords: 'pushpanjali floral woven silk design saree ruby pastel rose emerald flower zari' },
-  { title: 'Saila Pattu', type: 'Collection', href: '/saila-pattu', keywords: 'saila pattu malar kodi thanga mayil silk saree vine motif peacock zari green pastel festive' },
-  { title: 'Suvarna Thuli', type: 'Design', href: '/izhamathi-pattu/suvarna-thuli', keywords: 'suvarna thuli golden butta silk design saree champagne cream navy sage gold' },
-  { title: 'Banarasi Silk', type: 'Collection', href: '/banarasi-silk', keywords: 'banarasi brocade katan zari festive silk saree wine gold violet ivory emerald crimson peach blue' },
-  { title: 'Mysore Silk', type: 'Collection', href: '/mysore-silk', keywords: 'mysore soft silk sandal palace zari saree purple crimson ivory peacock rose emerald temple' },
-  { title: 'Tussar Silk', type: 'Collection', href: '/tussar-silk', keywords: 'tussar handloom honey gold natural silk saree ivory rust sage plum crimson peach blue' },
-  { title: 'Chettinad Cotton', type: 'Collection', href: '/chettinad-cotton', keywords: 'chettinad cotton karaikudi checks daily saree temple red mustard indigo sage maroon ivory peacock' },
-  { title: 'Ilkal Sarees', type: 'Collection', href: '/ilkal-sarees', keywords: 'ilkal kasuti regional cotton silk saree red sandal indigo maroon plum ivory copper emerald' },
-  { title: 'Bridal Silks', type: 'Collection', href: '/bridal-silks', keywords: 'bridal wedding muhurtham reception silk saree crimson temple red antique gold violet ivory peacock blue' },
-  { title: 'Shop By Collection', type: 'Page', href: '/shop', keywords: 'shop catalogue collections sarees view browse all' },
-  { title: 'New Arrivals', type: 'Section', href: '/#new-arrivals', keywords: 'new arrivals latest fresh sarees maroon mehendi peacock rose emerald ivory' },
-  { title: 'Wedding Sarees', type: 'Occasion', href: '/shop', keywords: 'wedding bridal marriage sarees muhurtham' },
-  { title: 'Festive Drapes', type: 'Occasion', href: '/shop', keywords: 'festival festive pooja traditional sarees' },
-  { title: 'Ruby Floral Zari', type: 'Saree', href: '/izhamathi-pattu/pushpanjali/ruby-floral-zari', keywords: 'ruby red floral zari pushpanjali silk' },
-  { title: 'Peacock Blue Bridal Silk', type: 'Saree', href: '/bridal-silks', keywords: 'peacock blue bridal kanjivaram silk' },
-  { title: 'Champagne Golden Butta', type: 'Saree', href: '/izhamathi-pattu/suvarna-thuli/champagne-golden-butta', keywords: 'champagne golden butta suvarna thuli silk saree' },
-  { title: 'Wine Banarasi Brocade', type: 'Saree', href: '/banarasi-silk', keywords: 'wine banarasi brocade silk' },
-  { title: 'Sandal Gold Mysore Silk', type: 'Saree', href: '/mysore-silk', keywords: 'sandal gold mysore silk' },
-  { title: 'Honey Gold Tussar Silk', type: 'Saree', href: '/tussar-silk', keywords: 'honey gold tussar silk' },
-  { title: 'Karaikudi Checks Cotton', type: 'Saree', href: '/chettinad-cotton', keywords: 'karaikudi checks cotton chettinad' },
-  { title: 'Kasuti Red Ilkal Saree', type: 'Saree', href: '/ilkal-sarees', keywords: 'kasuti red ilkal saree' },
+  { title: 'Izhamathi Pattu', type: 'Collection', href: '/izhamathi-pattu', keywords: 'izhamathi izhamati izhamthi pattu pushpanjali suvarna thuli floral flower golden gold butta traditional classic kanchi kanjivaram silk saree red cream navy green' },
+  { title: 'Saila Pattu', type: 'Collection', href: '/saila-pattu', keywords: 'saila saila pattu malar kodi thanga mayil floral vine peacock soft elegant celebration festive silk saree pastel green pink gold' },
+  { title: 'Sathura Pattu', type: 'Collection', href: '/sathura-pattu', keywords: 'sathura sathra pattu kattam square geometric structured checks pattern festive silk saree green orange blue gold' },
+  { title: 'Mayura Pattu', type: 'Collection', href: '/mayura-pattu', keywords: 'mayura mayil peacock inspired zari elegant motif festive party silk saree teal peacock blue pink gold' },
+  { title: 'Vaibhava Pattu', type: 'Collection', href: '/vaibhava-pattu', keywords: 'vaibhava vaibava pattu bridal bride wedding marriage muhurtham reception grand heavy rich silk saree red maroon gold auspicious' },
+  { title: 'Noolisai Pattu', type: 'Collection', href: '/noolisai-pattu', keywords: 'noolisai nool pattu thread inspired woven texture festive lightweight silk saree blue purple pink gold' },
+  { title: 'Sezhinool Pattu', type: 'Collection', href: '/sezhinool-pattu', keywords: 'sezhinool sezhinol pattu jewel toned heritage motif rich traditional festive silk saree violet purple green gold' },
+  { title: 'Velora Pattu', type: 'Collection', href: '/velora-pattu', keywords: 'velora veloura pattu refined polished premium festive elegant silk saree rose pink blue gold' },
+  { title: 'Ezhil Pattu', type: 'Collection', href: '/ezhil-pattu', keywords: 'ezhil elil pattu graceful heritage traditional classic soft gifting silk saree blue brown gold' },
+  { title: 'Kaithirai Pattu', type: 'Collection', href: '/kaithirai-pattu', keywords: 'kaithirai kaithri pattu nature lotus vine leaf floral motif silk saree green olive gold' },
+  { title: 'Varnika Pattu', type: 'Collection', href: '/varnika-pattu', keywords: 'varnika varnika pattu color colourful rich statement occasion modern festive silk saree vibrant red blue purple gold' },
+  { title: 'Mangai Pattu', type: 'Collection', href: '/mangai-pattu', keywords: 'mangai mangai pattu bold festive ornate woven detailed silk saree red magenta gold occasion' },
 ]
 const normalizeSearchText = (value) => value
   .toLowerCase()
@@ -192,11 +182,18 @@ export default function Navbar() {
   const [isHeroSection, setIsHeroSection] = useState(true)
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileCollectionsOpen, setIsMobileCollectionsOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [routePath, setRoutePath] = useState(() => normalizePath(window.location.pathname))
 
   useEffect(() => {
     const updateNavbar = () => {
+      if (routePath !== '/') {
+        setIsHeroSection(false)
+        return
+      }
+
       const hero = document.querySelector('[data-nav-hero]') || document.getElementById('home')
       if (!hero) {
         setIsHeroSection(false)
@@ -234,16 +231,23 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    if (!isCollectionsOpen && !isSearchOpen) return undefined
+    if (!isCollectionsOpen && !isSearchOpen && !isMobileMenuOpen) return undefined
     const closeOnEscape = (e) => {
       if (e.key === 'Escape') {
         setIsCollectionsOpen(false)
         setIsSearchOpen(false)
+        setIsMobileMenuOpen(false)
       }
     }
     window.addEventListener('keydown', closeOnEscape)
     return () => window.removeEventListener('keydown', closeOnEscape)
-  }, [isCollectionsOpen, isSearchOpen])
+  }, [isCollectionsOpen, isSearchOpen, isMobileMenuOpen])
+
+  useEffect(() => {
+    document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen)
+
+    return () => document.body.classList.remove('mobile-menu-open')
+  }, [isMobileMenuOpen])
 
   useEffect(() => {
     if (!isSearchOpen) return undefined
@@ -268,11 +272,12 @@ export default function Navbar() {
     : searchItems
 
   const visibleSearchItems = (normalizedSearch && rankedSearchItems.length === 0 ? searchItems : rankedSearchItems)
-    .slice(0, normalizedSearch ? 10 : 6)
+    .slice(0, 12)
 
   const navigateToSearchResult = (href) => {
     setIsSearchOpen(false)
     setSearchQuery('')
+    setIsMobileMenuOpen(false)
 
     if (href.startsWith('/#')) {
       window.history.pushState({}, '', href)
@@ -290,12 +295,16 @@ export default function Navbar() {
 
   const isCollectionRoute = collectionRoutePrefixes.some((prefix) => routePath === prefix || routePath.startsWith(`${prefix}/`))
 
-  const navSurfaceClass = isHeroSection
-    ? 'nav-over-hero border-white/10 bg-transparent shadow-none backdrop-blur-0'
-    : 'nav-scrolled border-[#c9933a]/20 shadow-[0_12px_32px_rgba(13,13,26,0.22)]'
+  const navSurfaceClass = routePath !== '/'
+    ? 'nav-page-surface'
+    : isHeroSection
+      ? 'nav-over-hero border-white/10 bg-transparent shadow-none backdrop-blur-0'
+      : 'nav-scrolled border-[#c9933a]/20 shadow-[0_12px_32px_rgba(13,13,26,0.22)]'
 
   const navigateTo = (href) => {
     setIsCollectionsOpen(false)
+    setIsMobileMenuOpen(false)
+    setIsMobileCollectionsOpen(false)
     if (href.startsWith('/#')) {
       window.history.pushState({}, '', href)
       window.dispatchEvent(new Event('arulmathi:navigate'))
@@ -314,6 +323,19 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >
+      <button
+        type="button"
+        aria-label="Open menu"
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => {
+          setIsSearchOpen(false)
+          setIsMobileMenuOpen((value) => !value)
+        }}
+        className={`mobile-menu-toggle lg:hidden ${isMobileMenuOpen ? 'is-active' : ''}`}
+      >
+        <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`} />
+      </button>
+
       <a href="/" className="nav-brand-logo flex shrink-0 items-center" aria-label="Arulmathi Silk Sarees home">
         <span className="nav-brand-mark">
           <img
@@ -324,14 +346,14 @@ export default function Navbar() {
         </span>
         <span className="nav-brand-wordmark">
           <img
-            src="/logo2.png"
+            src="/Arulmathi-logobg.png"
             alt="Arulmathi Silk Sarees"
           />
         </span>
       </a>
 
       {/* Nav links */}
-      <ul className="hidden justify-center gap-6 lg:flex xl:gap-10">
+      <ul className="nav-menu hidden lg:flex">
         {navLinks.map((item) => {
           const isCollections = item.label === 'COLLECTIONS'
           const isActive = item.href === routePath
@@ -349,7 +371,7 @@ export default function Navbar() {
                   onClick={() => setIsCollectionsOpen((v) => !v)}
                   className={`nav-link-glow font-sans text-[10px] tracking-[1.6px] font-medium transition-colors duration-200 flex items-center gap-1 ${isCollectionsOpen || isCollectionRoute ? 'is-active text-[#c9933a] after:scale-x-100' : 'text-white/78 hover:text-[#c9933a]'}`}
                 >
-                  COLLECTIONS
+        COLLECTIONS
                   <i className={`fas fa-chevron-up text-[8px] transition-transform duration-200 ${isCollectionsOpen ? 'rotate-0' : 'rotate-180'}`} />
                 </button>
               </li>
@@ -357,7 +379,7 @@ export default function Navbar() {
           }
 
           return (
-            <li key={item.label}>
+            <li key={item.label} onMouseEnter={() => setIsCollectionsOpen(false)} onFocus={() => setIsCollectionsOpen(false)}>
               <a
                 href={item.href}
                 aria-current={isActive ? 'page' : undefined}
@@ -404,10 +426,10 @@ export default function Navbar() {
 
             {/* Header */}
             <div className="text-center mb-5">
-              <p className="font-sans text-[11px] font-semibold tracking-[4px] text-[#8b5e1a] mb-1 flex items-center justify-center gap-3">
+              <p className="font-sans text-[14px] font-bold tracking-[4.5px] text-[#8b5e1a] mb-2 flex items-center justify-center gap-3">
                 EXPLORE OUR
               </p>
-              <h2 className="font-serif text-[32px] font-semibold leading-[1.1] text-[#3d1f00]">
+              <h2 className="font-serif text-[44px] font-semibold leading-[1.05] text-[#3d1f00]">
                 12 <span style={{ fontStyle: 'italic' }}>Exclusive</span> Collections
               </h2>
               {/* Gold lotus divider */}
@@ -422,9 +444,9 @@ export default function Navbar() {
             <div className="mb-0 grid grid-cols-6 justify-items-center gap-4">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
-                  'nav-1.png', 'nav-2.png', 'nav-3.png', 'nav-4.png',
-                  'nav-5.png', 'nav-6.png', 'nav-7.png', 'nav-8.png',
-                  'nav-9.png', 'nav-10.png', 'nav-11.png', 'nav-12.png',
+                  '/nav-1.png', '/nav-2.png', '/nav-3.png', '/nav-4.png',
+                  '/nav-5.png', '/nav-6.png', '/nav-7.png', '/nav-8.png',
+                  '/nav-9.png', '/nav-10.png', '/nav-11.png', '/nav-12.png',
                 ]
                 const isMegaActive = routePath === col.href || routePath.startsWith(`${col.href}/`)
                 return (
@@ -432,7 +454,7 @@ export default function Navbar() {
                     key={col.number}
                     href={col.href}
                     onClick={(e) => { e.preventDefault(); navigateTo(col.href) }}
-                    className="group w-full max-w-[142px] cursor-pointer"
+                    className="group w-full max-w-[164px] cursor-pointer"
                     style={{ textDecoration: 'none' }}
                   >
                     <div
@@ -454,12 +476,12 @@ export default function Navbar() {
                       </div>
                     </div>
                     {/* Card text below image box */}
-                      <div className="pt-2 px-0.5">
-                      <p className={`inline-block border-b pb-0.5 font-sans text-[9px] font-bold tracking-[0.5px] leading-[1.3] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
+                      <div className="pt-3 px-0.5">
+                      <p className={`inline-block border-b pb-0.5 font-sans text-[13px] font-bold tracking-[0.7px] leading-[1.3] mb-1 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
                         {col.title}
                       </p>
-                      <p className="font-sans text-[8px] text-[#8b6020] font-medium tracking-[0.5px]">
-                        {col.count} <i className="fas fa-arrow-right text-[7px] ml-0.5" />
+                      <p className="font-sans text-[11px] text-[#8b6020] font-semibold tracking-[0.8px]">
+                        {col.count} <i className="fas fa-arrow-right text-[10px] ml-1" />
                       </p>
                     </div>
                   </a>
@@ -473,9 +495,12 @@ export default function Navbar() {
 
       {/* Search dropdown */}
       {isSearchOpen && (
-        <div className="absolute left-4 right-4 top-[68px] z-40 rounded-b-lg border border-[#c9933a]/35 bg-[#0d0d1a] p-4 shadow-[0_28px_70px_rgba(0,0,0,0.62)] sm:left-auto sm:right-8 sm:w-[440px] lg:right-16">
-          <div className="flex items-center gap-3 rounded-lg border border-[#c9933a]/35 bg-[#171527] px-4 py-2">
-            <i className="fas fa-search text-[12px] text-[#c9933a]" />
+        <div
+          className="absolute left-0 right-0 top-[calc(100%+14px)] z-40 rounded-[14px] border border-[#c9933a]/45 bg-[#0d0d1a] p-4 shadow-[0_24px_60px_rgba(0,0,0,0.58)] sm:left-auto sm:right-0 sm:w-[min(560px,calc(100vw-64px))] lg:w-[600px]"
+          onMouseLeave={() => { setIsSearchOpen(false); setSearchQuery('') }}
+        >
+          <div className="flex h-[74px] items-center gap-5 rounded-[12px] border border-[#c9933a]/45 bg-[#171527] px-6">
+            <i className="fas fa-search shrink-0 text-[24px] leading-none text-[#f5f0e8]" />
             <input
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
@@ -485,42 +510,122 @@ export default function Navbar() {
                 }
               }}
               autoFocus
-              placeholder="Search sarees, collections, colors..."
-              className="min-w-0 flex-1 bg-transparent font-sans text-[12px] text-white outline-none placeholder:text-white/62"
+              placeholder="Search collections..."
+              className="h-full min-w-0 flex-1 bg-transparent font-sans text-[18px] leading-none text-white outline-none placeholder:text-white/62 sm:text-[19px]"
             />
             <button
               type="button"
               aria-label="Close search"
               onClick={() => { setIsSearchOpen(false); setSearchQuery('') }}
-              className="text-white/50 transition-colors hover:text-[#c9933a]"
+              className="flex h-10 w-10 shrink-0 items-center justify-center text-[27px] leading-none text-[#f5f0e8]/78 transition-colors hover:text-[#c9933a]"
             >
               <i className="fas fa-times" />
             </button>
           </div>
-          <div className="mt-3 max-h-[360px] overflow-y-auto pr-1">
+          <div className="mt-4 max-h-[min(430px,52vh)] overflow-y-auto pr-1">
             {visibleSearchItems.length > 0 ? (
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {visibleSearchItems.map((item) => (
                   <li key={`${item.type}-${item.title}`}>
                     <button
                       type="button"
                       onClick={() => navigateToSearchResult(item.href)}
-                      className="group flex w-full items-center justify-between gap-4 rounded-lg border border-white/12 bg-[#171527] px-4 py-3 text-left shadow-[0_10px_24px_rgba(0,0,0,0.20)] transition-colors hover:border-[#c9933a]/55 hover:bg-[#211d30]"
+                      className="group flex min-h-[72px] w-full items-center justify-between gap-5 rounded-[12px] border border-white/18 bg-[#171527] px-5 py-3 text-left shadow-[0_10px_24px_rgba(0,0,0,0.20)] transition-colors hover:border-[#c9933a]/65 hover:bg-[#211d30]"
                     >
-                      <span>
-                        <span className="block font-serif text-[18px] leading-tight text-white group-hover:text-[#f0c36e]">{item.title}</span>
-                        <span className="mt-1 block font-sans text-[10px] uppercase tracking-[1.6px] text-[#d2a24f]/78">{item.type}</span>
+                      <span className="min-w-0">
+                        <span className="block truncate font-serif text-[22px] leading-tight text-white group-hover:text-[#f0c36e] sm:text-[24px]">{item.title}</span>
+                        <span className="mt-1.5 block font-sans text-[11px] font-semibold uppercase tracking-[2px] text-[#d2a24f]/82">{item.type}</span>
                       </span>
-                      <i className="fas fa-arrow-right text-[11px] text-[#c9933a] transition-transform group-hover:translate-x-1" />
+                      <i className="fas fa-arrow-right shrink-0 text-[24px] text-[#f5f0e8] transition-transform group-hover:translate-x-1 group-hover:text-[#c9933a]" />
                     </button>
                   </li>
                 ))}
               </ul>
             ) : (
-              <div className="rounded-lg border border-white/8 bg-[#171527] px-4 py-5 text-center font-sans text-[12px] text-white/70">
-                No matching sarees or collections found.
+              <div className="rounded-[12px] border border-white/12 bg-[#171527] px-5 py-5 text-center font-sans text-[15px] text-white/70">
+                No matching collections found.
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="mobile-nav-panel lg:hidden">
+          <div className="mobile-nav-panel-header">
+            <span>Menu</span>
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <i className="fas fa-times" />
+            </button>
+          </div>
+
+          <div className="mobile-nav-links">
+            {navLinks.map((item) => {
+              const isCollections = item.label === 'COLLECTIONS'
+
+              if (isCollections) {
+                return (
+                  <div key={item.label} className="mobile-nav-group">
+                    <button
+                      type="button"
+                      className="mobile-nav-link"
+                      aria-expanded={isMobileCollectionsOpen}
+                      onClick={() => setIsMobileCollectionsOpen((value) => !value)}
+                    >
+                      <span>COLLECTIONS</span>
+                      <i className={`fas fa-chevron-down transition-transform ${isMobileCollectionsOpen ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    {isMobileCollectionsOpen && (
+                      <div className="mobile-collection-list">
+                        {megaCollections.map((collection) => (
+                          <a
+                            key={collection.title}
+                            href={collection.href}
+                            onClick={(event) => {
+                              event.preventDefault()
+                              navigateTo(collection.href)
+                            }}
+                            className="mobile-collection-link"
+                          >
+                            <span>
+                              <strong>{collection.title}</strong>
+                              <small>{collection.count}</small>
+                            </span>
+                            <i className="fas fa-arrow-right" />
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`mobile-nav-link ${item.href === routePath ? 'is-active' : ''}`}
+                  onClick={(event) => {
+                    if (item.href.startsWith('/#')) {
+                      event.preventDefault()
+                      navigateTo(item.href)
+                      return
+                    }
+
+                    setIsMobileMenuOpen(false)
+                  }}
+                >
+                  <span>{item.label}</span>
+                  <i className="fas fa-arrow-right" />
+                </a>
+              )
+            })}
           </div>
         </div>
       )}
@@ -538,30 +643,10 @@ export default function Navbar() {
         <a href="/contact-us" aria-label="Account">
           <i className="far fa-user cursor-pointer hover:text-[#c9933a] transition-colors text-base" />
         </a>
-        <a href="/#collections" aria-label="Wishlist">
-          <i className="far fa-heart cursor-pointer hover:text-[#c9933a] transition-colors text-base" />
-        </a>
-
       </div>
     </nav>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

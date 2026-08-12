@@ -49,21 +49,21 @@ export default function StoryArrivals() {
         />
         {/* Gradient overlay + text */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a]/95 via-[#0d0d1a]/40 to-transparent flex flex-col justify-end p-6 sm:p-12">
-          <p className="font-sans text-[10px] tracking-[2.5px] text-[#c9933a] font-medium uppercase mb-3">
+          <p className="font-sans text-[13px] tracking-[3px] text-[#c9933a] font-semibold uppercase mb-4">
             ARULMATHI PROMISE
           </p>
-          <h2 className="font-serif text-[34px] sm:text-[38px] font-normal leading-[1.15] text-white mb-4">
+          <h2 className="font-serif text-[42px] sm:text-[52px] font-normal leading-[1.1] text-white mb-5">
             Sarees chosen<br />
             with care,<br />
             woven for<br />
             <em className="italic text-[#d4a853]">lasting memories.</em>
           </h2>
-          <p className="font-sans text-[12px] leading-[1.8] text-white/65 font-light mb-6 max-w-[380px]">
+          <p className="font-sans text-[15px] leading-[1.85] text-white/70 font-light mb-7 max-w-[440px]">
             From bridal silks to festive drapes, every saree is selected for color, fall, border work, and the elegance it brings to your special day.
           </p>
           <a
             href="#collections"
-            className="glow-cta inline-flex items-center gap-2.5 px-5 py-2.5 border border-white/45 font-sans text-[10px] tracking-[2px] font-medium text-white hover:border-[#c9933a] hover:text-[#c9933a] transition-all duration-300 self-start"
+            className="glow-cta inline-flex items-center gap-3 border border-white/45 px-6 py-3.5 font-sans text-[12px] font-semibold tracking-[2.2px] text-white transition-all duration-300 hover:border-[#c9933a] hover:text-[#c9933a] self-start"
           >
             EXPLORE SILKS <i className="fas fa-arrow-right" />
           </a>
@@ -72,39 +72,39 @@ export default function StoryArrivals() {
 
       {/* NEW ARRIVALS */}
       <div id="new-arrivals" className="bg-[#13121f] px-5 py-12 sm:px-8 lg:px-12 flex flex-col justify-center">
-        <p className="font-sans text-[10px] tracking-[2.5px] text-[#c9933a] font-medium uppercase mb-3">
+        <p className="font-sans text-[13px] tracking-[3px] text-[#c9933a] font-semibold uppercase mb-4">
           NEW ARRIVALS
         </p>
-        <h2 className="font-serif text-[34px] sm:text-[42px] font-normal leading-[1.15] text-white mb-3">
+        <h2 className="font-serif text-[42px] sm:text-[54px] font-normal leading-[1.1] text-white mb-4">
           Fresh Silks,<br />
           <em className="italic text-[#d4a853]">Ready to Drape</em>
         </h2>
-        <p className="mb-7 max-w-[520px] font-sans text-[12px] leading-[1.8] text-white/55">
+        <p className="mb-8 max-w-[600px] font-sans text-[15px] leading-[1.85] text-white/62">
           New colors and zari combinations for engagement, reception, gifting and festive wardrobes.
         </p>
 
         {/* Product cards */}
-        <div className="mb-6 grid grid-cols-1 gap-3.5 pt-2.5 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mobile-arrivals-grid mb-6 hidden grid-cols-1 gap-3.5 pt-2.5 sm:grid sm:grid-cols-2 xl:grid-cols-3">
           {arrivals.map((item) => (
             <div
               key={item.name}
               className="glow-card hover-lift bg-[#1e1b30] rounded-lg overflow-hidden cursor-pointer group transition-transform duration-300"
             >
-              <div className="relative h-[260px] sm:h-[200px] overflow-hidden">
+              <div className="relative h-[260px] sm:h-[300px] lg:h-[340px] overflow-hidden">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-400"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-400"
                 />
               </div>
-              <div className="px-3 pt-2.5 pb-3">
-                <p className="font-serif text-[14px] font-medium text-white mb-0.5">
+              <div className="px-5 pt-4 pb-5">
+                <p className="font-serif text-[23px] font-semibold leading-tight text-white mb-2">
                   {item.name}
                 </p>
-                <p className="mb-1 font-sans text-[9px] uppercase tracking-[1.6px] text-white/40">
+                <p className="mb-2 font-sans text-[12px] uppercase tracking-[2px] text-white/46">
                   {item.note}
                 </p>
-                <p className="font-sans text-[12px] text-[#c9933a] font-medium">
+                <p className="font-sans text-[16px] text-[#c9933a] font-semibold">
                   {item.price}
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function StoryArrivals() {
 
         <a
           href="/shop"
-          className="glow-text inline-flex items-center gap-2 font-sans text-[10px] tracking-[2px] font-medium text-white border-b border-white/30 pb-0.5 self-start hover:text-[#c9933a] hover:border-[#c9933a] transition-all duration-200"
+          className="glow-text inline-flex items-center gap-3 border-b border-white/30 pb-1 font-sans text-[13px] font-bold tracking-[2.3px] text-white transition-all duration-200 self-start hover:text-[#c9933a] hover:border-[#c9933a]"
         >
           SHOP NEW ARRIVALS <i className="fas fa-arrow-right" />
         </a>
@@ -122,5 +122,3 @@ export default function StoryArrivals() {
     </section>
   )
 }
-
-

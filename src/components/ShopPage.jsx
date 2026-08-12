@@ -1,12 +1,20 @@
 import { useEffect, useRef } from 'react'
 
+const whatsappUrl = 'https://wa.me/917010452034?text=Hello%20Arulmathi%20Silks%2C%20I%20need%20help%20selecting%20a%20saree.'
+
 const collectionCards = [
-  { title: 'Kanjivaram Silks', image: '/Arulmathi-shop2.png', href: '/kanchipuram-silk' },
-  { title: 'Bridal Sarees', image: '/Arulmathi-shop3.png', href: '/bridal-silks' },
-  { title: 'Festive Drapes', image: '/Arulmathi-shop4.png', href: '/#shop' },
-  { title: 'Pure Handloom Silks', image: '/Arulmathi-shop5.png', href: '/tussar-silk' },
-  { title: 'Tissue Silks', image: '/Arulmathi-shop6.png', href: '/mysore-silk' },
-  { title: 'New Arrivals', image: '/Arulmathi-shop7.png', href: '/#new-arrivals' },
+  { title: 'Izhamathi Pattu', count: '8 Saree Designs', image: '/nav-1.png', href: '/izhamathi-pattu', desc: 'Heritage floral and golden butta silk sarees.' },
+  { title: 'Saila Pattu', count: '6 Designs', image: '/nav-2.png', href: '/saila-pattu', desc: 'Soft vine-inspired silks for graceful occasions.' },
+  { title: 'Sathura Pattu', count: '9 Designs', image: '/nav-3.png', href: '/sathura-pattu', desc: 'Structured kattam patterns with festive richness.' },
+  { title: 'Mayura Pattu', count: '9 Designs', image: '/nav-4.png', href: '/mayura-pattu', desc: 'Peacock-inspired drapes with elegant zari detail.' },
+  { title: 'Vaibhava Pattu', count: '9 Designs', image: '/nav-5.png', href: '/vaibhava-pattu', desc: 'Grand bridal silks for auspicious celebrations.' },
+  { title: 'Noolisai Pattu', count: '9 Designs', image: '/nav-6.png', href: '/noolisai-pattu', desc: 'Thread-inspired woven textures for festive wear.' },
+  { title: 'Sezhinool Pattu', count: '9 Designs', image: '/nav-7.png', href: '/sezhinool-pattu', desc: 'Jewel-toned sarees with rich heritage motifs.' },
+  { title: 'Velora Pattu', count: '9 Designs', image: '/nav-8.png', href: '/velora-pattu', desc: 'Refined silk sarees with polished festive appeal.' },
+  { title: 'Ezhil Pattu', count: '9 Designs', image: '/nav-9.png', href: '/ezhil-pattu', desc: 'Graceful silk drapes with timeless traditional charm.' },
+  { title: 'Kaithirai Pattu', count: '9 Designs', image: '/nav-10.png', href: '/kaithirai-pattu', desc: 'Nature-inspired motifs with soft luxury finishes.' },
+  { title: 'Varnika Pattu', count: '9 Designs', image: '/nav-11.png', href: '/varnika-pattu', desc: 'Color-rich pattu sarees for statement occasions.' },
+  { title: 'Mangai Pattu', count: '9 Designs', image: '/nav-12.png', href: '/mangai-pattu', desc: 'Bold festive silks with ornate woven detailing.' },
 ]
 
 const occasions = [
@@ -67,23 +75,23 @@ export default function ShopPage() {
 
   return (
     <section id="shop-page" className="bg-[#f6efe4] text-[#17131c]">
-      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-[120px] text-white sm:px-8 lg:px-16">
+      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16">
         <img
           src="/Arulmathi-shop1.png"
           alt="Pure silk sarees arranged for shopping"
-          className="absolute inset-y-0 right-0 -z-20 h-full w-full object-cover object-center opacity-72 lg:w-[64%]"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-86 md:object-contain md:object-right"
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.98)_36%,rgba(8,11,18,0.62)_68%,rgba(8,11,18,0.18)_100%)]" />
-        <div className="mx-auto grid min-h-[520px] max-w-7xl grid-cols-1 items-center py-14 lg:grid-cols-[0.58fr_0.42fr]">
-          <div className="max-w-[610px]">
-            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.95)_34%,rgba(8,11,18,0.48)_62%,rgba(8,11,18,0.08)_100%)]" />
+        <div className="mx-auto grid min-h-[650px] max-w-7xl grid-cols-1 items-center py-16 md:min-h-[720px] lg:min-h-[780px] lg:grid-cols-[0.58fr_0.42fr]">
+          <div className="max-w-[760px]">
+            <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">
               Shop Pure Silk Sarees
             </p>
-            <h1 className="mt-5 font-serif text-[42px] font-normal leading-[1.08] text-white sm:text-[58px] lg:text-[70px]">
+            <h1 className="mt-6 font-serif text-[56px] font-normal leading-[1.04] text-white sm:text-[76px] lg:text-[92px]">
               Handpicked Elegance.<br />
               <em className="italic text-[#d2a24f]">Woven for You.</em>
             </h1>
-            <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76">
+            <p className="mt-7 max-w-[700px] font-sans text-[18px] leading-[1.9] text-white/82 sm:text-[20px]">
               Explore our exclusive range of pure silk sarees, handcrafted with tradition, chosen with care, and woven to perfection. Every saree tells a story of heritage, artistry, and trust.
             </p>
           </div>
@@ -98,16 +106,20 @@ export default function ShopPage() {
             <h2 className="mt-3 font-serif text-[38px] font-normal leading-[1.08] text-[#221824] sm:text-[50px]">Find Your Weave</h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {collectionCards.map((item, index) => (
-              <article key={item.title} className="shop-ref-rise overflow-hidden rounded-lg bg-[#fbf7ef] shadow-[0_18px_42px_rgba(52,36,18,0.10)]" style={{ animationDelay: `${index * 80}ms` }}>
+              <article key={item.title} className="shop-ref-rise overflow-hidden rounded-lg border border-[#e2cda8] bg-[#fbf7ef] shadow-[0_18px_42px_rgba(52,36,18,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b9863c]/70 hover:shadow-[0_24px_54px_rgba(52,36,18,0.16)]" style={{ animationDelay: `${index * 80}ms` }}>
                 <a href={item.href} className="group block">
-                  <div className="h-[210px] overflow-hidden bg-[#e8ddcf]">
+                  <div className="h-[250px] overflow-hidden bg-[#e8ddcf]">
                     <img src={item.image} alt={item.title} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="px-5 py-5 text-center">
-                    <h3 className="font-serif text-[24px] font-normal leading-tight text-[#221824]">{item.title}</h3>
-                    <p className="mt-3 font-sans text-[12px] text-[#4f463d]">View Collection <i className="fas fa-arrow-right ml-2" /></p>
+                  <div className="px-5 py-6">
+                    <p className="font-sans text-[13px] font-bold uppercase tracking-[1.7px] text-[#a9762d]">{item.count}</p>
+                    <h3 className="mt-2 font-serif text-[29px] font-normal leading-tight text-[#221824]">{item.title}</h3>
+                    <p className="mt-3 min-h-[54px] font-sans text-[15px] leading-[1.7] text-[#5f5145]">{item.desc}</p>
+                    <p className="mt-5 inline-flex items-center gap-2 font-sans text-[14px] font-bold uppercase tracking-[1.8px] text-[#9a6720] transition-colors group-hover:text-[#c9933a]">
+                      View Collection <i className="fas fa-arrow-right text-[12px]" />
+                    </p>
                   </div>
                 </a>
               </article>
@@ -186,7 +198,7 @@ export default function ShopPage() {
               <p className="mt-1 font-sans text-[12px] text-[#6b5a49]">Our team is here to guide you through the collection.</p>
             </div>
           </div>
-          <a href="/contact-us" className="inline-flex w-max items-center gap-3 rounded bg-[#b9863c] px-5 py-3 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#d2a24f]">
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex w-max items-center gap-3 rounded bg-[#b9863c] px-5 py-3 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#d2a24f]">
             <i className="fab fa-whatsapp" /> Chat on WhatsApp <i className="fas fa-arrow-right" />
           </a>
         </div>

@@ -7,12 +7,12 @@ const contactDetails = [
   {
     icon: 'fa-phone',
     title: 'Call Us',
-    text: '+91 9XXXXXXXXX',
+    text: '+91 70104 52034',
   },
   {
     icon: 'fa-envelope',
     title: 'Email Us',
-    text: 'arulmathisilks@gmail.com',
+    text: 'info.arulmathi@gmail.com',
   },
   {
     icon: 'fa-clock',
@@ -20,6 +20,8 @@ const contactDetails = [
     text: 'Monday - Saturday: 9:30 AM - 8:00 PM\nSunday: 10:00 AM - 6:00 PM',
   },
 ]
+
+const whatsappUrl = 'https://wa.me/917010452034?text=Hello%20Arulmathi%20Silks%2C%20I%20need%20help%20selecting%20a%20saree.'
 
 const supportValues = [
   { icon: 'fa-headset', title: 'Quick Support', text: 'We reply as soon as possible' },
@@ -30,24 +32,28 @@ const supportValues = [
 
 const faqs = [
   {
-    question: 'Can I view the latest saree catalogue?',
-    answer: 'Yes. Contact our team on WhatsApp or visit the store and we will share the latest available saree collections, designs, colors, and price details.',
+    question: 'Can I get bulk orders transported to another state?',
+    answer: 'Most wholesale bulk orders can be arranged for transport, but please check with an official Arulmathi Silks representative for confirmation before placing the order.',
   },
   {
-    question: 'Do you guide bridal saree selection?',
-    answer: 'Yes. We help brides choose sarees based on the wedding occasion, preferred color, border style, zari richness, budget, and blouse pairing.',
+    question: 'Can Arulmathi Silks provide a catalogue?',
+    answer: 'Yes. Please contact Arulmathi Silks to know the latest saree patterns, designs, colors, and availability. Since trends change often, our team can guide you with the newest collections directly.',
   },
   {
-    question: 'Can I ask about available colors and designs?',
-    answer: 'Of course. Share the collection or saree style you like, and our team will confirm available colors, design options, stock, and suitable alternatives.',
+    question: 'Do you also do fall-beading for sarees I buy?',
+    answer: 'Fall-beading service may depend on the saree and requirement. Please speak with our store representative for assistance before purchase.',
   },
   {
-    question: 'Do you help with blouse matching?',
-    answer: 'Yes. We can suggest matching or contrast blouse colors, border styles, and fabric combinations that suit the saree and occasion.',
+    question: 'Can I return or exchange sarees bought from Arulmathi Silks?',
+    answer: 'Please check with our team directly regarding the current return and exchange policy before completing your purchase.',
   },
   {
-    question: 'How can I know about new arrivals?',
-    answer: 'You can contact us directly or follow our updates to know about new arrivals. We can also guide you to the newest sarees currently available in store.',
+    question: 'What is the exact location of Arulmathi Silks?',
+    answer: 'Arulmathi Silks is located at No 6/321, Near Indian Petrol Bunk, Karuppanampatti, Pachanampatti, Salem, Tamil Nadu 636455.',
+  },
+  {
+    question: 'What are the store timings?',
+    answer: 'You can visit Arulmathi Silks from 9:30 AM to 8:30 PM. For Sunday visits or holiday timings, please call us before visiting.',
   },
 ]
 
@@ -55,20 +61,23 @@ export default function ContactUs() {
   return (
     <section id="contact-page" className="bg-[#f6efe4] text-[#17131c]">
       <div data-nav-hero className="relative isolate overflow-hidden bg-[#080b12] px-5 text-white sm:px-8 lg:px-16">
-        <img
-          src="/Arulmathi-contact.png"
-          alt="Arulmathi Silks contact welcome"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-[72%_0%] opacity-100"
-        />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.92)_40%,rgba(8,11,18,0.20)_64%,rgba(8,11,18,0)_100%)]" />
-        <div className="mx-auto grid min-h-[520px] max-w-7xl grid-cols-1 items-center py-8 lg:min-h-[560px] lg:grid-cols-[0.52fr_0.48fr]">
-          <div className="max-w-[560px] rounded-lg bg-[#080b12]/12 py-4 backdrop-blur-[1px]">
-            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">Contact Us</p>
-            <h1 className="mt-5 font-serif text-[40px] font-normal leading-[1.08] text-white sm:text-[56px] lg:text-[66px]">
+        <picture>
+          <source media="(max-width: 767px)" srcSet="/mobileview-herobg.png" />
+          <img
+            src="/Arulmathi-contact.png"
+            alt="Arulmathi Silks contact welcome"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-100 md:object-contain md:object-right"
+          />
+        </picture>
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.88)_36%,rgba(8,11,18,0.18)_62%,rgba(8,11,18,0)_100%)]" />
+        <div className="mx-auto grid min-h-[640px] max-w-7xl grid-cols-1 items-center py-10 md:min-h-[720px] lg:min-h-[780px] lg:grid-cols-[0.56fr_0.44fr]">
+          <div className="max-w-[720px] rounded-lg bg-[#080b12]/12 py-4 backdrop-blur-[1px]">
+            <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">Contact Us</p>
+            <h1 className="mt-6 font-serif text-[56px] font-normal leading-[1.04] text-white sm:text-[76px] lg:text-[92px]">
               We are Here<br />
               To <em className="italic text-[#d2a24f]">Help You</em>
             </h1>
-            <p className="mt-5 max-w-[500px] font-sans text-[13px] leading-[1.95] text-white/76">
+            <p className="mt-7 max-w-[690px] font-sans text-[18px] leading-[1.9] text-white/82 sm:text-[20px]">
               Have questions about our saree collections or need help choosing a drape? We would love to hear from you. Reach out to us and our team will get back to you soon.
             </p>
           </div>
@@ -136,9 +145,9 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-10 bg-[#fbf7ef] px-5 py-14 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-16 lg:py-20">
-        <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg bg-[#e8ddcf] shadow-[0_18px_44px_rgba(52,36,18,0.10)]">
-          <img src="/Arulmathi-shop3.png" alt="Stacked silk sarees for customer questions" className="h-full min-h-[420px] w-full object-cover object-center" />
+      <div className="grid grid-cols-1 items-start gap-10 bg-[#fbf7ef] px-5 py-14 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-16 lg:py-20">
+        <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg shadow-[0_18px_44px_rgba(52,36,18,0.10)]">
+          <img src="/mid5.png" alt="Stacked silk sarees for customer questions" className="block aspect-[4/3] w-full object-cover object-center" />
         </div>
         <div className="mx-auto flex w-full max-w-7xl flex-col justify-center">
           <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#a9762d]">Common Questions</p>
@@ -168,7 +177,7 @@ export default function ContactUs() {
               <p className="mt-2 max-w-[360px] font-sans text-[12px] leading-[1.7] text-white/70">Chat with us on WhatsApp for quick assistance during business hours.</p>
             </div>
           </div>
-          <a href="https://wa.me/919000000000" className="inline-flex w-max items-center gap-3 rounded bg-[#b9863c] px-5 py-3 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#d2a24f]">
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex w-max items-center gap-3 rounded bg-[#b9863c] px-5 py-3 font-sans text-[11px] font-semibold text-white transition-colors hover:bg-[#d2a24f]">
             <i className="fab fa-whatsapp" /> Chat on WhatsApp <i className="fas fa-arrow-right" />
           </a>
         </div>
@@ -176,4 +185,3 @@ export default function ContactUs() {
     </section>
   )
 }
-

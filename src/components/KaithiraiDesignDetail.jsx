@@ -149,7 +149,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
 
   return (
     <section className="bg-[#080711] text-white">
-      <div className="relative isolate overflow-hidden px-5 pb-12 pt-32 sm:px-8 lg:px-16">
+      <div className="relative isolate overflow-hidden px-5 pb-12 pt-10 sm:px-8 lg:px-16">
         <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[#c9933a]/75 to-transparent" />
         <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_18%,rgba(201,147,58,0.14),transparent_28%),radial-gradient(circle_at_78%_16%,rgba(77,42,112,0.22),transparent_30%),linear-gradient(135deg,#080711_0%,#0d0d1a_58%,#141020_100%)]" />
 

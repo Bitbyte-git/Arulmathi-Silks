@@ -35,7 +35,7 @@ export default function MangaiCollectionPage({ collectionSlug }) {
   return (
     <section className="bg-[#f6efe4] text-[#1a1420]">
       {/* Hero */}
-      <div className="relative isolate overflow-hidden bg-[#080711] px-5 pb-16 pt-32 text-white sm:px-8 lg:px-16">
+      <div className="relative isolate overflow-hidden bg-[#080711] px-5 pb-16 pt-10 text-white sm:px-8 lg:px-16">
         <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-[#c9933a]/75 to-transparent" />
         <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_18%_18%,rgba(201,147,58,0.16),transparent_28%),radial-gradient(circle_at_80%_24%,rgba(77,42,112,0.22),transparent_30%),linear-gradient(135deg,#080711_0%,#0d0d1a_58%,#141020_100%)]" />
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.48fr_0.52fr] lg:items-center">

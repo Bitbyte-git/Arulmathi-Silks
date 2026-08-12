@@ -57,8 +57,8 @@ function HomePage() {
     <>
       <Hero />
       <Collections />
-      <FeaturesBar />
       <StoryArrivals />
+      <FeaturesBar />
       <Occasions />
     </>
   )
@@ -113,6 +113,7 @@ export default function App() {
   }
 
   const pathParts = path.split('/').filter(Boolean)
+  const isHomePage = path === '/'
 
   // izhamathi-pattu dynamic routes
   // saila-pattu dynamic routes
@@ -170,7 +171,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-dark text-white overflow-x-hidden flex flex-col">
       <Navbar />
-      <main className="flex-1">
+      <main className={`flex-1 ${isHomePage ? '' : 'site-page-offset'}`}>
         {pages[path] || dynamicPage || <HomePage />}
       </main>
       <Footer />
