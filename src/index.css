@@ -798,6 +798,10 @@
     transform: translateX(-120%);
   }
 
+  72%, 100% {
+    transform: translateX(120%);
+  }
+}
 
 /* Hero image responsive positioning */
 .hero-bg-image {
@@ -813,9 +817,14 @@
   }
 }
 
-/* reduce hero top offset on mobile to remove excess space */
 #home {
   --hero-top-offset: 10px;
+}
+
+@media (min-width: 1024px) {
+  #home {
+    --hero-top-offset: clamp(46px, 3vw, 64px);
+  }
 }
 
 @media (max-width: 640px) {
@@ -870,10 +879,6 @@
   /* ensure paragraph keeps intended explicit breaks and fits */
   .hero-content p {
     font-size: 14px !important;
-  }
-}
-  72%, 100% {
-    transform: translateX(120%);
   }
 }
 
