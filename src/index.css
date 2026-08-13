@@ -837,6 +837,14 @@
     top: calc(var(--nav-height,126px) + 35px) !important;
   }
 }
+
+/* Prevent heading from overlapping the model face on mobile by constraining width */
+@media (max-width: 640px) {
+  .hero-content h1 {
+    max-width: 58%;
+    /* keep layout and typography unchanged otherwise */
+  }
+}
   72%, 100% {
     transform: translateX(120%);
   }
