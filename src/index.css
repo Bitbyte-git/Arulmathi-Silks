@@ -834,7 +834,12 @@
 /* Force the absolute wrapper down by 35px under the navbar on mobile */
 @media (max-width: 640px) {
   .hero-inner {
-    top: calc(var(--nav-height,126px) + 35px) !important;
+    /* Put hero-inner into normal flow on mobile so section height includes it */
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
   }
 }
 
@@ -851,6 +856,20 @@
   .hero-content h1 {
     font-size: 42px !important;
     line-height: 1.08 !important;
+  }
+}
+
+/* Tweak specifically for very narrow devices (360px wide) to avoid overlap */
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 40px !important;
+    max-width: 52% !important;
+    line-height: 1.06 !important;
+  }
+
+  /* ensure paragraph keeps intended explicit breaks and fits */
+  .hero-content p {
+    font-size: 14px !important;
   }
 }
   72%, 100% {

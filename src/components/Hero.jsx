@@ -65,7 +65,7 @@ export default function Hero() {
     <section
       id="home"
       data-nav-hero
-      className="relative w-full min-h-[680px] overflow-hidden"
+      className="relative w-full min-h-[680px] overflow-visible md:overflow-hidden"
       style={{ minHeight: '100svh' }}
     >
       <picture>
