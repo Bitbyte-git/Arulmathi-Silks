@@ -388,7 +388,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
                     </div>
                     <div className="mt-4 flex items-center justify-between border-t border-[#e5ceb0] pt-4">
                       <span className="font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#b57922]">View Saree</span>
-                      <span className="max-w-[58%] text-right font-sans text-[9px] font-bold uppercase leading-[1.5] tracking-[1px] text-[#7a6f79]">{item.code}</span>
+                      <span className="text-right font-sans text-[12px] font-bold text-[#17131c]">{item.code || 'Code unavailable'}</span>
                     </div>
                   </div>
                 </a>

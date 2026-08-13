@@ -27,6 +27,24 @@ export default function Hero() {
     return () => window.removeEventListener('keydown', closeOnEscape)
   }, [isStoryOpen])
 
+  useEffect(() => {
+    // Ensure exact 35px gap below navbar on mobile by adjusting absolute wrapper top inline.
+    const applyMobileHeroTop = () => {
+      const heroInner = document.querySelector('.hero-inner')
+      if (!heroInner) return
+
+      if (window.innerWidth <= 640) {
+        heroInner.style.top = `calc(var(--nav-height,126px) + 35px)`
+      } else {
+        heroInner.style.top = `calc(var(--nav-height,126px) + var(--hero-top-offset,10px))`
+      }
+    }
+
+    applyMobileHeroTop()
+    window.addEventListener('resize', applyMobileHeroTop)
+    return () => window.removeEventListener('resize', applyMobileHeroTop)
+  }, [])
+
   const closeStory = () => {
     setIsStoryOpen(false)
     if (videoRef.current) {
@@ -34,6 +52,14 @@ export default function Hero() {
       videoRef.current.currentTime = 0
     }
   }
+
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth <= 640 : false)
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 640)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   return (
     <section
@@ -43,9 +69,9 @@ export default function Hero() {
       style={{ minHeight: '100svh' }}
     >
       <picture>
-        <source media="(max-width: 767px)" srcSet="/mobileview-herobg.png" />
+        <source media="(max-width: 767px)" srcSet="/mob-view.png" />
         <img
-          src="/heroimage.png"
+          src="/heroimg.png"
           alt="Hero Model"
           className={`hero-bg-image transition-opacity duration-500 ${isStoryOpen ? 'opacity-0' : 'opacity-100'}`}
           style={{
@@ -54,8 +80,6 @@ export default function Hero() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'top center',
-            transform: 'translateY(clamp(42px, 4vw, 72px)) scale(1.12)',
             transformOrigin: 'center center',
           }}
         />
@@ -86,7 +110,7 @@ export default function Hero() {
       <div
         className={`absolute inset-0 transition-opacity duration-500 ${isStoryOpen ? 'opacity-20' : 'opacity-100'}`}
         style={{
-          background: 'linear-gradient(to right, rgba(5,3,15,0.82) 0%, rgba(5,3,15,0.65) 35%, rgba(5,3,15,0.15) 60%, transparent 100%)',
+          background: 'linear-gradient(to right, rgba(5,3,15,0.50) 0%, rgba(5,3,15,0.45) 35%, rgba(5,3,15,0.12) 60%, transparent 100%)',
         }}
       />
 
@@ -99,29 +123,38 @@ export default function Hero() {
       />
 
       <div
-        className={`absolute left-0 right-0 bottom-0 z-20 flex items-center transition-opacity duration-500 ${isStoryOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
-        style={{ top: 'calc(var(--nav-height,106px) + 10px)' }}
+        className={`hero-inner absolute left-0 right-0 bottom-0 z-20 flex items-start transition-opacity duration-500 ${isStoryOpen ? 'pointer-events-none opacity-0' : 'opacity-100'}`}
+        style={{ top: 'calc(var(--nav-height,126px) + var(--hero-top-offset,10px))' }}
       >
         <div
-          className="w-full max-w-[760px] px-5 sm:pl-10 sm:pr-0 md:w-[74%] lg:w-[64%] lg:pl-16 xl:pl-20"
-          style={{ transform: 'translateY(10px)' }}
+          className="hero-content w-full max-w-[340px] px-4 sm:max-w-[520px] sm:px-5 md:max-w-[760px] sm:pl-10 sm:pr-0 md:w-[74%] lg:w-[64%] lg:pl-16 xl:pl-20"
+          style={{ transform: 'translateY(8px)' }}
         >
           <p className="mb-5 font-sans text-[11px] font-semibold uppercase leading-[1.8] tracking-[3.2px] text-[#c9933a] lg:text-[13px]">
             CRAFTED IN HERITAGE, DESIGNED FOR TODAY
           </p>
 
-          <h1 className="mb-6 font-serif text-[54px] font-normal leading-[1.02] text-white sm:text-[66px] lg:text-[88px] xl:text-[96px]">
+          <h1 className="mb-6 font-serif text-[34px] font-normal leading-[1.02] text-white sm:text-[44px] md:text-[66px] lg:text-[88px] xl:text-[96px]">
             Timeless
             <em className="italic text-[#d4a853]"> in Every</em><br />
             <em className="italic text-[#d4a853]">Weave</em>
           </h1>
 
-          <p className="mb-7 max-w-[560px] font-sans text-[15px] font-light leading-[1.9] text-white/92 lg:text-[18px]">
-            Experience the richness of pure silk sarees woven with tradition,
-            elegance, and a finish made for every treasured occasion.
-          </p>
+          {isMobile ? (
+            <p className="mb-7 max-w-[520px] font-sans text-[14px] font-light leading-[1.9] text-white/92 sm:text-[15px] lg:text-[18px]">
+              Experience the richness of pure <br />
+              silk sarees woven with tradition, <br />
+              elegance, and a finish made <br />
+              for every treasured occasion.
+            </p>
+          ) : (
+            <p className="mb-7 max-w-[520px] font-sans text-[14px] font-light leading-[1.9] text-white/92 sm:text-[15px] lg:text-[18px]">
+              Experience the richness of pure silk sarees woven with tradition,
+              elegance, and a finish made for every treasured occasion.
+            </p>
+          )}
 
-          <div className="mb-9 grid max-w-[640px] grid-cols-1 gap-3 font-sans text-white/88 sm:grid-cols-3">
+          <div className="mb-9 grid max-w-[520px] sm:max-w-[640px] grid-cols-1 gap-3 font-sans text-white/88 sm:grid-cols-3">
             <div className="border-l border-[#c9933a]/70 pl-4">
               <span className="block text-[18px] font-serif text-[#d4a853] lg:text-[24px]">Pure Silk</span>
               <span className="mt-1 block text-[10px] font-semibold uppercase tracking-[1.8px] lg:text-[11px]">Handpicked drapes</span>

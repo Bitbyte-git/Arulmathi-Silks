@@ -38,16 +38,11 @@ export default function Footer() {
 
       <div className="relative z-10 grid grid-cols-1 gap-10 border-b border-[#2d1811]/12 pb-10 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1.15fr] lg:items-start">
         <div>
-          <a href="#home" className="mb-5 flex h-[110px] w-[110px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
+          <a href="#home" className="mb-5 flex h-[140px] w-[240px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
             <img
-              src="/logo1.png"
+              src="/logowobg.png"
               alt="Arulmathi Silk Sarees"
-              className="h-full w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
-            />
-             <img
-              src="Arulmathi-logobg.png"
-              alt="Arulmathi Silk Sarees"
-              className="h-full w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
+              className="h-full w-auto max-w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
             />
           </a>
           <p className="mt-3 max-w-[340px] font-sans text-[16px] leading-[1.8] text-[#2d1811]/68">

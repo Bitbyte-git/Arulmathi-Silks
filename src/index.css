@@ -798,6 +798,45 @@
     transform: translateX(-120%);
   }
 
+
+/* Hero image responsive positioning */
+.hero-bg-image {
+  object-position: top center;
+  transform: translateY(clamp(42px, 4vw, 72px)) scale(1.12);
+  transition: transform 420ms ease, object-position 420ms ease;
+}
+
+@media (max-width: 640px) {
+  .hero-bg-image {
+    object-position: right center;
+    transform: translateY(8px) scale(1);
+  }
+}
+
+/* reduce hero top offset on mobile to remove excess space */
+#home {
+  --hero-top-offset: 10px;
+}
+
+@media (max-width: 640px) {
+  #home {
+    --hero-top-offset: 0px;
+  }
+}
+
+/* Ensure hero content starts exactly 35px below navbar on mobile */
+@media (max-width: 640px) {
+  .hero-content {
+    margin-top: 35px !important;
+  }
+}
+
+/* Force the absolute wrapper down by 35px under the navbar on mobile */
+@media (max-width: 640px) {
+  .hero-inner {
+    top: calc(var(--nav-height,126px) + 35px) !important;
+  }
+}
   72%, 100% {
     transform: translateX(120%);
   }
