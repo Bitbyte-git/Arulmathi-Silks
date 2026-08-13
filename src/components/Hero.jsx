@@ -134,11 +134,19 @@ export default function Hero() {
             CRAFTED IN HERITAGE, DESIGNED FOR TODAY
           </p>
 
-          <h1 className="mb-6 font-serif text-[34px] font-normal leading-[1.02] text-white sm:text-[44px] md:text-[66px] lg:text-[88px] xl:text-[96px]">
-            Timeless
-            <em className="italic text-[#d4a853]"> in Every</em><br />
-            <em className="italic text-[#d4a853]">Weave</em>
-          </h1>
+          {isMobile ? (
+            <h1 className="mb-6 font-serif text-[34px] font-normal leading-[1.02] text-white sm:text-[44px] md:text-[66px] lg:text-[88px] xl:text-[96px]">
+              Timeless<br />
+              <em className="italic text-[#d4a853]">in Every</em><br />
+              <em className="italic text-[#d4a853]">Weave</em>
+            </h1>
+          ) : (
+            <h1 className="mb-6 font-serif text-[34px] font-normal leading-[1.02] text-white sm:text-[44px] md:text-[66px] lg:text-[88px] xl:text-[96px]">
+              Timeless
+              <em className="italic text-[#d4a853]"> in Every</em><br />
+              <em className="italic text-[#d4a853]">Weave</em>
+            </h1>
+          )}
 
           {isMobile ? (
             <p className="mb-7 max-w-[520px] font-sans text-[14px] font-light leading-[1.9] text-white/92 sm:text-[15px] lg:text-[18px]">
