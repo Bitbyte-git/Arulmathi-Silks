@@ -845,6 +845,14 @@
     /* keep layout and typography unchanged otherwise */
   }
 }
+
+/* Mobile-specific heading size to approximate H3/H4 */
+@media (max-width: 640px) {
+  .hero-content h1 {
+    font-size: 42px !important;
+    line-height: 1.08 !important;
+  }
+}
   72%, 100% {
     transform: translateX(120%);
   }
