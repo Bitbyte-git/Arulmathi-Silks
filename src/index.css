@@ -862,8 +862,8 @@
 /* Tweak specifically for very narrow devices (360px wide) to avoid overlap */
 @media (max-width: 360px) {
   .hero-content h1 {
-    font-size: 40px !important;
-    max-width: 52% !important;
+    font-size: 32px !important;
+    max-width: 48% !important;
     line-height: 1.06 !important;
   }
 
