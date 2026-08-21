@@ -188,7 +188,7 @@ export default function VarnikaDesignDetail({ collectionSlug, designSlug }) {
                   ref={zoomImageRef}
                   src={selectedImage || design.image}
                   alt={design.name}
-                  className="h-[560px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
+                  className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
                 />
@@ -334,3 +334,4 @@ export default function VarnikaDesignDetail({ collectionSlug, designSlug }) {
     </section>
   )
 }
+

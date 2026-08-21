@@ -145,8 +145,6 @@ export default function SailaDesignDetail({ collectionSlug, designSlug }) {
     { title: 'Item details', content: specs.map(([label, value]) => `${label}: ${value}`) },
   ]
 
-  const relatedDesigns = collection.designs.filter((d) => d.slug !== design.slug)
-
   return (
     <section className="bg-[#080711] text-white">
       <div className="relative isolate overflow-hidden px-5 pb-12 pt-10 sm:px-8 lg:px-16">
@@ -188,7 +186,7 @@ export default function SailaDesignDetail({ collectionSlug, designSlug }) {
                   ref={zoomImageRef}
                   src={selectedImage || design.image}
                   alt={design.name}
-                  className="h-[560px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
+                  className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
                 />
@@ -301,35 +299,6 @@ export default function SailaDesignDetail({ collectionSlug, designSlug }) {
           </aside>
         </div>
 
-        {/* Related designs */}
-        {relatedDesigns.length > 0 && (
-          <div className="relative mx-auto mt-14 max-w-7xl">
-            <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">More from this collection</p>
-            <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees in {collection.name}</h2>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedDesigns.slice(0, 3).map((item) => (
-                <a key={item.slug} href={`/saila-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
-                  <div className="h-[310px] overflow-hidden bg-[#eadfce]">
-                    <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-serif text-[21px] font-normal leading-tight text-[#17131c]">{item.name}</h3>
-                    <p className="mt-2 font-sans text-[12px] text-[#6b6470]">{item.color} | {item.fabric}</p>
-                    <div className="mt-3 flex flex-wrap items-end gap-2 font-sans">
-                      <span className="text-[18px] font-bold leading-none text-[#17131c]">{item.price}</span>
-                      <span className="text-[11px] text-[#8a8089] line-through">{item.oldPrice}</span>
-                      <span className="rounded-full bg-[#eff7ed] px-2 py-1 text-[9px] font-bold uppercase tracking-[1px] text-[#24763a]">{item.discount}</span>
-                    </div>
-                    <div className="mt-4 flex items-center justify-between border-t border-[#e5ceb0] pt-4">
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#b57922]">View Saree</span>
-                      <i className="fas fa-arrow-right text-[#b57922]" />
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </section>
   )

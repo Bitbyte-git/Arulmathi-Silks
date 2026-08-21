@@ -5,7 +5,7 @@ const tussarSarees = [
     name: 'Honey Gold Tussar Silk',
     detail: 'Natural textured sheen',
     price: 'From Rs. 12,800',
-    img: '/w3.png',
+    img: '/Kathirai-pattu/KP-PP-1.png',
   },
   {
     name: 'Ivory Tussar Zari',
@@ -17,25 +17,25 @@ const tussarSarees = [
     name: 'Rust Temple Tussar',
     detail: 'Earthy heritage tone',
     price: 'From Rs. 15,200',
-    img: '/4-pose2.png',
+    img: '/Velora-pattu/VP-VM-5.png',
   },
   {
     name: 'Sage Floral Tussar',
     detail: 'Soft woven detail',
     price: 'From Rs. 14,600',
-    img: '/image10.png',
+    img: '/Saila-Pattu/SP-Blue-2.png',
   },
   {
     name: 'Plum Festive Tussar',
     detail: 'Rich occasion drape',
     price: 'From Rs. 16,400',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue4.png',
   },
   {
     name: 'Crimson Tussar Silk',
     detail: 'Classic zari pallu',
     price: 'From Rs. 17,100',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
   {
     name: 'Peach Tissue Tussar',
@@ -58,11 +58,11 @@ const tussarHighlights = [
 ]
 
 const tussarHeroImages = [
-  '/w3.png',
-  '/image10.png',
-  '/4-pose2.png',
-  '/viol.png',
-  '/red-pose1.png',
+  '/Kathirai-pattu/KP-PP-1.png',
+  '/Saila-Pattu/SP-Blue-2.png',
+  '/Velora-pattu/VP-VM-5.png',
+  '/Sezhinoo-pattu/SP-MV-Blue4.png',
+  '/Vaibhava-pattu/VP-TM-Red1.png',
 ]
 
 export default function TussarSilk() {

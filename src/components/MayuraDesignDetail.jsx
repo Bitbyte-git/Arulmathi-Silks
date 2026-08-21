@@ -2,13 +2,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { getMayuraPattuCollection, getMayuraPattuDesign } from '../data/mayuraPattuProducts'
 
 const colorMap = {
+  'Teal Blue': '#0c6b76', 'Rani Pink': '#b21f63', 'Antique Gold': '#b9842e', 'Midnight Navy': '#111c3a', Emerald: '#0f6a46',
   'Rose Pink': '#d87591', Coral: '#d75b48', Ivory: '#f1eadc', 'Champagne Gold': '#d7b46a',
-  'Peacock Blue': '#0f6070', 'Teal Blue': '#0c6b76', Emerald: '#0f6a46', 'Midnight Navy': '#111c3a',
-  'Bottle Green': '#154a33', 'Mint Gold': '#abc493', Sage: '#9aaa87',
+  'Peacock Blue': '#0f6070', 'Bottle Green': '#154a33', 'Mint Gold': '#abc493', Sage: '#9aaa87',
   'Cream Gold': '#e8d9b6', Beige: '#d8c3a7',
   'Royal Violet': '#4b247c', 'Black Gold': '#17130f', Peacock: '#0a6972',
   'Golden Sand': '#d2a24f', Marigold: '#e8a020', 'Copper Gold': '#b46a32', 'Peach Gold': '#dda06e',
 }
+
+
 
 const assuranceItems = [
   { icon: 'fa-certificate', title: 'Authentic Silk', text: 'Quality checked before catalogue confirmation.' },
@@ -188,7 +190,7 @@ export default function MayuraDesignDetail({ collectionSlug, designSlug }) {
                   ref={zoomImageRef}
                   src={selectedImage || design.image}
                   alt={design.name}
-                  className="h-[560px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
+                  className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
                 />
@@ -334,4 +336,5 @@ export default function MayuraDesignDetail({ collectionSlug, designSlug }) {
     </section>
   )
 }
+
 

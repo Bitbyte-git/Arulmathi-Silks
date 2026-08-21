@@ -5,13 +5,13 @@ const ilkalSarees = [
     name: 'Kasuti Red Ilkal Saree',
     detail: 'Traditional pallu detail',
     price: 'From Rs. 5,800',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
   {
     name: 'Sandal Border Ilkal',
     detail: 'Heritage cotton-silk feel',
     price: 'From Rs. 5,200',
-    img: '/w3.png',
+    img: '/Kathirai-pattu/KP-PP-1.png',
   },
   {
     name: 'Indigo Ilkal Drape',
@@ -29,7 +29,7 @@ const ilkalSarees = [
     name: 'Plum Festive Ilkal',
     detail: 'Rich woven accent',
     price: 'From Rs. 6,900',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue4.png',
   },
   {
     name: 'Ivory Temple Ilkal',
@@ -41,13 +41,13 @@ const ilkalSarees = [
     name: 'Copper Gold Ilkal',
     detail: 'Warm occasion tone',
     price: 'From Rs. 6,200',
-    img: '/4-pose2.png',
+    img: '/Velora-pattu/VP-VM-5.png',
   },
   {
     name: 'Emerald Border Ilkal',
     detail: 'Festive heritage shade',
     price: 'From Rs. 6,600',
-    img: '/w4.png',
+    img: '/Ezhil-pattu/EP-TT-2.png',
   },
 ]
 
@@ -58,11 +58,11 @@ const ilkalHighlights = [
 ]
 
 const ilkalHeroImages = [
-  '/red-pose1.png',
-  '/w3.png',
+  '/Vaibhava-pattu/VP-TM-Red1.png',
+  '/Kathirai-pattu/KP-PP-1.png',
   '/3-pose3.png',
   '/red-pose5.png',
-  '/viol.png',
+  '/Sezhinoo-pattu/SP-MV-Blue4.png',
 ]
 
 export default function IlkalSarees() {

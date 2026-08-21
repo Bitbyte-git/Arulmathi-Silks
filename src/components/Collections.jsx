@@ -4,43 +4,43 @@ const collections = [
   {
     name: 'Saila Pattu',
     desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
-    img: '/image10.png',
+    img: '/Saila-Pattu/SP-Blue-2.png',
     href: '/saila-pattu',
   },
   {
-    name: 'Sathura Pattu',
+    name: 'Aanchali Pattu',
     desc: 'Geometric kattam silk designs with structured festive character.',
-    img: '/3-pose2.png',
-    href: '/sathura-pattu',
+    img: '/Ananchail-Pattu/SP-Green-3.png',
+    href: '/Aanchali-pattu',
   },
   {
     name: 'Vaibhava Pattu',
     desc: 'Grand bridal and muhurtham silks for auspicious moments.',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu',
   },
   {
     name: 'Noolisai Pattu',
     desc: 'Thread-inspired woven silks with refined festive texture.',
-    img: '/w2.png',
+    img: '/noolisai-pattu/NP-NK-2.png',
     href: '/noolisai-pattu',
   },
   {
     name: 'Sezhinool Pattu',
     desc: 'Jewel-toned silk sarees with rich heritage motifs.',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue1.png',
     href: '/sezhinool-pattu',
   },
   {
     name: 'Ezhil Pattu',
     desc: 'Graceful heritage silks with soft festive drape appeal.',
-    img: '/w4.png',
+    img: '/Ezhil-pattu/EP-TT-2.png',
     href: '/ezhil-pattu',
   },
   {
     name: 'Kaithirai Pattu',
     desc: 'Nature-inspired silk sarees with lotus and vine motifs.',
-    img: '/w3.png',
+    img: '/Kathirai-pattu/KP-PP-1.png',
     href: '/kaithirai-pattu',
   },
 ]
@@ -51,10 +51,16 @@ export default function Collections() {
   const lastFrameRef = useRef(null)
   const resumeTimerRef = useRef(null)
   const scrollRemainderRef = useRef(0)
+  const isPausedRef = useRef(false)
   const [isPaused, setIsPaused] = useState(false)
   const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   const carouselItems = useMemo(() => [...collections, ...collections], [])
+
+  const updatePaused = (value) => {
+    isPausedRef.current = value
+    setIsPaused(value)
+  }
 
   useEffect(() => {
     const scroller = scrollerRef.current
@@ -66,25 +72,21 @@ export default function Collections() {
     updateIsTouch()
     hoverQuery.addEventListener?.('change', updateIsTouch)
 
-    // If user prefers reduced motion or device lacks hover (touch), don't auto-scroll
-    if (!scroller || prefersReducedMotion || hoverQuery.matches) {
-      // ensure touch detection state is set
-      if (hoverQuery.matches) setIsTouchDevice(true)
+    if (!scroller || prefersReducedMotion) {
       hoverQuery.removeEventListener?.('change', updateIsTouch)
       return undefined
     }
 
-    // lower default speed for smoother auto movement
-    const speed = 0.018
+    const speed = 0.035
 
     // pause auto-scroll when page is hidden to avoid jumps when user returns
     const onVisibility = () => {
       if (document.hidden) {
-        setIsPaused(true)
+        updatePaused(true)
       } else {
         // resume after a short delay so layout settles
         if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-        resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 500)
+        resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 500)
       }
     }
     document.addEventListener('visibilitychange', onVisibility)
@@ -97,15 +99,12 @@ export default function Collections() {
       const delta = timestamp - lastFrameRef.current
       lastFrameRef.current = timestamp
 
-      if (!isPaused) {
+      if (!isPausedRef.current) {
         const loopPoint = scroller.scrollWidth / 2
         const movement = delta * speed + scrollRemainderRef.current
-        const wholePixels = Math.trunc(movement)
-        scrollRemainderRef.current = movement - wholePixels
 
-        if (wholePixels !== 0) {
-          scroller.scrollLeft += wholePixels
-        }
+        scroller.scrollLeft += movement
+        scrollRemainderRef.current = 0
 
         if (scroller.scrollLeft >= loopPoint) {
           scroller.scrollLeft -= loopPoint
@@ -129,7 +128,7 @@ export default function Collections() {
       scrollRemainderRef.current = 0
       hoverQuery.removeEventListener?.('change', updateIsTouch)
     }
-  }, [isPaused])
+  }, [])
 
   const scrollByCard = (direction) => {
     const scroller = scrollerRef.current
@@ -152,31 +151,31 @@ export default function Collections() {
       scroller.scrollLeft -= loopPoint
     }
 
-    setIsPaused(true)
+    updatePaused(true)
     scroller.scrollBy({ left: direction * scrollDistance, behavior: 'smooth' })
 
     if (resumeTimerRef.current) {
       window.clearTimeout(resumeTimerRef.current)
     }
 
-    resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 1100)
+    resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 1100)
   }
 
   const showPrevious = () => scrollByCard(-1)
   const showNext = () => scrollByCard(1)
 
   return (
-    <section id="collections" className="section-reveal relative bg-[#13121f] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 rounded-t-3xl -mt-5 z-10">
+    <section id="collections" className="section-reveal relative bg-[#13121f] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 rounded-t-3xl z-10">
 
       {/* Left text */}
       <div className="flex-shrink-0 w-full lg:w-72">
         <p className="font-sans text-[13px] tracking-[3px] text-[#c9933a] font-semibold uppercase mb-3">
           CURATED DRAPES
         </p>
-        <h2 className="font-serif text-[42px] sm:text-[52px] font-normal leading-[1.08] text-white mb-4">
+        <h2 className="collections-section-title font-serif text-[34px] sm:text-[42px] lg:text-[44px] font-normal leading-[1.08] text-white mb-4">
           Signature<br />Silk Collections
         </h2>
-        <p className="font-sans text-[15px] leading-[1.85] text-white/70 font-light mb-7 max-w-[320px]">
+        <p className="collections-section-copy font-sans text-[14px] leading-[1.75] text-white/70 font-light mb-7 max-w-[300px]">
           Handpicked sarees for weddings, poojas, festive gifting, and graceful everyday wear.
         </p>
         <div className="flex gap-2.5">
@@ -204,30 +203,25 @@ export default function Collections() {
         <div
           ref={scrollerRef}
           className="collections-scroll flex gap-4 overflow-x-auto py-1 pr-12"
-          onMouseEnter={() => !isTouchDevice && setIsPaused(true)}
-          onMouseLeave={() => !isTouchDevice && setIsPaused(false)}
-          onFocus={() => setIsPaused(true)}
-          onBlur={() => setIsPaused(false)}
+          onMouseEnter={() => !isTouchDevice && updatePaused(true)}
+          onMouseLeave={() => !isTouchDevice && updatePaused(false)}
+          onFocus={() => updatePaused(true)}
+          onBlur={() => updatePaused(false)}
           onPointerDown={() => {
-            setIsPaused(true)
+            updatePaused(true)
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
           }}
           onPointerUp={() => {
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 900)
           }}
           onTouchStart={() => {
-            setIsPaused(true)
+            updatePaused(true)
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
           }}
           onTouchEnd={() => {
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
-          }}
-          onScroll={() => {
-            setIsPaused(true)
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
+            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 900)
           }}
         >
           {carouselItems.map((col, index) => (
@@ -244,16 +238,16 @@ export default function Collections() {
                   className="collection-card-image w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="bg-white px-6 py-6">
-                <h3 className="font-serif text-[30px] font-semibold leading-tight text-[#1a1a2e] mb-3">
+              <div className="bg-white px-6 py-5">
+                <h3 className="collection-card-title font-serif text-[21px] sm:text-[23px] font-semibold leading-tight text-[#1a1a2e] mb-3">
                   {col.name}
                 </h3>
-                <p className="mb-5 font-sans text-[17px] leading-[1.7] text-gray-500">
+                <p className="collection-card-copy mb-5 font-sans text-[13px] leading-[1.6] text-gray-500">
                   {col.desc}
                 </p>
                 <a
                   href={col.href}
-                  className="font-sans text-[14px] font-bold tracking-[2px] text-gray-500 flex items-center gap-3 hover:text-[#c9933a] transition-colors duration-200"
+                  className="collection-card-link font-sans text-[10px] font-bold tracking-[1.6px] text-gray-500 flex items-center gap-3 hover:text-[#c9933a] transition-colors duration-200"
                 >
                   VIEW COLLECTION <i className="fas fa-arrow-right" />
                 </a>

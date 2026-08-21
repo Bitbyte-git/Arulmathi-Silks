@@ -23,7 +23,7 @@ export default function VeloraDesignDetail({ collectionSlug, designSlug }) {
 
   const galleryImages = useMemo(() => {
     if (!collection || !design) return []
-    return [...new Set(design.images || [design.image])].filter(Boolean)
+    return (design.images || [design.image]).filter(Boolean)
   }, [collection, design])
 
   const [selectedImage, setSelectedImage] = useState(() => design?.image || '')
@@ -162,9 +162,9 @@ export default function VeloraDesignDetail({ collectionSlug, designSlug }) {
             {/* Gallery */}
             <div className="grid gap-4 lg:grid-cols-[82px_1fr]">
               <div className="order-2 flex gap-3 overflow-x-auto lg:order-1 lg:flex-col lg:overflow-visible">
-                {galleryImages.map((img) => (
+                {galleryImages.map((img, index) => (
                   <button
-                    key={img}
+                    key={`${img}-${index}`}
                     type="button"
                     onClick={() => setSelectedImage(img)}
                     className={`h-20 w-20 shrink-0 overflow-hidden rounded border bg-[#eadfce] transition-all ${selectedImage === img ? 'border-[#c9933a] shadow-[0_0_18px_rgba(201,147,58,0.28)]' : 'border-white/12 opacity-72 hover:opacity-100'}`}
@@ -188,7 +188,7 @@ export default function VeloraDesignDetail({ collectionSlug, designSlug }) {
                   ref={zoomImageRef}
                   src={selectedImage || design.image}
                   alt={design.name}
-                  className="h-[560px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
+                  className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
                 />
@@ -334,3 +334,4 @@ export default function VeloraDesignDetail({ collectionSlug, designSlug }) {
     </section>
   )
 }
+

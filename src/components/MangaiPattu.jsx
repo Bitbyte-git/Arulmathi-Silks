@@ -1,7 +1,5 @@
 const mangaiDesigns = [
-  { name: 'Amudha Pattu', slug: 'amudha-pattu', href: '/mangai-pattu/amudha-pattu', desc: 'Nectar motif woven silk for festive gifting', img: '/image10.png', badge: 'Gifting', badgeIcon: 'fa-gift' },
-  { name: 'Koovai Pattu', slug: 'koovai-pattu', href: '/mangai-pattu/koovai-pattu', desc: 'Kovai heritage patterned silk for family celebrations', img: '/4-pose3.png' },
-  { name: 'Panneer Pattu', slug: 'panneer-pattu', href: '/mangai-pattu/panneer-pattu', desc: 'Rose water soft festive silk for everyday elegance', img: '/sec-pose1.png', badge: 'New', badgeIcon: 'fa-sparkles' },
+  { name: 'Amudha Pattu', slug: 'amudha-pattu', href: '/mangai-pattu/amudha-pattu', desc: 'Nectar motif woven silk for festive gifting', img: '/Saila-Pattu/SP-Blue-2.png', badge: 'Gifting', badgeIcon: 'fa-gift' },
 ]
 
 const mangaiNotes = [
@@ -11,8 +9,8 @@ const mangaiNotes = [
 ]
 
 const mangaiStats = [
-  { value: '3', label: 'design families' },
-  { value: '9', label: 'saree designs' },
+  { value: '1', label: 'design family' },
+  { value: '1', label: 'saree design' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -54,10 +52,10 @@ export default function MangaiPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/4-pose2.png" alt="Mangai Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Velora-pattu/VP-VM-5.png" alt="Mangai Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/image10.png" alt="Mangai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/Saila-Pattu/SP-Blue-2.png" alt="Mangai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
                 <img src="/4-pose3.png" alt="Mangai Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
@@ -71,7 +69,7 @@ export default function MangaiPattu() {
             </div>
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/image10.png" alt="Mangai Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/Saila-Pattu/SP-Blue-2.png" alt="Mangai Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
@@ -107,26 +105,22 @@ export default function MangaiPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex gap-4 overflow-x-auto pb-3 pr-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex items-stretch justify-center pb-2">
               {mangaiDesigns.map((saree) => (
-                <article key={saree.name} className="group relative min-w-[245px] overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:min-w-[280px] lg:min-w-[265px] xl:min-w-[250px]">
-                  {saree.badge && (
-                    <span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg bg-[#7b250f]/92 px-3 py-2 font-sans text-[10px] font-semibold text-[#ffe7b2] shadow-[0_8px_18px_rgba(0,0,0,0.18)]">
-                      <i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}
-                    </span>
-                  )}
-                  <a href={saree.href} className="block h-[220px] overflow-hidden bg-[#e8ddcf]" aria-label={`Open ${saree.name} designs`}>
-                    <img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                <article key={saree.name} className="relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
+                  {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg bg-[#7b250f]/92 px-3 py-2 font-sans text-[10px] font-semibold text-[#ffe7b2] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}
+                  <a href={saree.href} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
+                    <img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105" />
                   </a>
-                  <div className="rounded-t-lg bg-[#fffaf2] px-5 pb-5 pt-4 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="font-serif text-[20px] font-medium leading-tight text-[#1a1a2e]">{saree.name}</h3>
-                    <p className="mx-auto mt-2 min-h-[42px] max-w-[210px] font-sans text-[12px] leading-[1.45] text-[#5e5f6b]">{saree.desc}</p>
+                  <div className="flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
+                    <h3 className="font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
+                    <p className="mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />
                       <i className="fas fa-spa text-[9px]" />
                       <span className="h-px flex-1 bg-[#d7b578]" />
                     </div>
-                    <a href={saree.href} className="mt-3 inline-flex items-center gap-2 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">
+                    <a href={saree.href} className="mt-auto inline-flex items-center justify-center gap-2 pt-3 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">
                       Explore <i className="fas fa-arrow-right text-[10px]" />
                     </a>
                   </div>

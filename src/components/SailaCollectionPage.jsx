@@ -48,7 +48,7 @@ export default function SailaCollectionPage({ collectionSlug }) {
             <p className="mt-5 max-w-[560px] font-sans text-[13px] leading-[1.9] text-white/62">{collection.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">
-                {collection.designs.length} Saree Designs Available
+                1 Saree Design Available
               </span>
               <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">
                 Salem Bestseller
@@ -82,7 +82,7 @@ export default function SailaCollectionPage({ collectionSlug }) {
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {collection.designs.map((design, index) => (
+            {collection.designs.slice(0, 1).map((design, index) => (
               <article
                 key={design.slug}
                 className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]"

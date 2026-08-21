@@ -7,6 +7,7 @@ export default function NoolisaiCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.heroImages && collection.heroImages.length > 0) return collection.heroImages
     return [...new Set([collection.heroImage, ...collection.designs.map((d) => d.image)])].filter(Boolean).slice(0, 4)
   }, [collection])
 

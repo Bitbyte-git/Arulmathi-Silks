@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getIzhamathiCollection, getIzhamathiDesign } from '../data/izhamathiProducts'
+import { addCartItem } from '../utils/cart'
 
 const colorMap = {
-  'Ruby Red': '#9e1f1d', 'Antique Gold': '#b9842e', 'Temple Green': '#1f5a3d',
+  'Ruby Red': '#9e1f1d', 'Antique Gold': '#b9842e', 'Temple Green': '#1f5a3d', 'Parrot Green': '#5bb327', 'Lime Green': '#7ab82f', 'Emerald Green': '#0f6a46',
   'Champagne Gold': '#d7b46a', 'Copper Gold': '#b46a32', 'Pastel Blue': '#b8d7d2', Mint: '#b7d9c4', Ivory: '#f1eadc', 'Silver Blue': '#a9bdc9',
   'Midnight Navy': '#111c3a', 'Peacock Blue': '#0f6070', Wine: '#5f1738', 'Black Gold': '#17130f', 'Royal Violet': '#4b247c', 'Rani Pink': '#b21f63', Emerald: '#0f6a46',
   'Rose Pink': '#d87591', Coral: '#d75b48', 'Teal Blue': '#0c6b76', Peacock: '#0a6972', 'Bottle Green': '#154a33', 'Cream Gold': '#e8d9b6', Beige: '#d8c3a7',
   'Golden Sand': '#d2a24f', Copper: '#a95d2c', 'Olive Green': '#647447', Sage: '#9aaa87', Aqua: '#9fd1cc', Ruby: '#a61f2b', 'Sindoor Red': '#b8291f', Peach: '#e3a078', Rust: '#a34b2d', Blush: '#e6a8aa', Gold: '#d7a23d', Plum: '#673158',
   'Navy Gold': '#17213e', Champagne: '#ddc994', 'Rose Gold': '#d09a87', 'Peach Gold': '#dda06e', Pink: '#d95d8a', 'Mint Gold': '#abc493', Olive: '#6b7142', Blue: '#2e5f95', Teal: '#0b6870', Cream: '#efe2c8', Maroon: '#681d24', 'Brick Red': '#8e3226',
 }
+
 
 const assuranceItems = [
   { icon: 'fa-certificate', title: 'Authentic Silk', text: 'Quality checked before catalogue confirmation.' },
@@ -184,6 +186,25 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
   const unitPrice = Number((design.price || '').replace(/[^0-9]/g, '')) || 0
   const estimatedTotal = unitPrice * quantity
   const formattedTotal = estimatedTotal.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
+  const addToBag = () => {
+    addCartItem({
+      id: `${collection.slug}/${design.slug}/${selectedColor}`,
+      collectionSlug: collection.slug,
+      collectionName: collection.name,
+      designSlug: design.slug,
+      name: design.name,
+      code: productCode,
+      color: selectedColor,
+      price: design.price,
+      unitPrice,
+      quantity,
+      image: design.image,
+      url: `/izhamathi-pattu/${collection.slug}/${design.slug}`,
+    })
+    window.history.pushState({}, '', '/cart')
+    window.dispatchEvent(new Event('arulmathi:navigate'))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <section className="bg-[#080711] text-white">
@@ -269,13 +290,6 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
                 <p className="mt-2 text-[12px] text-[#5f5660]">Inclusive of catalogue taxes. Final invoice, shipping, and blouse add-ons confirmed by store.</p>
               </div>
 
-              <div className="mt-5 flex flex-wrap items-center gap-3 border-y border-[#ead7bc] py-4 font-sans text-[12px] text-[#5f5660]">
-                <span className="rounded bg-[#0f6a46] px-2 py-1 text-[10px] font-bold text-white">4.8 <i className="fas fa-star text-[8px]" /></span>
-                <span>42 customer enquiries</span>
-                <span className="hidden h-4 w-px bg-[#d9c4a8] sm:block" />
-                <span>Pure silk selection support</span>
-              </div>
-
               <p className="mt-5 font-sans text-[13px] leading-[1.85] text-[#5f5660]">{design.details}</p>
 
               <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-[150px_1fr]">
@@ -296,9 +310,9 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
               </div>
 
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <a href="/contact-us" className="glow-cta inline-flex items-center justify-center gap-3 rounded bg-[#b57922] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-white transition-colors hover:bg-[#d9a046]">
+                <button type="button" onClick={addToBag} className="glow-cta inline-flex items-center justify-center gap-3 rounded bg-[#b57922] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-white transition-colors hover:bg-[#d9a046]">
                   Add to Bag <i className="fas fa-bag-shopping" />
-                </a>
+                </button>
                 <a href="/contact-us" className="inline-flex items-center justify-center gap-3 rounded border border-[#17131c] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-[#17131c] transition-colors hover:bg-[#17131c] hover:text-white">
                   Buy Now Enquiry <i className="fas fa-bolt" />
                 </a>

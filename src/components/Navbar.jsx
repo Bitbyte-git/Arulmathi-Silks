@@ -1,4 +1,15 @@
-﻿import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react'
+
+import {
+  CART_UPDATED_EVENT,
+  clearCart,
+  createWhatsAppOrderUrl,
+  formatINR,
+  getCartCount,
+  getCartItems,
+  getCartTotal,
+  removeCartItem,
+} from '../utils/cart'
 
 const navLinks = [
   { label: 'COLLECTIONS', href: '/#collections' },
@@ -20,7 +31,7 @@ const collectionRoutePrefixes = [
   '/izhamathi-pattu',
   '/kanchipuram-silk',
   '/saila-pattu',
-  '/sathura-pattu',
+  '/Aanchali-pattu',
   '/mayura-pattu',
   '/vaibhava-pattu',
   '/noolisai-pattu',
@@ -70,9 +81,9 @@ const collectionColumns = [
   },
 ]
 const megaCollections = [
-  { number: '01', title: 'IZHAMATHI PATTU', count: '8 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
+  { number: '01', title: 'IZHAMATHI PATTU', count: '2 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
   { number: '02', title: 'SAILA PATTU', count: '6 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
-  { number: '03', title: 'SATHURA PATTU', count: '9 DESIGNS', icon: 'fa-clover', href: '/sathura-pattu' },
+  { number: '03', title: 'AANCHAIL PATTU', count: '9 DESIGNS', icon: 'fa-clover', href: '/Aanchali-pattu' },
   { number: '04', title: 'MAYURA PATTU', count: '9 DESIGNS', icon: 'fa-fan', href: '/mayura-pattu' },
   { number: '05', title: 'VAIBHAVA PATTU', count: '9 DESIGNS', icon: 'fa-border-all', href: '/vaibhava-pattu' },
   { number: '06', title: 'NOOLISAI PATTU', count: '9 DESIGNS', icon: 'fa-feather-pointed', href: '/noolisai-pattu' },
@@ -80,7 +91,7 @@ const megaCollections = [
   { number: '08', title: 'VELORA PATTU', count: '9 DESIGNS', icon: 'fa-spa', href: '/velora-pattu' },
   { number: '09', title: 'EZHIL PATTU', count: '9 DESIGNS', icon: 'fa-star', href: '/ezhil-pattu' },
   { number: '10', title: 'KAITHIRAI PATTU', count: '9 DESIGNS', icon: 'fa-briefcase', href: '/kaithirai-pattu' },
-  { number: '11', title: 'VARNIKA PATTU', count: '9 DESIGNS', icon: 'fa-sun', href: '/varnika-pattu' },
+  { number: '11', title: 'VARNIKA PATTU', count: '1 DESIGN', icon: 'fa-sun', href: '/varnika-pattu' },
   { number: '12', title: 'MANGAI PATTU', count: '9 DESIGNS', icon: 'fa-fire-flame-curved', href: '/mangai-pattu' },
 ]
 const shoppingSteps = [
@@ -100,8 +111,8 @@ const trustItems = [
 
 const searchItems = [
   { title: 'Izhamathi Pattu', type: 'Collection', href: '/izhamathi-pattu', keywords: 'izhamathi izhamati izhamthi pattu pushpanjali suvarna thuli floral flower golden gold butta traditional classic kanchi kanjivaram silk saree red cream navy green' },
-  { title: 'Saila Pattu', type: 'Collection', href: '/saila-pattu', keywords: 'saila saila pattu malar kodi thanga mayil floral vine peacock soft elegant celebration festive silk saree pastel green pink gold' },
-  { title: 'Sathura Pattu', type: 'Collection', href: '/sathura-pattu', keywords: 'sathura sathra pattu kattam square geometric structured checks pattern festive silk saree green orange blue gold' },
+  { title: 'Saila Pattu', type: 'Collection', href: '/saila-pattu', keywords: 'saila saila pattu Suvarneela thanga mayil floral vine peacock soft elegant celebration festive silk saree pastel green pink gold' },
+  { title: 'Aanchali Pattu', type: 'Collection', href: '/Aanchali-pattu', keywords: 'Aanchali pattu kattam square geometric structured checks pattern festive silk saree green orange blue gold' },
   { title: 'Mayura Pattu', type: 'Collection', href: '/mayura-pattu', keywords: 'mayura mayil peacock inspired zari elegant motif festive party silk saree teal peacock blue pink gold' },
   { title: 'Vaibhava Pattu', type: 'Collection', href: '/vaibhava-pattu', keywords: 'vaibhava vaibava pattu bridal bride wedding marriage muhurtham reception grand heavy rich silk saree red maroon gold auspicious' },
   { title: 'Noolisai Pattu', type: 'Collection', href: '/noolisai-pattu', keywords: 'noolisai nool pattu thread inspired woven texture festive lightweight silk saree blue purple pink gold' },
@@ -182,10 +193,31 @@ export default function Navbar() {
   const [isHeroSection, setIsHeroSection] = useState(true)
   const [isCollectionsOpen, setIsCollectionsOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isCartOpen, setIsCartOpen] = useState(false)
+  const [cartItems, setCartItems] = useState(() => getCartItems())
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobileCollectionsOpen, setIsMobileCollectionsOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [routePath, setRoutePath] = useState(() => normalizePath(window.location.pathname))
+  const [isStoryVideoOpen, setIsStoryVideoOpen] = useState(false)
+
+  useEffect(() => {
+    const updateStoryVideoState = (event) => {
+      const isOpen = Boolean(event.detail?.isOpen)
+      setIsStoryVideoOpen(isOpen)
+
+      if (isOpen) {
+        setIsCollectionsOpen(false)
+        setIsSearchOpen(false)
+        setIsCartOpen(false)
+        setIsMobileMenuOpen(false)
+        setIsMobileCollectionsOpen(false)
+      }
+    }
+
+    window.addEventListener('arulmathi:story-video', updateStoryVideoState)
+    return () => window.removeEventListener('arulmathi:story-video', updateStoryVideoState)
+  }, [])
 
   useEffect(() => {
     const updateNavbar = () => {
@@ -231,17 +263,31 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    if (!isCollectionsOpen && !isSearchOpen && !isMobileMenuOpen) return undefined
+    if (!isCollectionsOpen && !isSearchOpen && !isCartOpen && !isMobileMenuOpen) return undefined
     const closeOnEscape = (e) => {
       if (e.key === 'Escape') {
         setIsCollectionsOpen(false)
         setIsSearchOpen(false)
+        setIsCartOpen(false)
         setIsMobileMenuOpen(false)
       }
     }
     window.addEventListener('keydown', closeOnEscape)
     return () => window.removeEventListener('keydown', closeOnEscape)
-  }, [isCollectionsOpen, isSearchOpen, isMobileMenuOpen])
+  }, [isCollectionsOpen, isSearchOpen, isCartOpen, isMobileMenuOpen])
+
+  useEffect(() => {
+    const updateCart = () => setCartItems(getCartItems())
+
+    updateCart()
+    window.addEventListener(CART_UPDATED_EVENT, updateCart)
+    window.addEventListener('storage', updateCart)
+
+    return () => {
+      window.removeEventListener(CART_UPDATED_EVENT, updateCart)
+      window.removeEventListener('storage', updateCart)
+    }
+  }, [])
 
   useEffect(() => {
     document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen)
@@ -303,6 +349,7 @@ export default function Navbar() {
 
   const navigateTo = (href) => {
     setIsCollectionsOpen(false)
+    setIsCartOpen(false)
     setIsMobileMenuOpen(false)
     setIsMobileCollectionsOpen(false)
     if (href.startsWith('/#')) {
@@ -319,11 +366,20 @@ export default function Navbar() {
   }
 
   const navRef = useRef(null)
+  const cartCount = getCartCount(cartItems)
+  const cartTotal = getCartTotal(cartItems)
+
+  const placeOrder = () => {
+    if (cartItems.length === 0) return
+    window.open(createWhatsAppOrderUrl(cartItems), '_blank', 'noopener,noreferrer')
+  }
 
   useEffect(() => {
     const updateNavHeight = () => {
       const h = navRef.current?.offsetHeight || 0
-      document.documentElement.style.setProperty('--nav-height', `${h}px`)
+      if (h > 0) {
+        document.documentElement.style.setProperty('--nav-height', `${h}px`)
+      }
     }
 
     updateNavHeight()
@@ -334,7 +390,8 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass}`}
+      className={`fixed top-0 left-0 right-0 z-50 grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-4 border-b px-4 py-2 transition-all duration-300 sm:px-8 lg:px-16 ${navSurfaceClass} ${isStoryVideoOpen ? 'pointer-events-none -translate-y-full opacity-0' : 'translate-y-0 opacity-100'}`}
+      aria-hidden={isStoryVideoOpen}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >
       <button
@@ -423,7 +480,9 @@ export default function Navbar() {
             borderTop: '2px solid #b8882a',
             borderBottom: '2px solid #b8882a',
             boxShadow: '0 20px 60px rgba(90,50,10,0.25)',
-            overflow: 'hidden',
+            maxHeight: 'calc(100vh - var(--nav-height, 126px) - 10px)',
+            overflowY: 'auto',
+            overflowX: 'hidden',
           }}
         >
           {/* Botanical left decoration */}
@@ -436,26 +495,26 @@ export default function Navbar() {
           />
 
           {/* Inner content */}
-          <div className="relative" style={{ zIndex: 1, padding: '20px 36px 24px' }}>
+          <div className="relative" style={{ zIndex: 1, padding: '14px 34px 16px' }}>
 
             {/* Header */}
-            <div className="text-center mb-5">
-              <p className="font-sans text-[14px] font-bold tracking-[4.5px] text-[#8b5e1a] mb-2 flex items-center justify-center gap-3">
+            <div className="text-center mb-3">
+              <p className="font-sans text-[11px] font-bold tracking-[4px] text-[#8b5e1a] mb-1.5 flex items-center justify-center gap-3">
                 EXPLORE OUR
               </p>
-              <h2 className="font-serif text-[44px] font-semibold leading-[1.05] text-[#3d1f00]">
+              <h2 className="font-serif text-[30px] font-medium leading-[1.05] text-[#3d1f00]">
                 12 <span style={{ fontStyle: 'italic' }}>Exclusive</span> Collections
               </h2>
               {/* Gold lotus divider */}
-              <div className="flex items-center justify-center gap-3 mt-2">
-                <span className="w-16 h-px bg-gradient-to-r from-transparent to-[#b8882a]" />
-                <i className="fas fa-spa text-[#b8882a] text-[14px]" />
-                <span className="w-16 h-px bg-gradient-to-l from-transparent to-[#b8882a]" />
+              <div className="flex items-center justify-center gap-3 mt-1.5">
+                <span className="w-12 h-px bg-gradient-to-r from-transparent to-[#b8882a]" />
+                <i className="fas fa-spa text-[#b8882a] text-[11px]" />
+                <span className="w-12 h-px bg-gradient-to-l from-transparent to-[#b8882a]" />
               </div>
             </div>
 
             {/* Cards grid */}
-            <div className="mb-0 grid grid-cols-6 justify-items-center gap-4">
+            <div className="mb-0 grid grid-cols-6 justify-items-center gap-x-3 gap-y-3">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
                   '/nav-1.png', '/nav-2.png', '/nav-3.png', '/nav-4.png',
@@ -468,7 +527,7 @@ export default function Navbar() {
                     key={col.number}
                     href={col.href}
                     onClick={(e) => { e.preventDefault(); navigateTo(col.href) }}
-                    className="group w-full max-w-[164px] cursor-pointer"
+                    className="group w-full max-w-[136px] cursor-pointer"
                     style={{ textDecoration: 'none' }}
                   >
                     <div
@@ -481,7 +540,7 @@ export default function Navbar() {
                       }}
                     >
                       {/* Saree image */}
-                      <div className="aspect-square overflow-hidden">
+                      <div className="h-[116px] overflow-hidden">
                         <img
                           src={cardImages[idx % cardImages.length]}
                           alt={col.title}
@@ -490,12 +549,12 @@ export default function Navbar() {
                       </div>
                     </div>
                     {/* Card text below image box */}
-                      <div className="pt-3 px-0.5">
-                      <p className={`inline-block border-b pb-0.5 font-sans text-[13px] font-bold tracking-[0.7px] leading-[1.3] mb-1 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
+                    <div className="pt-2 px-0.5">
+                      <p className={`inline-block border-b pb-0.5 font-sans text-[10px] font-bold tracking-[0.6px] leading-[1.25] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
                         {col.title}
                       </p>
-                      <p className="font-sans text-[11px] text-[#8b6020] font-semibold tracking-[0.8px]">
-                        {col.count} <i className="fas fa-arrow-right text-[10px] ml-1" />
+                      <p className="font-sans text-[9px] text-[#8b6020] font-semibold tracking-[0.7px]">
+                        {col.count} <i className="fas fa-arrow-right text-[8px] ml-1" />
                       </p>
                     </div>
                   </a>
@@ -561,6 +620,69 @@ export default function Navbar() {
               </div>
             )}
           </div>
+        </div>
+      )}
+
+      {/* Cart dropdown */}
+      {isCartOpen && (
+        <div
+          className="absolute left-4 right-4 top-[calc(100%+14px)] z-40 rounded-[14px] border border-[#c9933a]/45 bg-[#0d0d1a] p-4 text-white shadow-[0_24px_60px_rgba(0,0,0,0.58)] sm:left-auto sm:right-0 sm:w-[min(520px,calc(100vw-64px))]"
+          onMouseEnter={() => setIsCartOpen(true)}
+          onMouseLeave={() => setIsCartOpen(false)}
+        >
+          <div className="flex items-center justify-between gap-4 border-b border-white/12 pb-3">
+            <div>
+              <p className="font-sans text-[10px] font-bold uppercase tracking-[2.4px] text-[#c9933a]">Shopping Bag</p>
+              <h3 className="mt-1 font-serif text-[24px] font-normal text-white">{cartCount} Saree{cartCount === 1 ? '' : 's'}</h3>
+            </div>
+            {cartItems.length > 0 && (
+              <button type="button" onClick={clearCart} className="font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-white/58 hover:text-[#c9933a]">
+                Clear
+              </button>
+            )}
+          </div>
+
+          {cartItems.length === 0 ? (
+            <div className="py-8 text-center">
+              <i className="fas fa-bag-shopping text-[28px] text-[#c9933a]" />
+              <p className="mt-3 font-sans text-[13px] text-white/68">No sarees added yet.</p>
+            </div>
+          ) : (
+            <>
+              <div className="mt-4 max-h-[320px] space-y-3 overflow-y-auto pr-1">
+                {cartItems.map((item) => {
+                  const itemUrl = item.url || '/cart'
+
+                  return (
+                    <div key={item.id} className="grid grid-cols-[64px_1fr_auto] gap-3 rounded-lg border border-white/10 bg-white/[0.04] p-3">
+                      <button type="button" onClick={() => navigateTo(itemUrl)} className="h-16 w-16 overflow-hidden rounded bg-white/10">
+                        <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-105" />
+                      </button>
+                    <div className="min-w-0">
+                      <button type="button" onClick={() => navigateTo(itemUrl)} className="block max-w-full truncate text-left font-serif text-[17px] leading-tight text-white hover:text-[#c9933a]">{item.name}</button>
+                      <p className="mt-1 font-sans text-[10px] uppercase tracking-[1.4px] text-[#c9933a]">{item.code}</p>
+                      <p className="mt-1 font-sans text-[11px] text-white/62">{item.collectionName} | {item.color}</p>
+                      <p className="mt-1 font-sans text-[11px] text-white/72">Qty {item.quantity} x {item.price}</p>
+                    </div>
+                    <button type="button" aria-label={`Remove ${item.name}`} onClick={() => removeCartItem(item.id)} className="h-8 w-8 rounded-full text-white/58 hover:bg-white/10 hover:text-[#c9933a]">
+                      <i className="fas fa-times" />
+                    </button>
+                  </div>
+                  )
+                })}
+              </div>
+
+              <div className="mt-4 border-t border-white/12 pt-4">
+                <div className="flex items-center justify-between font-sans text-[13px]">
+                  <span className="text-white/70">Estimated total</span>
+                  <strong className="text-[16px] text-white">{formatINR(cartTotal)}</strong>
+                </div>
+                <button type="button" onClick={placeOrder} className="mt-4 inline-flex w-full items-center justify-center gap-3 rounded bg-[#25d366] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-[#07140b] transition-colors hover:bg-[#5af08c]">
+                  Place Order on WhatsApp <i className="fab fa-whatsapp text-[14px]" />
+                </button>
+              </div>
+            </>
+          )}
         </div>
       )}
 
@@ -649,13 +771,27 @@ export default function Navbar() {
         <button
           type="button"
           aria-label="Search sarees and collections"
-          onClick={() => setIsSearchOpen((v) => !v)}
+          onClick={() => { setIsCartOpen(false); setIsSearchOpen((v) => !v) }}
           className={`hover:text-[#c9933a] transition-colors text-base ${isSearchOpen ? 'text-[#c9933a]' : ''}`}
         >
           <i className="fas fa-search" />
         </button>
-        <a href="/contact-us" aria-label="Account">
-          <i className="far fa-user cursor-pointer hover:text-[#c9933a] transition-colors text-base" />
+        <button
+          type="button"
+          aria-label="Open shopping bag"
+          onClick={() => navigateTo('/cart')}
+          onMouseEnter={() => { setIsSearchOpen(false); setIsCartOpen(true) }}
+          className={`relative hover:text-[#c9933a] transition-colors text-base ${isCartOpen ? 'text-[#c9933a]' : ''}`}
+        >
+          <i className="fas fa-bag-shopping" />
+          {cartCount > 0 && (
+            <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#c9933a] px-1 font-sans text-[9px] font-bold leading-none text-[#0d0d1a]">
+              {cartCount}
+            </span>
+          )}
+        </button>
+        <a href="/contact-us" aria-label="Contact Us">
+          <i className="fas fa-phone cursor-pointer hover:text-[#c9933a] transition-colors text-base" />
         </a>
       </div>
     </nav>

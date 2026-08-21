@@ -17,25 +17,25 @@ const chettinadCottons = [
     name: 'Mustard Heritage Cotton',
     detail: 'Earthy festive shade',
     price: 'From Rs. 3,600',
-    img: '/w3.png',
+    img: '/Kathirai-pattu/KP-PP-1.png',
   },
   {
     name: 'Indigo Border Cotton',
     detail: 'Daily elegant weave',
     price: 'From Rs. 3,900',
-    img: '/3-pose2.png',
+    img: '/Ananchail-Pattu/SP-Green-3.png',
   },
   {
     name: 'Sage Chettinad Cotton',
     detail: 'Soft breathable finish',
     price: 'From Rs. 4,100',
-    img: '/image10.png',
+    img: '/Saila-Pattu/SP-Blue-2.png',
   },
   {
     name: 'Maroon Stripe Cotton',
     detail: 'Classic regional pattern',
     price: 'From Rs. 3,700',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
   {
     name: 'Ivory Contrast Cotton',
@@ -47,7 +47,7 @@ const chettinadCottons = [
     name: 'Peacock Chettinad Drape',
     detail: 'Vibrant cotton color',
     price: 'From Rs. 4,500',
-    img: '/w4.png',
+    img: '/Ezhil-pattu/EP-TT-2.png',
   },
 ]
 
@@ -60,9 +60,9 @@ const chettinadHighlights = [
 const chettinadHeroImages = [
   '/sec-pose1.png',
   '/red-pose5.png',
-  '/w3.png',
-  '/3-pose2.png',
-  '/image10.png',
+  '/Kathirai-pattu/KP-PP-1.png',
+  '/Ananchail-Pattu/SP-Green-3.png',
+  '/Saila-Pattu/SP-Blue-2.png',
 ]
 
 export default function ChettinadCotton() {

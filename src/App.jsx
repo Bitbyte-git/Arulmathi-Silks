@@ -6,9 +6,9 @@ import KanchipuramSilk from './components/KanchipuramSilk'
 import SailaPattu from './components/SailaPattu'
 import SailaCollectionPage from './components/SailaCollectionPage'
 import SailaDesignDetail from './components/SailaDesignDetail'
-import SathuraPattu from './components/SathuraPattu'
-import SathuraCollectionPage from './components/SathuraCollectionPage'
-import SathuraDesignDetail from './components/SathuraDesignDetail'
+import AanchaliPattu from './components/AanchaliPattu'
+import AanchaliCollectionPage from './components/AanchaliCollectionPage'
+import AanchaliDesignDetail from './components/AanchaliDesignDetail'
 import MayuraPattu from './components/MayuraPattu'
 import MayuraCollectionPage from './components/MayuraCollectionPage'
 import MayuraDesignDetail from './components/MayuraDesignDetail'
@@ -47,6 +47,7 @@ import BridalSilks from './components/BridalSilks'
 import AboutUs from './components/AboutUs'
 import ShopPage from './components/ShopPage'
 import ContactUs from './components/ContactUs'
+import CartPage from './components/CartPage'
 import FeaturesBar from './components/FeaturesBar'
 import StoryArrivals from './components/StoryArrivals'
 import Occasions from './components/Occasions'
@@ -91,7 +92,7 @@ export default function App() {
     '/izhamathi-pattu': <KanchipuramSilk />,
     '/kanchipuram-silk': <KanchipuramSilk />,
     '/saila-pattu': <SailaPattu />,
-    '/sathura-pattu': <SathuraPattu />,
+    '/Aanchali-pattu': <AanchaliPattu />,
     '/mayura-pattu': <MayuraPattu />,
     '/vaibhava-pattu': <VaibhavaPattu />,
     '/noolisai-pattu': <NoolisaiPattu />,
@@ -110,6 +111,7 @@ export default function App() {
     '/about-us': <AboutUs />,
     '/shop': <ShopPage />,
     '/contact-us': <ContactUs />,
+    '/cart': <CartPage />,
   }
 
   const pathParts = path.split('/').filter(Boolean)
@@ -126,10 +128,10 @@ export default function App() {
           ? <SailaCollectionPage collectionSlug={pathParts[1]} />
           : pathParts[0] === 'saila-pattu' && pathParts.length === 3
             ? <SailaDesignDetail collectionSlug={pathParts[1]} designSlug={pathParts[2]} />
-            : pathParts[0] === 'sathura-pattu' && pathParts.length === 2
-              ? <SathuraCollectionPage collectionSlug={pathParts[1]} />
-              : pathParts[0] === 'sathura-pattu' && pathParts.length === 3
-                ? <SathuraDesignDetail collectionSlug={pathParts[1]} designSlug={pathParts[2]} />
+            : pathParts[0] === 'Aanchali-pattu' && pathParts.length === 2
+              ? <AanchaliCollectionPage collectionSlug={pathParts[1]} />
+              : pathParts[0] === 'Aanchali-pattu' && pathParts.length === 3
+                ? <AanchaliDesignDetail collectionSlug={pathParts[1]} designSlug={pathParts[2]} />
                 : pathParts[0] === 'mayura-pattu' && pathParts.length === 2
                   ? <MayuraCollectionPage collectionSlug={pathParts[1]} />
                   : pathParts[0] === 'mayura-pattu' && pathParts.length === 3

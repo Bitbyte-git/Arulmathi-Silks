@@ -1,7 +1,7 @@
 const shopLinks = [
   { label: 'Izhamathi Pattu', href: '/izhamathi-pattu' },
   { label: 'Saila Pattu', href: '/saila-pattu' },
-  { label: 'Sathura Pattu', href: '/sathura-pattu' },
+  { label: 'Aanchali Pattu', href: '/Aanchali-pattu' },
   { label: 'Vaibhava Pattu', href: '/vaibhava-pattu' },
 ]
 

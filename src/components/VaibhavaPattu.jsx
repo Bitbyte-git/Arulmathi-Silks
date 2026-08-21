@@ -1,7 +1,5 @@
 const vaibhavaDesigns = [
-  { name: 'Thirumanam', slug: 'thirumanam', href: '/vaibhava-pattu/thirumanam', desc: 'Wedding muhurtham heavy zari silk', img: '/red-pose1.png', badge: 'Bridal', badgeIcon: 'fa-gem' },
-  { name: 'Maangalyam', slug: 'maangalyam', href: '/vaibhava-pattu/maangalyam', desc: 'Bridal red and gold temple border silk', img: '/red-pose3.png', badge: 'Popular', badgeIcon: 'fa-crown' },
-  { name: 'Raja Pattam', slug: 'raja-pattam', href: '/vaibhava-pattu/raja-pattam', desc: 'Royal jewel-toned grand silk with full zari', img: '/red-pose5.png' },
+  { name: 'Thirumanam', slug: 'thirumanam', href: '/vaibhava-pattu/thirumanam', desc: 'Wedding muhurtham heavy zari silk', img: '/Vaibhava-pattu/VP-TM-Red1.png', badge: 'Bridal', badgeIcon: 'fa-gem' },
 ]
 
 const vaibhavaNotes = [
@@ -19,6 +17,34 @@ const vaibhavaStats = [
 export default function VaibhavaPattu() {
   return (
     <section id="vaibhava-pattu" className="section-reveal bg-[#13121f]">
+      <style>
+        {`
+          #vaibhava-pattu .vaibhava-design-card:hover .vaibhava-design-image {
+            transform: scale(1.05);
+          }
+
+          #vaibhava-pattu .vaibhava-design-title {
+            font-family: Montserrat, sans-serif !important;
+            font-size: clamp(17px, 1.25vw, 20px) !important;
+            font-weight: 800 !important;
+            line-height: 1.18 !important;
+            letter-spacing: 0.2px !important;
+            color: #241b27 !important;
+          }
+
+          #vaibhava-pattu .vaibhava-design-desc {
+            font-size: clamp(14px, 1vw, 16px) !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            color: #4a3f49 !important;
+          }
+
+          #vaibhava-pattu .vaibhava-design-body {
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+          }
+        `}
+      </style>
       <div className="relative overflow-hidden bg-[#13121f] px-5 pb-10 pt-10 text-white sm:px-8 lg:min-h-[calc(100vh-120px)] lg:px-16 lg:pb-12 lg:pt-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_22%,rgba(201,147,58,0.17),transparent_27%),radial-gradient(circle_at_78%_22%,rgba(37,88,62,0.24),transparent_30%),radial-gradient(circle_at_86%_76%,rgba(201,147,58,0.10),transparent_24%),linear-gradient(135deg,#13121f_0%,#0d0d1a_54%,#18111f_100%)]" />
         <div className="footer-weave absolute inset-x-0 top-0 h-44 opacity-30" />
@@ -49,16 +75,16 @@ export default function VaibhavaPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}><img src="/red-pose2.png" alt="Vaibhava bridal silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
-              <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}><img src="/red-pose1.png" alt="Vaibhava muhurtham silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" /></div>
-              <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}><img src="/viol.png" alt="Vaibhava jewel silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
+              <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}><img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava muhurtham silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" /></div>
+              <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}><img src="/Sezhinoo-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}><img src="/red-pose3.png" alt="Vaibhava temple border" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}><img src="/red-pose5.png" alt="Vaibhava raja pattam" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
             </div>
             <div className="grid gap-4 lg:hidden">
-              <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]"><img src="/red-pose1.png" alt="Vaibhava Pattu bridal" className="h-[440px] w-full object-cover object-top brightness-[0.88]" /></div>
+              <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]"><img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava Pattu bridal" className="h-[440px] w-full object-cover object-top brightness-[0.88]" /></div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/red-pose3.png" alt="Vaibhava temple border" className="h-[180px] w-full object-cover object-top brightness-[0.84]" /></div>
-                <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/viol.png" alt="Vaibhava jewel silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" /></div>
+                <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/Sezhinoo-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" /></div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
                 <p className="font-sans text-[10px] font-semibold uppercase tracking-[2.4px] text-[#c9933a]">Vaibhava Notes</p>
@@ -83,16 +109,18 @@ export default function VaibhavaPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex gap-4 overflow-x-auto pb-3 pr-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex items-stretch justify-center pb-2">
               {vaibhavaDesigns.map((saree) => (
-                <article key={saree.name} className="group relative min-w-[245px] overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:min-w-[280px] lg:min-w-[265px] xl:min-w-[250px]">
+                <article key={saree.name} className="vaibhava-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg bg-[#7b250f]/92 px-3 py-2 font-sans text-[10px] font-semibold text-[#ffe7b2] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}
-                  <a href={saree.href} className="block h-[220px] overflow-hidden bg-[#e8ddcf]"><img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /></a>
-                  <div className="rounded-t-lg bg-[#fffaf2] px-5 pb-5 pt-4 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="font-serif text-[20px] font-medium leading-tight text-[#1a1a2e]">{saree.name}</h3>
-                    <p className="mx-auto mt-2 min-h-[42px] max-w-[210px] font-sans text-[12px] leading-[1.45] text-[#5e5f6b]">{saree.desc}</p>
+                  <a href={saree.href} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
+                    <img src={saree.img} alt={saree.name} className="vaibhava-design-image h-full w-full object-cover object-top transition-transform duration-500" />
+                  </a>
+                  <div className="vaibhava-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
+                    <h3 className="vaibhava-design-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
+                    <p className="vaibhava-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]"><span className="h-px flex-1 bg-[#d7b578]" /><i className="fas fa-spa text-[9px]" /><span className="h-px flex-1 bg-[#d7b578]" /></div>
-                    <a href={saree.href} className="mt-3 inline-flex items-center gap-2 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">Explore <i className="fas fa-arrow-right text-[10px]" /></a>
+                    <a href={saree.href} className="mt-auto inline-flex items-center justify-center gap-2 pt-3 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">Explore <i className="fas fa-arrow-right text-[10px]" /></a>
                   </div>
                 </article>
               ))}

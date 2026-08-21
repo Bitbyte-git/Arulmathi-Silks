@@ -1,135 +1,80 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 
 const occasions = [
   {
     label: 'BRIDAL',
     img: '/circle5.png',
+    href: '/vaibhava-pattu',
   },
   {
     label: 'FESTIVE',
     img: '/d3.png',
+    href: '/izhamathi-pattu',
   },
   {
     label: 'RECEPTION',
     img: '/d1.png',
+    href: '/saila-pattu',
   },
   {
     label: 'POOJA',
     img: '/d4.png',
+    href: '/kaithirai-pattu',
   },
   {
     label: 'GIFTING',
     img: '/d5.png',
+    href: '/mangai-pattu',
   },
   {
     label: 'LIGHTWEIGHT',
     img: '/d6.png',
+    href: '/noolisai-pattu',
   },
   {
     label: 'DESIGNER',
     img: '/d1.png',
+    href: '/sezhinool-pattu',
   },
   {
     label: 'ENGAGEMENT',
     img: '/circle1.png',
+    href: '/Aanchali-pattu',
   },
   {
     label: 'HOUSEWARMING',
     img: '/circle2.png',
+    href: '/velora-pattu',
   },
   {
     label: 'HALDI',
     img: '/circle3.png',
+    href: '/ezhil-pattu',
   },
   {
     label: 'SANGEET',
     img: '/circle4.png',
+    href: '/mayura-pattu',
   },
   {
     label: 'EVERYDAY',
     img: '/circle8.png',
+    href: '/varnika-pattu',
   },
 ]
 
 export default function Occasions() {
-  const scrollerRef = useRef(null)
-  const animationRef = useRef(null)
-  const lastFrameRef = useRef(null)
-  const scrollRemainderRef = useRef(0)
   const [isPaused, setIsPaused] = useState(false)
-  const [isTouchDevice, setIsTouchDevice] = useState(false)
 
   const carouselItems = useMemo(() => [...occasions, ...occasions], [])
 
-  useEffect(() => {
-    const scroller = scrollerRef.current
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const hoverQuery = window.matchMedia('(hover: none)')
-
-    const updateIsTouch = () => setIsTouchDevice(hoverQuery.matches)
-    updateIsTouch()
-    hoverQuery.addEventListener?.('change', updateIsTouch)
-
-    // allow auto-scroll on mobile but respect user preferences
-    if (!scroller || prefersReducedMotion) {
-      if (hoverQuery.matches) setIsTouchDevice(true)
-      hoverQuery.removeEventListener?.('change', updateIsTouch)
-      return undefined
-    }
-
-    // smoother, slower auto-scroll
-    const speed = 0.018
-
-    const onVisibility = () => {
-      if (document.hidden) setIsPaused(true)
-      else {
-        if (animationRef.current) cancelAnimationFrame(animationRef.current)
-        if (lastFrameRef.current !== null) lastFrameRef.current = null
-        if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-        resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 500)
-      }
-    }
-    document.addEventListener('visibilitychange', onVisibility)
-
-    const animate = (timestamp) => {
-      if (lastFrameRef.current === null) {
-        lastFrameRef.current = timestamp
-      }
-
-      const delta = timestamp - lastFrameRef.current
-      lastFrameRef.current = timestamp
-
-      if (!isPaused) {
-        const loopPoint = scroller.scrollWidth / 2
-        const movement = delta * speed + scrollRemainderRef.current
-        const wholePixels = Math.trunc(movement)
-        scrollRemainderRef.current = movement - wholePixels
-
-        if (wholePixels !== 0) {
-          scroller.scrollLeft += wholePixels
-        }
-
-        if (scroller.scrollLeft >= loopPoint) {
-          scroller.scrollLeft -= loopPoint
-        }
-      }
-
-      animationRef.current = requestAnimationFrame(animate)
-    }
-
-    animationRef.current = requestAnimationFrame(animate)
-
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current)
-      document.removeEventListener('visibilitychange', onVisibility)
-      lastFrameRef.current = null
-      scrollRemainderRef.current = 0
-      hoverQuery.removeEventListener?.('change', updateIsTouch)
-    }
-  }, [isPaused])
-
-  // small resume timer ref used above
-  const resumeTimerRef = useRef(null)
+  const handleNavigate = (event, href) => {
+    event.preventDefault()
+    window.history.pushState({}, '', href)
+    window.dispatchEvent(new Event('popstate'))
+    window.dispatchEvent(new Event('arulmathi:navigate'))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <section id="shop" className="section-reveal bg-[#12121F] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-10 lg:gap-12">
@@ -152,40 +97,24 @@ export default function Occasions() {
       {/* Auto-scroll occasion circles */}
       <div className="occasion-carousel relative w-full min-w-0 flex-1 overflow-hidden py-2">
         <div
-          ref={scrollerRef}
-          className="occasion-scroll flex gap-7 overflow-x-auto py-4 pr-10"
-          onMouseEnter={() => !isTouchDevice && setIsPaused(true)}
-          onMouseLeave={() => !isTouchDevice && setIsPaused(false)}
+          className={`occasion-scroll flex w-max gap-7 py-4 pr-7 ${isPaused ? 'is-paused' : ''}`}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
-          onPointerDown={() => {
-            setIsPaused(true)
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-          }}
-          onPointerUp={() => {
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
-          }}
-          onTouchStart={() => {
-            setIsPaused(true)
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-          }}
-          onTouchEnd={() => {
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
-          }}
-          onScroll={() => {
-            setIsPaused(true)
-            if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => setIsPaused(false), 900)
-          }}
-          style={{ WebkitOverflowScrolling: 'touch', scrollBehavior: 'smooth' }}
+          onPointerDown={() => setIsPaused(true)}
+          onPointerUp={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
         >
           {carouselItems.map((o, index) => (
-            <div
+            <a
               key={`${o.label}-${index}`}
-              className={`occasion-pop occasion-item flex w-[154px] min-w-[154px] flex-col items-center gap-3 cursor-pointer group ${isTouchDevice ? '' : ''}`}
+              href={o.href}
+              onClick={(e) => handleNavigate(e, o.href)}
+              className="occasion-pop occasion-item flex w-[154px] min-w-[154px] flex-col items-center gap-3 cursor-pointer group no-underline text-inherit"
               style={{ animationDelay: `${(index % occasions.length) * 180}ms` }}
+              aria-label={`Explore ${o.label} Sarees Collection`}
             >
               <div className="occasion-circle glow-orbit w-[146px] h-[146px] rounded-full overflow-hidden border-2 border-[#c9933a]/42 bg-[#F5F0E8]/10 shadow-[0_18px_38px_rgba(0,0,0,0.28)] group-hover:border-[#c9933a] group-hover:scale-110 transition-all duration-300">
                 <img
@@ -197,7 +126,7 @@ export default function Occasions() {
               <p className="font-sans text-[13px] tracking-[2.2px] font-bold text-[#F5F0E8]/68 uppercase text-center group-hover:text-[#c9933a] transition-colors duration-300">
                 {o.label}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

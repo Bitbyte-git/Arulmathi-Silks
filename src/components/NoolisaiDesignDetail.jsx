@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { getNoolisaiPattuCollection, getNoolisaiPattuDesign } from '../data/noolisaiPattuProducts'
 
 const colorMap = {
+  Magenta: '#8b1a6b', 'Royal Blue': '#2a2fc7', 'Antique Gold': '#b9842e',
   'Rose Pink': '#d87591', Coral: '#d75b48', Ivory: '#f1eadc', 'Champagne Gold': '#d7b46a',
   'Peacock Blue': '#0f6070', 'Teal Blue': '#0c6b76', Emerald: '#0f6a46', 'Midnight Navy': '#111c3a',
   'Bottle Green': '#154a33', 'Mint Gold': '#abc493', Sage: '#9aaa87',
@@ -188,7 +189,7 @@ export default function NoolisaiDesignDetail({ collectionSlug, designSlug }) {
                   ref={zoomImageRef}
                   src={selectedImage || design.image}
                   alt={design.name}
-                  className="h-[560px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
+                  className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
                 />
@@ -334,4 +335,5 @@ export default function NoolisaiDesignDetail({ collectionSlug, designSlug }) {
     </section>
   )
 }
+
 

@@ -7,7 +7,12 @@ export default function KaithiraiCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
-    return [...new Set([collection.heroImage, ...collection.designs.map((d) => d.image)])].filter(Boolean).slice(0, 4)
+    return [
+      ...new Set([
+        collection.heroImage,
+        ...collection.designs.flatMap((design) => [design.image, ...(design.images || [])]),
+      ]),
+    ].filter(Boolean).slice(0, 3)
   }, [collection])
 
   useEffect(() => {

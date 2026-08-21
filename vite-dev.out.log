@@ -1,104 +1,72 @@
 
 > Arulmathi-react@0.0.0 dev
-> vite --host 127.0.0.1 --port 5174
+> vite --host 127.0.0.1
 
 
-  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m336[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m317[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5174[22m/[39m
-[2m1:49:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:50:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:50:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:50:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:51:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:51:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:51:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:51:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:52:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:52:28 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CollectionDesigns.jsx, /src/index.css[22m
-[2m1:54:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:57:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m1:57:22 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m1:57:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m1:57:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
-[2m3:48:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:48:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m3:50:24 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:50:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:51:00 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:51:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:51:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:51:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:55:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:55:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m3:55:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:32:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:34:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:34:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:04 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:06 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:12 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:44 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:51 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:57 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:35:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
-[2m4:37:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:39:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:40:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:41:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:41:37 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:41:38 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:41:41 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:41:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:42:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:43 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:50 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:43:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:44:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:44:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:45:07 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:45:09 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:45:12 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
-[2m4:48:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:55:55 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:56:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:56:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:57:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:57:10 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m4:57:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m5:10:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m5:10:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m5:10:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m5:26:02 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
-[2m5:26:02 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m6:22:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
-[2m6:44:32 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
-[2m6:44:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m5:40:54 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m5:42:35 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m5:43:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m5:44:00 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m5:45:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m5:45:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.jsx, /src/index.css[22m
+[2m5:45:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m5:47:31 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaCollectionPage.jsx, /src/index.css[22m
+[2m5:53:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m5:53:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m5:55:02 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m5:55:15 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m5:57:42 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m5:57:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaCollectionPage.jsx, /src/index.css[22m
+[2m5:59:21 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m5:59:27 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaCollectionPage.jsx, /src/index.css[22m
+[2m6:00:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:00:56 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaCollectionPage.jsx, /src/index.css[22m
+[2m6:02:58 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:04:03 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:04:08 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:04:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:05:11 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:05:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:05:51 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/EzhilDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KaithiraiDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/MangaiDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/MayuraDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/NoolisaiDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/AanchaliDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SezhinoolDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/VaibhavaDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/VarnikaDesignDetail.jsx, /src/index.css[22m
+[2m6:07:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/VeloraDesignDetail.jsx, /src/index.css[22m
+[2m6:17:23 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:17:45 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:20:13 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaDesignDetail.jsx, /src/index.css[22m
+[2m6:24:16 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:27:29 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/KanchipuramSilk.jsx, /src/index.css[22m
+[2m6:29:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SareeDetail.jsx, /src/index.css[22m
+[2m6:34:39 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:34:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:35:59 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:36:46 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:37:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:40:11 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m6:40:40 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m6:41:25 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SailaCollectionPage.jsx, /src/components/SailaDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/VeloraDesignDetail.jsx, /src/components/VeloraCollectionPage.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/SezhinoolCollectionPage.jsx, /src/components/SezhinoolDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/NoolisaiCollectionPage.jsx, /src/components/NoolisaiDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/MangaiCollectionPage.jsx, /src/components/MangaiDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/KaithiraiCollectionPage.jsx, /src/components/KaithiraiDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/CollectionDesigns.jsx, /src/components/SareeDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/EzhilCollectionPage.jsx, /src/components/EzhilDesignDetail.jsx[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ChettinadCotton.jsx, /src/index.css[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Collections.jsx, /src/index.css[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/MangaiPattu.jsx, /src/index.css[22m
+[2m6:45:01 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/TussarSilk.jsx, /src/index.css[22m
+[2m6:46:34 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m
+[2m6:46:47 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/SailaPattu.jsx, /src/index.css[22m

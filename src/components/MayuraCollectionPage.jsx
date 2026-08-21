@@ -7,8 +7,19 @@ export default function MayuraCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
-    return [...new Set([collection.heroImage, ...collection.designs.map((d) => d.image)])].filter(Boolean).slice(0, 4)
+    if (collection.heroImages && collection.heroImages.length > 0) {
+      return collection.heroImages
+    }
+    return [
+      ...new Set([
+        collection.heroImage,
+        ...collection.designs.flatMap((d) => [d.image, ...(d.images || [])]),
+      ]),
+    ]
+      .filter(Boolean)
+      .slice(0, 3)
   }, [collection])
+
 
   useEffect(() => {
     if (heroImages.length <= 1) return undefined

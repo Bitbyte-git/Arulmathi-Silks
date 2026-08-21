@@ -11,13 +11,13 @@ const banarasiSarees = [
     name: 'Antique Gold Banarasi',
     detail: 'Heritage butta weave',
     price: 'From Rs. 21,400',
-    img: '/4-pose2.png',
+    img: '/Velora-pattu/VP-VM-5.png',
   },
   {
     name: 'Royal Violet Silk',
     detail: 'Meenakari accents',
     price: 'From Rs. 19,800',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue4.png',
   },
   {
     name: 'Ivory Zari Banarasi',
@@ -29,13 +29,13 @@ const banarasiSarees = [
     name: 'Emerald Festive Brocade',
     detail: 'Traditional zari pallu',
     price: 'From Rs. 22,600',
-    img: '/w4.png',
+    img: '/Ezhil-pattu/EP-TT-2.png',
   },
   {
     name: 'Crimson Katan Silk',
     detail: 'Grand wedding drape',
     price: 'From Rs. 25,300',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
   {
     name: 'Peach Tissue Banarasi',
@@ -59,10 +59,10 @@ const banarasiHighlights = [
 
 const banarasiHeroImages = [
   '/red-pose4.png',
-  '/4-pose2.png',
-  '/viol.png',
+  '/Velora-pattu/VP-VM-5.png',
+  '/Sezhinoo-pattu/SP-MV-Blue4.png',
   '/red-pose3.png',
-  '/w4.png',
+  '/Ezhil-pattu/EP-TT-2.png',
 ]
 
 export default function BanarasiSilk() {

@@ -11,7 +11,7 @@ const mysoreSarees = [
     name: 'Royal Purple Mysore Drape',
     detail: 'Classic festive sheen',
     price: 'From Rs. 16,500',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue4.png',
   },
   {
     name: 'Crimson Palace Silk',
@@ -41,13 +41,13 @@ const mysoreSarees = [
     name: 'Emerald Soft Silk',
     detail: 'Graceful drape color',
     price: 'From Rs. 15,600',
-    img: '/w4.png',
+    img: '/Ezhil-pattu/EP-TT-2.png',
   },
   {
     name: 'Temple Red Mysore',
     detail: 'Heritage border detail',
     price: 'From Rs. 18,900',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
 ]
 
@@ -59,10 +59,10 @@ const mysoreHighlights = [
 
 const mysoreHeroImages = [
   '/4-pose1.png',
-  '/viol.png',
+  '/Sezhinoo-pattu/SP-MV-Blue4.png',
   '/red-pose2.png',
   '/3-pose3.png',
-  '/w4.png',
+  '/Ezhil-pattu/EP-TT-2.png',
 ]
 
 export default function MysoreSilk() {

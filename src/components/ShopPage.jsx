@@ -3,9 +3,9 @@ import { useEffect, useRef } from 'react'
 const whatsappUrl = 'https://wa.me/917010452034?text=Hello%20Arulmathi%20Silks%2C%20I%20need%20help%20selecting%20a%20saree.'
 
 const collectionCards = [
-  { title: 'Izhamathi Pattu', count: '8 Saree Designs', image: '/nav-1.png', href: '/izhamathi-pattu', desc: 'Heritage floral and golden butta silk sarees.' },
+  { title: 'Izhamathi Pattu', count: '2 Saree Designs', image: '/nav-1.png', href: '/izhamathi-pattu', desc: 'Heritage floral and golden butta silk sarees.' },
   { title: 'Saila Pattu', count: '6 Designs', image: '/nav-2.png', href: '/saila-pattu', desc: 'Soft vine-inspired silks for graceful occasions.' },
-  { title: 'Sathura Pattu', count: '9 Designs', image: '/nav-3.png', href: '/sathura-pattu', desc: 'Structured kattam patterns with festive richness.' },
+  { title: 'Aanchali Pattu', count: '9 Designs', image: '/nav-3.png', href: '/Aanchali-pattu', desc: 'Structured kattam patterns with festive richness.' },
   { title: 'Mayura Pattu', count: '9 Designs', image: '/nav-4.png', href: '/mayura-pattu', desc: 'Peacock-inspired drapes with elegant zari detail.' },
   { title: 'Vaibhava Pattu', count: '9 Designs', image: '/nav-5.png', href: '/vaibhava-pattu', desc: 'Grand bridal silks for auspicious celebrations.' },
   { title: 'Noolisai Pattu', count: '9 Designs', image: '/nav-6.png', href: '/noolisai-pattu', desc: 'Thread-inspired woven textures for festive wear.' },
@@ -13,7 +13,7 @@ const collectionCards = [
   { title: 'Velora Pattu', count: '9 Designs', image: '/nav-8.png', href: '/velora-pattu', desc: 'Refined silk sarees with polished festive appeal.' },
   { title: 'Ezhil Pattu', count: '9 Designs', image: '/nav-9.png', href: '/ezhil-pattu', desc: 'Graceful silk drapes with timeless traditional charm.' },
   { title: 'Kaithirai Pattu', count: '9 Designs', image: '/nav-10.png', href: '/kaithirai-pattu', desc: 'Nature-inspired motifs with soft luxury finishes.' },
-  { title: 'Varnika Pattu', count: '9 Designs', image: '/nav-11.png', href: '/varnika-pattu', desc: 'Color-rich pattu sarees for statement occasions.' },
+  { title: 'Varnika Pattu', count: '1 Design', image: '/nav-11.png', href: '/varnika-pattu', desc: 'Color-rich pattu sarees for statement occasions.' },
   { title: 'Mangai Pattu', count: '9 Designs', image: '/nav-12.png', href: '/mangai-pattu', desc: 'Bold festive silks with ornate woven detailing.' },
 ]
 
@@ -34,6 +34,8 @@ const trustItems = [
 ]
 
 export default function ShopPage() {
+  const shopHeroVideoRef = useRef(null)
+  const shopHeroPlayCountRef = useRef(0)
   const storyVideoRef = useRef(null)
   const hasPlayedStoryVideoRef = useRef(false)
 
@@ -48,7 +50,7 @@ export default function ShopPage() {
 
         hasPlayedStoryVideoRef.current = true
         video.currentTime = 0
-        video.play().catch(() => {})
+        video.play().catch(() => { })
       },
       { threshold: 0.45 },
     )
@@ -70,18 +72,52 @@ export default function ShopPage() {
       video.currentTime = 0
     }
 
-    video.play().catch(() => {})
+    video.play().catch(() => { })
+  }
+
+  const replayShopHeroVideo = () => {
+    const video = shopHeroVideoRef.current
+
+    if (!video) return
+
+    shopHeroPlayCountRef.current = 0
+    video.currentTime = 0
+    video.play().catch(() => { })
+  }
+
+  const handleShopHeroVideoEnded = (event) => {
+    shopHeroPlayCountRef.current += 1
+
+    if (shopHeroPlayCountRef.current < 3) {
+      event.currentTarget.currentTime = 0
+      event.currentTarget.play().catch(() => { })
+      return
+    }
+
+    event.currentTarget.pause()
   }
 
   return (
     <section id="shop-page" className="bg-[#f6efe4] text-[#17131c]">
-      <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16">
-        <img
-          src="/Arulmathi-shop1.png"
-          alt="Pure silk sarees arranged for shopping"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-86 md:object-contain md:object-right"
+      <div
+        className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16"
+        onClick={replayShopHeroVideo}
+      >
+        <video
+          ref={shopHeroVideoRef}
+          src="/Video-folder/AM-shop-video.mp4"
+          aria-label="Pure silk sarees arranged for shopping"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-86"
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+          onEnded={handleShopHeroVideoEnded}
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.95)_34%,rgba(8,11,18,0.48)_62%,rgba(8,11,18,0.08)_100%)]" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 left-0 -z-10 w-full bg-[linear-gradient(90deg,rgba(5,3,15,0.82)_0%,rgba(5,3,15,0.68)_30%,rgba(5,3,15,0.28)_54%,transparent_78%)]"
+        />
         <div className="mx-auto grid min-h-[650px] max-w-7xl grid-cols-1 items-center py-16 md:min-h-[720px] lg:min-h-[780px] lg:grid-cols-[0.58fr_0.42fr]">
           <div className="max-w-[760px]">
             <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">
@@ -173,7 +209,7 @@ export default function ShopPage() {
         <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg bg-[#e8ddcf] shadow-[0_18px_44px_rgba(52,36,18,0.12)]">
           <video
             ref={storyVideoRef}
-            src="/shopvid.mp4"
+            src="/Video-folder/shopvid.mp4"
             aria-label="Arulmathi Silks showroom story"
             className="h-full min-h-[420px] w-full object-cover object-top"
             muted

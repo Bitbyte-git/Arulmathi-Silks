@@ -1,9 +1,9 @@
-﻿const bridalSilks = [
+const bridalSilks = [
   {
     name: 'Crimson Muhurtham Silk',
     detail: 'Grand bridal zari border',
     price: 'From Rs. 28,500',
-    img: '/red-pose1.png',
+    img: '/Vaibhava-pattu/VP-TM-Red1.png',
   },
   {
     name: 'Temple Red Bridal Drape',
@@ -15,13 +15,13 @@
     name: 'Antique Gold Bridal Silk',
     detail: 'Reception-ready glow',
     price: 'From Rs. 26,900',
-    img: '/4-pose2.png',
+    img: '/Velora-pattu/VP-VM-5.png',
   },
   {
     name: 'Royal Violet Wedding Silk',
     detail: 'Meenakari festive tone',
     price: 'From Rs. 29,800',
-    img: '/viol.png',
+    img: '/Sezhinoo-pattu/SP-MV-Blue4.png',
   },
   {
     name: 'Ivory Zari Bridal Silk',
@@ -33,7 +33,7 @@
     name: 'Peacock Blue Bridal Silk',
     detail: 'Contrast korvai border',
     price: 'From Rs. 27,400',
-    img: '/w2.png',
+    img: '/Kathirai-pattu/KP-PP-2.png',
   },
 ]
 
@@ -99,7 +99,7 @@ export default function BridalSilks() {
           <div className="relative">
             <div className="hidden h-[620px] grid-cols-12 grid-rows-8 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image col-start-5 col-end-10 row-start-1 row-end-3 overflow-hidden rounded-lg border border-[#c9933a]/40 bg-[#0d0d1a] shadow-[0_24px_70px_rgba(0,0,0,0.42)]">
-                <img src="/red-pose1.png" alt="Bridal silk portrait" className="h-full w-full object-cover object-top brightness-[0.86]" />
+                <img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Bridal silk portrait" className="h-full w-full object-cover object-top brightness-[0.86]" />
               </div>
 
               <div className="hero-box-image col-start-1 col-end-4 row-start-2 row-end-4 overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_18px_44px_rgba(0,0,0,0.34)]">
@@ -119,7 +119,7 @@ export default function BridalSilks() {
               </div>
 
               <div className="hero-box-image col-start-9 col-end-12 row-start-5 row-end-7 overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_18px_44px_rgba(0,0,0,0.34)]">
-                <img src="/4-pose2.png" alt="Antique gold bridal silk" className="h-full w-full object-cover object-top brightness-[0.82]" />
+                <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold bridal silk" className="h-full w-full object-cover object-top brightness-[0.82]" />
               </div>
 
               <div className="hero-box-gold col-start-1 col-end-4 row-start-6 row-end-8 self-center rounded-lg border border-[#c9933a]/58 bg-[#171325]/94 p-5 text-white shadow-[0_20px_54px_rgba(0,0,0,0.38)]">
@@ -141,10 +141,10 @@ export default function BridalSilks() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/red-pose1.png" alt="Muhurtham red bridal silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Muhurtham red bridal silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/4-pose2.png" alt="Antique gold bridal silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold bridal silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">

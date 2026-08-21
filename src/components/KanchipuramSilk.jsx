@@ -1,6 +1,6 @@
 const izhamathiSilks = [
-  { name: 'Pushpanjali', slug: 'pushpanjali', desc: 'Floral Woven Silk Design', img: '/IZ-PS-8.png' },
-  { name: 'Suvarna Thuli', slug: 'suvarna-thuli', desc: 'Golden Butta Silk Design', img: '/IZ-PS-1.png' },
+  { name: 'Pushpanjali', slug: 'pushpanjali', desc: 'Floral woven silk with graceful zari blooms', img: '/Ilamathi-saree/Pushpa/IZ-PA-2.png' },
+  { name: 'Suvarna Thuli', slug: 'suvarna-thuli', desc: 'Golden butta silk with warm festive shine', img: '/Ilamathi-saree/IZ-Green-1.png' },
 ]
 
 const izhamathiMoments = [
@@ -10,14 +10,44 @@ const izhamathiMoments = [
 ]
 
 const izhamathiStats = [
-  { value: '2', label: 'design families' },
-  { value: '8', label: 'saree designs' },
+  { value: '2', label: 'collections' },
+  { value: '2', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
 export default function KanchipuramSilk() {
   return (
     <section id="izhamathi-pattu" className="section-reveal bg-[#13121f]">
+      <style>
+        {`
+          #izhamathi-pattu .izhamathi-family-title,
+          #izhamathi-pattu .izhamathi-family-title a {
+            display: block !important;
+            font-family: Montserrat, sans-serif !important;
+            font-size: clamp(17px, 1.25vw, 20px) !important;
+            font-weight: 800 !important;
+            line-height: 1.16 !important;
+            letter-spacing: 0.2px !important;
+            color: #241b27 !important;
+          }
+
+          #izhamathi-pattu .izhamathi-family-desc {
+            font-size: clamp(14px, 1vw, 16px) !important;
+            font-weight: 500 !important;
+            line-height: 1.5 !important;
+            color: #4a3f49 !important;
+          }
+
+          #izhamathi-pattu .izhamathi-family-body {
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+          }
+
+          #izhamathi-pattu .izhamathi-family-card:hover .izhamathi-family-image {
+            transform: scale(1.05);
+          }
+        `}
+      </style>
       <div className="relative overflow-hidden bg-[#13121f] px-5 pb-10 pt-10 text-white sm:px-8 lg:min-h-[calc(100vh-120px)] lg:px-16 lg:pb-12 lg:pt-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_22%,rgba(201,147,58,0.17),transparent_27%),radial-gradient(circle_at_78%_22%,rgba(77,42,112,0.26),transparent_30%),radial-gradient(circle_at_86%_76%,rgba(201,147,58,0.10),transparent_24%),linear-gradient(135deg,#13121f_0%,#0d0d1a_54%,#18111f_100%)]" />
         <div className="footer-weave absolute inset-x-0 top-0 h-44 opacity-30" />
@@ -57,19 +87,19 @@ export default function KanchipuramSilk() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/w2.png" alt="Gold Izhamathi silk portrait" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Kathirai-pattu/KP-PP-2.png" alt="Gold Izhamathi silk portrait" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
                 <img src="/hero-fix.png" alt="Izhamathi Pattu silk saree in rich tones" className="h-full w-full rounded-[2px] object-cover object-[72%_18%] brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/viol.png" alt="Violet silk saree detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Sezhinoo-pattu/SP-MV-Blue4.png" alt="Violet silk saree detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/image9.png" alt="Pastel Izhamathi silk drape" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Ilamathi-saree/IZ-Green-1.png" alt="Pastel Izhamathi silk drape" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/4-pose2.png" alt="Antique gold Izhamathi silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
 
@@ -79,10 +109,10 @@ export default function KanchipuramSilk() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/image9.png" alt="Ruby Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/Velora-pattu/VP-VM-2.png" alt="Ruby Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/4-pose2.png" alt="Antique gold Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
@@ -114,13 +144,13 @@ export default function KanchipuramSilk() {
 
           <div className="relative">
             <div
-              className="flex items-stretch gap-5 overflow-x-auto pb-2 [scrollbar-width:none] sm:justify-center [&::-webkit-scrollbar]:hidden"
+              className="flex flex-wrap items-stretch justify-center gap-5 pb-2"
             >
               {izhamathiSilks.map((saree) => (
                 <article
                   key={saree.name}
                   data-izhamathi-card
-                  className="group relative flex w-[82vw] min-w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] sm:min-w-[300px] lg:w-[330px] lg:min-w-[330px] xl:w-[350px] xl:min-w-[350px]"
+                  className="izhamathi-family-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]"
                 >
                   {saree.badge && (
                     <span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg bg-[#7b250f]/92 px-3 py-2 font-sans text-[10px] font-semibold text-[#ffe7b2] shadow-[0_8px_18px_rgba(0,0,0,0.18)]">
@@ -128,11 +158,13 @@ export default function KanchipuramSilk() {
                     </span>
                   )}
                   <a href={`/izhamathi-pattu/${saree.slug}`} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
-                    <img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <img src={saree.img} alt={saree.name} className="izhamathi-family-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>
-                  <div className="flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-4 pt-4 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="font-serif text-[20px] font-medium leading-tight text-[#1a1a2e]"><a href={`/izhamathi-pattu/${saree.slug}`} className="transition-colors hover:text-[#b57922]">{saree.name}</a></h3>
-                    <p className="mx-auto mt-2 min-h-[42px] max-w-[210px] font-sans text-[12px] leading-[1.45] text-[#5e5f6b]">{saree.desc}</p>
+                  <div className="izhamathi-family-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
+                    <h3 className="izhamathi-family-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">
+                      <a href={`/izhamathi-pattu/${saree.slug}`} className="transition-colors hover:text-[#b57922]">{saree.name}</a>
+                    </h3>
+                    <p className="izhamathi-family-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4f4854]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />
                       <i className="fas fa-spa text-[9px]" />

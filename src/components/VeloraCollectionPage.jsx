@@ -7,7 +7,10 @@ export default function VeloraCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
-    return [...new Set([collection.heroImage, ...collection.designs.map((d) => d.image)])].filter(Boolean).slice(0, 4)
+    return [
+      collection.heroImage,
+      ...collection.designs.flatMap((design) => design.images || [design.image]),
+    ].filter(Boolean).slice(0, 3)
   }, [collection])
 
   useEffect(() => {
