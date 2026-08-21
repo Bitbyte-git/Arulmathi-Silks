@@ -65,6 +65,7 @@ export default function Collections() {
   useEffect(() => {
     const scroller = scrollerRef.current
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const isMobileViewport = window.matchMedia('(max-width: 767px)').matches
 
     // detect touch/hover capability to disable hover effects on touch devices
     const hoverQuery = window.matchMedia('(hover: none)')
@@ -72,7 +73,7 @@ export default function Collections() {
     updateIsTouch()
     hoverQuery.addEventListener?.('change', updateIsTouch)
 
-    if (!scroller || prefersReducedMotion) {
+    if (!scroller || prefersReducedMotion || isMobileViewport || hoverQuery.matches) {
       hoverQuery.removeEventListener?.('change', updateIsTouch)
       return undefined
     }
@@ -96,7 +97,7 @@ export default function Collections() {
         lastFrameRef.current = timestamp
       }
 
-      const delta = timestamp - lastFrameRef.current
+      const delta = Math.min(timestamp - lastFrameRef.current, 32)
       lastFrameRef.current = timestamp
 
       if (!isPausedRef.current) {
@@ -139,7 +140,7 @@ export default function Collections() {
 
     const firstCard = scroller.querySelector('[data-collection-card]')
     const cardWidth = firstCard?.getBoundingClientRect().width || 280
-    const gap = 16
+    const gap = parseFloat(window.getComputedStyle(scroller).columnGap || '16') || 16
     const scrollDistance = cardWidth + gap
     const loopPoint = scroller.scrollWidth / 2
 
@@ -213,7 +214,7 @@ export default function Collections() {
           }}
           onPointerUp={() => {
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 900)
+            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 1400)
           }}
           onTouchStart={() => {
             updatePaused(true)
@@ -221,7 +222,7 @@ export default function Collections() {
           }}
           onTouchEnd={() => {
             if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
-            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 900)
+            resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 1400)
           }}
         >
           {carouselItems.map((col, index) => (

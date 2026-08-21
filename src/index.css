@@ -5453,12 +5453,22 @@
   #collections .collections-scroll,
   #shop .occasion-scroll {
     padding-right: 18px !important;
+  }
+
+  #shop .occasion-scroll {
     scroll-snap-type: x mandatory;
   }
 
-  #collections .collection-card,
   #shop .occasion-item {
     scroll-snap-align: start;
+  }
+
+  #collections .collections-scroll {
+    scroll-snap-type: none !important;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
   }
 
   #shop .occasion-circle {
@@ -6321,4 +6331,4 @@ section[id$="-cotton"] article.group a {
   .hero-content {
     max-width: 320px !important;
   }
-}
+}
