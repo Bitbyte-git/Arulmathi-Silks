@@ -1106,16 +1106,12 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     mask-image: linear-gradient(to right, transparent 0, black 28px, black calc(100% - 64px), transparent 100%);
-    overflow-x: auto;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    touch-action: pan-x;
-    will-change: scroll-position;
+    animation: occasion-track-scroll 34s linear infinite;
+    will-change: transform;
   }
 
   .occasion-scroll.is-paused {
-    scroll-behavior: smooth;
+    animation-play-state: paused;
   }
 
   .occasion-scroll::-webkit-scrollbar {
@@ -7010,5 +7006,31 @@ section[id$="-cotton"] article.group a {
     line-height: 1.45 !important;
     overflow-wrap: anywhere !important;
     word-break: break-word !important;
+  }
+}
+
+/* Occasion carousel: reliable transform auto-scroll on mobile. */
+@media (max-width: 767px) {
+  #shop .occasion-carousel {
+    overflow: hidden !important;
+    mask-image: linear-gradient(to right, transparent 0, black 28px, black calc(100% - 42px), transparent 100%) !important;
+  }
+
+  #shop .occasion-scroll {
+    width: max-content !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    animation: occasion-track-scroll 28s linear infinite !important;
+    will-change: transform !important;
+  }
+
+  #shop .occasion-scroll.is-paused {
+    animation-play-state: paused !important;
+  }
+
+  #shop .occasion-item {
+    scroll-snap-align: none !important;
+    width: 132px !important;
+    min-width: 132px !important;
   }
 }

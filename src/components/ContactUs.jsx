@@ -22,6 +22,7 @@ const contactDetails = [
 ]
 
 const whatsappUrl = 'https://wa.me/917010452034?text=Hello%20Arulmathi%20Silks%2C%20I%20need%20help%20selecting%20a%20saree.'
+const whatsappNumber = '917010452034'
 
 const supportValues = [
   { icon: 'fa-headset', title: 'Quick Support', text: 'We reply as soon as possible' },
@@ -58,6 +59,30 @@ const faqs = [
 ]
 
 export default function ContactUs() {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const name = formData.get('name')?.toString().trim()
+    const email = formData.get('email')?.toString().trim()
+    const phone = formData.get('phone')?.toString().trim()
+    const subject = formData.get('subject')?.toString().trim()
+    const message = formData.get('message')?.toString().trim()
+
+    const whatsappMessage = [
+      'Hello Arulmathi Silks,',
+      '',
+      'I would like to send an enquiry.',
+      name ? `Name: ${name}` : '',
+      email ? `Email: ${email}` : '',
+      phone ? `Phone: ${phone}` : '',
+      subject ? `Subject: ${subject}` : '',
+      message ? `Message: ${message}` : '',
+    ].filter(Boolean).join('\n')
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section id="contact-page" className="bg-[#f6efe4] text-[#17131c]">
       <div data-nav-hero className="relative isolate overflow-hidden bg-[#080b12] px-5 text-white sm:px-8 lg:px-16">
@@ -94,14 +119,14 @@ export default function ContactUs() {
           </div>
 
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-[1.12fr_0.88fr]">
-            <form className="contact-ref-rise rounded-lg border border-[#d8c7ad] bg-[#fbf7ef] p-5 shadow-[0_18px_44px_rgba(52,36,18,0.08)] sm:p-7">
+            <form onSubmit={handleSubmit} className="contact-ref-rise rounded-lg border border-[#d8c7ad] bg-[#fbf7ef] p-5 shadow-[0_18px_44px_rgba(52,36,18,0.08)] sm:p-7">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <input className="contact-field" type="text" placeholder="Your Name *" />
-                <input className="contact-field" type="email" placeholder="Email Address *" />
+                <input className="contact-field" name="name" type="text" placeholder="Your Name *" required />
+                <input className="contact-field" name="email" type="email" placeholder="Email Address *" required />
               </div>
-              <input className="contact-field mt-4" type="tel" placeholder="Phone Number" />
-              <input className="contact-field mt-4" type="text" placeholder="Subject" />
-              <textarea className="contact-field mt-4 min-h-[190px] resize-y" placeholder="Your Message *" />
+              <input className="contact-field mt-4" name="phone" type="tel" placeholder="Phone Number" />
+              <input className="contact-field mt-4" name="subject" type="text" placeholder="Subject" />
+              <textarea className="contact-field mt-4 min-h-[190px] resize-y" name="message" placeholder="Your Message *" required />
               <button type="submit" className="mt-6 inline-flex min-w-[220px] items-center justify-center gap-3 rounded bg-[#b9863c] px-6 py-3.5 font-sans text-[11px] font-bold text-white transition-colors hover:bg-[#d2a24f]">
                 Send Message <i className="fas fa-arrow-right" />
               </button>
