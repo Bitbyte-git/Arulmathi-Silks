@@ -51,10 +51,10 @@ export default function StoryArrivals() {
         <img
           src="red-pose4.png"
           alt="Silk saree craftsmanship at Arulmathi"
-          className="w-full h-full min-h-[520px] object-cover object-top brightness-[0.55]"
+          className="story-promise-image w-full h-full min-h-[520px] object-cover object-top brightness-[0.92] lg:brightness-[0.62]"
         />
         {/* Gradient overlay + text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d1a]/95 via-[#0d0d1a]/40 to-transparent flex flex-col justify-end p-6 sm:p-12">
+        <div className="story-promise-overlay absolute inset-0 bg-[linear-gradient(90deg,rgba(13,13,26,0.58)_0%,rgba(13,13,26,0.28)_48%,rgba(13,13,26,0.06)_100%),linear-gradient(180deg,rgba(13,13,26,0)_0%,rgba(13,13,26,0.32)_62%,rgba(13,13,26,0.62)_100%)] lg:bg-gradient-to-t lg:from-[#0d0d1a]/95 lg:via-[#0d0d1a]/40 lg:to-transparent flex flex-col justify-end p-6 sm:p-12">
           <p className="font-sans text-[13px] tracking-[3px] text-[#c9933a] font-semibold uppercase mb-4">
             ARULMATHI PROMISE
           </p>

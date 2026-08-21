@@ -162,12 +162,12 @@ export default function ShopPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="shop-page-occasion-section mt-12 text-center">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#a9762d]">Shop By Occasion</p>
             <h2 className="mt-3 font-serif text-[36px] font-normal leading-[1.08] text-[#221824] sm:text-[48px]">Sarees for Every Moment</h2>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="shop-page-occasion-grid mt-8 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
             {occasions.map((item, index) => (
               <div key={item.label} className="shop-ref-rise flex flex-col items-center text-center" style={{ animationDelay: `${index * 70}ms` }}>
                 <div className="flex h-[104px] w-[104px] items-center justify-center rounded-full border border-[#c99a51] bg-[#fbf7ef] text-[#b9863c] shadow-[0_8px_26px_rgba(52,36,18,0.06)]">
@@ -180,7 +180,7 @@ export default function ShopPage() {
         </div>
       </div>
 
-      <div className="bg-[#0d0d1a] px-5 py-10 sm:px-8 lg:px-16">
+      <div className="shop-page-trust-section bg-[#0d0d1a] px-5 py-10 sm:px-8 lg:px-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
           {trustItems.map((item, index) => (
             <article key={item.title} className={`shop-ref-rise px-6 text-white ${index < trustItems.length - 1 ? 'lg:border-r lg:border-white/14' : ''}`} style={{ animationDelay: `${index * 80}ms` }}>

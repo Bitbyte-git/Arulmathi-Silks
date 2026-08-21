@@ -128,12 +128,12 @@ export default function ContactUs() {
         </div>
       </div>
 
-      <div className="bg-[#f1e6d7] px-5 py-12 sm:px-8 lg:px-16">
+      <div className="contact-support-section bg-[#f1e6d7] px-5 py-12 sm:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="font-serif text-[32px] font-normal text-[#221824] sm:text-[40px]">We would Love to Hear From You</h2>
-          <div className="mt-8 grid grid-cols-2 gap-6 lg:grid-cols-4">
+          <div className="contact-support-grid mt-8 grid grid-cols-2 gap-6 lg:grid-cols-4">
             {supportValues.map((item, index) => (
-              <div key={item.title} className="contact-ref-rise flex flex-col items-center" style={{ animationDelay: `${index * 90}ms` }}>
+              <div key={item.title} className="contact-support-item contact-ref-rise flex flex-col items-center" style={{ animationDelay: `${index * 90}ms` }}>
                 <span className="flex h-20 w-20 items-center justify-center rounded-full border border-[#d8b577] text-[#b9863c]">
                   <i className={`fas ${item.icon} text-[30px]`} />
                 </span>

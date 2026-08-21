@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 const occasions = [
   {
@@ -64,9 +64,64 @@ const occasions = [
 ]
 
 export default function Occasions() {
+  const scrollerRef = useRef(null)
+  const animationRef = useRef(null)
+  const lastFrameRef = useRef(null)
+  const resumeTimerRef = useRef(null)
   const [isPaused, setIsPaused] = useState(false)
+  const isPausedRef = useRef(false)
 
   const carouselItems = useMemo(() => [...occasions, ...occasions], [])
+
+  const updatePaused = (value) => {
+    isPausedRef.current = value
+    setIsPaused(value)
+  }
+
+  useEffect(() => {
+    const scroller = scrollerRef.current
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (!scroller || prefersReducedMotion) return undefined
+
+    const speed = window.matchMedia('(max-width: 767px)').matches ? 0.03 : 0.045
+
+    const animate = (timestamp) => {
+      if (lastFrameRef.current === null) lastFrameRef.current = timestamp
+
+      const delta = Math.min(timestamp - lastFrameRef.current, 32)
+      lastFrameRef.current = timestamp
+
+      if (!isPausedRef.current) {
+        const loopPoint = scroller.scrollWidth / 2
+        scroller.scrollLeft += delta * speed
+
+        if (scroller.scrollLeft >= loopPoint) {
+          scroller.scrollLeft -= loopPoint
+        }
+      }
+
+      animationRef.current = window.requestAnimationFrame(animate)
+    }
+
+    animationRef.current = window.requestAnimationFrame(animate)
+
+    return () => {
+      if (animationRef.current) window.cancelAnimationFrame(animationRef.current)
+      if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+      lastFrameRef.current = null
+    }
+  }, [])
+
+  const pauseTemporarily = () => {
+    updatePaused(true)
+    if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+  }
+
+  const resumeAfterTouch = () => {
+    if (resumeTimerRef.current) window.clearTimeout(resumeTimerRef.current)
+    resumeTimerRef.current = window.setTimeout(() => updatePaused(false), 1200)
+  }
 
   const handleNavigate = (event, href) => {
     event.preventDefault()
@@ -97,15 +152,16 @@ export default function Occasions() {
       {/* Auto-scroll occasion circles */}
       <div className="occasion-carousel relative w-full min-w-0 flex-1 overflow-hidden py-2">
         <div
+          ref={scrollerRef}
           className={`occasion-scroll flex w-max gap-7 py-4 pr-7 ${isPaused ? 'is-paused' : ''}`}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onFocus={() => setIsPaused(true)}
-          onBlur={() => setIsPaused(false)}
-          onPointerDown={() => setIsPaused(true)}
-          onPointerUp={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          onTouchEnd={() => setIsPaused(false)}
+          onMouseEnter={() => updatePaused(true)}
+          onMouseLeave={() => updatePaused(false)}
+          onFocus={() => updatePaused(true)}
+          onBlur={() => updatePaused(false)}
+          onPointerDown={pauseTemporarily}
+          onPointerUp={resumeAfterTouch}
+          onTouchStart={pauseTemporarily}
+          onTouchEnd={resumeAfterTouch}
         >
           {carouselItems.map((o, index) => (
             <a
