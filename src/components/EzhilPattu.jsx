@@ -1,5 +1,5 @@
 const ezhilDesigns = [
-  { name: 'Thanga Thorana Pattu', slug: 'azhagu-pattu', href: '/ezhil-pattu/azhagu-pattu', desc: 'Beautiful woven festive silk with refined elegance', img: '/Ezhil-pattu/EP-TT-2.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
+  { name: 'Thanga Thorana Pattu', slug: 'azhagu-pattu', href: '/ezhil-pattu/azhagu-pattu', desc: 'Beautiful woven festive silk with refined elegance', img: '/ezhil-pattu/EP-TT-2.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
 ]
 
 const ezhilNotes = [
@@ -83,10 +83,10 @@ export default function EzhilPattu() {
                 <img src="/w5.png" alt="Ezhil Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/Ezhil-pattu/EP-TT-2.png" alt="Ezhil Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/ezhil-pattu/EP-TT-2.png" alt="Ezhil Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/Ananchail-Pattu/SP-Green-3.png" alt="Ezhil Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/aanchali-pattu/SP-Green-4.png" alt="Ezhil Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
                 <img src="/image11.png" alt="Ezhil Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
@@ -97,11 +97,11 @@ export default function EzhilPattu() {
             </div>
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/Ezhil-pattu/EP-TT-2.png" alt="Ezhil Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/ezhil-pattu/EP-TT-2.png" alt="Ezhil Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Ananchail-Pattu/SP-Green-3.png" alt="Ezhil Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/aanchali-pattu/SP-Green-4.png" alt="Ezhil Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
                   <img src="/image11.png" alt="Ezhil Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />

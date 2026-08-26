@@ -1,69 +1,48 @@
-import { useEffect, useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Collections from './components/Collections'
-import KanchipuramSilk from './components/KanchipuramSilk'
-import SailaPattu from './components/SailaPattu'
-import SailaCollectionPage from './components/SailaCollectionPage'
-import SailaDesignDetail from './components/SailaDesignDetail'
-import AanchaliPattu from './components/AanchaliPattu'
-import AanchaliCollectionPage from './components/AanchaliCollectionPage'
-import AanchaliDesignDetail from './components/AanchaliDesignDetail'
-import MayuraPattu from './components/MayuraPattu'
-import MayuraCollectionPage from './components/MayuraCollectionPage'
-import MayuraDesignDetail from './components/MayuraDesignDetail'
-import VaibhavaPattu from './components/VaibhavaPattu'
-import VaibhavaCollectionPage from './components/VaibhavaCollectionPage'
-import VaibhavaDesignDetail from './components/VaibhavaDesignDetail'
-import NoolisaiPattu from './components/NoolisaiPattu'
-import NoolisaiCollectionPage from './components/NoolisaiCollectionPage'
-import NoolisaiDesignDetail from './components/NoolisaiDesignDetail'
-import SezhinoolPattu from './components/SezhinoolPattu'
-import SezhinoolCollectionPage from './components/SezhinoolCollectionPage'
-import SezhinoolDesignDetail from './components/SezhinoolDesignDetail'
-import VeloraPattu from './components/VeloraPattu'
-import VeloraCollectionPage from './components/VeloraCollectionPage'
-import VeloraDesignDetail from './components/VeloraDesignDetail'
-import EzhilPattu from './components/EzhilPattu'
-import EzhilCollectionPage from './components/EzhilCollectionPage'
-import EzhilDesignDetail from './components/EzhilDesignDetail'
-import KaithiraiPattu from './components/KaithiraiPattu'
-import KaithiraiCollectionPage from './components/KaithiraiCollectionPage'
-import KaithiraiDesignDetail from './components/KaithiraiDesignDetail'
-import VarnikaPattu from './components/VarnikaPattu'
-import VarnikaCollectionPage from './components/VarnikaCollectionPage'
-import VarnikaDesignDetail from './components/VarnikaDesignDetail'
-import MangaiPattu from './components/MangaiPattu'
-import MangaiCollectionPage from './components/MangaiCollectionPage'
-import MangaiDesignDetail from './components/MangaiDesignDetail'
-import CollectionDesigns from './components/CollectionDesigns'
-import SareeDetail from './components/SareeDetail'
-import BanarasiSilk from './components/BanarasiSilk'
-import MysoreSilk from './components/MysoreSilk'
-import TussarSilk from './components/TussarSilk'
-import ChettinadCotton from './components/ChettinadCotton'
-import IlkalSarees from './components/IlkalSarees'
-import BridalSilks from './components/BridalSilks'
-import AboutUs from './components/AboutUs'
-import ShopPage from './components/ShopPage'
-import ContactUs from './components/ContactUs'
-import CartPage from './components/CartPage'
-import FeaturesBar from './components/FeaturesBar'
-import StoryArrivals from './components/StoryArrivals'
-import Occasions from './components/Occasions'
-import Footer from './components/Footer'
+import { lazy, Suspense, useEffect, useState } from 'react'
+import DeferredNavbar from './components/DeferredNavbar'
+import DeferredFooter from './components/DeferredFooter'
 
-function HomePage() {
-  return (
-    <>
-      <Hero />
-      <Collections />
-      <StoryArrivals />
-      <FeaturesBar />
-      <Occasions />
-    </>
-  )
-}
+const HomePage = lazy(() => import('./components/HomePage'))
+const IzhamathiPattu = lazy(() => import('./components/IzhamathiPattu'))
+const SailaPattu = lazy(() => import('./components/SailaPattu'))
+const SailaCollectionPage = lazy(() => import('./components/SailaCollectionPage'))
+const SailaDesignDetail = lazy(() => import('./components/SailaDesignDetail'))
+const AanchaliPattu = lazy(() => import('./components/AanchaliPattu'))
+const AanchaliCollectionPage = lazy(() => import('./components/AanchaliCollectionPage'))
+const AanchaliDesignDetail = lazy(() => import('./components/AanchaliDesignDetail'))
+const MayuraPattu = lazy(() => import('./components/MayuraPattu'))
+const MayuraCollectionPage = lazy(() => import('./components/MayuraCollectionPage'))
+const MayuraDesignDetail = lazy(() => import('./components/MayuraDesignDetail'))
+const VaibhavaPattu = lazy(() => import('./components/VaibhavaPattu'))
+const VaibhavaCollectionPage = lazy(() => import('./components/VaibhavaCollectionPage'))
+const VaibhavaDesignDetail = lazy(() => import('./components/VaibhavaDesignDetail'))
+const NoolisaiPattu = lazy(() => import('./components/NoolisaiPattu'))
+const NoolisaiCollectionPage = lazy(() => import('./components/NoolisaiCollectionPage'))
+const NoolisaiDesignDetail = lazy(() => import('./components/NoolisaiDesignDetail'))
+const SezhinoolPattu = lazy(() => import('./components/SezhinoolPattu'))
+const SezhinoolCollectionPage = lazy(() => import('./components/SezhinoolCollectionPage'))
+const SezhinoolDesignDetail = lazy(() => import('./components/SezhinoolDesignDetail'))
+const VeloraPattu = lazy(() => import('./components/VeloraPattu'))
+const VeloraCollectionPage = lazy(() => import('./components/VeloraCollectionPage'))
+const VeloraDesignDetail = lazy(() => import('./components/VeloraDesignDetail'))
+const EzhilPattu = lazy(() => import('./components/EzhilPattu'))
+const EzhilCollectionPage = lazy(() => import('./components/EzhilCollectionPage'))
+const EzhilDesignDetail = lazy(() => import('./components/EzhilDesignDetail'))
+const KaithiraiPattu = lazy(() => import('./components/KaithiraiPattu'))
+const KaithiraiCollectionPage = lazy(() => import('./components/KaithiraiCollectionPage'))
+const KaithiraiDesignDetail = lazy(() => import('./components/KaithiraiDesignDetail'))
+const VarnikaPattu = lazy(() => import('./components/VarnikaPattu'))
+const VarnikaCollectionPage = lazy(() => import('./components/VarnikaCollectionPage'))
+const VarnikaDesignDetail = lazy(() => import('./components/VarnikaDesignDetail'))
+const MangaiPattu = lazy(() => import('./components/MangaiPattu'))
+const MangaiCollectionPage = lazy(() => import('./components/MangaiCollectionPage'))
+const MangaiDesignDetail = lazy(() => import('./components/MangaiDesignDetail'))
+const CollectionDesigns = lazy(() => import('./components/CollectionDesigns'))
+const SareeDetail = lazy(() => import('./components/SareeDetail'))
+const AboutUs = lazy(() => import('./components/AboutUs'))
+const ShopPage = lazy(() => import('./components/ShopPage'))
+const ContactUs = lazy(() => import('./components/ContactUs'))
+const CartPage = lazy(() => import('./components/CartPage'))
 
 const normalizePath = (pathname) => {
   if (pathname.length > 1 && pathname.endsWith('/')) {
@@ -71,6 +50,29 @@ const normalizePath = (pathname) => {
   }
 
   return pathname
+}
+
+const defaultDescription = 'Discover handcrafted pure silk sarees from Arulmathi Silks in Salem, curated for weddings, festivals, gifting, and timeless celebrations.'
+
+const getPageMetadata = (path) => {
+  const routeName = path.split('/').filter(Boolean)[0]
+  const collectionName = routeName
+    ? routeName.replace(/-/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase())
+    : null
+
+  const fixedPages = {
+    '/': ['Pure Silk Sarees in Salem | Arulmathi Silks', defaultDescription],
+    '/shop': ['Shop Pure Silk Sarees | Arulmathi Silks', 'Shop curated pure silk sarees for weddings, festivals, receptions, gifting, and special occasions at Arulmathi Silks.'],
+    '/about-us': ['About Arulmathi Silks | Silk Saree Store in Salem', 'Learn about Arulmathi Silks, our commitment to traditional craftsmanship, pure silk sarees, and thoughtful customer service in Salem.'],
+    '/contact-us': ['Contact Arulmathi Silks | Salem Saree Store', 'Contact Arulmathi Silks for saree catalogue guidance, bridal selections, store timings, location, and customer assistance.'],
+    '/cart': ['Your Saree Cart | Arulmathi Silks', 'Review the silk sarees selected in your Arulmathi Silks shopping cart.'],
+  }
+
+  if (fixedPages[path]) return fixedPages[path]
+
+  return collectionName
+    ? [`${collectionName} Collection | Arulmathi Silks`, `Explore ${collectionName} pure silk sarees, colors, zari work, designs, prices, and availability from Arulmathi Silks.`]
+    : ['Arulmathi Silks | Pure Silk Sarees', defaultDescription]
 }
 
 export default function App() {
@@ -88,9 +90,25 @@ export default function App() {
     }
   }, [])
 
+  useEffect(() => {
+    const [title, description] = getPageMetadata(path)
+    document.title = title
+
+    const descriptionTag = document.querySelector('meta[name="description"]')
+    const canonicalTag = document.querySelector('link[rel="canonical"]')
+    const ogTitleTag = document.querySelector('meta[property="og:title"]')
+    const ogDescriptionTag = document.querySelector('meta[property="og:description"]')
+    const ogUrlTag = document.querySelector('meta[property="og:url"]')
+
+    descriptionTag?.setAttribute('content', description)
+    canonicalTag?.setAttribute('href', `${window.location.origin}${path}`)
+    ogTitleTag?.setAttribute('content', title)
+    ogDescriptionTag?.setAttribute('content', description)
+    ogUrlTag?.setAttribute('content', `${window.location.origin}${path}`)
+  }, [path])
+
   const pages = {
-    '/izhamathi-pattu': <KanchipuramSilk />,
-    '/kanchipuram-silk': <KanchipuramSilk />,
+    '/izhamathi-pattu': <IzhamathiPattu />,
     '/saila-pattu': <SailaPattu />,
     '/Aanchali-pattu': <AanchaliPattu />,
     '/mayura-pattu': <MayuraPattu />,
@@ -102,12 +120,6 @@ export default function App() {
     '/kaithirai-pattu': <KaithiraiPattu />,
     '/varnika-pattu': <VarnikaPattu />,
     '/mangai-pattu': <MangaiPattu />,
-    '/banarasi-silk': <BanarasiSilk />,
-    '/mysore-silk': <MysoreSilk />,
-    '/tussar-silk': <TussarSilk />,
-    '/chettinad-cotton': <ChettinadCotton />,
-    '/ilkal-sarees': <IlkalSarees />,
-    '/bridal-silks': <BridalSilks />,
     '/about-us': <AboutUs />,
     '/shop': <ShopPage />,
     '/contact-us': <ContactUs />,
@@ -172,11 +184,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-dark text-white overflow-x-hidden flex flex-col">
-      <Navbar />
+      <DeferredNavbar />
       <main className={`flex-1 ${isHomePage ? '' : 'site-page-offset'}`}>
-        {pages[path] || dynamicPage || <HomePage />}
+        <Suspense fallback={<div className="min-h-screen bg-[#0d0d1a]" aria-label="Loading page" />}>
+          {pages[path] || dynamicPage || <HomePage />}
+        </Suspense>
       </main>
-      <Footer />
+      <DeferredFooter />
     </div>
   )
 }

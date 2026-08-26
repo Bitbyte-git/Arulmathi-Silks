@@ -43,6 +43,32 @@ export const addCartItem = (item) => {
   return items
 }
 
+export const addDesignToCartAndOpenCart = ({ collection, design, color, quantity, image }) => {
+  if (!collection || !design) return
+
+  const selectedColor = color || design.color || ''
+  const unitPrice = Number((design.price || '').replace(/[^0-9]/g, '')) || 0
+
+  addCartItem({
+    id: `${collection.slug}/${design.slug}/${selectedColor}`,
+    collectionSlug: collection.slug,
+    collectionName: collection.name,
+    designSlug: design.slug,
+    name: design.name,
+    code: design.code,
+    color: selectedColor,
+    price: design.price,
+    unitPrice,
+    quantity: Number(quantity) || 1,
+    image: image || design.image,
+    url: window.location.pathname,
+  })
+
+  window.history.pushState({}, '', '/cart')
+  window.dispatchEvent(new Event('arulmathi:navigate'))
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 export const removeCartItem = (id) => {
   const items = readCartItems().filter((item) => item.id !== id)
   writeCartItems(items)

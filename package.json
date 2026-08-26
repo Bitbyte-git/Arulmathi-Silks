@@ -1,12 +1,14 @@
 {
-  "name": "Arulmathi-react",
+  "name": "arulmathi-silks-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "dev:hot": "vite --host 0.0.0.0 --port 5173",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "performance": "npm run build && vite preview --host 0.0.0.0 --port 5173"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -19,6 +21,6 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.0.12"
+    "vite": "^8.2.2"
   }
 }

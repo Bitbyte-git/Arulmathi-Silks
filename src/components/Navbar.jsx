@@ -29,7 +29,6 @@ const normalizePath = (pathname) => {
 
 const collectionRoutePrefixes = [
   '/izhamathi-pattu',
-  '/kanchipuram-silk',
   '/saila-pattu',
   '/Aanchali-pattu',
   '/mayura-pattu',
@@ -41,44 +40,6 @@ const collectionRoutePrefixes = [
   '/kaithirai-pattu',
   '/varnika-pattu',
   '/mangai-pattu',
-  '/banarasi-silk',
-  '/mysore-silk',
-  '/tussar-silk',
-  '/chettinad-cotton',
-  '/ilkal-sarees',
-  '/bridal-silks',
-]
-
-const collectionRoutes = {
-  'Kanchipuram Silk': '/izhamathi-pattu',
-  'Banarasi Silk': '/banarasi-silk',
-  'Mysore Silk': '/mysore-silk',
-  'Tussar Silk': '/tussar-silk',
-  'Chettinad Cotton': '/chettinad-cotton',
-  'Ilkal Sarees': '/ilkal-sarees',
-  'Bridal Silks': '/bridal-silks',
-}
-const collectionColumns = [
-  {
-    icon: 'fa-spa',
-    title: 'Traditional Weaves',
-    links: ['Kanchipuram Silk', 'Banarasi Silk', 'Mysore Silk', 'Tussar Silk', 'Chettinad Cotton', 'Ilkal Sarees'],
-  },
-  {
-    icon: 'fa-gem',
-    title: 'Bridal Collections',
-    links: ['Bridal Silks', 'Muhurtham Sarees', 'Reception Sarees', 'Engagement Silks', 'Temple Collection', 'Zari Woven Silks'],
-  },
-  {
-    icon: 'fa-seedling',
-    title: 'Modern Styles',
-    links: ['Designer Sarees', 'Contemporary Silks', 'Printed Silks', 'Pastel Collection', 'Handloom Collection', 'Fusion Drapes'],
-  },
-  {
-    icon: 'fa-sun',
-    title: 'Daily & Festive',
-    links: ['Soft Silk', 'Cotton Sarees', 'Linen Sarees', 'Festive Collection', 'Office Wear', 'Daily Wear'],
-  },
 ]
 const megaCollections = [
   { number: '01', title: 'IZHAMATHI PATTU', count: '2 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
@@ -375,17 +336,17 @@ export default function Navbar() {
   }
 
   useEffect(() => {
-    const updateNavHeight = () => {
-      const h = navRef.current?.offsetHeight || 0
-      if (h > 0) {
-        document.documentElement.style.setProperty('--nav-height', `${h}px`)
-      }
-    }
+    const nav = navRef.current
+    if (!nav || typeof ResizeObserver === 'undefined') return undefined
 
-    updateNavHeight()
-    window.addEventListener('resize', updateNavHeight)
-    return () => window.removeEventListener('resize', updateNavHeight)
-  }, [isMobileMenuOpen, routePath])
+    const observer = new ResizeObserver(([entry]) => {
+      const height = Math.round(entry.borderBoxSize?.[0]?.blockSize || entry.contentRect.height)
+      if (height > 0) document.documentElement.style.setProperty('--nav-height', `${height}px`)
+    })
+
+    observer.observe(nav)
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <nav
@@ -413,12 +374,16 @@ export default function Navbar() {
             src="/logo1.png"
             alt=""
             aria-hidden="true"
+            width="1090"
+            height="645"
           />
         </span>
         <span className="nav-brand-wordmark">
           <img
             src="/Arulmathi-logobg.png"
             alt="Arulmathi Silk Sarees"
+            width="1254"
+            height="1254"
           />
         </span>
       </a>
@@ -541,10 +506,12 @@ export default function Navbar() {
                     >
                       {/* Saree image */}
                       <div className="h-[116px] overflow-hidden">
-                        <img
-                          src={cardImages[idx % cardImages.length]}
-                          alt={col.title}
-                          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                         <img
+                           src={cardImages[idx % cardImages.length]}
+                           alt={col.title}
+                           loading="lazy"
+                           decoding="async"
+                           className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                     </div>
@@ -656,7 +623,7 @@ export default function Navbar() {
                   return (
                     <div key={item.id} className="grid grid-cols-[64px_1fr_auto] gap-3 rounded-lg border border-white/10 bg-white/[0.04] p-3">
                       <button type="button" onClick={() => navigateTo(itemUrl)} className="h-16 w-16 overflow-hidden rounded bg-white/10">
-                        <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-105" />
+                        <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-300 hover:scale-105" />
                       </button>
                     <div className="min-w-0">
                       <button type="button" onClick={() => navigateTo(itemUrl)} className="block max-w-full truncate text-left font-serif text-[17px] leading-tight text-white hover:text-[#c9933a]">{item.name}</button>

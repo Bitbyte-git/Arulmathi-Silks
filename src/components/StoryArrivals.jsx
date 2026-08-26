@@ -3,42 +3,42 @@ const arrivals = [
     name: 'Parrot Green Floral Bloom',
     price: 'Rs. 32,900',
     note: 'Pushpanjali Pure Silk',
-    img: '/Ilamathi-saree/Pushpa/IZ-PA-1.png',
+    img: '/izhamathi-sarees/Pushpa/IZ-PA-2601-2.png',
     href: '/izhamathi-pattu/pushpanjali',
   },
   {
     name: 'Emerald Paisley Zari Saree',
     price: 'Rs. 28,500',
     note: 'Suvarna Thuli Silk',
-    img: '/Ilamathi-saree/IZ-Green-1.png',
+    img: '/izhamathi-sarees/IZ-Green-1.png',
     href: '/izhamathi-pattu/suvarna-thuli',
   },
   {
     name: 'Bridal Red Temple Zari',
     price: 'Rs. 28,500',
     note: 'Vaibhava Thirumanam',
-    img: '/Vaibhava-pattu/VP-TM-Red1.png',
+    img: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu/thirumanam',
   },
   {
     name: 'Royal Magenta Lotus Silk',
     price: 'Rs. 18,600',
     note: 'Kaithirai Poigai Silk',
-    img: '/Kathirai-pattu/KP-PP-1.png',
+    img: '/kaithirai-pattu/KP-PP-1.png',
     href: '/kaithirai-pattu/poigai-pattu',
   },
   {
     name: 'Amber Mustard Gold Silk',
     price: 'Rs. 17,200',
     note: 'Ezhil Thanga Thorana',
-    img: '/Ezhil-pattu/EP-TT-2.png',
+    img: '/ezhil-pattu/EP-TT-2.png',
     href: '/ezhil-pattu/azhagu-pattu',
   },
   {
     name: 'Honey Amudha Soft Silk',
     price: 'Rs. 15,600',
     note: 'Mangai Amudha Pattu',
-    img: '/Mangai-pattu/MP-AP-1.png',
+    img: '/mangai-pattu/MP-AP-1.png',
     href: '/mangai-pattu/amudha-pattu',
   },
 ]
@@ -48,7 +48,7 @@ export default function StoryArrivals() {
 
       {/* OUR STORY */}
       <div className="relative overflow-hidden">
-        <img
+        <DeferredImage
           src="red-pose4.png"
           alt="Silk saree craftsmanship at Arulmathi"
           className="story-promise-image w-full h-full min-h-[520px] object-cover object-top brightness-[0.92] lg:brightness-[0.62]"
@@ -98,7 +98,7 @@ export default function StoryArrivals() {
               className="glow-card hover-lift bg-[#1e1b30] rounded-lg overflow-hidden cursor-pointer group transition-transform duration-300 block"
             >
               <div className="relative h-[260px] sm:h-[300px] lg:h-[340px] overflow-hidden">
-                <img
+                <DeferredImage
                   src={item.img}
                   alt={item.name}
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-400"
@@ -129,3 +129,4 @@ export default function StoryArrivals() {
     </section>
   )
 }
+import DeferredImage from './DeferredImage'

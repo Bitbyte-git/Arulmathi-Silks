@@ -81,7 +81,10 @@ export default function Hero() {
         <source media="(max-width: 767px)" srcSet="/mob-view.png" />
         <img
           src="/heroimg.png"
-          alt="Hero Model"
+          alt="Woman wearing a traditional Arulmathi pure silk saree"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className={`hero-bg-image transition-opacity duration-500 ${isStoryOpen ? 'opacity-0' : 'opacity-100'}`}
           style={{
             position: 'absolute',
@@ -98,7 +101,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-40 story-video-backdrop" onClick={closeStory}>
           <video
             ref={videoRef}
-            src="/Video-folder/AM-Hero-video.mp4"
+            src="/videos/AM-Hero-video.mp4"
             className="w-full h-full object-cover bg-black"
             controls
             playsInline
@@ -147,10 +150,10 @@ export default function Hero() {
           </p>
 
           {isMobile ? (
-            <h3 className="mb-3 sm:mb-5 font-serif text-[30px] font-normal leading-[1.05] text-white sm:text-[40px] md:text-[58px] lg:text-[74px] xl:text-[82px]">
+            <h1 className="mb-3 sm:mb-5 font-serif text-[30px] font-normal leading-[1.05] text-white sm:text-[40px] md:text-[58px] lg:text-[74px] xl:text-[82px]">
               Timeless <em className="italic text-[#d4a853]">in</em><br />
               <em className="italic text-[#d4a853]">Every Weave</em>
-            </h3>
+            </h1>
           ) : (
             <h1 className="mb-5 font-serif text-[32px] font-normal leading-[1.02] text-white sm:text-[40px] md:text-[58px] lg:text-[74px] xl:text-[82px]">
               Timeless

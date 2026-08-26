@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 
 const whatsappUrl = 'https://wa.me/917010452034?text=Hello%20Arulmathi%20Silks%2C%20I%20need%20help%20selecting%20a%20saree.'
 
@@ -38,11 +39,12 @@ export default function ShopPage() {
   const shopHeroPlayCountRef = useRef(0)
   const storyVideoRef = useRef(null)
   const hasPlayedStoryVideoRef = useRef(false)
+  const canLoadDeferredContent = useDeferredSiteLoad()
 
   useEffect(() => {
     const video = storyVideoRef.current
 
-    if (!video) return undefined
+    if (!video || !canLoadDeferredContent) return undefined
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -58,12 +60,12 @@ export default function ShopPage() {
     observer.observe(video)
 
     return () => observer.disconnect()
-  }, [])
+  }, [canLoadDeferredContent])
 
   const replayStoryVideo = () => {
     const video = storyVideoRef.current
 
-    if (!video) return
+    if (!video || !canLoadDeferredContent) return
 
     video.muted = false
     video.volume = 1
@@ -78,7 +80,7 @@ export default function ShopPage() {
   const replayShopHeroVideo = () => {
     const video = shopHeroVideoRef.current
 
-    if (!video) return
+    if (!video || !canLoadDeferredContent) return
 
     shopHeroPlayCountRef.current = 0
     video.currentTime = 0
@@ -103,17 +105,19 @@ export default function ShopPage() {
         className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16"
         onClick={replayShopHeroVideo}
       >
-        <video
-          ref={shopHeroVideoRef}
-          src="/Video-folder/AM-shop-video.mp4"
-          aria-label="Pure silk sarees arranged for shopping"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-86"
-          autoPlay
-          muted
-          playsInline
-          preload="auto"
-          onEnded={handleShopHeroVideoEnded}
-        />
+        {canLoadDeferredContent ? (
+          <video
+            ref={shopHeroVideoRef}
+            src="/videos/AM-shop-video.mp4"
+            aria-label="Pure silk sarees arranged for shopping"
+            className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-86"
+            autoPlay
+            muted
+            playsInline
+            preload="metadata"
+            onEnded={handleShopHeroVideoEnded}
+          />
+        ) : null}
         <div
           aria-hidden="true"
           className="absolute inset-y-0 left-0 -z-10 w-full bg-[linear-gradient(90deg,rgba(5,3,15,0.82)_0%,rgba(5,3,15,0.68)_30%,rgba(5,3,15,0.28)_54%,transparent_78%)]"
@@ -146,8 +150,8 @@ export default function ShopPage() {
             {collectionCards.map((item, index) => (
               <article key={item.title} className="shop-ref-rise overflow-hidden rounded-lg border border-[#e2cda8] bg-[#fbf7ef] shadow-[0_18px_42px_rgba(52,36,18,0.10)] transition-all duration-300 hover:-translate-y-1 hover:border-[#b9863c]/70 hover:shadow-[0_24px_54px_rgba(52,36,18,0.16)]" style={{ animationDelay: `${index * 80}ms` }}>
                 <a href={item.href} className="group block">
-                  <div className="h-[250px] overflow-hidden bg-[#e8ddcf]">
-                    <img src={item.image} alt={item.title} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  <div className="collection-grid-media h-[250px] overflow-hidden bg-[#e8ddcf]">
+                    <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="px-5 py-6">
                     <p className="font-sans text-[13px] font-bold uppercase tracking-[1.7px] text-[#a9762d]">{item.count}</p>
@@ -207,19 +211,23 @@ export default function ShopPage() {
         </div>
 
         <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg bg-[#e8ddcf] shadow-[0_18px_44px_rgba(52,36,18,0.12)]">
-          <video
-            ref={storyVideoRef}
-            src="/Video-folder/shopvid.mp4"
-            aria-label="Arulmathi Silks showroom story"
-            className="h-full min-h-[420px] w-full object-cover object-top"
-            muted
-            playsInline
-            preload="auto"
-            onMouseEnter={replayStoryVideo}
-            onClick={replayStoryVideo}
-            onFocus={replayStoryVideo}
-            onEnded={(event) => event.currentTarget.pause()}
-          />
+          {canLoadDeferredContent ? (
+            <video
+              ref={storyVideoRef}
+              src="/videos/shopvid.mp4"
+              aria-label="Arulmathi Silks showroom story"
+              className="h-full min-h-[420px] w-full object-cover object-top"
+              muted
+              playsInline
+              preload="none"
+              onMouseEnter={replayStoryVideo}
+              onClick={replayStoryVideo}
+              onFocus={replayStoryVideo}
+              onEnded={(event) => event.currentTarget.pause()}
+            />
+          ) : (
+            <div className="min-h-[420px] bg-[#e8ddcf]" aria-hidden="true" />
+          )}
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getKaithiraiPattuCollection, getKaithiraiPattuDesign } from '../data/kaithiraiPattuProducts'
+import { addDesignToCartAndOpenCart } from '../utils/cart'
 
 const colorMap = {
   'Rose Pink': '#d87591', Coral: '#d75b48', Ivory: '#f1eadc', 'Champagne Gold': '#d7b46a',
@@ -23,7 +24,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
 
   const galleryImages = useMemo(() => {
     if (!collection || !design) return []
-    return [...new Set(design.images || [design.image])].filter(Boolean)
+    return [...new Set([design.image, ...(design.images || []), collection.heroImage])].filter(Boolean).slice(0, 4)
   }, [collection, design])
 
   const [selectedImage, setSelectedImage] = useState(() => design?.image || '')
@@ -170,7 +171,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
                     className={`h-20 w-20 shrink-0 overflow-hidden rounded border bg-[#eadfce] transition-all ${selectedImage === img ? 'border-[#c9933a] shadow-[0_0_18px_rgba(201,147,58,0.28)]' : 'border-white/12 opacity-72 hover:opacity-100'}`}
                     aria-label="View image"
                   >
-                    <img src={img} alt="Saree thumbnail" className="h-full w-full object-cover object-top" />
+                    <img src={img} alt="Saree thumbnail" loading="lazy" decoding="async" width="240" height="240" className="h-full w-full object-cover object-top" />
                   </button>
                 ))}
               </div>
@@ -186,8 +187,11 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
                 <img
                   key={selectedImage || design.image}
                   ref={zoomImageRef}
-                  src={selectedImage || design.image}
+                  src={(selectedImage || design.image)}
                   alt={design.name}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="h-[650px] w-full select-none object-cover object-top transition-[opacity,transform] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%' }}
@@ -198,7 +202,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
             </div>
 
             {/* Product info */}
-            <div className="rounded-lg border border-[#e1c7a0] bg-[#fffaf2] p-5 text-[#17131c] shadow-[0_18px_44px_rgba(0,0,0,0.22)] lg:p-7">
+            <div className="product-detail-summary rounded-lg border border-[#e1c7a0] bg-[#fffaf2] p-5 text-[#17131c] shadow-[0_18px_44px_rgba(0,0,0,0.22)] lg:p-7">
               <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">{collection.name}</p>
               <h1 className="mt-3 font-serif text-[38px] font-normal leading-[1.08] sm:text-[50px]">{design.name}</h1>
               <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -236,7 +240,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
 
               {/* CTAs */}
               <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <a href="/contact-us" className="glow-cta inline-flex items-center justify-center gap-3 rounded bg-[#b57922] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-white transition-colors hover:bg-[#d9a046]">Add to Bag <i className="fas fa-bag-shopping" /></a>
+                <button type="button" onClick={() => addDesignToCartAndOpenCart({ collection, design, color: selectedColor, quantity, image: selectedImage })} className="glow-cta inline-flex items-center justify-center gap-3 rounded bg-[#b57922] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-white transition-colors hover:bg-[#d9a046]">Add to Bag <i className="fas fa-bag-shopping" /></button>
                 <a href="/contact-us" className="inline-flex items-center justify-center gap-3 rounded border border-[#17131c] px-5 py-3 font-sans text-[11px] font-bold uppercase tracking-[1.8px] text-[#17131c] transition-colors hover:bg-[#17131c] hover:text-white">Buy Now Enquiry <i className="fas fa-bolt" /></a>
               </div>
 
@@ -310,7 +314,7 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
               {relatedDesigns.slice(0, 3).map((item) => (
                 <a key={item.slug} href={`/kaithirai-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
                   <div className="h-[310px] overflow-hidden bg-[#eadfce]">
-                    <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-serif text-[21px] font-normal leading-tight text-[#17131c]">{item.name}</h3>
@@ -334,4 +338,3 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
     </section>
   )
 }
-

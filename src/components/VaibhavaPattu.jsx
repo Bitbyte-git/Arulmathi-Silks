@@ -1,5 +1,5 @@
 const vaibhavaDesigns = [
-  { name: 'Thirumanam', slug: 'thirumanam', href: '/vaibhava-pattu/thirumanam', desc: 'Wedding muhurtham heavy zari silk', img: '/Vaibhava-pattu/VP-TM-Red1.png', badge: 'Bridal', badgeIcon: 'fa-gem' },
+  { name: 'Thirumanam', slug: 'thirumanam', href: '/vaibhava-pattu/thirumanam', desc: 'Wedding muhurtham heavy zari silk', img: '/vaibhava-pattu/VP-TM-Red1.png', badge: 'Bridal', badgeIcon: 'fa-gem' },
 ]
 
 const vaibhavaNotes = [
@@ -75,16 +75,16 @@ export default function VaibhavaPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}><img src="/red-pose2.png" alt="Vaibhava bridal silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
-              <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}><img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava muhurtham silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" /></div>
-              <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}><img src="/Sezhinoo-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
+              <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}><img src="/vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava muhurtham silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" /></div>
+              <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}><img src="/sezhinool-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}><img src="/red-pose3.png" alt="Vaibhava temple border" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}><img src="/red-pose5.png" alt="Vaibhava raja pattam" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" /></div>
             </div>
             <div className="grid gap-4 lg:hidden">
-              <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]"><img src="/Vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava Pattu bridal" className="h-[440px] w-full object-cover object-top brightness-[0.88]" /></div>
+              <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]"><img src="/vaibhava-pattu/VP-TM-Red1.png" alt="Vaibhava Pattu bridal" className="h-[440px] w-full object-cover object-top brightness-[0.88]" /></div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/red-pose3.png" alt="Vaibhava temple border" className="h-[180px] w-full object-cover object-top brightness-[0.84]" /></div>
-                <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/Sezhinoo-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" /></div>
+                <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]"><img src="/sezhinool-pattu/SP-MV-Blue4.png" alt="Vaibhava jewel silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" /></div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
                 <p className="font-sans text-[10px] font-semibold uppercase tracking-[2.4px] text-[#c9933a]">Vaibhava Notes</p>

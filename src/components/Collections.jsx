@@ -1,46 +1,47 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import DeferredImage from './DeferredImage'
 
 const collections = [
   {
     name: 'Saila Pattu',
     desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
-    img: '/Saila-Pattu/SP-Blue-2.png',
+    img: '/mangai-pattu/MG-AM-0101.png',
     href: '/saila-pattu',
   },
   {
     name: 'Aanchali Pattu',
     desc: 'Geometric kattam silk designs with structured festive character.',
-    img: '/Ananchail-Pattu/SP-Green-3.png',
+    img: '/aanchali-pattu/SP-Green-1.png',
     href: '/Aanchali-pattu',
   },
   {
     name: 'Vaibhava Pattu',
     desc: 'Grand bridal and muhurtham silks for auspicious moments.',
-    img: '/Vaibhava-pattu/VP-TM-Red1.png',
+    img: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu',
   },
   {
     name: 'Noolisai Pattu',
     desc: 'Thread-inspired woven silks with refined festive texture.',
-    img: '/noolisai-pattu/NP-NK-2.png',
+    img: '/noolisai-pattu/NP-NK-1.png',
     href: '/noolisai-pattu',
   },
   {
     name: 'Sezhinool Pattu',
     desc: 'Jewel-toned silk sarees with rich heritage motifs.',
-    img: '/Sezhinoo-pattu/SP-MV-Blue1.png',
+    img: '/sezhinool-pattu/SP-MV-Blue4.png',
     href: '/sezhinool-pattu',
   },
   {
     name: 'Ezhil Pattu',
     desc: 'Graceful heritage silks with soft festive drape appeal.',
-    img: '/Ezhil-pattu/EP-TT-2.png',
+    img: '/ezhil-pattu/EP-TT-2.png',
     href: '/ezhil-pattu',
   },
   {
     name: 'Kaithirai Pattu',
     desc: 'Nature-inspired silk sarees with lotus and vine motifs.',
-    img: '/Kathirai-pattu/KP-PP-1.png',
+    img: '/kaithirai-pattu/KP-PP-2.png',
     href: '/kaithirai-pattu',
   },
 ]
@@ -232,13 +233,17 @@ export default function Collections() {
               className={`collection-card glow-card ${isTouchDevice ? '' : 'hover-lift'} w-[78vw] min-w-[78vw] sm:w-[320px] sm:min-w-[320px] lg:w-[292px] lg:min-w-[292px] xl:w-[306px] xl:min-w-[306px] rounded-[15px] overflow-hidden cursor-pointer group bg-white`}
               style={{ animationDelay: `${(index % collections.length) * 130}ms` }}
             >
-              <div className="collection-card-media overflow-hidden h-[330px] sm:h-[380px] lg:h-[390px] bg-[#eee8df]">
-                <img
+              <a
+                href={col.href}
+                aria-label={`View ${col.name} collection`}
+                className="collection-card-media block overflow-hidden h-[330px] sm:h-[380px] lg:h-[390px] bg-[#eee8df]"
+              >
+                <DeferredImage
                   src={col.img}
                   alt={col.name}
                   className="collection-card-image w-full h-full object-cover object-top"
                 />
-              </div>
+              </a>
               <div className="bg-white px-6 py-5">
                 <h3 className="collection-card-title font-serif text-[21px] sm:text-[23px] font-semibold leading-tight text-[#1a1a2e] mb-3">
                   {col.name}

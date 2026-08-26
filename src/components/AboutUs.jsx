@@ -149,7 +149,7 @@ export default function AboutUs() {
               <article key={panel.number} className="about-ref-rise grid grid-cols-1 border-b border-[#d6c6ad] last:border-b-0 lg:grid-cols-2" style={{ animationDelay: `${index * 130}ms` }}>
                 {panel.imageFirst && (
                   <div className="h-[330px] overflow-hidden lg:h-[380px]">
-                    <img src={panel.image} alt={panel.title} className="h-full w-full object-cover object-top" />
+                    <img src={panel.image} alt={panel.title} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
                   </div>
                 )}
 
@@ -171,7 +171,7 @@ export default function AboutUs() {
 
                 {!panel.imageFirst && (
                   <div className="h-[330px] overflow-hidden lg:h-[380px]">
-                    <img src={panel.image} alt={panel.title} className="h-full w-full object-cover object-top" />
+                    <img src={panel.image} alt={panel.title} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
                   </div>
                 )}
               </article>
@@ -266,7 +266,7 @@ export default function AboutUs() {
                                   Explore milestone
                                 </span>
                               </div>
-                              <img className="milestone-image" src={item.image} alt={`${item.title} silk milestone`} />
+                              <img className="milestone-image" src={item.image} alt={`${item.title} silk milestone`} loading="lazy" decoding="async" />
                             </div>
                           )}
                         </div>

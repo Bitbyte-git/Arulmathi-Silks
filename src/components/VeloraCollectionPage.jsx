@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
+import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 import { getVeloraPattuCollection } from '../data/veloraPattuProducts'
 
 export default function VeloraCollectionPage({ collectionSlug }) {
   const collection = getVeloraPattuCollection(collectionSlug)
   const [heroSlide, setHeroSlide] = useState(0)
+  const canLoadDeferredContent = useDeferredSiteLoad()
 
   const heroImages = useMemo(() => {
     if (!collection) return []
@@ -14,12 +16,12 @@ export default function VeloraCollectionPage({ collectionSlug }) {
   }, [collection])
 
   useEffect(() => {
-    if (heroImages.length <= 1) return undefined
+    if (!canLoadDeferredContent || heroImages.length <= 1) return undefined
     const timer = window.setInterval(() => {
       setHeroSlide((c) => (c + 1) % heroImages.length)
     }, 5200)
     return () => window.clearInterval(timer)
-  }, [heroImages])
+  }, [canLoadDeferredContent, heroImages])
 
   if (!collection) {
     return (
@@ -91,16 +93,18 @@ export default function VeloraCollectionPage({ collectionSlug }) {
                 className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]"
                 style={{ animationDelay: `${index * 90}ms` }}
               >
-                <div className="premium-saree-media group relative h-[290px] overflow-hidden bg-[#e8ddcf]">
+                  <a href={`/velora-pattu/${collection.slug}/${design.slug}`} aria-label={`View ${design.name} details`} className="premium-saree-media group relative block h-[290px] overflow-hidden bg-[#e8ddcf]">
                   <img
                     src={design.image}
                     alt={design.name}
+                    loading="lazy"
+                    decoding="async"
                     className="premium-saree-image h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105"
                   />
                   <span className="absolute left-3 right-3 top-3 rounded bg-[#17131c]/86 px-3 py-1.5 font-sans text-[9px] font-bold uppercase leading-[1.5] tracking-[1px] text-[#f3d18a]">
                     {design.code}
                   </span>
-                </div>
+                </a>
                 <div className="p-5">
                   <h3 className="premium-saree-title font-serif text-[24px] font-normal leading-tight text-[#17131c]">{design.name}</h3>
                   <p className="mt-2 font-sans text-[12px] text-[#6b6470]">{design.color} | {design.fabric}</p>

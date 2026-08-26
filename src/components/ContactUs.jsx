@@ -95,14 +95,14 @@ export default function ContactUs() {
           />
         </picture>
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#080b12_0%,rgba(8,11,18,0.88)_36%,rgba(8,11,18,0.18)_62%,rgba(8,11,18,0)_100%)]" />
-        <div className="mx-auto grid min-h-[640px] max-w-7xl grid-cols-1 items-center py-10 md:min-h-[720px] lg:min-h-[780px] lg:grid-cols-[0.56fr_0.44fr]">
+        <div className="mx-auto grid min-h-[600px] max-w-7xl grid-cols-1 items-center py-10 md:min-h-[640px] lg:min-h-[680px] lg:grid-cols-[0.56fr_0.44fr] lg:items-start lg:py-24">
           <div className="max-w-[720px] rounded-lg bg-[#080b12]/12 py-4 backdrop-blur-[1px]">
-            <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">Contact Us</p>
-            <h1 className="mt-6 font-serif text-[56px] font-normal leading-[1.04] text-white sm:text-[76px] lg:text-[92px]">
+            <p className="font-sans text-[13px] font-bold uppercase tracking-[3px] text-[#d2a24f] sm:text-[14px]">Contact Us</p>
+            <h1 className="mt-5 font-serif text-[52px] font-normal leading-[1.04] text-white sm:text-[64px] lg:text-[72px]">
               We are Here<br />
               To <em className="italic text-[#d2a24f]">Help You</em>
             </h1>
-            <p className="mt-7 max-w-[690px] font-sans text-[18px] leading-[1.9] text-white/82 sm:text-[20px]">
+            <p className="mt-6 max-w-[620px] font-sans text-[16px] leading-[1.8] text-white/82 sm:text-[17px]">
               Have questions about our saree collections or need help choosing a drape? We would love to hear from you. Reach out to us and our team will get back to you soon.
             </p>
           </div>

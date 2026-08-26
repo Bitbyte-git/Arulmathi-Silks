@@ -1,33 +1,26 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getIzhamathiCollection } from '../data/izhamathiProducts'
 
 export default function CollectionDesigns({ collectionSlug, getCollection: getCollectionProp, baseRoute: baseRouteProp }) {
   const getCollectionFn = getCollectionProp || getIzhamathiCollection
   const baseRoute = baseRouteProp || '/izhamathi-pattu'
   const collection = getCollectionFn(collectionSlug)
-
   const [heroSlide, setHeroSlide] = useState(0)
-  const heroImages = useMemo(() => {
-    if (!collection) return []
-    return [...new Set([collection.heroImage, ...collection.designs.map((design) => design.image)])].filter(Boolean).slice(0, 4)
-  }, [collection])
+  const heroImages = collection?.heroImages?.length ? collection.heroImages : [collection?.heroImage].filter(Boolean)
 
-
-
+  useEffect(() => {
+    setHeroSlide(0)
+  }, [collectionSlug])
 
   useEffect(() => {
     if (heroImages.length <= 1) return undefined
 
     const timer = window.setInterval(() => {
       setHeroSlide((current) => (current + 1) % heroImages.length)
-    }, 5200)
+    }, 3500)
 
     return () => window.clearInterval(timer)
-  }, [heroImages])
-
-
-
-
+  }, [heroImages.length])
 
   if (!collection) {
     return (
@@ -62,7 +55,7 @@ export default function CollectionDesigns({ collectionSlug, getCollection: getCo
             </div>
           </div>
           <div className="collection-hero-frame group relative overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a] shadow-[0_24px_70px_rgba(0,0,0,0.42),0_0_28px_rgba(201,147,58,0.14)]">
-            <img key={heroSlide} src={heroImages[heroSlide] || collection.heroImage} alt={collection.name} className="collection-hero-image collection-hero-slide h-[420px] w-full object-cover object-top" />
+            <img key={heroSlide} src={heroImages[heroSlide]} alt={`${collection.name} showcase ${heroSlide + 1}`} className="collection-hero-image collection-hero-slide h-[420px] w-full object-cover object-top" />
             <div className="collection-hero-vignette absolute inset-0 pointer-events-none" />
             <div className="collection-hero-shine absolute inset-0 pointer-events-none" />
             <div className="collection-hero-lift absolute inset-x-8 bottom-0 h-px bg-gradient-to-r from-transparent via-[#f0c36e]/70 to-transparent" />
@@ -85,10 +78,10 @@ export default function CollectionDesigns({ collectionSlug, getCollection: getCo
 
               return (
                 <article key={design.slug} className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]" style={{ animationDelay: `${index * 90}ms` }}>
-                  <div className="premium-saree-media group relative h-[290px] overflow-hidden bg-[#e8ddcf]">
+                  <a href={`/izhamathi-pattu/${collection.slug}/${design.slug}`} aria-label={`View ${design.name} details`} className="premium-saree-media group relative block h-[290px] overflow-hidden bg-[#e8ddcf]">
                     <img src={activeImage} alt={design.name} className="premium-saree-image h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105" />
                     <span className="absolute left-3 right-3 top-3 rounded bg-[#17131c]/86 px-3 py-1.5 font-sans text-[9px] font-bold uppercase leading-[1.5] tracking-[1px] text-[#f3d18a]">{design.code}</span>
-                  </div>
+                  </a>
                   <div className="p-5">
                     <h3 className="premium-saree-title font-serif text-[24px] font-normal leading-tight text-[#17131c]">{design.name}</h3>
                     <p className="mt-2 font-sans text-[12px] text-[#6b6470]">{design.color} | {design.fabric}</p>

@@ -24,7 +24,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
   const design = getIzhamathiDesign(collectionSlug, designSlug)
   const galleryImages = useMemo(() => {
     if (!collection || !design) return []
-    return [...new Set(design.images || [design.image])].filter(Boolean)
+    return [...new Set([design.image, ...(design.images || []), collection.heroImage])].filter(Boolean).slice(0, 4)
   }, [collection, design])
   const [selectedImage, setSelectedImage] = useState(() => design?.image || '')
   const [selectedColor, setSelectedColor] = useState(() => design?.color || '')
@@ -228,7 +228,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
                     className={`h-20 w-20 shrink-0 overflow-hidden rounded border bg-[#eadfce] transition-all ${selectedImage === image ? 'border-[#c9933a] shadow-[0_0_18px_rgba(201,147,58,0.28)]' : 'border-white/12 opacity-72 hover:opacity-100'}`}
                     aria-label="View saree image"
                   >
-                    <img src={image} alt="Saree thumbnail" className="h-full w-full object-cover object-top" />
+                    <img src={image} alt="Saree thumbnail" loading="lazy" decoding="async" width="240" height="240" className="h-full w-full object-cover object-top" />
                   </button>
                 ))}
               </div>
@@ -245,8 +245,11 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
                 <img
                   key={selectedImage || design.image}
                   ref={zoomImageRef}
-                  src={selectedImage || design.image}
+                  src={(selectedImage || design.image)}
                   alt={design.name}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="h-[560px] w-full select-none object-cover object-top opacity-100 transition-[opacity,transform,transform-origin] duration-300 ease-out will-change-transform"
                   draggable="false"
                   style={{ transform: 'scale(1)', transformOrigin: '50% 50%', backfaceVisibility: 'hidden' }}
@@ -272,7 +275,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
               </div>
             </div>
 
-            <div className="rounded-lg border border-[#e1c7a0] bg-[#fffaf2] p-5 text-[#17131c] shadow-[0_18px_44px_rgba(0,0,0,0.22)] lg:p-7">
+            <div className="product-detail-summary rounded-lg border border-[#e1c7a0] bg-[#fffaf2] p-5 text-[#17131c] shadow-[0_18px_44px_rgba(0,0,0,0.22)] lg:p-7">
               <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">{collection.name}</p>
               <h1 className="mt-3 font-serif text-[38px] font-normal leading-[1.08] sm:text-[50px]">{design.name}</h1>
 
@@ -390,7 +393,7 @@ export default function SareeDetail({ collectionSlug, designSlug }) {
               {relatedDesigns.map((item) => (
                 <a key={item.slug} href={`/izhamathi-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
                   <div className="h-[310px] overflow-hidden bg-[#eadfce]">
-                    <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-serif text-[21px] font-normal leading-tight text-[#17131c]">{item.name}</h3>

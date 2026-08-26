@@ -76,7 +76,7 @@ export default function CartPage() {
                 return (
                   <article key={item.id} className="grid grid-cols-1 overflow-hidden rounded-lg border border-[#d9b77d] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.10)] sm:grid-cols-[190px_1fr]">
                     <button type="button" onClick={() => navigateTo(itemUrl)} className="block h-[220px] w-full overflow-hidden bg-[#eadfce] text-left sm:h-full">
-                      <img src={item.image} alt={item.name} className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105" />
+                      <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105" />
                     </button>
                     <div className="p-5">
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">

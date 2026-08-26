@@ -39,9 +39,11 @@ export default function Footer() {
       <div className="relative z-10 grid grid-cols-1 gap-10 border-b border-[#2d1811]/12 pb-10 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1.15fr] lg:items-start">
         <div>
           <a href="#home" className="mb-5 flex h-[140px] w-[240px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
-            <img
+            <DeferredImage
               src="/logowobg.png"
               alt="Arulmathi Silk Sarees"
+              width="1448"
+              height="1086"
               className="h-full w-auto max-w-full object-contain drop-shadow-[0_0_24px_rgba(201,147,58,0.28)]"
             />
           </a>
@@ -119,3 +121,4 @@ export default function Footer() {
     </footer>
   )
 }
+import DeferredImage from './DeferredImage'
