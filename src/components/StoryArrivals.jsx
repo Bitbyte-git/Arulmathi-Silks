@@ -19,8 +19,8 @@ const arrivals = [
     name: 'Bridal Red Temple Zari',
     price: 'Rs. 28,500',
     note: 'Vaibhava Thirumanam',
-    img: '/Vaibhava-pattu/VB-TM-0101-1.png',
-    fallbackImg: '/Vaibhava-pattu/VP-TM-Red1.png',
+    img: '/vaibhava-pattu/VB-TM-0101-1.png',
+    fallbackImg: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu/thirumanam',
   },
   {
@@ -35,16 +35,16 @@ const arrivals = [
     name: 'Amber Mustard Gold Silk',
     price: 'Rs. 17,200',
     note: 'Ezhil Thanga Thorana',
-    img: '/Ezhil-pattu/EZ-TT-0101-1.png',
-    fallbackImg: '/Ezhil-pattu/EP-TT-2.png',
+    img: '/ezhil-pattu/EZ-TT-0101-1.png',
+    fallbackImg: '/ezhil-pattu/EP-TT-2.png',
     href: '/ezhil-pattu/azhagu-pattu',
   },
   {
     name: 'Honey Amudha Soft Silk',
     price: 'Rs. 15,600',
     note: 'Mangai Amudha Pattu',
-    img: '/Mangai-pattu/MG-AM-0101.png',
-    fallbackImg: '/Mangai-pattu/MP-AP-1.png',
+    img: '/mangai-pattu/MG-AM-0101.png',
+    fallbackImg: '/mangai-pattu/MP-AP-1.png',
     href: '/mangai-pattu/amudha-pattu',
   },
 ]
@@ -111,7 +111,7 @@ export default function StoryArrivals() {
         </p>
 
         {/* Product cards */}
-        <div className="mobile-arrivals-grid mb-6 hidden grid-cols-1 gap-3.5 pt-2.5 sm:grid sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mobile-arrivals-grid mb-6 grid grid-cols-1 gap-3.5 pt-2.5 sm:grid-cols-2 xl:grid-cols-3">
           {arrivals.map((item) => (
             <a
               key={item.name}

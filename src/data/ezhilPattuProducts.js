@@ -4,10 +4,10 @@ export const ezhilPattuCollections = [
     name: 'Thanga Thorana Pattu',
     eyebrow: 'Golden Festive Borders - Ezhil Pattu',
     description: 'Thanga Thorana Pattu features warm festive silk shades, paisley-inspired woven motifs, and gold zari borders made for celebrations, gifting, and graceful traditional draping.',
-    heroImage: '/Ezhil-pattu/EP-TT-2.png',
+    heroImage: '/ezhil-pattu/EP-TT-2.png',
     heroImages: [
-      '/Ezhil-pattu/EP-TT-1.png',
-      '/Ezhil-pattu/EP-TT-2.png',
+      '/ezhil-pattu/EP-TT-1.png',
+      '/ezhil-pattu/EP-TT-2.png',
       
     ],
     designs: [
@@ -15,8 +15,8 @@ export const ezhilPattuCollections = [
         slug: 'teal-azhagu-silk',
         name: 'Amber Thanga Thorana Silk',
         code: 'EZ-TT-0101',
-        image: '/Ezhil-pattu/EZ-TT-0101-1.png',
-        images: ['/Ezhil-pattu/EZ-TT-0101-1.png', '/Ezhil-pattu/EZ-TT-0101-2.png', '/Ezhil-pattu/EZ-TT-0101-3.png', '/Ezhil-pattu/EZ-TT-0101-4.png'],
+        image: '/ezhil-pattu/EZ-TT-0101-1.png',
+        images: ['/ezhil-pattu/EZ-TT-0101-1.png', '/ezhil-pattu/EZ-TT-0101-2.png', '/ezhil-pattu/EZ-TT-0101-3.png', '/ezhil-pattu/EZ-TT-0101-4.png'],
         price: 'Rs. 17,200',
         oldPrice: 'Rs. 23,900',
         discount: '28% off',

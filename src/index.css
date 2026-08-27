@@ -5900,12 +5900,6 @@ footer {
   }
 }
 
-@media (max-width: 639px) {
-  #new-arrivals>.mobile-arrivals-grid {
-    display: none !important;
-  }
-}
-
 /* Mobile page polish: make inner routes match the home page rhythm. */
 @media (max-width: 767px) {
   section [class*="lg:grid-cols-[0.54fr_0.46fr]"],

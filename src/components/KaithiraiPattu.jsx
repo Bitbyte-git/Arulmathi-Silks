@@ -92,7 +92,7 @@ export default function KaithiraiPattu() {
                 <img src="/sec-pose5.png" alt="Kaithirai Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/Ezhil-pattu/EP-TT-2.png" alt="Kaithirai Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/ezhil-pattu/EP-TT-2.png" alt="Kaithirai Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
             <div className="grid gap-4 lg:hidden">

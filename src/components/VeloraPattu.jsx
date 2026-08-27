@@ -85,13 +85,13 @@ export default function VeloraPattu() {
                 <img src="/4-pose3.png" alt="Velora Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/Velora-pattu/VP-VM-5.png" alt="Velora Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/velora-pattu/VP-VM-5.png" alt="Velora Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
                 <img src="/sec-pose4.png" alt="Velora Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/Velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
                 <img src="/sec-pose5.png" alt="Velora Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
@@ -99,14 +99,14 @@ export default function VeloraPattu() {
             </div>
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/Velora-pattu/VP-VM-5.png" alt="Velora Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/velora-pattu/VP-VM-5.png" alt="Velora Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
                   <img src="/sec-pose4.png" alt="Velora Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
