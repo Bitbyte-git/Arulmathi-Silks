@@ -201,7 +201,7 @@ export default function AboutUs() {
 
       <div className="milestone-legacy relative overflow-visible px-5 py-14 sm:px-8 lg:px-16 lg:py-20">
         <div className="relative mx-auto max-w-[1480px] text-center">
-          <p className="font-sans text-[10px] font-bold uppercase tracking-[5px] text-[#b98335]">40 Years of Legacy</p>
+          <p className="font-sans text-[10px] font-bold uppercase tracking-[5px] text-[#b98335]">+40 Years of Legacy</p>
           <h2 className="mt-3 font-serif text-[42px] font-normal leading-[1.04] text-[#221824] sm:text-[58px] lg:text-[68px]">
             Woven Through Time
           </h2>
@@ -279,11 +279,15 @@ export default function AboutUs() {
           </div>
 
           <div className="milestone-trust-badge about-ref-rise group">
+            <span className="trust-border-stars" aria-hidden="true">
+              <span />
+              <span />
+            </span>
             <span className="trust-badge-icon">
               <i className="fas fa-users" />
             </span>
             <div className="text-left">
-              <p className="trust-badge-years">40 Years</p>
+              <p className="trust-badge-years">40 + Years</p>
               <p className="trust-badge-text">Crafted with Trust</p>
             </div>
           </div>

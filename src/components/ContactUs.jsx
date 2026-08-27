@@ -15,9 +15,14 @@ const contactDetails = [
     text: 'info.arulmathi@gmail.com',
   },
   {
+    icon: 'fa-file-invoice',
+    title: 'GSTIN',
+    text: '33AJKPT2529A1ZG',
+  },
+  {
     icon: 'fa-clock',
     title: 'Business Hours',
-    text: 'Monday - Saturday: 9:30 AM - 8:00 PM\nSunday: 10:00 AM - 6:00 PM',
+    text: 'Monday - Saturday: 9:30 AM - 7:00 PM\nSunday: 10:00 AM - 6:00 PM',
   },
 ]
 
