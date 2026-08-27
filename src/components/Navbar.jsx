@@ -371,19 +371,19 @@ export default function Navbar() {
       <a href="/" className="nav-brand-logo flex shrink-0 items-center" aria-label="Arulmathi Silk Sarees home">
         <span className="nav-brand-mark">
           <img
-            src="/logo1.png"
+            src="/logo1-346.png"
             alt=""
             aria-hidden="true"
-            width="1090"
-            height="645"
+            width="346"
+            height="205"
           />
         </span>
         <span className="nav-brand-wordmark">
           <img
-            src="/Arulmathi-logobg.png"
+            src="/Arulmathi-logobg-288.png"
             alt="Arulmathi Silk Sarees"
-            width="1254"
-            height="1254"
+            width="288"
+            height="288"
           />
         </span>
       </a>

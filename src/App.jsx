@@ -1,8 +1,8 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
-import DeferredNavbar from './components/DeferredNavbar'
+import Navbar from './components/Navbar'
 import DeferredFooter from './components/DeferredFooter'
+import HomePage from './components/HomePage'
 
-const HomePage = lazy(() => import('./components/HomePage'))
 const IzhamathiPattu = lazy(() => import('./components/IzhamathiPattu'))
 const SailaPattu = lazy(() => import('./components/SailaPattu'))
 const SailaCollectionPage = lazy(() => import('./components/SailaCollectionPage'))
@@ -184,7 +184,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-dark text-white overflow-x-hidden flex flex-col">
-      <DeferredNavbar />
+      <Navbar />
       <main className={`flex-1 ${isHomePage ? '' : 'site-page-offset'}`}>
         <Suspense fallback={<div className="min-h-screen bg-[#0d0d1a]" aria-label="Loading page" />}>
           {pages[path] || dynamicPage || <HomePage />}

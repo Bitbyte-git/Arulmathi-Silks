@@ -80,7 +80,11 @@ export default function Hero() {
       <picture>
         <source media="(max-width: 767px)" srcSet="/mob-view.png" />
         <img
-          src="/heroimg.png"
+          src="/heroimg-1600.jpg"
+          srcSet="/heroimg-960.jpg 960w, /heroimg-1600.jpg 1600w"
+          sizes="100vw"
+          width="1600"
+          height="900"
           alt="Woman wearing a traditional Arulmathi pure silk saree"
           loading="eager"
           decoding="async"
@@ -98,15 +102,15 @@ export default function Hero() {
       </picture>
 
       {isStoryOpen && (
-        <div className="absolute inset-0 z-40 story-video-backdrop" onClick={closeStory}>
+        <div className="absolute inset-0 z-40 story-video-backdrop">
           <video
             ref={videoRef}
             src="/videos/AM-Hero-video.mp4"
             className="w-full h-full object-cover bg-black"
-            controls
             playsInline
             autoPlay
-            onClick={(event) => event.stopPropagation()}
+            loop
+            disablePictureInPicture
           />
           <button
             type="button"
