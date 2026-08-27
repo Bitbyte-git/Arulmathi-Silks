@@ -1,7 +1,7 @@
 import { veloraPattuCollections } from '../data/veloraPattuProducts'
 
 const veloraDesigns = [
-  { name: 'Velli Malar Pattu', slug: 'velli-border', href: '/velora-pattu/velli-border', desc: 'Silver contrast border silk with lustrous zari', img: veloraPattuCollections[0].cardImage, badge: 'Popular', badgeIcon: 'fa-star' },
+  { name: 'வெள்ளி மலர் பட்டு', slug: 'velli-border', href: '/velora-pattu/velli-border', desc: 'Silver contrast border silk with lustrous zari', img: veloraPattuCollections[0].cardImage, badge: 'Popular', badgeIcon: 'fa-star' },
 ]
 
 const veloraNotes = [
@@ -53,9 +53,9 @@ export default function VeloraPattu() {
         <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-12 xl:gap-16">
           <div className="max-w-[560px] lg:pb-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Signature Collections</p>
-            <h1 className="mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
-              Velora<br />
-              <em className="italic text-[#d4a853]">Pattu</em>
+            <h1 className="collection-hero-tamil-name mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
+              வெலோரா<br />
+              <em className="italic text-[#d4a853]">பட்டு</em>
             </h1>
             <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76 sm:text-[14px]">
               Elegant silk sarees with silver-gold contrast borders, geometric kolam patterns, and flame blossom motifs for every festive occasion.
@@ -130,7 +130,7 @@ export default function VeloraPattu() {
           <div className="mb-8 text-center">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Explore Our</p>
             <h2 className="mt-3 font-serif text-[34px] font-normal leading-[1.12] text-[#1a1a2e] sm:text-[44px] lg:text-[50px]">
-              Velora <em className="italic text-[#c9933a]">Silk Designs</em>
+              <span className="section-heading-tamil-name">வெலோரா</span> <em className="italic text-[#c9933a]">Silk Designs</em>
             </h2>
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
@@ -147,7 +147,7 @@ export default function VeloraPattu() {
                     <img src={saree.img} alt={saree.name} className="velora-design-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>
                   <div className="velora-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="velora-design-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
+                    <h3 className="velora-design-title collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
                     <p className="velora-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />

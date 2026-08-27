@@ -42,18 +42,18 @@ const collectionRoutePrefixes = [
   '/mangai-pattu',
 ]
 const megaCollections = [
-  { number: '01', title: 'IZHAMATHI PATTU', count: '2 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
-  { number: '02', title: 'SAILA PATTU', count: '6 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
-  { number: '03', title: 'AANCHAIL PATTU', count: '9 DESIGNS', icon: 'fa-clover', href: '/Aanchali-pattu' },
-  { number: '04', title: 'MAYURA PATTU', count: '9 DESIGNS', icon: 'fa-fan', href: '/mayura-pattu' },
-  { number: '05', title: 'VAIBHAVA PATTU', count: '9 DESIGNS', icon: 'fa-border-all', href: '/vaibhava-pattu' },
-  { number: '06', title: 'NOOLISAI PATTU', count: '9 DESIGNS', icon: 'fa-feather-pointed', href: '/noolisai-pattu' },
-  { number: '07', title: 'SEZHINOOL PATTU', count: '9 DESIGNS', icon: 'fa-gem', href: '/sezhinool-pattu' },
-  { number: '08', title: 'VELORA PATTU', count: '9 DESIGNS', icon: 'fa-spa', href: '/velora-pattu' },
-  { number: '09', title: 'EZHIL PATTU', count: '9 DESIGNS', icon: 'fa-star', href: '/ezhil-pattu' },
-  { number: '10', title: 'KAITHIRAI PATTU', count: '9 DESIGNS', icon: 'fa-briefcase', href: '/kaithirai-pattu' },
-  { number: '11', title: 'VARNIKA PATTU', count: '1 DESIGN', icon: 'fa-sun', href: '/varnika-pattu' },
-  { number: '12', title: 'MANGAI PATTU', count: '9 DESIGNS', icon: 'fa-fire-flame-curved', href: '/mangai-pattu' },
+  { number: '01', title: 'இழமதி பட்டு', count: '2 SAREE DESIGNS', icon: 'fa-landmark', href: '/izhamathi-pattu' },
+  { number: '02', title: 'சைலா பட்டு', count: '6 DESIGNS', icon: 'fa-seedling', href: '/saila-pattu' },
+  { number: '03', title: 'ஆஞ்சலி பட்டு', count: '9 DESIGNS', icon: 'fa-clover', href: '/Aanchali-pattu' },
+  { number: '04', title: 'மயூரா பட்டு', count: '9 DESIGNS', icon: 'fa-fan', href: '/mayura-pattu' },
+  { number: '05', title: 'வைபவ பட்டு', count: '9 DESIGNS', icon: 'fa-border-all', href: '/vaibhava-pattu' },
+  { number: '06', title: 'நூலிசை பட்டு', count: '9 DESIGNS', icon: 'fa-feather-pointed', href: '/noolisai-pattu' },
+  { number: '07', title: 'செழிநூல் பட்டு', count: '9 DESIGNS', icon: 'fa-gem', href: '/sezhinool-pattu' },
+  { number: '08', title: 'வெலோரா பட்டு', count: '9 DESIGNS', icon: 'fa-spa', href: '/velora-pattu' },
+  { number: '09', title: 'எழில் பட்டு', count: '9 DESIGNS', icon: 'fa-star', href: '/ezhil-pattu' },
+  { number: '10', title: 'கைத்திரை பட்டு', count: '9 DESIGNS', icon: 'fa-briefcase', href: '/kaithirai-pattu' },
+  { number: '11', title: 'வர்ணிகா பட்டு', count: '1 DESIGN', icon: 'fa-sun', href: '/varnika-pattu' },
+  { number: '12', title: 'மங்கை பட்டு', count: '9 DESIGNS', icon: 'fa-fire-flame-curved', href: '/mangai-pattu' },
 ]
 const shoppingSteps = [
   { icon: 'fa-bag-shopping', title: '1. CHOOSE DESIGN', text: 'Browse Pushpanjali and Suvarna Thuli' },
@@ -517,7 +517,7 @@ export default function Navbar() {
                     </div>
                     {/* Card text below image box */}
                     <div className="pt-2 px-0.5">
-                      <p className={`inline-block border-b pb-0.5 font-sans text-[10px] font-bold tracking-[0.6px] leading-[1.25] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
+                      <p className={`tamil-collection-name inline-block border-b pb-0.5 text-[11px] font-normal leading-[1.35] mb-0.5 transition-colors ${isMegaActive ? 'border-[#b8882a] text-[#b8882a]' : 'border-transparent text-[#3d1f00] group-hover:border-[#b8882a] group-hover:text-[#b8882a]'}`}>
                         {col.title}
                       </p>
                       <p className="font-sans text-[9px] text-[#8b6020] font-semibold tracking-[0.7px]">

@@ -1,7 +1,7 @@
 export const ezhilPattuCollections = [
   {
     slug: 'azhagu-pattu',
-    name: 'Thanga Thorana Pattu',
+    name: 'தங்க தோரண பட்டு',
     eyebrow: 'Golden Festive Borders - Ezhil Pattu',
     description: 'Thanga Thorana Pattu features warm festive silk shades, paisley-inspired woven motifs, and gold zari borders made for celebrations, gifting, and graceful traditional draping.',
     heroImage: '/ezhil-pattu/EP-TT-2.png',

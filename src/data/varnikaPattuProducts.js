@@ -1,7 +1,7 @@
 export const varnikaPattuCollections = [
   {
     slug: 'sudar-pattu',
-    name: 'Vasundhara Pattu',
+    name: 'வசுந்தரா பட்டு',
     eyebrow: 'Radiant Sun Silks - Varnika Pattu',
     description: 'Vasundhara Pattu radiates like the morning sun, with bright warm tones, sun-inspired motifs, and luminous zari for weddings and grand celebrations.',
     heroImage: '/varnika-pattu/VP-VP-3.png',

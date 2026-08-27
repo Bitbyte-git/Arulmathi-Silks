@@ -1,7 +1,7 @@
 export const mangaiPattuCollections = [
   {
     slug: 'amudha-pattu',
-    name: 'Amudha Pattu',
+    name: 'அமுத பட்டு',
     eyebrow: 'Nectar Woven Silks · Mangai Pattu',
     description: 'Amudha Pattu is the sweetest collection of Mangai Pattu — soft nectar-inspired motifs and golden zari woven into silk for festive gifting and family celebrations.',
     heroImage: '/mangai-pattu/MP-AP-5.png',

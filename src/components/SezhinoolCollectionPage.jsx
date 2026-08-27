@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+﻿import { useEffect, useMemo, useState } from 'react'
 import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 import { getSezhinoolPattuCollection } from '../data/sezhinoolPattuProducts'
 
@@ -46,7 +46,7 @@ export default function SezhinoolCollectionPage({ collectionSlug }) {
               <i className="fas fa-arrow-left mr-2" /> Sezhinool Pattu
             </a>
             <p className="mt-8 font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#c9933a]">{collection.eyebrow}</p>
-            <h1 className="mt-4 font-serif text-[46px] font-normal leading-[1.08] text-white sm:text-[62px] lg:text-[74px]">{collection.name}</h1>
+            <h1 className="collection-hero-tamil-name mt-4 font-serif text-[46px] font-normal leading-[1.08] text-white sm:text-[62px] lg:text-[74px]">{collection.name}</h1>
             <p className="mt-5 max-w-[560px] font-sans text-[13px] leading-[1.9] text-white/62">{collection.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <span className="rounded-full border border-white/16 bg-white/5 px-4 py-2 font-sans text-[10px] font-bold uppercase tracking-[1.6px] text-[#f0c36e] shadow-[0_0_18px_rgba(201,147,58,0.12)]">
@@ -78,7 +78,7 @@ export default function SezhinoolCollectionPage({ collectionSlug }) {
             <div>
               <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">Available Saree Designs</p>
               <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c] sm:text-[50px]">
-                Sarees in <em className="italic text-[#b57922]">{collection.name}</em>
+                Sarees in <em className="mixed-heading-tamil italic text-[#b57922]">{collection.name}</em>
               </h2>
             </div>
           </div>

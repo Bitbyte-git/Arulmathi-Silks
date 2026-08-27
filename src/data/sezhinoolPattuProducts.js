@@ -1,7 +1,7 @@
 export const sezhinoolPattuCollections = [
   {
     slug: 'malar-valli',
-    name: 'Malar Valli',
+    name: 'மலர் வள்ளி',
     eyebrow: 'Butta & Vine Silks · Sezhinool Pattu',
     description: 'Malar Valli features a rich royal blue pure silk body scattered with rose-gold chakra butta motifs, framed by an intricate rose-gold floral vine and paisley border — a vibrant and refined choice for weddings and grand festive occasions.',
     heroImage: '/sezhinool-pattu/SP-MV-Blue4.png',
@@ -36,7 +36,7 @@ export const sezhinoolPattuCollections = [
   },
   {
     slug: 'mani-kodi',
-    name: 'Mani Kodi',
+    name: 'மணி கொடி',
     eyebrow: 'Jewel Vine Silks · Sezhinool Pattu',
     description: 'Mani Kodi weaves the beauty of jewel-toned vines into premium silk — intricate gem-like patterns for receptions and grand family events.',
     heroImage: '/red-pose4.png',
@@ -48,7 +48,7 @@ export const sezhinoolPattuCollections = [
   },
   {
     slug: 'thirai-pattu',
-    name: 'Thirai Pattu',
+    name: 'திரை பட்டு',
     eyebrow: 'Wave Woven Silks · Sezhinool Pattu',
     description: 'Thirai Pattu draws from the graceful wave — undulating zari patterns woven across silk for a fluid, elegant festive drape.',
     heroImage: '/sec-pose3.png',

@@ -1,6 +1,6 @@
 const izhamathiSilks = [
-  { name: 'Pushpanjali', slug: 'pushpanjali', desc: 'Floral woven silk with graceful zari blooms', img: '/izhamathi-sarees/Pushpa/IZ-PA-2.png' },
-  { name: 'Suvarna Thuli', slug: 'suvarna-thuli', desc: 'Golden butta silk with warm festive shine', img: '/izhamathi-sarees/IZ-Green-1.png' },
+  { name: 'புஷ்பாஞ்சலி', slug: 'pushpanjali', desc: 'Floral woven silk with graceful zari blooms', img: '/izhamathi-sarees/Pushpa/IZ-PA-2.png' },
+  { name: 'சுவர்ண துளி', slug: 'suvarna-thuli', desc: 'Golden butta silk with warm festive shine', img: '/izhamathi-sarees/IZ-Green-1.png' },
 ]
 
 const izhamathiMoments = [
@@ -55,9 +55,9 @@ export default function IzhamathiPattu() {
         <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-12 xl:gap-16">
           <div className="max-w-[560px] lg:pb-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Signature Collections</p>
-            <h1 className="mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
-              Izhamathi<br />
-              <em className="italic text-[#d4a853]">Pattu</em>
+            <h1 className="collection-hero-tamil-name mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
+              இழமதி<br />
+              <em className="italic text-[#d4a853]">பட்டு</em>
             </h1>
             <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76 sm:text-[14px]">
               Timeless pure silk sarees curated for muhurtham, reception, gifting, and grand family moments, with luminous zari, royal color stories, and graceful drape support.
@@ -161,7 +161,7 @@ export default function IzhamathiPattu() {
                     <img src={saree.img} alt={saree.name} className="izhamathi-family-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>
                   <div className="izhamathi-family-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="izhamathi-family-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">
+                    <h3 className="izhamathi-family-title collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">
                       <a href={`/izhamathi-pattu/${saree.slug}`} className="transition-colors hover:text-[#b57922]">{saree.name}</a>
                     </h3>
                     <p className="izhamathi-family-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4f4854]">{saree.desc}</p>

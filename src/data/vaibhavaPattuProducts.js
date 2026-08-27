@@ -1,7 +1,7 @@
 export const vaibhavaPattuCollections = [
   {
     slug: 'thirumanam',
-    name: 'Thirumanam',
+    name: 'திருமணம்',
     eyebrow: 'Wedding Muhurtham Silks · Vaibhava Pattu',
     description: 'Thirumanam is the grand wedding collection of Vaibhava Pattu — heavy zari, rich jewel tones, and temple-inspired borders crafted for muhurtham and the most special moments.',
     heroImage: '/vaibhava-pattu/VP-TM-Red1.png',
@@ -11,7 +11,7 @@ export const vaibhavaPattuCollections = [
   },
   {
     slug: 'maangalyam',
-    name: 'Maangalyam',
+    name: 'மாங்கல்யம்',
     eyebrow: 'Bridal Gold & Red · Vaibhava Pattu',
     description: 'Maangalyam is the sacred red-and-gold collection of Vaibhava Pattu — temple borders, rich vermilion tones, and heavy zari work woven for the most auspicious occasions.',
     heroImage: '/red-pose3.png',
@@ -23,7 +23,7 @@ export const vaibhavaPattuCollections = [
   },
   {
     slug: 'raja-pattam',
-    name: 'Raja Pattam',
+    name: 'ராஜ பட்டம்',
     eyebrow: 'Royal Jewel Silks · Vaibhava Pattu',
     description: 'Raja Pattam is the royal line of Vaibhava Pattu — jewel-toned silks with full zari work, sovereign borders, and a regal presence for the grandest occasions.',
     heroImage: '/red-pose5.png',

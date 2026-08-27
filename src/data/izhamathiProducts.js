@@ -1,7 +1,7 @@
 export const izhamathiCollections = [
   {
     slug: 'pushpanjali',
-    name: 'Pushpanjali',
+    name: 'புஷ்பாஞ்சலி',
     eyebrow: 'Floral woven silk design',
     description: 'A floral woven silk design family with graceful zari blooms, rich festive shades, and soft traditional elegance for weddings, poojas, and gifting.',
     heroImage: '/izhamathi-sarees/Pushpa/IZ-PA-3.png',
@@ -34,7 +34,7 @@ export const izhamathiCollections = [
   },
   {
     slug: 'suvarna-thuli',
-    name: 'Suvarna Thuli',
+    name: 'சுவர்ண துளி',
     eyebrow: 'Golden butta silk design',
     description: 'A golden butta silk design family with warm metallic shine, delicate woven dots, and elegant festive styling for special occasions.',
     heroImage: '/izhamathi-sarees/IZ-Green-1.png',

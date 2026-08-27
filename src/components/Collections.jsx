@@ -2,46 +2,46 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 const collections = [
   {
-    name: 'Saila Pattu',
+    name: 'சைலா பட்டு',
     desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
     img: '/saila-pattu/SP-SN-0101-3.png',
     fallbackImg: '/saila-pattu/SP-Blue-2.png',
     href: '/saila-pattu',
   },
   {
-    name: 'Aanchali Pattu',
+    name: 'ஆஞ்சலி பட்டு',
     desc: 'Geometric kattam silk designs with structured festive character.',
     img: '/aanchali-pattu/SP-Green-1.png',
     href: '/Aanchali-pattu',
   },
   {
-    name: 'Vaibhava Pattu',
+    name: 'வைபவ பட்டு',
     desc: 'Grand bridal and muhurtham silks for auspicious moments.',
     img: '/vaibhava-pattu/VB-TM-0101-1.png',
     fallbackImg: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu',
   },
   {
-    name: 'Noolisai Pattu',
+    name: 'நூலிசை பட்டு',
     desc: 'Thread-inspired woven silks with refined festive texture.',
     img: '/noolisai-pattu/NP-NK-1.png',
     href: '/noolisai-pattu',
   },
   {
-    name: 'Sezhinool Pattu',
+    name: 'செழிநூல் பட்டு',
     desc: 'Jewel-toned silk sarees with rich heritage motifs.',
     img: '/sezhinool-pattu/SP-MV-Blue4.png',
     href: '/sezhinool-pattu',
   },
   {
-    name: 'Ezhil Pattu',
+    name: 'எழில் பட்டு',
     desc: 'Graceful heritage silks with soft festive drape appeal.',
     img: '/ezhil-pattu/EZ-TT-0101-1.png',
     fallbackImg: '/ezhil-pattu/EP-TT-1.png',
     href: '/ezhil-pattu',
   },
   {
-    name: 'Kaithirai Pattu',
+    name: 'கைத்திரை பட்டு',
     desc: 'Nature-inspired silk sarees with lotus and vine motifs.',
     img: '/kaithirai-pattu/KP-PP-2.png',
     href: '/kaithirai-pattu',
@@ -254,7 +254,7 @@ export default function Collections() {
                 />
               </a>
               <div className="bg-white px-6 py-5">
-                <h3 className="collection-card-title font-serif text-[21px] sm:text-[23px] font-semibold leading-tight text-[#1a1a2e] mb-3">
+                <h3 className="collection-card-title tamil-collection-name font-serif text-[19px] sm:text-[21px] font-normal leading-tight text-[#1a1a2e] mb-3">
                   {col.name}
                 </h3>
                 <p className="collection-card-copy mb-5 font-sans text-[13px] leading-[1.6] text-gray-500">

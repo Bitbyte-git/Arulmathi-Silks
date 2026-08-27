@@ -1,7 +1,7 @@
 export const sailaPattuCollections = [
   {
     slug: 'malar-kodi',
-    name: 'Suvarneela',
+    name: 'சுவர்ணீலா',
     eyebrow: "Salem's Bestseller · Vaagai Collection",
     description: 'SAILA PATTU - Vaagai represents a design that has achieved lasting success in the Salem market and continues to be one of the most loved choices among customers. Suvarneela is the signature vine motif silk with graceful festive texture, woven for every celebration.',
     heroImage: '/saila-pattu/SP-SN-0101-2.png',
@@ -82,7 +82,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'thanga-mayil',
-    name: 'Thanga Mayil',
+    name: 'தங்க மயில்',
     eyebrow: 'New Arrival · Vaagai Collection',
     description: 'Thanga Mayil features peacock-inspired zari borders that flow gracefully across the pallu — a Saila Pattu choice pick for reception and wedding occasions in the Vaagai collection.',
     heroImage: '/saila-pattu/SP-Blue-1.png',
@@ -145,7 +145,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'pachai-valli',
-    name: 'Pachai Valli',
+    name: 'பச்சை வள்ளி',
     eyebrow: 'Festive Classic · Vaagai Collection',
     description: 'Pachai Valli brings the freshness of green vine weaving to everyday festive dressing — a Vaagai classic that suits poojas, family events, and gifting alike.',
     heroImage: '/ezhil-pattu/EP-TT-2.png',
@@ -190,7 +190,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'sandhana-malar',
-    name: 'Sandhana Malar',
+    name: 'சந்தன மலர்',
     eyebrow: 'Bridal Gifting · Vaagai Collection',
     description: 'Sandhana Malar is a soft sandal floral silk with luminous zari that brings a refined glow to the Vaagai collection — ideal for elegant gifting and festive occasions.',
     heroImage: '/4-pose1.png',
@@ -235,7 +235,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'neela-thogai',
-    name: 'Neela Thogai',
+    name: 'நீல தோகை',
     eyebrow: 'Evening Elegance · Vaagai Collection',
     description: 'Neela Thogai is a blue-toned silk with refined woven accents that gives a distinguished evening-wear quality to the Vaagai collection.',
     heroImage: '/3-pose3.png',
@@ -280,7 +280,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'manjal-kodi',
-    name: 'Manjal Kodi',
+    name: 'மஞ்சள் கொடி',
     eyebrow: 'Festive Gifting · Vaagai Collection',
     description: 'Manjal Kodi brings the warmth of golden yellow vine silk to the Vaagai collection — the perfect saree for festive gifting and celebratory family moments.',
     heroImage: '/image11.png',

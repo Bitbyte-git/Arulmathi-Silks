@@ -1,5 +1,5 @@
 const varnikaDesigns = [
-  { name: 'Vasundhara Pattu', slug: 'sudar-pattu', href: '/varnika-pattu/sudar-pattu', desc: 'Radiant sun motif woven silk for grand celebrations', img: '/varnika-pattu/VP-VP-3.png', badge: 'Popular', badgeIcon: 'fa-sun' },
+  { name: 'வசுந்தரா பட்டு', slug: 'sudar-pattu', href: '/varnika-pattu/sudar-pattu', desc: 'Radiant sun motif woven silk for grand celebrations', img: '/varnika-pattu/VP-VP-3.png', badge: 'Popular', badgeIcon: 'fa-sun' },
 ]
 
 const varnikaNotes = [
@@ -51,9 +51,9 @@ export default function VarnikaPattu() {
         <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-12 xl:gap-16">
           <div className="max-w-[560px] lg:pb-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Signature Collections</p>
-            <h1 className="mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
-              Varnika<br />
-              <em className="italic text-[#d4a853]">Pattu</em>
+            <h1 className="collection-hero-tamil-name mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
+              வர்ணிகா<br />
+              <em className="italic text-[#d4a853]">பட்டு</em>
             </h1>
             <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76 sm:text-[14px]">
               Grand silks with sun-inspired motifs, vivid spectrum colors, and antique heritage weaving for weddings and the most special occasions.
@@ -128,7 +128,7 @@ export default function VarnikaPattu() {
           <div className="mb-8 text-center">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Explore Our</p>
             <h2 className="mt-3 font-serif text-[34px] font-normal leading-[1.12] text-[#1a1a2e] sm:text-[44px] lg:text-[50px]">
-              Varnika <em className="italic text-[#c9933a]">Silk Designs</em>
+              <span className="section-heading-tamil-name">வர்ணிகா</span> <em className="italic text-[#c9933a]">Silk Designs</em>
             </h2>
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
@@ -145,7 +145,7 @@ export default function VarnikaPattu() {
                     <img src={saree.img} alt={saree.name} className="varnika-design-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>
                   <div className="varnika-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="varnika-design-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
+                    <h3 className="varnika-design-title collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
                     <p className="varnika-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />

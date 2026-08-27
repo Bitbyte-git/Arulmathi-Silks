@@ -1,7 +1,7 @@
 import { mayuraPattuCollections } from '../data/mayuraPattuProducts'
 
 const mayuraDesigns = [
-  { name: 'Vaira Mayil', slug: 'mayil-peru', href: '/mayura-pattu/mayil-peru', desc: 'Peacock feather woven silk with rani pink border accent', img: mayuraPattuCollections[0].cardImage, badge: 'Bestseller', badgeIcon: 'fa-crown' },
+  { name: 'வைர மயில்', slug: 'mayil-peru', href: '/mayura-pattu/mayil-peru', desc: 'Peacock feather woven silk with rani pink border accent', img: mayuraPattuCollections[0].cardImage, badge: 'Bestseller', badgeIcon: 'fa-crown' },
 ]
 
 const mayuraNotes = [
@@ -54,8 +54,8 @@ export default function MayuraPattu() {
         <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-center lg:gap-12 xl:gap-16">
           <div className="max-w-[560px] lg:pb-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Signature Collections</p>
-            <h1 className="mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
-              Mayura<br /><em className="italic text-[#d4a853]">Pattu</em>
+            <h1 className="collection-hero-tamil-name mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
+              மயூரா<br /><em className="italic text-[#d4a853]">பட்டு</em>
             </h1>
             <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76 sm:text-[14px]">
               Peacock-inspired silk sarees with feather motifs and vivid festive colors for the grandest celebrations.
@@ -109,7 +109,7 @@ export default function MayuraPattu() {
         <div className="relative mx-auto max-w-[1480px]">
           <div className="mb-8 text-center">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Explore Our</p>
-            <h2 className="mt-3 font-serif text-[34px] font-normal leading-[1.12] text-[#1a1a2e] sm:text-[44px] lg:text-[50px]">Mayura <em className="italic text-[#c9933a]">Silk Designs</em></h2>
+            <h2 className="mt-3 font-serif text-[34px] font-normal leading-[1.12] text-[#1a1a2e] sm:text-[44px] lg:text-[50px]"><span className="section-heading-tamil-name">மயூரா</span> <em className="italic text-[#c9933a]">Silk Designs</em></h2>
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
@@ -121,7 +121,7 @@ export default function MayuraPattu() {
                     <img src={saree.img} alt={saree.name} className="mayura-design-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>
                   <div className="mayura-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="mayura-design-title font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
+                    <h3 className="mayura-design-title collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
                     <p className="mayura-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]"><span className="h-px flex-1 bg-[#d7b578]" /><i className="fas fa-spa text-[9px]" /><span className="h-px flex-1 bg-[#d7b578]" /></div>
                     <a href={saree.href} className="mt-auto inline-flex items-center justify-center gap-2 pt-3 font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#9a6720] transition-colors hover:text-[#c9933a]">Explore <i className="fas fa-arrow-right text-[10px]" /></a>

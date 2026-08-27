@@ -1,7 +1,7 @@
 export const kaithiraiPattuCollections = [
   {
     slug: 'poigai-pattu',
-    name: 'Poigai Pattu',
+    name: 'பொய்கை பட்டு',
     eyebrow: 'Water Lily Silks - Kaithirai Pattu',
     description: 'Poigai Pattu draws inspiration from the water lily, with graceful floral motifs woven into premium silk for receptions and festive occasions.',
     heroImage: '/kaithirai-pattu/KP-PP-2.png',
@@ -11,7 +11,7 @@ export const kaithiraiPattuCollections = [
   },
   {
     slug: 'punnai-kodi',
-    name: 'Punnai Kodi',
+    name: 'புன்னை கொடி',
     eyebrow: 'Bay Leaf Vine Silks - Kaithirai Pattu',
     description: 'Punnai Kodi weaves the graceful bay leaf vine into silk, a classic Kaithirai Pattu pattern loved across Salem for weddings and festive gifting.',
     heroImage: '/3-pose3.png',
@@ -23,7 +23,7 @@ export const kaithiraiPattuCollections = [
   },
   {
     slug: 'thennai-pattu',
-    name: 'Thennai Pattu',
+    name: 'தென்னை பட்டு',
     eyebrow: 'Palm Weave Silks - Kaithirai Pattu',
     description: 'Thennai Pattu draws from the graceful palm tree, with tall woven patterns that bring a majestic natural beauty to festive silk draping.',
     heroImage: '/sec-pose5.png',

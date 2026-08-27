@@ -2,7 +2,7 @@ export const noolisaiPattuCollections = [
   {
     slug: 'nool-veli',
     altSlugs: ['nool-kodi'],
-    name: 'Nool Kodi',
+    name: 'நூல் கொடி',
     eyebrow: 'Butta Silk Collection · Noolisai Pattu',
     description: 'Nool Kodi showcases the beauty of bold contrast border silks — a rich magenta pure silk body adorned with a grand royal blue border bearing large antique gold diamond butta motifs, curated for weddings, poojas, and festive celebrations.',
     heroImage: '/noolisai-pattu/NP-NK-1.png',

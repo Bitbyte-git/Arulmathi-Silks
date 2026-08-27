@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+﻿import { useEffect, useMemo, useRef, useState } from 'react'
 import { getAanchaliPattuCollection, getAanchaliPattuDesign } from '../data/AanchaliPattuProducts'
 import { addDesignToCartAndOpenCart } from '../utils/cart'
 
@@ -312,7 +312,7 @@ export default function AanchaliDesignDetail({ collectionSlug, designSlug }) {
         {relatedDesigns.length > 0 && (
           <div className="relative mx-auto mt-14 max-w-7xl">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">More from this collection</p>
-            <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees in {collection.name}</h2>
+            <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees in <span className="mixed-heading-tamil">{collection.name}</span></h2>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {relatedDesigns.slice(0, 3).map((item) => (
                 <a key={item.slug} href={`/Aanchali-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">

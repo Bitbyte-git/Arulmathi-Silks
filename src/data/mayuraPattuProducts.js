@@ -2,7 +2,7 @@ export const mayuraPattuCollections = [
   {
     slug: 'mayil-peru',
     altSlugs: ['vaira-mayil'],
-    name: 'Vaira Mayil',
+    name: 'வைர மயில்',
     eyebrow: 'Peacock Feather Silks · Mayura Pattu',
     description: 'Vaira Mayil captures the full glory of the peacock — feather and sprig motifs woven across deep jewel-toned silk, with a vibrant contrast border for weddings and grand festive celebrations.',
     cardImage: '/mayura-pattu/MY-VM-0101-2.png',

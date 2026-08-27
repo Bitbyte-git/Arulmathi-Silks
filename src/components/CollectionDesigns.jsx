@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { getIzhamathiCollection } from '../data/izhamathiProducts'
 
 export default function CollectionDesigns({ collectionSlug, getCollection: getCollectionProp, baseRoute: baseRouteProp }) {
@@ -68,7 +68,7 @@ export default function CollectionDesigns({ collectionSlug, getCollection: getCo
           <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">Available Saree Designs</p>
-              <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c] sm:text-[50px]">Sarees Available in {collection.name}</h2>
+              <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c] sm:text-[50px]">Sarees Available in <span className="mixed-heading-tamil">{collection.name}</span></h2>
             </div>
           </div>
 

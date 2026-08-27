@@ -1,7 +1,7 @@
 export const veloraPattuCollections = [
   {
     slug: 'velli-border',
-    name: 'Velli Malar Pattu',
+    name: 'வெள்ளி மலர் பட்டு',
     eyebrow: 'Silver Zari Borders - Velora Pattu',
     description: 'Velli Malar Pattu highlights a soft silver contrast border with floral zari accents, made for customers who prefer an elegant festive saree with a lighter, refined finish.',
     cardImage: '/velora-pattu/VL-VM-0101-3.png',
@@ -29,7 +29,7 @@ export const veloraPattuCollections = [
   },
   {
     slug: 'kolam-pattu',
-    name: 'Kolam Pattu',
+    name: 'கோலம் பட்டு',
     eyebrow: 'Geometric Floor Pattern Silks - Velora Pattu',
     description: 'Kolam Pattu translates the beauty of traditional floor designs into woven silk - intricate geometric patterns with festive zari for family celebrations.',
     heroImage: '/velora-pattu/VP-VM-3.png',
@@ -92,7 +92,7 @@ export const veloraPattuCollections = [
   },
   {
     slug: 'venkai-kodi',
-    name: 'Venkai Kodi',
+    name: 'வேங்கை கொடி',
     eyebrow: 'Flame Blossom Silks - Velora Pattu',
     description: 'Venkai Kodi draws from the beauty of the flame tree blossom - fiery warm tones and blossom-inspired zari woven into silk for festive celebrations.',
     heroImage: '/velora-pattu/VP-VM-4.png',
