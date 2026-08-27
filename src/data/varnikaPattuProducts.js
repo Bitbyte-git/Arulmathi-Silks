@@ -4,9 +4,9 @@ export const varnikaPattuCollections = [
     name: 'Vasundhara Pattu',
     eyebrow: 'Radiant Sun Silks - Varnika Pattu',
     description: 'Vasundhara Pattu radiates like the morning sun, with bright warm tones, sun-inspired motifs, and luminous zari for weddings and grand celebrations.',
-    heroImage: '/varnika-pattu/VP-VP-3.png',
+    heroImage: '/Varnika-pattu/VP-VP-3.png',
     designs: [
-      { slug: 'sunrise-gold-silk', name: 'Sunrise Gold Silk', code: 'VN-SP-0101', image: '/varnika-pattu/VN-SP-0101-3.png', images: ['/varnika-pattu/VN-SP-0101-3.png', '/varnika-pattu/VN-SP-0101-2.png', '/varnika-pattu/VN-SP-0101-3.png'], price: 'Rs. 21,400', oldPrice: 'Rs. 29,700', discount: '28% off', stock: 'In stock', color: 'Copper Gold', colors: ['Copper Gold', 'Antique Gold', 'Golden Sand'], fabric: 'Pure silk with sunrise gold woven body', zari: 'Warm gold sun motif zari border and pallu', occasion: 'Wedding, reception, grand celebrations', blouse: 'Gold blouse with sun motif zari border', details: 'Sunrise Gold Silk is the flagship Vasundhara Pattu saree, luminous copper-gold with warm sun motif zari for grand festive occasions.' },
+      { slug: 'sunrise-gold-silk', name: 'Sunrise Gold Silk', code: 'VN-SP-0101', image: '/Varnika-pattu/VN-SP-0101-3.png', images: ['/Varnika-pattu/VN-SP-0101-3.png', '/Varnika-pattu/VN-SP-0101-2.png', '/Varnika-pattu/VN-SP-0101-3.png'], price: 'Rs. 21,400', oldPrice: 'Rs. 29,700', discount: '28% off', stock: 'In stock', color: 'Copper Gold', colors: ['Copper Gold', 'Antique Gold', 'Golden Sand'], fabric: 'Pure silk with sunrise gold woven body', zari: 'Warm gold sun motif zari border and pallu', occasion: 'Wedding, reception, grand celebrations', blouse: 'Gold blouse with sun motif zari border', details: 'Sunrise Gold Silk is the flagship Vasundhara Pattu saree, luminous copper-gold with warm sun motif zari for grand festive occasions.' },
     ],
   },
 ]
