@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
-import { getAanchaliPattuCollection } from '../data/aanchaliPattuProducts'
+import { getAanchaliPattuCollection } from '../data/AanchaliPattuProducts'
 
 export default function AanchaliCollectionPage({ collectionSlug }) {
   const collection = getAanchaliPattuCollection(collectionSlug)

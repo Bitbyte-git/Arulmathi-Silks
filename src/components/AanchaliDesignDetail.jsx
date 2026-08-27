@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { getAanchaliPattuCollection, getAanchaliPattuDesign } from '../data/aanchaliPattuProducts'
+import { getAanchaliPattuCollection, getAanchaliPattuDesign } from '../data/AanchaliPattuProducts'
 import { addDesignToCartAndOpenCart } from '../utils/cart'
 
 const colorMap = {
