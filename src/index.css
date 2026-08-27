@@ -6662,13 +6662,18 @@ section[id$="-cotton"] article.group a {
   }
 
   .hero-inner {
-    top: calc(var(--nav-height, 74px) + 22px) !important;
+    top: calc(var(--nav-height, 74px) + 7px) !important;
     padding-left: 4px;
     padding-right: 4px;
   }
 
   .hero-content {
     max-width: 320px !important;
+  }
+
+  #home .hero-content h1 {
+    font-size: clamp(38px, 11vw, 46px) !important;
+    line-height: 1.06 !important;
   }
 }
 

@@ -4,8 +4,8 @@ const collections = [
   {
     name: 'Saila Pattu',
     desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
-    img: '/Saila-Pattu/SP-SN-0101-3.png',
-    fallbackImg: '/Saila-Pattu/SP-Blue-2.png',
+    img: '/saila-pattu/SP-SN-0101-3.png',
+    fallbackImg: '/saila-pattu/SP-Blue-2.png',
     href: '/saila-pattu',
   },
   {
@@ -17,8 +17,8 @@ const collections = [
   {
     name: 'Vaibhava Pattu',
     desc: 'Grand bridal and muhurtham silks for auspicious moments.',
-    img: '/Vaibhava-pattu/VB-TM-0101-1.png',
-    fallbackImg: '/Vaibhava-pattu/VP-TM-Red1.png',
+    img: '/vaibhava-pattu/VB-TM-0101-1.png',
+    fallbackImg: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu',
   },
   {
@@ -36,8 +36,8 @@ const collections = [
   {
     name: 'Ezhil Pattu',
     desc: 'Graceful heritage silks with soft festive drape appeal.',
-    img: '/Ezhil-pattu/EZ-TT-0101-1.png',
-    fallbackImg: '/Ezhil-pattu/EP-TT-1.png',
+    img: '/ezhil-pattu/EZ-TT-0101-1.png',
+    fallbackImg: '/ezhil-pattu/EP-TT-1.png',
     href: '/ezhil-pattu',
   },
   {

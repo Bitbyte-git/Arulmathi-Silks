@@ -5,21 +5,21 @@ export const mayuraPattuCollections = [
     name: 'Vaira Mayil',
     eyebrow: 'Peacock Feather Silks · Mayura Pattu',
     description: 'Vaira Mayil captures the full glory of the peacock — feather and sprig motifs woven across deep jewel-toned silk, with a vibrant contrast border for weddings and grand festive celebrations.',
-    cardImage: '/Mayura-pattu/MY-VM-0101-2.png',
-    heroImage: '/Mayura-pattu/MP-VM-3.png',
-    heroImages: ['/Mayura-pattu/MP-VM-4.png','/Mayura-pattu/MP-VM-5.png','/Mayura-pattu/MY-VM-0101-2.png'],
+    cardImage: '/mayura-pattu/MY-VM-0101-2.png',
+    heroImage: '/mayura-pattu/MP-VM-3.png',
+    heroImages: ['/mayura-pattu/MP-VM-4.png','/mayura-pattu/MP-VM-5.png','/mayura-pattu/MY-VM-0101-2.png'],
     designs: [
       {
         slug: 'teal-peacock-feather',
         altSlugs: ['teal-peacock-feather-silk', 'vaira-mayil-silk', 'gold-fan-border', 'sage-peacock-vine', 'mayil-peru-silk'],
         name: 'Teal Blue Vaira Mayil Silk',
         code: 'MY-VM-0101',
-        image: '/Mayura-pattu/MY-VM-0101-1.png',
+        image: '/mayura-pattu/MY-VM-0101-1.png',
         images: [
-          '/Mayura-pattu/MY-VM-0101-1.png',
-          '/Mayura-pattu/MY-VM-0101-2.png',
-          '/Mayura-pattu/MY-VM-0101-3.png',
-          '/Mayura-pattu/MY-VM-0101-4.png',
+          '/mayura-pattu/MY-VM-0101-1.png',
+          '/mayura-pattu/MY-VM-0101-2.png',
+          '/mayura-pattu/MY-VM-0101-3.png',
+          '/mayura-pattu/MY-VM-0101-4.png',
          
          
         ],

@@ -99,7 +99,7 @@ export default function IzhamathiPattu() {
                 <img src="/izhamathi-sarees/IZ-Green-1.png" alt="Pastel Izhamathi silk drape" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
 
@@ -109,10 +109,10 @@ export default function IzhamathiPattu() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Velora-pattu/VP-VM-2.png" alt="Ruby Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/velora-pattu/VP-VM-2.png" alt="Ruby Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/velora-pattu/VP-VM-5.png" alt="Antique gold Izhamathi silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
