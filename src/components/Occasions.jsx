@@ -1,5 +1,4 @@
 import { useMemo, useState } from 'react'
-import DeferredImage from './DeferredImage'
 
 const occasions = [
   {
@@ -118,9 +117,11 @@ export default function Occasions() {
               aria-label={`Explore ${o.label} Sarees Collection`}
             >
               <div className="occasion-circle glow-orbit w-[146px] h-[146px] rounded-full overflow-hidden border-2 border-[#c9933a]/42 bg-[#F5F0E8]/10 shadow-[0_18px_38px_rgba(0,0,0,0.28)] group-hover:border-[#c9933a] group-hover:scale-110 transition-all duration-300">
-                <DeferredImage
+                <img
                   src={o.img}
                   alt={o.label}
+                  loading={index < occasions.length ? 'eager' : 'lazy'}
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

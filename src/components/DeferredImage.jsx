@@ -8,21 +8,39 @@ export default function DeferredImage({ src, alt, ...props }) {
     const image = imageRef.current
     if (!image) return undefined
 
+    const loadImage = () => setShouldLoad(true)
+    const rect = image.getBoundingClientRect()
+    const isAlreadyNearViewport =
+      rect.top < window.innerHeight + 320 &&
+      rect.bottom > -320 &&
+      rect.left < window.innerWidth + 320 &&
+      rect.right > -320
+
+    if (isAlreadyNearViewport) {
+      loadImage()
+      return undefined
+    }
+
     if (!('IntersectionObserver' in window)) {
-      setShouldLoad(true)
+      loadImage()
       return undefined
     }
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setShouldLoad(true)
+        loadImage()
         observer.disconnect()
       }
-    })
+    }, { rootMargin: '320px 320px' })
 
     observer.observe(image)
-    return () => observer.disconnect()
-  }, [])
+    const fallbackTimer = window.setTimeout(loadImage, 2500)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(fallbackTimer)
+    }
+  }, [src])
 
   return (
     <img

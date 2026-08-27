@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import DeferredImage from './DeferredImage'
 
 const collections = [
   {
     name: 'Saila Pattu',
     desc: 'Floral vine and peacock-inspired silks for elegant celebrations.',
-    img: '/mangai-pattu/MG-AM-0101.png',
+    img: '/saila-pattu/SP-SN-0101-1.png',
+    fallbackImg: '/saila-pattu/SP-Blue-2.png',
     href: '/saila-pattu',
   },
   {
@@ -17,7 +17,8 @@ const collections = [
   {
     name: 'Vaibhava Pattu',
     desc: 'Grand bridal and muhurtham silks for auspicious moments.',
-    img: '/vaibhava-pattu/VP-TM-Red1.png',
+    img: '/vaibhava-pattu/VB-TM-0101-1.png',
+    fallbackImg: '/vaibhava-pattu/VP-TM-Red1.png',
     href: '/vaibhava-pattu',
   },
   {
@@ -35,7 +36,8 @@ const collections = [
   {
     name: 'Ezhil Pattu',
     desc: 'Graceful heritage silks with soft festive drape appeal.',
-    img: '/ezhil-pattu/EP-TT-2.png',
+    img: '/ezhil-pattu/EZ-TT-0101-1.png',
+    fallbackImg: '/ezhil-pattu/EP-TT-1.png',
     href: '/ezhil-pattu',
   },
   {
@@ -238,9 +240,16 @@ export default function Collections() {
                 aria-label={`View ${col.name} collection`}
                 className="collection-card-media block overflow-hidden h-[330px] sm:h-[380px] lg:h-[390px] bg-[#eee8df]"
               >
-                <DeferredImage
+                <img
                   src={col.img}
                   alt={col.name}
+                  loading={index < collections.length ? 'eager' : 'lazy'}
+                  decoding="async"
+                  onError={(event) => {
+                    if (col.fallbackImg && event.currentTarget.src !== new URL(col.fallbackImg, window.location.origin).href) {
+                      event.currentTarget.src = col.fallbackImg
+                    }
+                  }}
                   className="collection-card-image w-full h-full object-cover object-top"
                 />
               </a>
