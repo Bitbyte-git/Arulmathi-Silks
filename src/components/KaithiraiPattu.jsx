@@ -86,10 +86,10 @@ export default function KaithiraiPattu() {
                 <img src="/kaithirai-pattu/KP-PP-2.png" alt="Kaithirai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/3-pose3.png" alt="Kaithirai Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Images/3-pose3.png" alt="Kaithirai Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/sec-pose5.png" alt="Kaithirai Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Images/sec-pose5.png" alt="Kaithirai Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
                 <img src="/ezhil-pattu/EP-TT-2.png" alt="Kaithirai Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
@@ -101,10 +101,10 @@ export default function KaithiraiPattu() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/3-pose3.png" alt="Kaithirai Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/Images/3-pose3.png" alt="Kaithirai Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/sec-pose5.png" alt="Kaithirai Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/Images/sec-pose5.png" alt="Kaithirai Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">

@@ -3,62 +3,62 @@ import { useMemo, useState } from 'react'
 const occasions = [
   {
     label: 'BRIDAL',
-    img: '/circle5.png',
+    img: '/Images/circle5.png',
     href: '/vaibhava-pattu',
   },
   {
     label: 'FESTIVE',
-    img: '/d3.png',
+    img: '/Images/d3.png',
     href: '/izhamathi-pattu',
   },
   {
     label: 'RECEPTION',
-    img: '/d1.png',
+    img: '/Images/d1.png',
     href: '/saila-pattu',
   },
   {
     label: 'POOJA',
-    img: '/d4.png',
+    img: '/Images/d4.png',
     href: '/kaithirai-pattu',
   },
   {
     label: 'GIFTING',
-    img: '/d5.png',
+    img: '/Images/d5.png',
     href: '/mangai-pattu',
   },
   {
     label: 'LIGHTWEIGHT',
-    img: '/d6.png',
+    img: '/Images/d6.png',
     href: '/noolisai-pattu',
   },
   {
     label: 'DESIGNER',
-    img: '/d1.png',
+    img: '/Images/d1.png',
     href: '/sezhinool-pattu',
   },
   {
     label: 'ENGAGEMENT',
-    img: '/circle1.png',
+    img: '/Images/circle1.png',
     href: '/Aanchali-pattu',
   },
   {
     label: 'HOUSEWARMING',
-    img: '/circle2.png',
+    img: '/Images/circle2.png',
     href: '/velora-pattu',
   },
   {
     label: 'HALDI',
-    img: '/circle3.png',
+    img: '/Images/circle3.png',
     href: '/ezhil-pattu',
   },
   {
     label: 'SANGEET',
-    img: '/circle4.png',
+    img: '/Images/circle4.png',
     href: '/mayura-pattu',
   },
   {
     label: 'EVERYDAY',
-    img: '/circle8.png',
+    img: '/Images/circle8.png',
     href: '/varnika-pattu',
   },
 ]

@@ -90,7 +90,7 @@ export default function IzhamathiPattu() {
                 <img src="/kaithirai-pattu/KP-PP-2.png" alt="Gold Izhamathi silk portrait" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/hero-fix.png" alt="Izhamathi Pattu silk saree in rich tones" className="h-full w-full rounded-[2px] object-cover object-[72%_18%] brightness-[0.92]" />
+                <img src="/Images/hero-fix.png" alt="Izhamathi Pattu silk saree in rich tones" className="h-full w-full rounded-[2px] object-cover object-[72%_18%] brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
                 <img src="/sezhinool-pattu/SP-MV-Blue4.png" alt="Violet silk saree detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
@@ -105,7 +105,7 @@ export default function IzhamathiPattu() {
 
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/hero-fix.png" alt="Izhamathi Pattu silk saree in rich tones" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/Images/hero-fix.png" alt="Izhamathi Pattu silk saree in rich tones" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">

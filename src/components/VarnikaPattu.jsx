@@ -89,10 +89,10 @@ export default function VarnikaPattu() {
                 <img src="/varnika-pattu/VP-VP-4.png" alt="Varnika Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/4-pose4.png" alt="Varnika Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Images/4-pose4.png" alt="Varnika Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/4-pose1.png" alt="Varnika Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Images/4-pose1.png" alt="Varnika Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
             <div className="grid gap-4 lg:hidden">

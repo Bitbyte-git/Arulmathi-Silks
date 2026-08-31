@@ -183,7 +183,7 @@ export default function App() {
                                                     : null
 
   return (
-    <div className="min-h-screen bg-dark text-white overflow-x-hidden flex flex-col">
+    <div className="min-h-screen bg-[#F5F0E8] text-white overflow-x-hidden flex flex-col">
       <Navbar />
       <main className={`flex-1 ${isHomePage ? '' : 'site-page-offset'}`}>
         <Suspense fallback={<div className="min-h-screen bg-[#0d0d1a]" aria-label="Loading page" />}>

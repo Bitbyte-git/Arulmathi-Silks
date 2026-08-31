@@ -78,10 +78,10 @@ export default function Hero() {
       style={{ minHeight: '100svh' }}
     >
       <picture>
-        <source media="(max-width: 767px)" srcSet="/mob-view.png" />
+        <source media="(max-width: 767px)" srcSet="/Images/mob-view.png" />
         <img
-          src="/heroimg-1600.jpg"
-          srcSet="/heroimg-960.jpg 960w, /heroimg-1600.jpg 1600w"
+          src="/Images/heroimg-1600.jpg"
+          srcSet="/Images/heroimg-960.jpg 960w, /Images/heroimg-1600.jpg 1600w"
           sizes="100vw"
           width="1600"
           height="900"

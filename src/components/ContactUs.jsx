@@ -92,9 +92,9 @@ export default function ContactUs() {
     <section id="contact-page" className="bg-[#f6efe4] text-[#17131c]">
       <div data-nav-hero className="relative isolate overflow-hidden bg-[#080b12] px-5 text-white sm:px-8 lg:px-16">
         <picture>
-          <source media="(max-width: 767px)" srcSet="/mobileview-herobg.png" />
+          <source media="(max-width: 767px)" srcSet="/Images/mobileview-herobg.png" />
           <img
-            src="/Arulmathi-contact.png"
+            src="/Images/Arulmathi-contact.png"
             alt="Arulmathi Silks contact welcome"
             className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-100 md:object-contain md:object-right"
           />
@@ -177,7 +177,7 @@ export default function ContactUs() {
 
       <div className="grid grid-cols-1 items-start gap-10 bg-[#fbf7ef] px-5 py-14 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-16 lg:py-20">
         <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-lg shadow-[0_18px_44px_rgba(52,36,18,0.10)]">
-          <img src="/mid5.png" alt="Stacked silk sarees for customer questions" className="block aspect-[4/3] w-full object-cover object-center" />
+          <img src="/Images/mid5.png" alt="Stacked silk sarees for customer questions" className="block aspect-[4/3] w-full object-cover object-center" />
         </div>
         <div className="mx-auto flex w-full max-w-7xl flex-col justify-center">
           <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#a9762d]">Common Questions</p>

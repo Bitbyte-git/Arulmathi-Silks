@@ -371,7 +371,7 @@ export default function Navbar() {
       <a href="/" className="nav-brand-logo flex shrink-0 items-center" aria-label="Arulmathi Silk Sarees home">
         <span className="nav-brand-mark">
           <img
-            src="/logo1-346.png"
+            src="/Images/logo1-346.png"
             alt=""
             aria-hidden="true"
             width="346"
@@ -380,7 +380,7 @@ export default function Navbar() {
         </span>
         <span className="nav-brand-wordmark">
           <img
-            src="/Arulmathi-logobg-288.png"
+            src="/Images/Arulmathi-logobg-288.png"
             alt="Arulmathi Silk Sarees"
             width="288"
             height="288"
@@ -482,9 +482,9 @@ export default function Navbar() {
             <div className="mb-0 grid grid-cols-6 justify-items-center gap-x-3 gap-y-3">
               {megaCollections.map((col, idx) => {
                 const cardImages = [
-                  '/nav-1.png', '/nav-2.png', '/nav-3.png', '/nav-4.png',
-                  '/nav-5.png', '/nav-6.png', '/nav-7.png', '/nav-8.png',
-                  '/nav-9.png', '/nav-10.png', '/nav-11.png', '/nav-12.png',
+                  '/Images/nav-1.png', '/Images/nav-2.png', '/Images/nav-3.png', '/Images/nav-4.png',
+                  '/Images/nav-5.png', '/Images/nav-6.png', '/Images/nav-7.png', '/Images/nav-8.png',
+                  '/Images/nav-9.png', '/Images/nav-10.png', '/Images/nav-11.png', '/Images/nav-12.png',
                 ]
                 const isMegaActive = routePath === col.href || routePath.startsWith(`${col.href}/`)
                 return (

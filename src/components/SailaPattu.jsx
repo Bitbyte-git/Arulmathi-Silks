@@ -96,7 +96,7 @@ export default function SailaPattu() {
                 <img src="/saila-pattu/SP-SN-0101-4.png" alt="Saila Pattu pastel drape" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/sec-pose3.png" alt="Saila Pattu silk fold" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/Images/sec-pose3.png" alt="Saila Pattu silk fold" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
 

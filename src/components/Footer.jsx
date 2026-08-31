@@ -40,7 +40,7 @@ export default function Footer() {
         <div>
           <a href="#home" className="mb-5 flex h-[140px] w-[240px] items-center justify-center" aria-label="Arulmathi Silk Sarees home">
             <DeferredImage
-              src="/logowobg.png"
+              src="/Images/logowobg.png"
               alt="Arulmathi Silk Sarees"
               width="1448"
               height="1086"

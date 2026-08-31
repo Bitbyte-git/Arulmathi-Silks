@@ -12,7 +12,7 @@ const craftPanels = [
     tag: 'Real Weaving',
     title: 'Woven with Heritage',
     text: 'Our sarees are selected with respect for traditional looms, fine borders, zari detail, and the skill passed through generations of textile families.',
-    image: '/Arulmathi-aboutus2.png',
+    image: '/Images/Arulmathi-aboutus2.png',
     imageFirst: true,
     points: [
       { icon: 'fa-border-all', label: 'Traditional\nLooms' },
@@ -25,7 +25,7 @@ const craftPanels = [
     tag: 'Natural Tones',
     title: 'Dyed with Character',
     text: 'Every shade is chosen to feel rich, wearable, and occasion-ready, from bridal silks to festive sarees and wholesale catalogue selections.',
-    image: '/Arulmathi-about3.png',
+    image: '/Images/Arulmathi-about3.png',
     imageFirst: false,
     points: [
       { icon: 'fa-palette', label: 'Rich\nColors' },
@@ -36,16 +36,16 @@ const craftPanels = [
 ]
 
 const milestones = [
-  { year: '1985', icon: 'fa-flag', title: 'The Beginning', text: 'The idea was born, beginning our legacy with a clear promise for silk quality.', image: '/Arulmathi-aboutus1.png' },
-  { year: '1989', icon: 'fa-handshake', title: 'Wholesale Begins', text: 'Started wholesale operations and built strong relationships with textile buyers.', image: '/Arulmathi-shop2.png' },
-  { year: '1991', icon: 'fa-border-all', title: '12 Own Handlooms', text: 'Expanded to in-house handlooms, giving our sarees a more consistent finish.', image: '/Arulmathi-aboutus2.png' },
-  { year: '1996', icon: 'fa-table-cells-large', title: '2,000 Handlooms', text: 'Reached a wider handloom network while protecting traditional weaving quality.', image: '/Arulmathi-about3.png' },
-  { year: '2001', icon: 'fa-industry', title: 'Silk Manufacturing', text: 'Built complete silk manufacturing support for dependable catalogue production.', image: '/Arulmathi-shop3.png' },
-  { year: '2006', icon: 'fa-person-dress', title: '2,000 Sarees Monthly', text: 'Reached steady monthly production and strengthened our supply capability.', image: '/circle5.png' },
-  { year: '2011', icon: 'fa-shirt', title: '4,000 Sarees Monthly', text: 'Expanded monthly saree sales with richer colors, motifs, and zari combinations.', image: '/circle1.png' },
-  { year: '2016', icon: 'fa-store', title: 'Retail Begins', text: 'Started retail operations so more families could experience our collections directly.', image: '/Arulmathi-shop1.png' },
-  { year: '2021', icon: 'fa-users', title: 'Trusted Customers', text: 'Reached a growing customer family through quality, support, and reliable service.', image: '/ownerpic.png' },
-  { year: '2026', icon: 'fa-gem', title: 'Trend Adoption', text: 'Moving with trends and creating sarees for modern preferences.', image: '/circle2.png', featured: true },
+  { year: '1985', icon: 'fa-flag', title: 'The Beginning', text: 'The idea was born, beginning our legacy with a clear promise for silk quality.', image: '/Images/Arulmathi-aboutus1.png' },
+  { year: '1989', icon: 'fa-handshake', title: 'Wholesale Begins', text: 'Started wholesale operations and built strong relationships with textile buyers.', image: '/Images/Arulmathi-shop2.png' },
+  { year: '1991', icon: 'fa-border-all', title: '12 Own Handlooms', text: 'Expanded to in-house handlooms, giving our sarees a more consistent finish.', image: '/Images/Arulmathi-aboutus2.png' },
+  { year: '1996', icon: 'fa-table-cells-large', title: '2,000 Handlooms', text: 'Reached a wider handloom network while protecting traditional weaving quality.', image: '/Images/Arulmathi-about3.png' },
+  { year: '2001', icon: 'fa-industry', title: 'Silk Manufacturing', text: 'Built complete silk manufacturing support for dependable catalogue production.', image: '/Images/Arulmathi-shop3.png' },
+  { year: '2006', icon: 'fa-person-dress', title: '2,000 Sarees Monthly', text: 'Reached steady monthly production and strengthened our supply capability.', image: '/Images/circle5.png' },
+  { year: '2011', icon: 'fa-shirt', title: '4,000 Sarees Monthly', text: 'Expanded monthly saree sales with richer colors, motifs, and zari combinations.', image: '/Images/circle1.png' },
+  { year: '2016', icon: 'fa-store', title: 'Retail Begins', text: 'Started retail operations so more families could experience our collections directly.', image: '/Images/Arulmathi-shop1.png' },
+  { year: '2021', icon: 'fa-users', title: 'Trusted Customers', text: 'Reached a growing customer family through quality, support, and reliable service.', image: '/Images/ownerpic.png' },
+  { year: '2026', icon: 'fa-gem', title: 'Trend Adoption', text: 'Moving with trends and creating sarees for modern preferences.', image: '/Images/circle2.png', featured: true },
 ]
 
 const timelineRows = [
@@ -97,7 +97,7 @@ export default function AboutUs() {
     <section id="about-us" className="bg-[#f6efe4] text-[#17131c]">
       <div className="relative isolate overflow-hidden bg-[#080b12] px-5 pt-0 text-white sm:px-8 lg:px-16">
         <img
-          src="/Arulmathi-aboutus1.png"
+          src="/Images/Arulmathi-aboutus1.png"
           alt="Silk weaving and saree texture at Arulmathi Silks"
           className="absolute inset-0 right-0 -z-20 h-full w-full object-cover object-center opacity-82 md:object-contain md:object-right"
         />
@@ -183,7 +183,7 @@ export default function AboutUs() {
       <div className="bg-[#07110d] px-5 py-12 sm:px-8 lg:px-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 overflow-hidden rounded-lg border border-[#d2a24f]/35 bg-[rgba(13,13,26,1)] shadow-[0_28px_70px_rgba(0,0,0,0.46),0_0_0_1px_rgba(210,162,79,0.10)] lg:grid-cols-[0.42fr_0.58fr]">
           <div className="min-h-[360px] overflow-hidden">
-            <img src="/founderimg.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
+            <img src="/Images/founderimg.png" alt="Arulmathi Silks founder promise" className="h-full w-full object-cover object-top" />
           </div>
           <div className="flex flex-col justify-center bg-[radial-gradient(circle_at_88%_18%,rgba(210,162,79,0.12),transparent_28%)] p-8 text-white sm:p-12 lg:p-16">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#d2a24f]">Our Story</p>

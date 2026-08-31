@@ -68,7 +68,7 @@ export default function StoryArrivals() {
       {/* OUR STORY */}
       <div className="relative overflow-hidden">
         <img
-          src="/red-pose4.png"
+          src="/Images/red-pose4.png"
           alt="Silk saree craftsmanship at Arulmathi"
           loading="lazy"
           decoding="async"
