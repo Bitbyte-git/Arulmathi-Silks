@@ -169,7 +169,7 @@ export default function Collections() {
   const showNext = () => scrollByCard(1)
 
   return (
-    <section id="collections" className="section-reveal relative bg-[#13121f] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 rounded-t-3xl z-10">
+    <section id="collections" className="section-reveal relative bg-[#13121f] px-5 py-12 sm:px-8 lg:px-16 lg:py-16 flex flex-col lg:flex-row items-start lg:items-center gap-8 lg:gap-12 z-10">
 
       {/* Left text */}
       <div className="flex-shrink-0 w-full lg:w-72">

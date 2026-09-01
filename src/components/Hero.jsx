@@ -149,7 +149,7 @@ export default function Hero() {
         <div
           className="hero-content w-full max-w-[340px] px-4 sm:max-w-[520px] sm:px-5 md:max-w-[760px] sm:pl-10 sm:pr-0 md:w-[74%] lg:w-[64%] lg:pl-16 xl:pl-20"
         >
-          <p className="mb-3 sm:mb-5 font-sans text-[10.5px] sm:text-[11px] font-semibold uppercase leading-[1.6] tracking-[2.5px] text-[#c9933a] lg:text-[13px]">
+          <p className="hero-eyebrow mb-3 sm:mb-5 font-sans text-[10.5px] sm:text-[11px] font-semibold uppercase leading-[1.6] tracking-[2.5px] text-[#c9933a] lg:text-[13px]">
             CRAFTED IN HERITAGE, DESIGNED FOR TODAY
           </p>
 

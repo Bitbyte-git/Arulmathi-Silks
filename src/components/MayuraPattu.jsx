@@ -116,7 +116,7 @@ export default function MayuraPattu() {
             <div className="flex items-stretch justify-center pb-2">
               {mayuraDesigns.map((saree) => (
                 <article key={saree.name} className="mayura-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
-                  {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg bg-[#7b250f]/92 px-3 py-2 font-sans text-[10px] font-semibold text-[#ffe7b2] shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}
+                  {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg brand-badge px-3 py-2 font-sans text-[10px] font-semibold shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}
                   <a href={saree.href} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
                     <img src={saree.img} alt={saree.name} className="mayura-design-image h-full w-full object-cover object-top transition-transform duration-500" />
                   </a>

@@ -15,6 +15,17 @@
   }
 }
 
+/* Shared brand colors for badges used throughout the storefront. */
+:root {
+  --brand-badge-bg: #c9933a;
+  --brand-badge-text: #0d0d1a;
+}
+
+.brand-badge {
+  background-color: var(--brand-badge-bg);
+  color: var(--brand-badge-text);
+}
+
 /* Skip layout and paint work for homepage sections until they approach the viewport. */
 #collections,
 #about,
@@ -861,7 +872,7 @@ footer {
 /* Hero image responsive positioning */
 .hero-bg-image {
   object-position: top center;
-  transform: translateY(clamp(42px, 4vw, 72px)) scale(1.12);
+  transform: translateY(8%) scale(1.16);
   transition: transform 420ms ease, object-position 420ms ease;
 }
 
@@ -5518,7 +5529,7 @@ footer {
   }
 
   #collections {
-    border-radius: 22px 22px 0 0 !important;
+    border-radius: 0 !important;
     margin-top: 0 !important;
   }
 
@@ -6732,12 +6743,28 @@ section[id$="-cotton"] article.group a {
 @media (min-width: 1024px) {
   :root {
     --nav-height: 120px;
+    --desktop-nav-outer-gap: clamp(18px, 2vw, 32px);
+  }
+
+  nav {
+    top: var(--desktop-nav-outer-gap) !important;
+  }
+
+  .site-page-offset {
+    padding-top: calc(
+      var(--nav-height, 120px) + var(--desktop-nav-outer-gap) + var(--desktop-nav-outer-gap)
+    ) !important;
+  }
+
+  #home .hero-inner {
+    top: calc(var(--nav-height, 120px) + var(--desktop-nav-outer-gap)) !important;
+    align-items: center !important;
   }
 }
 
 .hero-bg-image {
   object-position: top center;
-  transform: translateY(clamp(42px, 4vw, 72px)) scale(1.12);
+  transform: translateY(8%) scale(1.16);
   transition: transform 420ms ease, object-position 420ms ease;
 }
 
@@ -7368,5 +7395,26 @@ h2[class*="text-[38px]"][class*="text-[#17131c]"] em.mixed-heading-tamil {
   .collection-hero-tamil-name {
     font-size: clamp(34px, 10vw, 44px) !important;
     line-height: 1.18 !important;
+  }
+}
+
+/* Complete four-sided shadow for the floating navbar in every state. */
+nav,
+nav.nav-over-hero,
+nav.nav-scrolled,
+nav.nav-page-surface {
+  box-shadow:
+    0 0 0 1px rgba(245, 240, 232, 0.16),
+    0 0 30px rgba(13, 13, 26, 0.30),
+    0 16px 38px rgba(3, 3, 12, 0.30),
+    inset 0 2px 9px rgba(245, 240, 232, 0.20) !important;
+}
+
+@media (max-width: 640px) {
+  #home .hero-eyebrow {
+    max-width: 280px;
+    font-size: 9px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.7px !important;
   }
 }

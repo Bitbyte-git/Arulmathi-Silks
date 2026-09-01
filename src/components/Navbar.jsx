@@ -752,7 +752,7 @@ export default function Navbar() {
         >
           <i className="fas fa-bag-shopping" />
           {cartCount > 0 && (
-            <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#c9933a] px-1 font-sans text-[9px] font-bold leading-none text-[#0d0d1a]">
+            <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full brand-badge px-1 font-sans text-[9px] font-bold leading-none">
               {cartCount}
             </span>
           )}
