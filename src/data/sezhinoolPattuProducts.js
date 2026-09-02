@@ -35,22 +35,11 @@ export const sezhinoolPattuCollections = [
     ],
   },
   {
-    slug: 'mani-kodi',
-    name: 'மணி கொடி',
-    eyebrow: 'Jewel Vine Silks · Sezhinool Pattu',
-    description: 'Mani Kodi weaves the beauty of jewel-toned vines into premium silk — intricate gem-like patterns for receptions and grand family events.',
-    heroImage: '/Images/red-pose4.png',
-    designs: [
-      { slug: 'ruby-mani-silk', name: 'Ruby Mani Silk', code: 'SZ-MK-0201', image: '/Images/red-pose4.png', images: ['/Images/red-pose4.png', '/Images/red-pose3.png', '/Images/red-pose5.png', '/sezhinool-pattu/SP-MV-Blue4.png'], price: 'Rs. 22,400', oldPrice: 'Rs. 31,200', discount: '28% off', stock: 'In stock', color: 'Ruby Red', colors: ['Ruby Red', 'Maroon', 'Sindoor Red'], fabric: 'Pure silk with ruby gem vine texture', zari: 'Gold jewel vine zari border and pallu', occasion: 'Muhurtham, wedding, reception', blouse: 'Ruby blouse with jewel vine border', details: 'Ruby Mani Silk is the prized Mani Kodi saree — deep ruby with gold jewel vine zari for wedding and muhurtham occasions.' },
-      { slug: 'rose-mani-pattu', name: 'Rose Mani Pattu', code: 'SZ-MK-0202', image: '/Images/red-pose5.png', images: ['/Images/red-pose5.png', '/Images/red-pose4.png', '/Images/red-pose2.png', '/Images/3-pose1.png'], price: 'Rs. 18,900', oldPrice: 'Rs. 26,300', discount: '28% off', stock: 'In stock', color: 'Rose Pink', colors: ['Rose Pink', 'Rani Pink', 'Coral'], fabric: 'Silk with rose gem vine woven body', zari: 'Antique gold vine zari highlights', occasion: 'Engagement, reception, gifting', blouse: 'Rose blouse with gold vine edge', details: 'Rose Mani Pattu brings soft elegance to the Mani Kodi family — rose pink with antique gold jewel vine zari.' },
-      { slug: 'gold-mani-border', name: 'Gold Mani Border', code: 'SZ-MK-0203', image: '/Images/3-pose1.png', images: ['/Images/3-pose1.png', '/Images/red-pose4.png', '/Images/3-pose3.png', '/Images/sec-pose1.png'], price: 'Rs. 24,500', oldPrice: 'Rs. 34,100', discount: '28% off', stock: 'In stock', color: 'Antique Gold', colors: ['Antique Gold', 'Champagne Gold', 'Copper Gold'], fabric: 'Grand silk with full gold mani border', zari: 'Heavy antique gold jewel border throughout', occasion: 'Wedding, grand bridal occasions, muhurtham', blouse: 'Gold blouse with full jewel zari', details: 'Gold Mani Border is the grandest Mani Kodi design — full antique gold jewel border for the most auspicious occasions.' },
-    ],
-  },
-  {
-    slug: 'thirai-pattu',
-    name: 'திரை பட்டு',
-    eyebrow: 'Wave Woven Silks · Sezhinool Pattu',
-    description: 'Thirai Pattu draws from the graceful wave — undulating zari patterns woven across silk for a fluid, elegant festive drape.',
+    slug: 'ambujam-pattu',
+    altSlugs: ['thirai-pattu'],
+    name: 'அம்புஜப் பட்டு',
+    eyebrow: 'Lotus Inspired Silks · Sezhinool Pattu',
+    description: 'Ambujam Pattu draws from the graceful lotus, weaving floral zari patterns across silk for an elegant festive drape.',
     heroImage: '/Images/sec-pose3.png',
     designs: [
       { slug: 'teal-wave-silk', name: 'Teal Wave Silk', code: 'SZ-TP-0301', image: '/Images/sec-pose3.png', images: ['/Images/sec-pose3.png', '/Images/sec-pose2.png', '/kaithirai-pattu/KP-PP-1.png', '/ezhil-pattu/EP-TT-2.png'], price: 'Rs. 16,800', oldPrice: 'Rs. 23,400', discount: '28% off', stock: 'In stock', color: 'Teal Blue', colors: ['Teal Blue', 'Peacock Blue', 'Emerald'], fabric: 'Silk with teal wave woven texture', zari: 'Gold wave zari border and pallu', occasion: 'Festival, pooja, family functions', blouse: 'Teal blouse with wave zari border', details: 'Teal Wave Silk brings the graceful undulation of thirai weaving in teal — fluid and festive for pooja and family occasions.' },
@@ -58,10 +47,32 @@ export const sezhinoolPattuCollections = [
       { slug: 'peacock-thirai-silk', name: 'Peacock Thirai Silk', code: 'SZ-TP-0303', image: '/kaithirai-pattu/KP-PP-1.png', images: ['/kaithirai-pattu/KP-PP-1.png', '/Images/sec-pose3.png', '/ezhil-pattu/EP-TT-2.png', '/Images/w5.png'], price: 'Rs. 18,400', oldPrice: 'Rs. 25,600', discount: '28% off', stock: 'In stock', color: 'Peacock Blue', colors: ['Peacock Blue', 'Teal Blue', 'Midnight Navy'], fabric: 'Pure silk with peacock wave woven texture', zari: 'Gold wave and peacock motif zari', occasion: 'Reception, engagement, festivals', blouse: 'Peacock blue blouse with wave zari cuff', details: 'Peacock Thirai Silk combines wave patterns with peacock motifs — a vivid fusion of two Sezhinool traditions.' },
     ],
   },
+  {
+    slug: 'valli-pattu',
+    name: 'வள்ளிப் பட்டு',
+    eyebrow: 'Vine Woven Silks · Sezhinool Pattu',
+    description: 'Valli Pattu celebrates elegant climbing-vine forms through luminous zari weaving on rich silk.',
+    heroImage: '/sezhinool-pattu/SP-MV-Blue2.png',
+    heroImages: ['/sezhinool-pattu/SP-MV-Blue2.png', '/sezhinool-pattu/SP-MV-Blue3.png', '/sezhinool-pattu/SP-MV-Blue4.png'],
+    designs: [
+      { slug: 'royal-blue-valli-silk', name: 'Royal Blue Valli Silk', code: 'SZ-VL-0401', image: '/sezhinool-pattu/SP-MV-Blue2.png', images: ['/sezhinool-pattu/SP-MV-Blue2.png', '/sezhinool-pattu/SP-MV-Blue3.png', '/sezhinool-pattu/SP-MV-Blue4.png', '/sezhinool-pattu/SP-MV-Blue1.png'], price: 'Rs. 19,200', oldPrice: 'Rs. 26,700', discount: '28% off', stock: 'In stock', color: 'Royal Blue', colors: ['Royal Blue', 'Rose Gold', 'Teal'], fabric: 'Pure silk with climbing-vine woven motifs', zari: 'Rose-gold vine zari border and coordinated pallu', occasion: 'Wedding, reception, engagement, festivals', blouse: 'Royal blue blouse with vine zari edge', details: 'Royal Blue Valli Silk features graceful climbing-vine motifs and luminous rose-gold zari.' },
+    ],
+  },
+  {
+    slug: 'solai-pattu',
+    name: 'சோலை பட்டு',
+    eyebrow: 'Grove Inspired Silks · Sezhinool Pattu',
+    description: 'Solai Pattu evokes a flourishing grove with nature-led woven motifs and refined traditional zari.',
+    heroImage: '/sezhinool-pattu/SP-MV-Blue5.png',
+    heroImages: ['/sezhinool-pattu/SP-MV-Blue5.png', '/sezhinool-pattu/SP-MV-Blue1.png', '/sezhinool-pattu/SP-MV-Blue3.png'],
+    designs: [
+      { slug: 'blue-solai-silk', name: 'Blue Solai Silk', code: 'SZ-SL-0501', image: '/sezhinool-pattu/SP-MV-Blue5.png', images: ['/sezhinool-pattu/SP-MV-Blue5.png', '/sezhinool-pattu/SP-MV-Blue1.png', '/sezhinool-pattu/SP-MV-Blue3.png', '/sezhinool-pattu/SP-MV-Blue4.png'], price: 'Rs. 18,600', oldPrice: 'Rs. 25,800', discount: '28% off', stock: 'In stock', color: 'Heritage Blue', colors: ['Heritage Blue', 'Rose Gold', 'Emerald'], fabric: 'Pure silk with lush grove-inspired woven motifs', zari: 'Traditional rose-gold zari border and festive pallu', occasion: 'Reception, pooja, family celebrations, gifting', blouse: 'Heritage blue blouse with nature-inspired zari edge', details: 'Blue Solai Silk combines lush nature-inspired motifs with a refined rose-gold zari finish.' },
+    ],
+  },
 ]
 
 export const getSezhinoolPattuCollection = (slug) =>
-  sezhinoolPattuCollections.find((c) => c.slug === slug)
+  sezhinoolPattuCollections.find((c) => c.slug === slug || c.altSlugs?.includes(slug))
 
 export const getSezhinoolPattuDesign = (collectionSlug, designSlug) => {
   const collection = getSezhinoolPattuCollection(collectionSlug)

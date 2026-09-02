@@ -153,6 +153,46 @@ export const veloraPattuCollections = [
       },
     ],
   },
+  {
+    slug: 'vanji-pattu',
+    name: 'வஞ்சி பட்டு',
+    eyebrow: 'Vine Inspired Silks - Velora Pattu',
+    description: 'Vanji Pattu celebrates graceful climbing vines through refined zari weaving on luminous festive silk.',
+    heroImage: '/velora-pattu/VP-VM-2.png',
+    designs: [
+      { slug: 'golden-vanji-silk', name: 'Golden Vanji Silk', code: 'VL-VJ-0201', image: '/velora-pattu/VP-VM-2.png', images: ['/velora-pattu/VP-VM-2.png', '/velora-pattu/VP-VM-1.png', '/velora-pattu/VP-VM-3.png'], price: 'Rs. 17,800', oldPrice: 'Rs. 24,700', discount: '28% off', stock: 'In stock', color: 'Golden Brown', colors: ['Golden Brown', 'Copper Gold', 'Maroon'], fabric: 'Pure silk with graceful vine-inspired woven motifs', zari: 'Warm gold vine zari border and coordinated pallu', occasion: 'Wedding, reception, festive celebrations', blouse: 'Matching silk blouse with vine zari edging', details: 'Golden Vanji Silk combines flowing vine motifs with warm gold zari for a graceful festive drape.' },
+    ],
+  },
+  {
+    slug: 'neythal-pattu',
+    name: 'நெய்தல் பட்டு',
+    eyebrow: 'Coastal Floral Silks - Velora Pattu',
+    description: 'Neythal Pattu brings coastal-flower inspiration to silk through fluid motifs and luminous zari accents.',
+    heroImage: '/velora-pattu/VP-VM-3.png',
+    designs: [
+      { slug: 'teal-neythal-silk', name: 'Teal Neythal Silk', code: 'VL-NP-0301', image: '/velora-pattu/VP-VM-3.png', images: ['/velora-pattu/VP-VM-3.png', '/velora-pattu/VP-VM-4.png', '/velora-pattu/VP-VM-2.png'], price: 'Rs. 16,900', oldPrice: 'Rs. 23,500', discount: '28% off', stock: 'In stock', color: 'Teal Blue', colors: ['Teal Blue', 'Peacock Blue', 'Gold'], fabric: 'Soft silk with fluid coastal floral weaving', zari: 'Gold floral zari border with a luminous pallu', occasion: 'Engagement, pooja, festive gatherings', blouse: 'Teal silk blouse with gold border', details: 'Teal Neythal Silk pairs fluid coastal motifs with luminous gold zari for elegant celebrations.' },
+    ],
+  },
+  {
+    slug: 'gothai-pattu',
+    name: 'கோதை பட்டு',
+    eyebrow: 'Garland Inspired Silks - Velora Pattu',
+    description: 'Gothai Pattu features graceful garland motifs woven into lustrous silk with traditional zari detailing.',
+    heroImage: '/velora-pattu/VP-VM-4.png',
+    designs: [
+      { slug: 'royal-gothai-silk', name: 'Royal Gothai Silk', code: 'VL-GP-0401', image: '/velora-pattu/VP-VM-4.png', images: ['/velora-pattu/VP-VM-4.png', '/velora-pattu/VP-VM-3.png', '/velora-pattu/VP-VM-5.png'], price: 'Rs. 18,600', oldPrice: 'Rs. 25,800', discount: '28% off', stock: 'In stock', color: 'Royal Teal', colors: ['Royal Teal', 'Emerald', 'Antique Gold'], fabric: 'Pure silk with garland-inspired woven motifs', zari: 'Antique gold garland border and festive pallu', occasion: 'Wedding, reception, engagement', blouse: 'Royal teal blouse with antique gold edging', details: 'Royal Gothai Silk showcases graceful garland weaving framed by a rich antique-gold zari border.' },
+    ],
+  },
+  {
+    slug: 'kuravam-pattu',
+    name: 'குரவம் பட்டு',
+    eyebrow: 'Heritage Floral Silks - Velora Pattu',
+    description: 'Kuravam Pattu combines heritage floral forms with rich zari accents for an elegant traditional statement.',
+    heroImage: '/velora-pattu/VP-VM-5.png',
+    designs: [
+      { slug: 'heritage-kuravam-silk', name: 'Heritage Kuravam Silk', code: 'VL-KR-0501', image: '/velora-pattu/VP-VM-5.png', images: ['/velora-pattu/VP-VM-5.png', '/velora-pattu/VP-VM-1.png', '/velora-pattu/VP-VM-4.png'], price: 'Rs. 19,200', oldPrice: 'Rs. 26,700', discount: '28% off', stock: 'In stock', color: 'Heritage Gold', colors: ['Heritage Gold', 'Olive', 'Maroon'], fabric: 'Pure silk with traditional kuravam floral motifs', zari: 'Rich gold floral zari border and woven pallu', occasion: 'Muhurtham, wedding, grand family occasions', blouse: 'Coordinated silk blouse with floral zari edging', details: 'Heritage Kuravam Silk blends traditional floral motifs with rich gold zari for auspicious occasions.' },
+    ],
+  },
 ]
 
 export const getVeloraPattuCollection = (slug) => veloraPattuCollections.find((c) => c.slug === slug)

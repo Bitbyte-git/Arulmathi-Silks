@@ -1,5 +1,9 @@
 const sailaDesigns = [
   { name: 'சுவர்ணீலா', slug: 'malar-kodi', href: '/saila-pattu/malar-kodi', desc: 'Vine motif silk with graceful festive texture', img: '/saila-pattu/SP-SN-0101-3.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
+  { name: 'சாயல் பட்டு', slug: 'thanga-mayil', href: '/saila-pattu/thanga-mayil', desc: 'Graceful festive silk with an elegant woven finish', img: '/saila-pattu/SP-Blue-1.png' },
+  { name: 'வேங்கை பட்டு', slug: 'pachai-valli', href: '/saila-pattu/pachai-valli', desc: 'Traditional silk with fresh vine-inspired details', img: '/ezhil-pattu/EP-TT-2.png' },
+  { name: 'குலாபி பட்டு', slug: 'sandhana-malar', href: '/saila-pattu/sandhana-malar', desc: 'Soft floral silk created for refined celebrations', img: '/Images/4-pose1.png' },
+  { name: 'அல்லி பட்டு', slug: 'neela-thogai', href: '/saila-pattu/neela-thogai', desc: 'Lily-inspired festive silk with a timeless drape', img: '/Images/3-pose3.png' },
 ]
 
 const sailaNotes = [
@@ -9,8 +13,8 @@ const sailaNotes = [
 ]
 
 const sailaStats = [
-  { value: '1', label: 'collection' },
-  { value: '4', label: 'saree designs' },
+  { value: '5', label: 'collections' },
+  { value: '5', label: 'featured designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -74,7 +78,7 @@ export default function SailaPattu() {
                 {sailaStats.map((stat) => (
                   <div key={stat.label} className="flex flex-col items-center gap-1 border-white/14 py-3 text-center sm:border-r sm:last:border-r-0">
                     <span className="font-serif text-[34px] leading-none text-[#d9a046]">{stat.value}</span>
-                    <span className="font-sans text-[10px] uppercase tracking-[1.5px] text-white/62">{stat.label}</span>
+                    <span className="max-w-[120px] text-center font-sans text-[10px] uppercase leading-[1.5] tracking-[1.5px] text-white/62">{stat.label}</span>
                   </div>
                 ))}
               </div>
@@ -140,7 +144,7 @@ export default function SailaPattu() {
           </div>
 
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="mx-auto grid w-fit grid-cols-1 items-stretch gap-5 pb-2 sm:grid-cols-2 lg:grid-cols-3">
               {sailaDesigns.map((saree) => (
                 <article key={saree.name} className="saila-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   <a href={saree.href} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
@@ -148,7 +152,7 @@ export default function SailaPattu() {
                   </a>
                   <div className="saila-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
                     <h3 className="saila-design-title collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
-                    <p className="saila-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
+                    <p className="saila-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4f4854]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />
                       <i className="fas fa-spa text-[9px]" />

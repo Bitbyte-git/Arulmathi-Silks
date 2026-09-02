@@ -28,7 +28,7 @@ const collections = [
     href: '/noolisai-pattu',
   },
   {
-    name: 'செழிநூல் பட்டு',
+    name: 'சென்னூல் பட்டு ',
     desc: 'Jewel-toned silk sarees with rich heritage motifs.',
     img: '/sezhinool-pattu/SP-MV-Blue4.png',
     href: '/sezhinool-pattu',

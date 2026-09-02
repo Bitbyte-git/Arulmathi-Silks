@@ -2,6 +2,7 @@ import { mayuraPattuCollections } from '../data/mayuraPattuProducts'
 
 const mayuraDesigns = [
   { name: 'வைர மயில்', slug: 'mayil-peru', href: '/mayura-pattu/mayil-peru', desc: 'Peacock feather woven silk with rani pink border accent', img: mayuraPattuCollections[0].cardImage, badge: 'Bestseller', badgeIcon: 'fa-crown' },
+  { name: 'ஆம்பல் பட்டு', slug: 'aambal-pattu', href: '/mayura-pattu/aambal-pattu', desc: 'Water-lily inspired silk with graceful golden woven motifs', img: mayuraPattuCollections[1].cardImage, badge: 'New', badgeIcon: 'fa-spa' },
 ]
 
 const mayuraNotes = [
@@ -11,8 +12,8 @@ const mayuraNotes = [
 ]
 
 const mayuraStats = [
-  { value: '1', label: 'design family' },
-  { value: '6', label: 'saree views' },
+  { value: '2', label: 'collections' },
+  { value: '3', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -113,7 +114,7 @@ export default function MayuraPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="flex flex-wrap items-stretch justify-center gap-5 pb-2">
               {mayuraDesigns.map((saree) => (
                 <article key={saree.name} className="mayura-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg brand-badge px-3 py-2 font-sans text-[10px] font-semibold shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}

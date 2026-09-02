@@ -10,7 +10,7 @@ const ezhilNotes = [
 
 const ezhilStats = [
   { value: '1', label: 'design family' },
-  { value: '3', label: 'saree designs' },
+  { value: '4', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 

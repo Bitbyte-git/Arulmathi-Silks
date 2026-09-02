@@ -82,7 +82,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'thanga-mayil',
-    name: 'தங்க மயில்',
+    name: 'சாயல் பட்டு',
     eyebrow: 'New Arrival · Vaagai Collection',
     description: 'Thanga Mayil features peacock-inspired zari borders that flow gracefully across the pallu — a Saila Pattu choice pick for reception and wedding occasions in the Vaagai collection.',
     heroImage: '/saila-pattu/SP-Blue-1.png',
@@ -90,7 +90,7 @@ export const sailaPattuCollections = [
       {
         slug: 'classic-peacock-zari',
         name: 'Classic Peacock Zari',
-        code: 'TM-VG-0201',
+        code: 'SP-SY-0201',
         image: '/saila-pattu/SP-Blue-3.png',
         images: ['/kaithirai-pattu/KP-PP-1.png', '/ezhil-pattu/EP-TT-2.png', '/Images/w5.png', '/Images/image11.png'],
         price: 'Rs. 21,800',
@@ -108,7 +108,7 @@ export const sailaPattuCollections = [
       {
         slug: 'teal-peacock-pallu',
         name: 'Teal Peacock Pallu',
-        code: 'TM-VG-0202',
+        code: 'SP-SY-0202',
         image: '/saila-pattu/SP-Blue-4.png',
         images: ['/Images/w5.png', '/kaithirai-pattu/KP-PP-1.png', '/Images/sec-pose3.png', '/ezhil-pattu/EP-TT-2.png'],
         price: 'Rs. 19,600',
@@ -126,7 +126,7 @@ export const sailaPattuCollections = [
       {
         slug: 'navy-temple-peacock',
         name: 'Navy Temple Peacock',
-        code: 'TM-VG-0203',
+        code: 'SP-SY-0203',
         image: '/saila-pattu/SP-Blue-5.png',
         images: ['/Images/3-pose3.png', '/aanchali-pattu/SP-Green-4.png', '/Images/3-pose4.png', '/kaithirai-pattu/KP-PP-1.png'],
         price: 'Rs. 23,500',
@@ -145,7 +145,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'pachai-valli',
-    name: 'பச்சை வள்ளி',
+    name: 'வேங்கை பட்டு',
     eyebrow: 'Festive Classic · Vaagai Collection',
     description: 'Pachai Valli brings the freshness of green vine weaving to everyday festive dressing — a Vaagai classic that suits poojas, family events, and gifting alike.',
     heroImage: '/ezhil-pattu/EP-TT-2.png',
@@ -153,7 +153,7 @@ export const sailaPattuCollections = [
       {
         slug: 'emerald-flower-weave',
         name: 'Emerald Flower Weave',
-        code: 'PV-VG-0301',
+        code: 'SP-VV-0301',
         image: '/ezhil-pattu/EP-TT-2.png',
         images: ['/ezhil-pattu/EP-TT-2.png', '/kaithirai-pattu/KP-PP-1.png', '/Images/w5.png', '/Images/sec-pose3.png'],
         price: 'Rs. 16,900',
@@ -171,7 +171,7 @@ export const sailaPattuCollections = [
       {
         slug: 'sage-vine-border',
         name: 'Sage Vine Border',
-        code: 'PV-VG-0302',
+        code: 'SP-VV-0302',
         image: '/Images/w5.png',
         images: ['/Images/w5.png', '/ezhil-pattu/EP-TT-2.png', '/Images/sec-pose4.png', '/Images/sec-pose5.png'],
         price: 'Rs. 14,800',
@@ -190,7 +190,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'sandhana-malar',
-    name: 'சந்தன மலர்',
+    name: 'குலாபி பட்டு',
     eyebrow: 'Bridal Gifting · Vaagai Collection',
     description: 'Sandhana Malar is a soft sandal floral silk with luminous zari that brings a refined glow to the Vaagai collection — ideal for elegant gifting and festive occasions.',
     heroImage: '/Images/4-pose1.png',
@@ -198,7 +198,7 @@ export const sailaPattuCollections = [
       {
         slug: 'sandal-floral-silk',
         name: 'Sandal Floral Silk',
-        code: 'SM-VG-0401',
+        code: 'SP-KP-0401',
         image: '/Images/4-pose1.png',
         images: ['/Images/4-pose1.png', '/velora-pattu/VP-VM-5.png', '/Images/4-pose4.png', '/Images/sec-pose2.png'],
         price: 'Rs. 19,200',
@@ -216,7 +216,7 @@ export const sailaPattuCollections = [
       {
         slug: 'cream-blossom-zari',
         name: 'Cream Blossom Zari',
-        code: 'SM-VG-0402',
+        code: 'SP-KP-0402',
         image: '/velora-pattu/VP-VM-5.png',
         images: ['/velora-pattu/VP-VM-5.png', '/Images/4-pose1.png', '/Images/4-pose4.png', '/Images/sec-pose1.png'],
         price: 'Rs. 17,500',
@@ -235,7 +235,7 @@ export const sailaPattuCollections = [
   },
   {
     slug: 'neela-thogai',
-    name: 'நீல தோகை',
+    name: 'அல்லி பட்டு',
     eyebrow: 'Evening Elegance · Vaagai Collection',
     description: 'Neela Thogai is a blue-toned silk with refined woven accents that gives a distinguished evening-wear quality to the Vaagai collection.',
     heroImage: '/Images/3-pose3.png',
@@ -243,7 +243,7 @@ export const sailaPattuCollections = [
       {
         slug: 'navy-woven-silk',
         name: 'Navy Woven Silk',
-        code: 'NT-VG-0501',
+        code: 'SP-AP-0501',
         image: '/Images/3-pose3.png',
         images: ['/Images/3-pose3.png', '/aanchali-pattu/SP-Green-4.png', '/Images/3-pose4.png', '/Images/sec-pose1.png'],
         price: 'Rs. 17,400',
@@ -261,7 +261,7 @@ export const sailaPattuCollections = [
       {
         slug: 'violet-evening-silk',
         name: 'Violet Evening Silk',
-        code: 'NT-VG-0502',
+        code: 'SP-AP-0502',
         image: '/sezhinool-pattu/SP-MV-Blue4.png',
         images: ['/sezhinool-pattu/SP-MV-Blue4.png', '/Images/3-pose3.png', '/aanchali-pattu/SP-Green-4.png', '/Images/sec-pose3.png'],
         price: 'Rs. 19,800',

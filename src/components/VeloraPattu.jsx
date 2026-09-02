@@ -2,6 +2,10 @@ import { veloraPattuCollections } from '../data/veloraPattuProducts'
 
 const veloraDesigns = [
   { name: 'வெள்ளி மலர் பட்டு', slug: 'velli-border', href: '/velora-pattu/velli-border', desc: 'Silver contrast border silk with lustrous zari', img: veloraPattuCollections[0].cardImage, badge: 'Popular', badgeIcon: 'fa-star' },
+  { name: 'வஞ்சி பட்டு', slug: 'vanji-pattu', href: '/velora-pattu/vanji-pattu', desc: 'Graceful vine-inspired silk with refined zari', img: '/velora-pattu/VP-VM-2.png', badge: 'New', badgeIcon: 'fa-leaf' },
+  { name: 'நெய்தல் பட்டு', slug: 'neythal-pattu', href: '/velora-pattu/neythal-pattu', desc: 'Coastal floral silk with a luminous festive finish', img: '/velora-pattu/VP-VM-3.png', badge: 'New', badgeIcon: 'fa-water' },
+  { name: 'கோதை பட்டு', slug: 'gothai-pattu', href: '/velora-pattu/gothai-pattu', desc: 'Garland-inspired silk woven with elegant zari', img: '/velora-pattu/VP-VM-4.png', badge: 'New', badgeIcon: 'fa-spa' },
+  { name: 'குரவம் பட்டு', slug: 'kuravam-pattu', href: '/velora-pattu/kuravam-pattu', desc: 'Heritage floral silk with rich traditional accents', img: '/velora-pattu/VP-VM-5.png', badge: 'New', badgeIcon: 'fa-fan' },
 ]
 
 const veloraNotes = [
@@ -11,8 +15,8 @@ const veloraNotes = [
 ]
 
 const veloraStats = [
-  { value: '1', label: 'design family' },
-  { value: '3', label: 'saree designs' },
+  { value: '5', label: 'collections' },
+  { value: '5', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -135,7 +139,7 @@ export default function VeloraPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="mx-auto grid w-fit grid-cols-1 items-stretch gap-5 pb-2 sm:grid-cols-2 lg:grid-cols-3">
               {veloraDesigns.map((saree) => (
                 <article key={saree.name} className="velora-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (

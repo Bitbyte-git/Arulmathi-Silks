@@ -33,6 +33,31 @@ export const kaithiraiPattuCollections = [
       { slug: 'ivory-thennai-pattu', name: 'Ivory Thennai Pattu', code: 'KT-TN-0303', image: '/Images/sec-pose4.png', images: ['/Images/sec-pose4.png', '/Images/sec-pose5.png', '/mangai-pattu/MG-AM-0101.png', '/Images/sec-pose2.png'], price: 'Rs. 14,200', oldPrice: 'Rs. 19,700', discount: '28% off', stock: 'In stock', color: 'Ivory', colors: ['Ivory', 'Cream Gold', 'Champagne Gold'], fabric: 'Lightweight silk with ivory palm texture', zari: 'Subtle gold palm zari highlights', occasion: 'Casual festive, gifting, pooja', blouse: 'Ivory blouse with soft gold palm edge', details: 'Ivory Thennai Pattu is the lightest Thennai Pattu option, ivory with delicate gold palm highlights for elegant everyday gifting.' },
     ],
   },
+  {
+    slug: 'sengandhal-pattu', name: 'செங்காந்தள் பட்டு', eyebrow: 'Flame Lily Silks - Kaithirai Pattu', description: 'Sengandhal Pattu celebrates the vivid flame lily with floral zari woven across rich festive silk.', heroImage: '/Images/red-pose4.png',
+    designs: [
+      { slug: 'ruby-sengandhal-silk', name: 'Ruby Sengandhal Silk', code: 'KT-SG-0401', image: '/Images/red-pose4.png', images: ['/Images/red-pose4.png', '/Images/red-pose3.png', '/Images/red-pose5.png'], price: 'Rs. 18,900', oldPrice: 'Rs. 26,200', discount: '28% off', stock: 'In stock', color: 'Ruby Red', colors: ['Ruby Red', 'Crimson', 'Antique Gold'], fabric: 'Pure silk with flame-lily floral motifs', zari: 'Antique gold floral zari border and pallu', occasion: 'Wedding, reception, festive celebrations', blouse: 'Ruby blouse with floral zari edging', details: 'Ruby Sengandhal Silk combines vivid floral inspiration with rich antique-gold zari.' },
+    ],
+  },
+  {
+    slug: 'niramugil-pattu', name: 'நிறமுகில் பட்டு', eyebrow: 'Cloud Toned Silks - Kaithirai Pattu', description: 'Niramugil Pattu captures shifting cloud hues in softly lustrous silk with elegant zari accents.', heroImage: '/Images/sec-pose3.png',
+    designs: [
+      { slug: 'teal-niramugil-silk', name: 'Teal Niramugil Silk', code: 'KT-NM-0501', image: '/Images/sec-pose3.png', images: ['/Images/sec-pose3.png', '/Images/sec-pose2.png', '/Images/sec-pose4.png'], price: 'Rs. 17,600', oldPrice: 'Rs. 24,400', discount: '28% off', stock: 'In stock', color: 'Cloud Teal', colors: ['Cloud Teal', 'Peacock Blue', 'Gold'], fabric: 'Soft pure silk with cloud-inspired woven texture', zari: 'Gold zari border with fluid woven details', occasion: 'Engagement, pooja, family celebrations', blouse: 'Teal blouse with gold zari edging', details: 'Teal Niramugil Silk brings a cool cloud-toned palette to graceful festive silk.' },
+      { slug: 'violet-niramugil-silk', name: 'Violet Niramugil Silk', code: 'KT-NM-0502', image: '/Images/3-pose3.png', images: ['/Images/3-pose3.png', '/Images/3-pose1.png', '/Images/3-pose4.png'], price: 'Rs. 18,200', oldPrice: 'Rs. 25,300', discount: '28% off', stock: 'In stock', color: 'Cloud Violet', colors: ['Cloud Violet', 'Plum', 'Silver'], fabric: 'Pure silk with softly shifting cloud motifs', zari: 'Silver-toned zari border and coordinated pallu', occasion: 'Reception, engagement, festive gifting', blouse: 'Violet blouse with silver zari edge', details: 'Violet Niramugil Silk combines misty violet tones with a refined silver zari finish.' },
+    ],
+  },
+  {
+    slug: 'tharakai-pattu', name: 'தாரகை பட்டு', eyebrow: 'Star Motif Silks - Kaithirai Pattu', description: 'Tharakai Pattu places luminous star-inspired motifs across silk for elegant evening occasions.', heroImage: '/Images/3-pose1.png',
+    designs: [
+      { slug: 'royal-tharakai-silk', name: 'Royal Tharakai Silk', code: 'KT-TR-0601', image: '/Images/3-pose1.png', images: ['/Images/3-pose1.png', '/Images/3-pose3.png', '/Images/3-pose5.png'], price: 'Rs. 18,800', oldPrice: 'Rs. 26,100', discount: '28% off', stock: 'In stock', color: 'Royal Violet', colors: ['Royal Violet', 'Rani Pink', 'Gold'], fabric: 'Pure silk with delicate star-inspired woven motifs', zari: 'Gold star zari border and festive pallu', occasion: 'Reception, wedding, evening celebrations', blouse: 'Royal violet blouse with gold zari border', details: 'Royal Tharakai Silk sparkles with star-inspired motifs and luminous gold zari.' },
+    ],
+  },
+  {
+    slug: 'kanagathalir-pattu', name: 'கனகத்தளிர் பட்டு', eyebrow: 'Golden Leaf Silks - Kaithirai Pattu', description: 'Kanagathalir Pattu combines tender leaf motifs with a rich golden zari finish.', heroImage: '/Images/sec-pose5.png',
+    designs: [
+      { slug: 'gold-kanagathalir-silk', name: 'Gold Kanagathalir Silk', code: 'KT-KT-0701', image: '/Images/sec-pose5.png', images: ['/Images/sec-pose5.png', '/Images/sec-pose4.png', '/Images/sec-pose2.png'], price: 'Rs. 19,400', oldPrice: 'Rs. 26,900', discount: '28% off', stock: 'In stock', color: 'Golden Sand', colors: ['Golden Sand', 'Olive Gold', 'Copper'], fabric: 'Pure silk with tender leaf motifs woven across the body', zari: 'Rich gold leaf zari border and traditional pallu', occasion: 'Muhurtham, wedding, festive gifting', blouse: 'Golden silk blouse with leaf zari edging', details: 'Gold Kanagathalir Silk celebrates tender leaf forms through rich traditional gold weaving.' },
+    ],
+  },
 ]
 
 export const getKaithiraiPattuCollection = (slug) => kaithiraiPattuCollections.find((c) => c.slug === slug)

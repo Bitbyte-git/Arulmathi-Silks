@@ -1,5 +1,9 @@
 const kaithiraiDesigns = [
   { name: 'பொய்கை பட்டு', slug: 'poigai-pattu', href: '/kaithirai-pattu/poigai-pattu', desc: 'Water lily motif woven silk for elegant occasions', img: '/kaithirai-pattu/KP-PP-2.png', badge: 'Popular', badgeIcon: 'fa-star' },
+  { name: 'செங்காந்தள் பட்டு', slug: 'sengandhal-pattu', href: '/kaithirai-pattu/sengandhal-pattu', desc: 'Flame-lily inspired silk with vibrant floral zari', img: '/Images/red-pose4.png', badge: 'New', badgeIcon: 'fa-spa' },
+  { name: 'நிறமுகில் பட்டு', slug: 'niramugil-pattu', href: '/kaithirai-pattu/niramugil-pattu', desc: 'Cloud-toned silk woven in graceful festive colors', img: '/Images/sec-pose3.png', badge: 'New', badgeIcon: 'fa-cloud' },
+  { name: 'தாரகை பட்டு', slug: 'tharakai-pattu', href: '/kaithirai-pattu/tharakai-pattu', desc: 'Star-inspired zari motifs on luminous silk', img: '/Images/3-pose1.png', badge: 'New', badgeIcon: 'fa-star' },
+  { name: 'கனகத்தளிர் பட்டு', slug: 'kanagathalir-pattu', href: '/kaithirai-pattu/kanagathalir-pattu', desc: 'Golden leaf motifs with a rich traditional finish', img: '/Images/sec-pose5.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const kaithiraiNotes = [
@@ -9,8 +13,8 @@ const kaithiraiNotes = [
 ]
 
 const kaithiraiStats = [
-  { value: '3', label: 'design families' },
-  { value: '9', label: 'saree designs' },
+  { value: '5', label: 'collections' },
+  { value: '6', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -133,7 +137,7 @@ export default function KaithiraiPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="mx-auto grid w-fit grid-cols-1 items-stretch gap-5 pb-2 sm:grid-cols-2 lg:grid-cols-3">
               {kaithiraiDesigns.map((saree) => (
                 <article key={saree.name} className="kaithirai-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (

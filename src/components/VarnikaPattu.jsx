@@ -1,5 +1,7 @@
 const varnikaDesigns = [
   { name: 'வசுந்தரா பட்டு', slug: 'sudar-pattu', href: '/varnika-pattu/sudar-pattu', desc: 'Radiant sun motif woven silk for grand celebrations', img: '/varnika-pattu/VP-VP-3.png', badge: 'Popular', badgeIcon: 'fa-sun' },
+  { name: 'முகிழ் பட்டு', slug: 'mugizh-pattu', href: '/varnika-pattu/mugizh-pattu', desc: 'Delicate bud motifs woven into luminous festive silk', img: '/varnika-pattu/VP-VP-4.png', badge: 'New', badgeIcon: 'fa-seedling' },
+  { name: 'மாங்கோலம் பட்டு', slug: 'mangolam-pattu', href: '/varnika-pattu/mangolam-pattu', desc: 'Traditional mango motifs with rich heritage zari', img: '/varnika-pattu/VP-VP-1.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const varnikaNotes = [
@@ -9,8 +11,8 @@ const varnikaNotes = [
 ]
 
 const varnikaStats = [
-  { value: '1', label: 'design family' },
-  { value: '1', label: 'saree design' },
+  { value: '3', label: 'collections' },
+  { value: '5', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -133,7 +135,7 @@ export default function VarnikaPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="mx-auto grid w-fit grid-cols-1 items-stretch gap-5 pb-2 sm:grid-cols-2 lg:grid-cols-3">
               {varnikaDesigns.map((saree) => (
                 <article key={saree.name} className="varnika-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (

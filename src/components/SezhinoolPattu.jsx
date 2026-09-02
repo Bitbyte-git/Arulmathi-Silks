@@ -1,5 +1,8 @@
 const sezhinoolDesigns = [
   { name: 'மலர் வள்ளி', slug: 'malar-valli', href: '/sezhinool-pattu/malar-valli', desc: 'Royal blue with rose-gold chakra butta and floral vine border', img: '/sezhinool-pattu/SP-MV-Blue4.png', badge: 'Popular', badgeIcon: 'fa-gem' },
+  { name: 'அம்புஜப் பட்டு', slug: 'ambujam-pattu', href: '/sezhinool-pattu/ambujam-pattu', desc: 'Lotus-inspired woven silk with a graceful festive finish', img: '/Images/sec-pose3.png', badge: 'New', badgeIcon: 'fa-fan' },
+  { name: 'வள்ளிப் பட்டு', slug: 'valli-pattu', href: '/sezhinool-pattu/valli-pattu', desc: 'Elegant climbing-vine motifs woven into luminous silk', img: '/sezhinool-pattu/SP-MV-Blue2.png', badge: 'New', badgeIcon: 'fa-seedling' },
+  { name: 'சோலை பட்டு', slug: 'solai-pattu', href: '/sezhinool-pattu/solai-pattu', desc: 'Lush grove-inspired silk with traditional zari accents', img: '/sezhinool-pattu/SP-MV-Blue5.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const sezhinoolNotes = [
@@ -10,8 +13,8 @@ const sezhinoolNotes = [
 
 
 const sezhinoolStats = [
-  { value: '3', label: 'design families' },
-  { value: '9', label: 'saree designs' },
+  { value: '4', label: 'collections' },
+  { value: '6', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -53,7 +56,7 @@ export default function SezhinoolPattu() {
           <div className="max-w-[560px] lg:pb-6">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Signature Collections</p>
             <h1 className="collection-hero-tamil-name mt-4 font-serif text-[52px] font-normal leading-[0.98] text-white sm:text-[78px] lg:text-[92px] xl:text-[104px]">
-              செழிநூல்<br />
+              சென்னூல் <br />
               <em className="italic text-[#d4a853]">பட்டு</em>
             </h1>
             <p className="mt-6 max-w-[520px] font-sans text-[13px] leading-[1.95] text-white/76 sm:text-[14px]">
@@ -129,12 +132,12 @@ export default function SezhinoolPattu() {
           <div className="mb-8 text-center">
             <p className="font-sans text-[10px] font-semibold uppercase tracking-[3px] text-[#c9933a]">Explore Our</p>
             <h2 className="mt-3 font-serif text-[34px] font-normal leading-[1.12] text-[#1a1a2e] sm:text-[44px] lg:text-[50px]">
-              <span className="section-heading-tamil-name">செழிநூல்</span> <em className="italic text-[#c9933a]">Silk Designs</em>
+              <span className="section-heading-tamil-name">சென்னூல் </span> <em className="italic text-[#c9933a]">Silk Designs</em>
             </h2>
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="mx-auto grid w-fit grid-cols-1 items-stretch gap-5 pb-2 sm:grid-cols-2 lg:grid-cols-3">
               {sezhinoolDesigns.map((saree) => (
                 <article key={saree.name} className="sezhinool-design-card relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (

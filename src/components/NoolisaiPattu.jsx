@@ -1,5 +1,7 @@
 const noolisaiDesigns = [
   { name: 'நூல் கொடி', slug: 'nool-veli', href: '/noolisai-pattu/nool-veli', desc: 'Deep magenta silk with royal blue gold butta border', img: '/noolisai-pattu/NL-NK-0101-3.png', badge: 'Bestseller', badgeIcon: 'fa-star' },
+  { name: 'அணிமாலை பட்டு', slug: 'animaalai-pattu', href: '/noolisai-pattu/animaalai-pattu', desc: 'Ornamental garland motifs woven into rich festive silk', img: '/noolisai-pattu/NP-NK-3.png', badge: 'New', badgeIcon: 'fa-gem' },
+  { name: 'பொதும்பு பட்டு', slug: 'pothumbu-pattu', href: '/noolisai-pattu/pothumbu-pattu', desc: 'Lush nature-inspired weaving with elegant zari detail', img: '/noolisai-pattu/NP-NK-5.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const noolisaiNotes = [
@@ -9,8 +11,8 @@ const noolisaiNotes = [
 ]
 
 const noolisaiStats = [
-  { value: '1', label: 'design family' },
-  { value: '5', label: 'saree views' },
+  { value: '3', label: 'collections' },
+  { value: '3', label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -18,6 +20,30 @@ const noolisaiStats = [
 export default function NoolisaiPattu() {
   return (
     <section id="noolisai-pattu" className="section-reveal bg-[#13121f]">
+      <style>
+        {`
+          #noolisai-pattu .noolisai-design-title {
+            font-family: Montserrat, sans-serif !important;
+            font-size: clamp(17px, 1.25vw, 20px) !important;
+            font-weight: 800 !important;
+            line-height: 1.18 !important;
+            letter-spacing: 0.2px !important;
+            color: #241b27 !important;
+          }
+
+          #noolisai-pattu .noolisai-design-desc {
+            font-size: clamp(14px, 1vw, 16px) !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            color: #4a3f49 !important;
+          }
+
+          #noolisai-pattu .noolisai-design-body {
+            padding-top: 24px !important;
+            padding-bottom: 24px !important;
+          }
+        `}
+      </style>
       <div className="relative overflow-hidden bg-[#13121f] px-5 pb-10 pt-10 text-white sm:px-8 lg:min-h-[calc(100vh-120px)] lg:px-16 lg:pb-12 lg:pt-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_22%,rgba(201,147,58,0.17),transparent_27%),radial-gradient(circle_at_78%_22%,rgba(37,88,62,0.24),transparent_30%),radial-gradient(circle_at_86%_76%,rgba(201,147,58,0.10),transparent_24%),linear-gradient(135deg,#13121f_0%,#0d0d1a_54%,#18111f_100%)]" />
         <div className="footer-weave absolute inset-x-0 top-0 h-44 opacity-30" />
@@ -82,16 +108,16 @@ export default function NoolisaiPattu() {
             <div className="mx-auto mt-4 h-px w-28 bg-gradient-to-r from-transparent via-[#c9933a] to-transparent" />
           </div>
           <div className="relative">
-            <div className="flex items-stretch justify-center pb-2">
+            <div className="flex flex-wrap items-stretch justify-center gap-5 pb-2">
               {noolisaiDesigns.map((saree) => (
                 <article key={saree.name} className="relative flex w-[82vw] max-w-[380px] flex-col overflow-hidden rounded-xl border border-[#e4cba8] bg-[#fffaf2] text-[#1a1a2e] shadow-[0_14px_34px_rgba(92,58,24,0.14)] transition-all duration-300 hover:-translate-y-1 hover:border-[#c9933a]/70 hover:shadow-[0_24px_52px_rgba(92,58,24,0.20)] sm:w-[300px] lg:w-[330px] xl:w-[350px]">
                   {saree.badge && (<span className="absolute left-0 top-0 z-10 inline-flex items-center gap-2 rounded-br-lg brand-badge px-3 py-2 font-sans text-[10px] font-semibold shadow-[0_8px_18px_rgba(0,0,0,0.18)]"><i className={`fas ${saree.badgeIcon} text-[9px]`} /> {saree.badge}</span>)}
                   <a href={saree.href} className="block h-[230px] shrink-0 overflow-hidden bg-[#e8ddcf] sm:h-[250px] lg:h-[270px]" aria-label={`Open ${saree.name} designs`}>
                     <img src={saree.img} alt={saree.name} className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-105" />
                   </a>
-                  <div className="flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
-                    <h3 className="collection-family-title-tamil font-sans text-[19px] font-extrabold leading-tight text-[#241b27]">{saree.name}</h3>
-                    <p className="mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
+                  <div className="noolisai-design-body flex flex-1 flex-col rounded-t-lg bg-[#fffaf2] px-5 pb-6 pt-6 text-center shadow-[0_-10px_22px_rgba(74,45,18,0.08)]">
+                    <h3 className="noolisai-design-title collection-family-title-tamil">{saree.name}</h3>
+                    <p className="noolisai-design-desc mx-auto mt-3 min-h-[48px] max-w-[290px] font-sans text-[15px] font-semibold leading-[1.5] text-[#4a3f49]">{saree.desc}</p>
                     <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2 text-[#b57922]">
                       <span className="h-px flex-1 bg-[#d7b578]" />
                       <i className="fas fa-spa text-[9px]" />
