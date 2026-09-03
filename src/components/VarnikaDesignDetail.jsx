@@ -310,10 +310,10 @@ export default function VarnikaDesignDetail({ collectionSlug, designSlug }) {
           <div className="relative mx-auto mt-14 max-w-7xl">
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">More from this collection</p>
             <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees in <span className="mixed-heading-tamil">{collection.name}</span></h2>
-            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 flex flex-wrap gap-6">
               {relatedDesigns.slice(0, 3).map((item) => (
-                <a key={item.slug} href={`/varnika-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
-                  <div className="h-[310px] overflow-hidden bg-[#eadfce]">
+                <a key={item.slug} href={`/varnika-pattu/${collection.slug}/${item.slug}`} className="group w-full max-w-[320px] overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
+                  <div className="h-[220px] overflow-hidden bg-[#eadfce]">
                     <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-5">

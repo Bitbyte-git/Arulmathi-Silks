@@ -9,6 +9,14 @@ export default function VarnikaCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.slug === 'mangolam-pattu') {
+      return [
+        '/varnika-pattu/mangolam-pattu/VN-MG-0201-7.png',
+        '/varnika-pattu/mangolam-pattu/VN-MG-0201-8.png',
+        '/varnika-pattu/mangolam-pattu/VN-MK-0301-3.png',
+        '/varnika-pattu/mangolam-pattu/VN-MK-0301-4.png',
+      ]
+    }
     return [
       ...new Set([
         collection.heroImage,

@@ -1,7 +1,7 @@
 const varnikaDesigns = [
   { name: 'வசுந்தரா பட்டு', slug: 'sudar-pattu', href: '/varnika-pattu/sudar-pattu', desc: 'Radiant sun motif woven silk for grand celebrations', img: '/varnika-pattu/VP-VP-3.png', badge: 'Popular', badgeIcon: 'fa-sun' },
-  { name: 'முகிழ் பட்டு', slug: 'mugizh-pattu', href: '/varnika-pattu/mugizh-pattu', desc: 'Delicate bud motifs woven into luminous festive silk', img: '/varnika-pattu/VP-VP-4.png', badge: 'New', badgeIcon: 'fa-seedling' },
-  { name: 'மாங்கோலம் பட்டு', slug: 'mangolam-pattu', href: '/varnika-pattu/mangolam-pattu', desc: 'Traditional mango motifs with rich heritage zari', img: '/varnika-pattu/VP-VP-1.png', badge: 'New', badgeIcon: 'fa-leaf' },
+  { name: 'முகிழ் பட்டு', slug: 'mugizh-pattu', href: '/varnika-pattu/mugizh-pattu', desc: 'Delicate bud motifs woven into luminous festive silk', img: '/varnika-pattu/Mugil-pattu/VN-MG-0201-3.png', badge: 'New', badgeIcon: 'fa-seedling' },
+  { name: 'மாங்கோலம் பட்டு', slug: 'mangolam-pattu', href: '/varnika-pattu/mangolam-pattu', desc: 'Traditional mango motifs with rich heritage zari', img: '/varnika-pattu/mangolam-pattu/VN-MK-0301-4.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const varnikaNotes = [
