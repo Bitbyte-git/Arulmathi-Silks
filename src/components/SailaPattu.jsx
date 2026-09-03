@@ -4,6 +4,7 @@ const sailaDesigns = [
   { name: 'வேங்கை பட்டு', slug: 'pachai-valli', href: '/saila-pattu/pachai-valli', desc: 'Traditional silk with fresh vine-inspired details', img: '/ezhil-pattu/EP-TT-2.png' },
   { name: 'குலாபி பட்டு', slug: 'sandhana-malar', href: '/saila-pattu/sandhana-malar', desc: 'Soft floral silk created for refined celebrations', img: '/Images/4-pose1.png' },
   { name: 'அல்லி பட்டு', slug: 'neela-thogai', href: '/saila-pattu/neela-thogai', desc: 'Lily-inspired festive silk with a timeless drape', img: '/Images/3-pose3.png' },
+  { name: 'செண்பக பட்டு', slug: 'manjal-kodi', href: '/saila-pattu/manjal-kodi', desc: 'Champak-inspired golden silk for auspicious celebrations', img: '/Images/image11.png' },
 ]
 
 const sailaNotes = [
@@ -13,8 +14,8 @@ const sailaNotes = [
 ]
 
 const sailaStats = [
-  { value: '5', label: 'collections' },
-  { value: '5', label: 'featured designs' },
+  { value: '6', label: 'collections' },
+  { value: '6', label: 'featured designs' },
   { value: '1:1', label: 'selection support' },
 ]
 

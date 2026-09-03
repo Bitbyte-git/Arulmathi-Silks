@@ -9,6 +9,20 @@ export default function VarnikaCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.slug === 'sudar-pattu') {
+      return [
+        '/varnika-pattu/VN-SP-0101-2.png',
+        '/varnika-pattu/VN-SP-0101-3.png',
+        '/varnika-pattu/VN-SP-0101-7.png',
+        '/varnika-pattu/VN-SP-0101-8.png',
+      ]
+    }
+    if (collection.slug === 'mugizh-pattu') {
+      return [
+        '/varnika-pattu/Mugil-pattu/VN-MG-0201-3.png',
+        '/varnika-pattu/Mugil-pattu/VN-MG-0201-4.png',
+      ]
+    }
     if (collection.slug === 'mangolam-pattu') {
       return [
         '/varnika-pattu/mangolam-pattu/VN-MG-0201-7.png',
