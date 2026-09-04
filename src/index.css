@@ -1324,7 +1324,7 @@ footer {
     animation: milestone-border-glow 5.8s linear infinite;
   }
 
-  .milestone-trust-badge > * {
+  .milestone-trust-badge>* {
     position: relative;
     z-index: 1;
   }
@@ -1352,7 +1352,7 @@ footer {
     offset-rotate: 0deg;
     text-shadow: 0 0 7px rgba(255, 255, 235, 1), 0 0 16px rgba(255, 190, 36, 0.95), 0 0 24px rgba(201, 147, 58, 0.75);
     filter: none;
-    animation: trust-border-star-run 7.2s linear infinite;
+    animation: trust-border-star-run 30s linear infinite;
   }
 
   .trust-border-stars span::before {
@@ -1365,7 +1365,53 @@ footer {
 
   .trust-border-stars span:last-child {
     offset-distance: 0%;
-    animation-delay: -3.6s;
+    animation-delay: -10s;
+  }
+
+  .nav-border-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .nav-border-stars span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    color: #ffbf2f;
+    font-size: 26px;
+    line-height: 1;
+    offset-anchor: center;
+    offset-path: inset(0px round 999px);
+    offset-rotate: 0deg;
+    text-shadow: 0 0 7px rgba(255, 255, 235, 1), 0 0 16px rgba(255, 190, 36, 0.95), 0 0 24px rgba(201, 147, 58, 0.75);
+    filter: none;
+    animation: trust-border-star-run 20s linear infinite;
+  }
+
+  .nav-border-stars span::before {
+    content: '✦';
+  }
+
+  .nav-border-stars span:first-child {
+    offset-distance: 0%;
+  }
+
+  .nav-border-stars span:last-child {
+    offset-distance: 0%;
+    animation-delay: -10s;
+  }
+
+  @media (max-width: 1023px) {
+    .nav-border-stars span {
+      offset-path: inset(0px round 0px);
+    }
   }
 
   .milestone-trust-badge:hover {
@@ -5992,6 +6038,7 @@ footer {
 
 /* Mobile page polish: make inner routes match the home page rhythm. */
 @media (max-width: 767px) {
+
   section [class*="lg:grid-cols-[0.54fr_0.46fr]"],
   section [class*="lg:grid-cols-[0.52fr_0.48fr]"],
   section [class*="lg:grid-cols-[0.48fr_0.52fr]"] {
@@ -6068,6 +6115,7 @@ footer {
   }
 
   @media (max-width: 480px) {
+
     section [class*="lg:grid-cols-[82px_1fr]"]>.order-2 button,
     section .order-2.flex.gap-3.overflow-x-auto button {
       width: 112px !important;
@@ -6399,17 +6447,17 @@ footer {
 .collection-card-media,
 .premium-saree-media,
 .collection-grid-media,
-a.saree-info-card > div:first-child {
+a.saree-info-card>div:first-child {
   width: 100%;
   height: auto !important;
   aspect-ratio: 4 / 5;
   overflow: hidden;
 }
 
-.collection-card-media > img,
-.premium-saree-media > img,
-.collection-grid-media > img,
-a.saree-info-card > div:first-child > img {
+.collection-card-media>img,
+.premium-saree-media>img,
+.collection-grid-media>img,
+a.saree-info-card>div:first-child>img {
   width: 100%;
   height: 100% !important;
   object-fit: cover;
@@ -6423,7 +6471,7 @@ a.saree-info-card > div:first-child > img {
   aspect-ratio: 4 / 5;
 }
 
-.site-page-offset .cursor-zoom-in > img {
+.site-page-offset .cursor-zoom-in>img {
   width: 100%;
   height: 100% !important;
   object-fit: cover;
@@ -6432,12 +6480,13 @@ a.saree-info-card > div:first-child > img {
 
 /* Keep the purchase panel visually level with the adjacent 4:5 gallery. */
 @media (min-width: 1024px) {
+
   /* The 4:5 gallery defines the row height; the adjacent panel matches it. */
   .site-page-offset .grid:has(> .product-detail-summary) {
     align-items: stretch !important;
   }
 
-  .site-page-offset .grid:has(> .product-detail-summary) > div:first-child {
+  .site-page-offset .grid:has(> .product-detail-summary)>div:first-child {
     align-self: start;
   }
 
@@ -6456,7 +6505,7 @@ a.saree-info-card > div:first-child > img {
     overflow: hidden;
   }
 
-  .product-detail-summary > * {
+  .product-detail-summary>* {
     flex-shrink: 0;
     margin-top: 0 !important;
   }
@@ -6467,13 +6516,13 @@ a.saree-info-card > div:first-child > img {
     line-height: 1.02 !important;
   }
 
-  .product-detail-summary > p:first-child {
+  .product-detail-summary>p:first-child {
     font-size: 13px !important;
     line-height: 1.2 !important;
     letter-spacing: 2.6px !important;
   }
 
-  .product-detail-summary > p:not(:first-child) {
+  .product-detail-summary>p:not(:first-child) {
     margin-top: 10px !important;
     font-size: 12px !important;
     line-height: 1.55 !important;
@@ -6489,11 +6538,11 @@ a.saree-info-card > div:first-child > img {
     margin-top: 10px !important;
   }
 
-  .product-detail-summary > div:nth-of-type(2) {
+  .product-detail-summary>div:nth-of-type(2) {
     padding: 10px !important;
   }
 
-  .product-detail-summary > div:nth-of-type(2) span:first-child {
+  .product-detail-summary>div:nth-of-type(2) span:first-child {
     font-size: 27px !important;
   }
 
@@ -6508,19 +6557,19 @@ a.saree-info-card > div:first-child > img {
     letter-spacing: 1.25px !important;
   }
 
-  .product-detail-summary > div:last-child {
+  .product-detail-summary>div:last-child {
     gap: 8px !important;
   }
 
-  .product-detail-summary > div:last-child > div {
+  .product-detail-summary>div:last-child>div {
     padding: 8px 5px !important;
   }
 
-  .product-detail-summary > div:last-child i {
+  .product-detail-summary>div:last-child i {
     font-size: 21px !important;
   }
 
-  .product-detail-summary > div:last-child p {
+  .product-detail-summary>div:last-child p {
     margin-top: 7px !important;
     font-size: 10px !important;
     line-height: 1.35 !important;
@@ -6546,6 +6595,7 @@ a.saree-info-card > div:first-child > img {
 }
 
 @media (max-width: 767px) {
+
   section.section-reveal[id$="-pattu"]>div:first-of-type .mt-8.border-t,
   section.section-reveal[id$="-silk"]>div:first-of-type .mt-8.border-t,
   section.section-reveal[id$="-silks"]>div:first-of-type .mt-8.border-t,
@@ -6751,9 +6801,7 @@ section[id$="-cotton"] article.group a {
   }
 
   .site-page-offset {
-    padding-top: calc(
-      var(--nav-height, 120px) + var(--desktop-nav-outer-gap) + var(--desktop-nav-outer-gap)
-    ) !important;
+    padding-top: calc(var(--nav-height, 120px) + var(--desktop-nav-outer-gap) + var(--desktop-nav-outer-gap)) !important;
   }
 
   #home .hero-inner {
@@ -6797,11 +6845,11 @@ section[id$="-cotton"] article.group a {
     background: #080711 !important;
   }
 
-  .site-page-offset > section {
+  .site-page-offset>section {
     padding-top: 24px !important;
   }
 
-  .site-page-offset > section:first-child {
+  .site-page-offset>section:first-child {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
@@ -6810,40 +6858,40 @@ section[id$="-cotton"] article.group a {
     padding-top: 24px !important;
   }
 
-  #cart-page > .mx-auto {
+  #cart-page>.mx-auto {
     padding-top: 0 !important;
   }
 
-  #shop-page > div:first-child > .mx-auto,
-  #about-us > div:first-child > .mx-auto {
+  #shop-page>div:first-child>.mx-auto,
+  #about-us>div:first-child>.mx-auto {
     min-height: auto !important;
     align-items: start !important;
     padding-top: 28px !important;
     padding-bottom: 44px !important;
   }
 
-  #shop-page > div:first-child > .mx-auto > div,
-  #about-us > div:first-child > .mx-auto > div {
+  #shop-page>div:first-child>.mx-auto>div,
+  #about-us>div:first-child>.mx-auto>div {
     transform: none !important;
   }
 
-  #shop-page > div:first-child {
+  #shop-page>div:first-child {
     min-height: 640px !important;
   }
 
-  #shop-page > div:first-child > .mx-auto {
+  #shop-page>div:first-child>.mx-auto {
     min-height: 640px !important;
     align-items: center !important;
     padding-top: 42px !important;
     padding-bottom: 56px !important;
   }
 
-  #shop-page > div:first-child > .mx-auto > div {
+  #shop-page>div:first-child>.mx-auto>div {
     width: 100% !important;
     max-width: 360px !important;
   }
 
-  #shop-page > div:first-child p:first-child {
+  #shop-page>div:first-child p:first-child {
     font-size: 11px !important;
     line-height: 1.55 !important;
     letter-spacing: 2.4px !important;
@@ -6855,14 +6903,14 @@ section[id$="-cotton"] article.group a {
     line-height: 0.98 !important;
   }
 
-  #shop-page > div:first-child h1 + p {
+  #shop-page>div:first-child h1+p {
     max-width: 340px !important;
     margin-top: 20px !important;
     font-size: 16px !important;
     line-height: 1.78 !important;
   }
 
-  #shop-page > div:first-child video {
+  #shop-page>div:first-child video {
     object-position: center top !important;
     opacity: 0.9 !important;
   }
@@ -6871,12 +6919,12 @@ section[id$="-cotton"] article.group a {
     overflow: visible !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"] {
     min-height: auto !important;
     padding: 30px 20px 34px !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] > p:first-child {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"]>p:first-child {
     font-size: 10px !important;
     line-height: 1.35 !important;
     letter-spacing: 2px !important;
@@ -6888,7 +6936,7 @@ section[id$="-cotton"] article.group a {
     line-height: 1.1 !important;
   }
 
-  #about-us article.about-ref-rise h3 + p {
+  #about-us article.about-ref-rise h3+p {
     margin-top: 22px !important;
     font-size: 15px !important;
     line-height: 1.85 !important;
@@ -6900,7 +6948,7 @@ section[id$="-cotton"] article.group a {
     margin-top: 34px !important;
   }
 
-  #about-us article.about-ref-rise .grid.grid-cols-3 > div {
+  #about-us article.about-ref-rise .grid.grid-cols-3>div {
     min-width: 0 !important;
   }
 
@@ -6914,14 +6962,14 @@ section[id$="-cotton"] article.group a {
     line-height: 1.35 !important;
   }
 
-  #shop-page > div:first-child,
-  #about-us > div:first-child,
-  #contact-page > div:first-child,
-  section[id$="-pattu"] > div:first-child,
-  section[id$="-silk"] > div:first-child,
-  section[id$="-silks"] > div:first-child,
-  section[id$="-sarees"] > div:first-child,
-  section[id$="-cotton"] > div:first-child {
+  #shop-page>div:first-child,
+  #about-us>div:first-child,
+  #contact-page>div:first-child,
+  section[id$="-pattu"]>div:first-child,
+  section[id$="-silk"]>div:first-child,
+  section[id$="-silks"]>div:first-child,
+  section[id$="-sarees"]>div:first-child,
+  section[id$="-cotton"]>div:first-child {
     margin-top: 0 !important;
   }
 
@@ -6935,7 +6983,7 @@ section[id$="-cotton"] article.group a {
     margin-left: auto !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > [class~="cursor-zoom-in"] {
+  section .grid:has(> [class~="cursor-zoom-in"])>[class~="cursor-zoom-in"] {
     order: 1 !important;
     width: 100% !important;
     max-width: 574px !important;
@@ -6946,27 +6994,27 @@ section[id$="-cotton"] article.group a {
     border-radius: 10px !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > [class~="cursor-zoom-in"] > img {
+  section .grid:has(> [class~="cursor-zoom-in"])>[class~="cursor-zoom-in"]>img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     object-position: top center !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > [class~="cursor-zoom-in"] > button {
+  section .grid:has(> [class~="cursor-zoom-in"])>[class~="cursor-zoom-in"]>button {
     width: 56px !important;
     height: 56px !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > [class~="cursor-zoom-in"] > button:first-of-type {
+  section .grid:has(> [class~="cursor-zoom-in"])>[class~="cursor-zoom-in"]>button:first-of-type {
     left: 22px !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > [class~="cursor-zoom-in"] > button:last-of-type {
+  section .grid:has(> [class~="cursor-zoom-in"])>[class~="cursor-zoom-in"]>button:last-of-type {
     right: 22px !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > .order-2 {
+  section .grid:has(> [class~="cursor-zoom-in"])>.order-2 {
     order: 2 !important;
     display: flex !important;
     width: 100% !important;
@@ -6978,14 +7026,14 @@ section[id$="-cotton"] article.group a {
     overflow-x: auto !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > .order-2 > button {
+  section .grid:has(> [class~="cursor-zoom-in"])>.order-2>button {
     width: clamp(92px, 25vw, 112px) !important;
     min-width: clamp(92px, 25vw, 112px) !important;
     height: clamp(92px, 25vw, 112px) !important;
     border-radius: 6px !important;
   }
 
-  section .grid:has(> [class~="cursor-zoom-in"]) > .order-2 img {
+  section .grid:has(> [class~="cursor-zoom-in"])>.order-2 img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
@@ -6994,6 +7042,7 @@ section[id$="-cotton"] article.group a {
 }
 
 @media (max-width: 767px) {
+
   #shop-page .shop-page-occasion-section,
   #shop-page .shop-page-occasion-grid,
   #shop-page .shop-page-trust-section {
@@ -7011,7 +7060,7 @@ section[id$="-cotton"] article.group a {
       linear-gradient(180deg, rgba(13, 13, 26, 0) 0%, rgba(13, 13, 26, 0.2) 62%, rgba(13, 13, 26, 0.48) 100%) !important;
   }
 
-  footer > .relative.grid > div:first-child {
+  footer>.relative.grid>div:first-child {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -7032,7 +7081,7 @@ section[id$="-cotton"] article.group a {
     object-position: center !important;
   }
 
-  footer > .relative.grid > div:first-child p {
+  footer>.relative.grid>div:first-child p {
     margin-right: auto !important;
     margin-left: auto !important;
     text-align: center !important;
@@ -7041,7 +7090,7 @@ section[id$="-cotton"] article.group a {
 
 /* About craft cards: prevent mobile text/icon rows from merging. */
 @media (max-width: 767px) {
-  #about-us .relative.mx-auto.max-w-7xl > .overflow-hidden.rounded-lg {
+  #about-us .relative.mx-auto.max-w-7xl>.overflow-hidden.rounded-lg {
     overflow: visible !important;
     border-radius: 8px !important;
   }
@@ -7053,29 +7102,29 @@ section[id$="-cotton"] article.group a {
     padding-bottom: 14px !important;
   }
 
-  #about-us article.about-ref-rise > div {
+  #about-us article.about-ref-rise>div {
     width: 100% !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="h-[330px]"] {
+  #about-us article.about-ref-rise>div[class*="h-[330px]"] {
     height: 220px !important;
     min-height: 220px !important;
     margin-top: 12px !important;
     border-top: 1px solid rgba(214, 198, 173, 0.68) !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="h-[330px]"]:first-child {
+  #about-us article.about-ref-rise>div[class*="h-[330px]"]:first-child {
     margin-top: 0 !important;
     border-top: 0 !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"] {
     display: block !important;
     min-height: 0 !important;
     padding: 34px 22px 48px !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] > p:first-child {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"]>p:first-child {
     display: block !important;
     margin: 0 !important;
     font-size: 10px !important;
@@ -7084,7 +7133,7 @@ section[id$="-cotton"] article.group a {
     white-space: normal !important;
   }
 
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] > p:first-child span {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"]>p:first-child span {
     display: inline-block !important;
     margin-right: 8px !important;
     font-size: 20px !important;
@@ -7099,7 +7148,7 @@ section[id$="-cotton"] article.group a {
     line-height: 1.08 !important;
   }
 
-  #about-us article.about-ref-rise h3 + p {
+  #about-us article.about-ref-rise h3+p {
     max-width: none !important;
     margin: 20px 0 0 !important;
     font-size: 14px !important;
@@ -7114,7 +7163,7 @@ section[id$="-cotton"] article.group a {
     align-items: start !important;
   }
 
-  #about-us article.about-ref-rise .grid.grid-cols-3 > div {
+  #about-us article.about-ref-rise .grid.grid-cols-3>div {
     min-width: 0 !important;
     overflow-wrap: anywhere !important;
   }
@@ -7134,7 +7183,7 @@ section[id$="-cotton"] article.group a {
 }
 
 @media (max-width: 360px) {
-  #about-us article.about-ref-rise > div[class*="flex"][class*="min-h"] {
+  #about-us article.about-ref-rise>div[class*="flex"][class*="min-h"] {
     padding-right: 18px !important;
     padding-left: 18px !important;
   }
@@ -7222,24 +7271,24 @@ section[id$="-cotton"] article.group a {
     margin-top: 22px !important;
   }
 
-  #contact-page .contact-ref-rise .space-y-7 > .contact-ref-rise {
+  #contact-page .contact-ref-rise .space-y-7>.contact-ref-rise {
     display: grid !important;
     grid-template-columns: 44px minmax(0, 1fr) !important;
     align-items: start !important;
     gap: 12px !important;
   }
 
-  #contact-page .contact-ref-rise .space-y-7 > .contact-ref-rise > span {
+  #contact-page .contact-ref-rise .space-y-7>.contact-ref-rise>span {
     width: 44px !important;
     height: 44px !important;
     align-self: start !important;
   }
 
-  #contact-page .contact-ref-rise .space-y-7 > .contact-ref-rise > span i {
+  #contact-page .contact-ref-rise .space-y-7>.contact-ref-rise>span i {
     font-size: 17px !important;
   }
 
-  #contact-page .contact-ref-rise .space-y-7 > .contact-ref-rise > div {
+  #contact-page .contact-ref-rise .space-y-7>.contact-ref-rise>div {
     min-width: 0 !important;
     width: 100% !important;
   }
@@ -7304,7 +7353,7 @@ section[id$="-cotton"] article.group a {
     aspect-ratio: auto !important;
   }
 
-  #collections .collection-card > div:last-child {
+  #collections .collection-card>div:last-child {
     padding: 14px 16px !important;
   }
 

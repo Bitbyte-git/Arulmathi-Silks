@@ -214,7 +214,7 @@ export default function ShopPage() {
           {canLoadDeferredContent ? (
             <video
               ref={storyVideoRef}
-              src="/videos/shopvid.mp4"
+              src="/videos/owner-video.mp4"
               aria-label="Arulmathi Silks showroom story"
               className="h-full min-h-[420px] w-full object-cover object-top"
               muted

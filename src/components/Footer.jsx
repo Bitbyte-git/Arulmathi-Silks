@@ -98,17 +98,12 @@ export default function Footer() {
       <div className="relative z-10 flex flex-col gap-4 py-5 font-sans text-[14px] font-semibold tracking-[1.5px] text-[#2d1811]/54 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p>&copy; 2026 Arulmathi Silk Sarees</p>
-          <p className="mt-1 text-[12px] tracking-[0.6px] text-[#2d1811]/48">
-            Designed, Developed, Hosted and Maintained by{' '}
-            <a href="https://bitbytetech.org/" target="_blank" rel="noreferrer" className="text-[#9b6118] transition-colors hover:text-[#c9933a]">
-              Bit Byte Technologies
-            </a>
-          </p>
         </div>
-        <div className="flex flex-wrap gap-5">
-          <a href="#collections" className="transition-colors hover:text-[#9b6118]">COLLECTIONS</a>
-          <a href="#shop" className="transition-colors hover:text-[#9b6118]">OCCASIONS</a>
-          <a href="#new-arrivals" className="transition-colors hover:text-[#9b6118]">ARRIVALS</a>
+        <div className="text-[13px] tracking-[0.6px] text-[#2d1811]/68">
+          Designed, Developed, Hosted and Maintained by{' '}
+          <a href="https://bitbytetech.org/" target="_blank" rel="noreferrer" className="font-bold text-[#9b6118] transition-colors hover:text-[#c9933a]">
+            Bit Byte Technologies
+          </a>
         </div>
         <div className="flex gap-3">
           {socialLinks.map((item) => (

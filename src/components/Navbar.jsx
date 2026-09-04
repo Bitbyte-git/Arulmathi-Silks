@@ -355,6 +355,10 @@ export default function Navbar() {
       aria-hidden={isStoryVideoOpen}
       onMouseLeave={() => setIsCollectionsOpen(false)}
     >
+      <span className="nav-border-stars" aria-hidden="true">
+        <span />
+        <span />
+      </span>
       <button
         type="button"
         aria-label="Open menu"

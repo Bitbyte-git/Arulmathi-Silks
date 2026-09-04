@@ -14,7 +14,7 @@ export const sezhinoolPattuCollections = [
         code: 'SZ-MV-0101',
         image: '/sezhinool-pattu/SZ-MV-0101-3.png',
         images: [
-          '/sezhinool-pattu/SZ-MV-0101-3.png',
+          '/sezhinool-pattu/SZ-MV-0101-1.png',
           '/sezhinool-pattu/SZ-MV-0101-2.png',
           '/sezhinool-pattu/SZ-MV-0101-3.png',
           '/sezhinool-pattu/SZ-MV-0101-4.png',

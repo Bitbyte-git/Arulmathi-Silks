@@ -7,7 +7,7 @@ const contactDetails = [
   {
     icon: 'fa-phone',
     title: 'Call Us',
-    text: '+91 70104 52034',
+    text: '+91 94432 01989  | +91 70104 52034',
   },
   {
     icon: 'fa-envelope',
