@@ -1,10 +1,10 @@
 const sailaDesigns = [
   { name: 'சுவர்ணீலா', slug: 'malar-kodi', href: '/saila-pattu/malar-kodi', desc: 'Vine motif silk with graceful festive texture', img: '/saila-pattu/SP-SN-0101-3.png', badge: 'Bestseller', badgeIcon: 'fa-crown' },
-  { name: 'சாயல் பட்டு', slug: 'thanga-mayil', href: '/saila-pattu/thanga-mayil', desc: 'Graceful festive silk with an elegant woven finish', img: '/saila-pattu/SP-Blue-1.png' },
-  { name: 'வேங்கை பட்டு', slug: 'pachai-valli', href: '/saila-pattu/pachai-valli', desc: 'Traditional silk with fresh vine-inspired details', img: '/ezhil-pattu/EP-TT-2.png' },
-  { name: 'குலாபி பட்டு', slug: 'sandhana-malar', href: '/saila-pattu/sandhana-malar', desc: 'Soft floral silk created for refined celebrations', img: '/Images/4-pose1.png' },
-  { name: 'அல்லி பட்டு', slug: 'neela-thogai', href: '/saila-pattu/neela-thogai', desc: 'Lily-inspired festive silk with a timeless drape', img: '/Images/3-pose3.png' },
-  { name: 'செண்பக பட்டு', slug: 'manjal-kodi', href: '/saila-pattu/manjal-kodi', desc: 'Champak-inspired golden silk for auspicious celebrations', img: '/Images/image11.png' },
+  { name: 'சாயல் பட்டு', slug: 'thanga-mayil', href: '/saila-pattu/thanga-mayil', desc: 'Graceful festive silk with an elegant woven finish', img: '/saila-pattu/Saayal-pattu/SP-SY-0201-1.png' },
+  { name: 'வேங்கை பட்டு', slug: 'pachai-valli', href: '/saila-pattu/pachai-valli', desc: 'Traditional silk with fresh vine-inspired details', img: '/saila-pattu/Vengai-Pattu/SP-VV-0301-4.png' },
+  { name: 'குலாபி பட்டு', slug: 'sandhana-malar', href: '/saila-pattu/sandhana-malar', desc: 'Soft floral silk created for refined celebrations', img: '/saila-pattu/Kulabi-Pattu/vSP-KP-0401-1.png' },
+  { name: 'அல்லி பட்டு', slug: 'neela-thogai', href: '/saila-pattu/neela-thogai', desc: 'Lily-inspired festive silk with a timeless drape', img: '/saila-pattu/Alli-Pattu/SP-AP-0501-3.png' },
+  { name: 'செண்பக பட்டு', slug: 'manjal-kodi', href: '/saila-pattu/manjal-kodi', desc: 'Champak-inspired golden silk for auspicious celebrations', img: '/saila-pattu/Senbaga-pattu/SP-SP-0301-4.png' },
 ]
 
 const sailaNotes = [
@@ -89,32 +89,32 @@ export default function SailaPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/saila-pattu/SP-SN-0101-2.png" alt="Saila Pattu green silk detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/saila-pattu/Saayal-pattu/SP-SY-0201-3.png" alt="Saayal Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/saila-pattu/SP-SN-0101-3.png" alt="Saila Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/saila-pattu/SP-SN-0101-3.png" alt="Suvarneela silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/saila-pattu/SP-SN-0101-3.png" alt="Saila silk green saree detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/saila-pattu/Vengai-Pattu/SP-VV-0301-4.png" alt="Vengai Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/saila-pattu/SP-SN-0101-4.png" alt="Saila Pattu pastel drape" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/saila-pattu/Kulabi-Pattu/SP-KP-0401-4.png" alt="Kulabi Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/Images/sec-pose3.png" alt="Saila Pattu silk fold" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/saila-pattu/Alli-Pattu/SP-AP-0501-3.png" alt="Alli Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
 
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/saila-pattu/SP-SN-0101-3.png" alt="Saila Pattu silk saree" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/saila-pattu/Saayal-pattu/SP-SY-0201-3.png" alt="Saayal Pattu silk saree" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/saila-pattu/SP-SN-0101-2.png" alt="Saila Pattu green silk" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/saila-pattu/SP-SN-0101-3.png" alt="Suvarneela silk saree" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/saila-pattu/SP-SN-0101-3.png" alt="Saila Pattu festive silk" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/saila-pattu/Vengai-Pattu/SP-VV-0301-4.png" alt="Vengai Pattu silk saree" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">

@@ -9,6 +9,7 @@ export default function SailaCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.heroImages?.length) return collection.heroImages
     return [...new Set([collection.heroImage, ...collection.designs.map((d) => d.image)])].filter(Boolean).slice(0, 4)
   }, [collection])
 
