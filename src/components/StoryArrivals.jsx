@@ -44,7 +44,7 @@ const arrivals = [
     price: 'Rs. 15,600',
     note: 'Mangai Amudha Pattu',
     img: '/mangai-pattu/MG-AM-0101-3.png',
-    fallbackImg: '/mangai-pattu/MP-AP-1.png',
+    fallbackImg: '/mangai-pattu/MG-AM-0101-2.png',
     href: '/mangai-pattu/amudha-pattu',
   },
 ]
