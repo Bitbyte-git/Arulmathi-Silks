@@ -1,8 +1,8 @@
 const sezhinoolDesigns = [
   { name: 'மலர் வள்ளி', slug: 'malar-valli', href: '/sezhinool-pattu/malar-valli', desc: 'Royal blue with rose-gold chakra butta and floral vine border', img: '/sezhinool-pattu/SP-MV-Blue4.png', badge: 'Popular', badgeIcon: 'fa-gem' },
-  { name: 'அம்புஜப் பட்டு', slug: 'ambujam-pattu', href: '/sezhinool-pattu/ambujam-pattu', desc: 'Lotus-inspired woven silk with a graceful festive finish', img: '/Images/sec-pose3.png', badge: 'New', badgeIcon: 'fa-fan' },
-  { name: 'வள்ளிப் பட்டு', slug: 'valli-pattu', href: '/sezhinool-pattu/valli-pattu', desc: 'Elegant climbing-vine motifs woven into luminous silk', img: '/sezhinool-pattu/SP-MV-Blue2.png', badge: 'New', badgeIcon: 'fa-seedling' },
-  { name: 'சோலை பட்டு', slug: 'solai-pattu', href: '/sezhinool-pattu/solai-pattu', desc: 'Lush grove-inspired silk with traditional zari accents', img: '/sezhinool-pattu/SP-MV-Blue5.png', badge: 'New', badgeIcon: 'fa-leaf' },
+  { name: 'அம்புஜப் பட்டு', slug: 'ambujam-pattu', href: '/sezhinool-pattu/ambujam-pattu', desc: 'Lotus-inspired woven silk with a graceful festive finish', img: '/sezhinool-pattu/Ambuja-Pattu/SZ-TP-0301-3.png', badge: 'New', badgeIcon: 'fa-fan' },
+  { name: 'வள்ளிப் பட்டு', slug: 'valli-pattu', href: '/sezhinool-pattu/valli-pattu', desc: 'Elegant climbing-vine motifs woven into luminous silk', img: '/sezhinool-pattu/Valli-Pattu/SZ-VL-0401-4.png', badge: 'New', badgeIcon: 'fa-seedling' },
+  { name: 'சோலை பட்டு', slug: 'solai-pattu', href: '/sezhinool-pattu/solai-pattu', desc: 'Lush grove-inspired silk with traditional zari accents', img: '/sezhinool-pattu/Solllai-Pattu/SZ-SL-0501-1.png', badge: 'New', badgeIcon: 'fa-leaf' },
 ]
 
 const sezhinoolNotes = [
@@ -84,31 +84,31 @@ export default function SezhinoolPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/Images/3-pose3.png" alt="Sezhinool Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/sezhinool-pattu/Solllai-Pattu/SZ-SL-0501-1.png" alt="Solai Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/sezhinool-pattu/SP-MV-Blue4.png" alt="Sezhinool Pattu jewel silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/sezhinool-pattu/Solllai-Pattu/SZ-SL-0501-2.png" alt="Solai Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/Images/red-pose4.png" alt="Sezhinool Pattu mani kodi" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/sezhinool-pattu/Valli-Pattu/SZ-VL-0401-4.png" alt="Valli Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/Images/sec-pose3.png" alt="Sezhinool Pattu thirai" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/sezhinool-pattu/Ambuja-Pattu/SZ-TP-0301-4.png" alt="Ambuja Pattu silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/kaithirai-pattu/KP-PP-1.png" alt="Sezhinool Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/sezhinool-pattu/SZ-MV-0101-3.png" alt="Malar Valli silk saree" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/sezhinool-pattu/SP-MV-Blue4.png" alt="Sezhinool Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/sezhinool-pattu/Solllai-Pattu/SZ-SL-0501-1.png" alt="Solai Pattu silk saree" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Images/red-pose4.png" alt="Sezhinool mani kodi" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/sezhinool-pattu/Solllai-Pattu/SZ-SL-0501-2.png" alt="Solai Pattu silk saree" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Images/sec-pose3.png" alt="Sezhinool thirai" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/sezhinool-pattu/Valli-Pattu/SZ-VL-0401-4.png" alt="Valli Pattu silk saree" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">
