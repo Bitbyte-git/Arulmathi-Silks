@@ -4,7 +4,8 @@ export const vaibhavaPattuCollections = [
     name: 'திருமணம்',
     eyebrow: 'Wedding Muhurtham Silks · Vaibhava Pattu',
     description: 'Thirumanam is the grand wedding collection of Vaibhava Pattu — heavy zari, rich jewel tones, and temple-inspired borders crafted for muhurtham and the most special moments.',
-    heroImage: '/vaibhava-pattu/VP-TM-Red1.png',
+    heroImage: '/vaibhava-pattu/VB-TM-0101-2.png',
+    heroImages: ['/vaibhava-pattu/VB-TM-0101-2.png', '/vaibhava-pattu/VB-TM-0101-3.png'],
     designs: [
       { slug: 'bridal-red-zari', name: 'Bridal Red Zari', code: 'VB-TM-0101', image: '/vaibhava-pattu/VB-TM-0101-1.png', images: ['/vaibhava-pattu/VB-TM-0101-2.png', '/vaibhava-pattu/VB-TM-0101-3.png', '/vaibhava-pattu/VB-TM-0101-4.png'], price: 'Rs. 28,500', oldPrice: 'Rs. 39,800', discount: '28% off', stock: 'In stock', color: 'Ruby Red', colors: ['Ruby Red', 'Maroon', 'Sindoor Red'], fabric: 'Grand pure silk with heavy zari body', zari: 'Heavy antique gold temple border and pallu', occasion: 'Muhurtham, wedding, grand bridal occasions', blouse: 'Ruby blouse with heavy gold zari sleeve', details: 'Bridal Red Zari is the defining Thirumanam design — a grand ruby silk with heavy antique gold temple zari for the most sacred wedding moments.' },
     ],

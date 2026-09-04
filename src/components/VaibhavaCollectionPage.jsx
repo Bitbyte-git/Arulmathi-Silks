@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 import { getVaibhavaPattuCollection } from '../data/vaibhavaPattuProducts'
 
@@ -9,6 +9,7 @@ export default function VaibhavaCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.heroImages?.length) return collection.heroImages
     return [
       ...new Set([
         collection.heroImage,
@@ -95,7 +96,7 @@ export default function VaibhavaCollectionPage({ collectionSlug }) {
                 className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]"
                 style={{ animationDelay: `${index * 90}ms` }}
               >
-                  <a href={`/vaibhava-pattu/${collection.slug}/${design.slug}`} aria-label={`View ${design.name} details`} className="premium-saree-media group relative block h-[290px] overflow-hidden bg-[#e8ddcf]">
+                <a href={`/vaibhava-pattu/${collection.slug}/${design.slug}`} aria-label={`View ${design.name} details`} className="premium-saree-media group relative block h-[290px] overflow-hidden bg-[#e8ddcf]">
                   <img
                     src={design.image}
                     alt={design.name}

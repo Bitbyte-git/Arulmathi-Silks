@@ -19,7 +19,7 @@ export const noolisaiPattuCollections = [
           '/noolisai-pattu/NL-NK-0101-2.png',
           '/noolisai-pattu/NL-NK-0101-3.png',
           '/noolisai-pattu/NL-NK-0101-4.png',
-         
+
         ],
         price: 'Rs. 13,800',
         oldPrice: 'Rs. 19,200',

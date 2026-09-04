@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 import { getVeloraPattuCollection } from '../data/veloraPattuProducts'
 
@@ -9,6 +9,7 @@ export default function VeloraCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.heroImages?.length) return collection.heroImages
     return [
       collection.heroImage,
       ...collection.designs.flatMap((design) => design.images || [design.image]),

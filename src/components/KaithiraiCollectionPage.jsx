@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import useDeferredSiteLoad from '../hooks/useDeferredSiteLoad'
 import { getKaithiraiPattuCollection } from '../data/kaithiraiPattuProducts'
 
@@ -9,6 +9,7 @@ export default function KaithiraiCollectionPage({ collectionSlug }) {
 
   const heroImages = useMemo(() => {
     if (!collection) return []
+    if (collection.heroImages?.length) return collection.heroImages
     return [
       ...new Set([
         collection.heroImage,

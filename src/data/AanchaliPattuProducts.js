@@ -4,13 +4,10 @@ export const AanchaliPattuCollections = [
     name: 'கட்டம் பட்டு',
     eyebrow: 'Geometric Weaves · Aanchali Pattu',
     description: 'Kattam Pattu brings the timeless beauty of handloom checks, rich textures, and delicate gold buttas into pure festive silk — a Salem favourite for weddings and family celebrations.',
-    heroImage: '/aanchali-pattu/SP-Green-1.png',
+    cardImage: '/aanchali-pattu/AP-KP-0101-1.png',
+    heroImage: '/aanchali-pattu/AP-KP-0101-1.png',
     heroImages: [
-      '/aanchali-pattu/SP-Green-1.png',
-      '/aanchali-pattu/SP-Green-2.png',
-      '/aanchali-pattu/SP-Green-5.png',
-      '/aanchali-pattu/SP-Green-4.png',
-      '/aanchali-pattu/SP-Green-5.png',
+      '/aanchali-pattu/AP-KP-0101-3.png',
     ],
     designs: [
       {

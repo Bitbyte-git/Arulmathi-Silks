@@ -10,23 +10,23 @@ const mangaiProductImages = {
     ],
   },
   thogaiOne: {
-    card: '/mangai-pattu/MG-TG-0201-1.png',
-    hero: '/mangai-pattu/MG-TG-0201-1.png',
+    card: '/mangai-pattu/MG-TG-0201-3.png',
+    hero: '/mangai-pattu/MG-TG-0201-3.png',
     gallery: [
-      '/mangai-pattu/MG-TG-0201-1.png',
-      '/mangai-pattu/MG-TG-0201-2.png',
       '/mangai-pattu/MG-TG-0201-3.png',
       '/mangai-pattu/MG-TG-0201-4.png',
+      '/mangai-pattu/MG-TG-0201-1.png',
+      '/mangai-pattu/MG-TG-0201-2.png',
     ],
   },
   thogaiTwo: {
-    card: '/mangai-pattu/MG-TG-0202-1.png',
-    hero: '/mangai-pattu/MG-TG-0202-1.png',
+    card: '/mangai-pattu/MG-TG-0202-3.png',
+    hero: '/mangai-pattu/MG-TG-0202-3.png',
     gallery: [
-      '/mangai-pattu/MG-TG-0202-1.png',
-      '/mangai-pattu/MG-TG-0202-2.png',
       '/mangai-pattu/MG-TG-0202-3.png',
       '/mangai-pattu/MG-TG-0202-4.png',
+      '/mangai-pattu/MG-TG-0202-1.png',
+      '/mangai-pattu/MG-TG-0202-2.png',
     ],
   },
 }
@@ -39,7 +39,7 @@ export const mangaiPattuCollections = [
     description: 'Amudha Pattu is the sweetest collection of Mangai Pattu — soft nectar-inspired motifs and golden zari woven into silk for festive gifting and family celebrations.',
     cardImage: mangaiProductImages.amudha.card,
     heroImage: mangaiProductImages.amudha.hero,
-    heroImages: mangaiProductImages.amudha.gallery,
+    heroImages: [mangaiProductImages.amudha.card],
     designs: [
       {
         slug: 'honey-amudha-silk',
@@ -68,17 +68,16 @@ export const mangaiPattuCollections = [
     eyebrow: 'Peacock Plume Silks · Mangai Pattu',
     description: 'Thogai Pattu draws inspiration from the graceful peacock plume, combining elegant colors with delicate zari for festive occasions.',
     cardImage: mangaiProductImages.thogaiOne.card,
-    heroImage: mangaiProductImages.thogaiOne.hero,
+    heroImage: '/mangai-pattu/MG-TG-0201-3.png',
     heroImages: [
-      '/mangai-pattu/MG-TG-0201-1.png',
-      '/mangai-pattu/MG-TG-0201-2.png',
-      '/mangai-pattu/MG-TG-0202-1.png',
-      '/mangai-pattu/MG-TG-0202-2.png',
+      '/mangai-pattu/MG-TG-0201-3.png',
+      '/mangai-pattu/MG-TG-0201-4.png',
     ],
     designs: [
       {
         slug: 'peacock-thogai-silk',
-        name: 'Peacock Thogai Silk',
+        altSlugs: ['olive-thogai-silk'],
+        name: 'Olive Thogai Silk',
         code: 'MG-TG-0201',
         cardImage: mangaiProductImages.thogaiOne.card,
         image: mangaiProductImages.thogaiOne.gallery[0],
@@ -87,17 +86,18 @@ export const mangaiPattuCollections = [
         oldPrice: 'Rs. 24,700',
         discount: '28% off',
         stock: 'In stock',
-        color: 'Peacock Green',
-        colors: ['Peacock Green', 'Teal Blue', 'Antique Gold'],
-        fabric: 'Soft pure silk with peacock-plume inspired woven motifs',
-        zari: 'Antique gold feather zari border and coordinated pallu',
+        color: 'Olive Green',
+        colors: ['Olive Green', 'Coral Pink', 'Gold Zari'],
+        fabric: 'Soft pure silk in olive green with coral pink contrast border',
+        zari: 'Antique gold feather and mango motif zari border with contrast pallu',
         occasion: 'Engagement, reception, pooja, family celebrations',
-        blouse: 'Peacock-green silk blouse with gold zari edging',
-        details: 'Peacock Thogai Silk combines graceful plume-inspired motifs with peacock green silk and antique-gold zari.',
+        blouse: 'Coral pink silk blouse piece with gold zari border',
+        details: 'Olive Thogai Silk pairs an olive green silk body with delicate golden motifs and a vivid coral pink contrast border.',
       },
       {
         slug: 'royal-blue-thogai-silk',
-        name: 'Royal Blue Thogai Silk',
+        altSlugs: ['copper-brown-thogai-silk'],
+        name: 'Copper Brown Thogai Silk',
         code: 'MG-TG-0202',
         cardImage: mangaiProductImages.thogaiTwo.card,
         image: mangaiProductImages.thogaiTwo.gallery[0],
@@ -106,13 +106,13 @@ export const mangaiPattuCollections = [
         oldPrice: 'Rs. 25,600',
         discount: '28% off',
         stock: 'In stock',
-        color: 'Royal Blue',
-        colors: ['Royal Blue', 'Peacock Blue', 'Gold'],
-        fabric: 'Pure silk with delicate plume-pattern weaving',
-        zari: 'Gold peacock-plume zari border with a rich festive pallu',
+        color: 'Copper Brown',
+        colors: ['Copper Brown', 'Clay Brown', 'Copper Gold Zari'],
+        fabric: 'Pure silk in warm copper brown tone with delicate plume-pattern weaving',
+        zari: 'Copper gold zari border with traditional woven pallu',
         occasion: 'Wedding, reception, festive gifting',
-        blouse: 'Royal-blue silk blouse with gold feather border',
-        details: 'Royal Blue Thogai Silk presents elegant plume motifs on a luminous blue body with a rich gold zari finish.',
+        blouse: 'Matching copper brown silk blouse piece with zari border',
+        details: 'Copper Brown Thogai Silk features a rich earth-toned copper silk body with delicate golden motifs and a regal woven zari border.',
       },
     ],
   },
@@ -121,5 +121,5 @@ export const mangaiPattuCollections = [
 export const getMangaiPattuCollection = (slug) => mangaiPattuCollections.find((c) => c.slug === slug)
 export const getMangaiPattuDesign = (collectionSlug, designSlug) => {
   const collection = getMangaiPattuCollection(collectionSlug)
-  return collection?.designs.find((d) => d.slug === designSlug)
+  return collection?.designs.find((d) => d.slug === designSlug || d.altSlugs?.includes(designSlug))
 }

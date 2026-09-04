@@ -20,8 +20,8 @@ export const mayuraPattuCollections = [
           '/mayura-pattu/MY-VM-0101-2.png',
           '/mayura-pattu/MY-VM-0101-3.png',
           '/mayura-pattu/MY-VM-0101-4.png',
-         
-         
+
+
         ],
         price: 'Rs. 22,400',
         oldPrice: 'Rs. 31,200',

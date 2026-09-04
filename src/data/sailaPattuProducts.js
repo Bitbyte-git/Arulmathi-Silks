@@ -5,6 +5,10 @@ export const sailaPattuCollections = [
     eyebrow: "Salem's Bestseller ·",
     description: 'Saila Pattu represents designs that have achieved lasting success in the Salem market and continue to be among the most loved choices of our customers. Suvarneela is a signature vine-motif silk with a graceful festive texture, woven for every celebration.',
     heroImage: '/saila-pattu/SP-SN-0101-2.png',
+    heroImages: [
+      '/saila-pattu/SP-SN-0101-2.png',
+      '/saila-pattu/SP-SN-0101-3.png',
+    ],
     designs: [
       {
         slug: 'suvarneela-blue-zari',

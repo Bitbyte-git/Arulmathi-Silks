@@ -18,7 +18,7 @@ export const sezhinoolPattuCollections = [
           '/sezhinool-pattu/SZ-MV-0101-2.png',
           '/sezhinool-pattu/SZ-MV-0101-3.png',
           '/sezhinool-pattu/SZ-MV-0101-4.png',
-         
+
         ],
         price: 'Rs. 19,800',
         oldPrice: 'Rs. 27,500',

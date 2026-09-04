@@ -97,7 +97,7 @@ export default function KaithiraiPattu() {
                 <img src="/kaithirai-pattu/Sengandhal-Pattu/KT-SG-0401-3.png" alt="Sengandhal Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/kaithirai-pattu/KT-PP-0101-1.png" alt="Poigai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/kaithirai-pattu/KP-PP-2.png" alt="Poigai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
                 <img src="/kaithirai-pattu/Niramugil-1/KT-NM-0501-4.png" alt="Niramugil Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />

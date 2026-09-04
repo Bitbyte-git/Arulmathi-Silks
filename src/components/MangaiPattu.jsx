@@ -53,16 +53,16 @@ export default function MangaiPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/mangai-pattu/MG-TG-0202-1.png" alt="Mangai Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/mangai-pattu/MG-TG-0202-3.png" alt="Mangai Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
                 <img src="/mangai-pattu/MG-AM-0101-3.png" alt="Mangai Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/mangai-pattu/MG-TG-0201-1.png" alt="Mangai Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/mangai-pattu/MG-TG-0201-4.png" alt="Mangai Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/mangai-pattu/MG-TG-0201-2.png" alt="Mangai Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/mangai-pattu/MG-TG-0201-3.png" alt="Mangai Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
                 <img src="/mangai-pattu/MG-AM-0101-2.png" alt="Mangai Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />

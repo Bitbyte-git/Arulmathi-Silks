@@ -68,8 +68,11 @@ export const kaithiraiPattuCollections = [
     eyebrow: 'Water Lily Silks - Kaithirai Pattu',
     description: 'Poigai Pattu draws inspiration from the water lily, with graceful floral motifs woven into premium silk for receptions and festive occasions.',
     cardImage: kaithiraiProductImages.poigai.card,
-    heroImage: kaithiraiProductImages.poigai.hero,
-    heroImages: ['/kaithirai-pattu/KP-PP-1.png', '/kaithirai-pattu/KP-PP-2.png', '/kaithirai-pattu/KP-PP-3.png'],
+    heroImage: '/kaithirai-pattu/KT-PP-0101-2.jpeg',
+    heroImages: [
+      '/kaithirai-pattu/KT-PP-0101-2.jpeg',
+      '/kaithirai-pattu/KT-PP-0101-3.jpeg',
+    ],
     designs: [
       {
         slug: 'lotus-blue-silk',
@@ -98,7 +101,11 @@ export const kaithiraiPattuCollections = [
     eyebrow: 'Flame Lily Silks - Kaithirai Pattu',
     description: 'Sengandhal Pattu celebrates the vivid flame lily with floral zari woven across rich festive silk.',
     cardImage: kaithiraiProductImages.sengandhal.card,
-    heroImage: kaithiraiProductImages.sengandhal.hero,
+    heroImage: '/kaithirai-pattu/Sengandhal-Pattu/KT-SG-0401-3.png',
+    heroImages: [
+      '/kaithirai-pattu/Sengandhal-Pattu/KT-SG-0401-3.png',
+      '/kaithirai-pattu/Sengandhal-Pattu/KT-SG-0401-4.png',
+    ],
     designs: [
       {
         slug: 'ruby-sengandhal-silk',
@@ -127,7 +134,8 @@ export const kaithiraiPattuCollections = [
     eyebrow: 'Cloud Toned Silks - Kaithirai Pattu',
     description: 'Niramugil Pattu captures shifting cloud hues in softly lustrous silk with elegant zari accents.',
     cardImage: kaithiraiProductImages.niramugilOne.card,
-    heroImage: kaithiraiProductImages.niramugilOne.hero,
+    heroImage: kaithiraiProductImages.niramugilOne.card,
+    heroImages: [kaithiraiProductImages.niramugilOne.card, kaithiraiProductImages.niramugilTwo.card],
     designs: [
       {
         slug: 'teal-niramugil-silk',
@@ -176,7 +184,8 @@ export const kaithiraiPattuCollections = [
     eyebrow: 'Star Motif Silks - Kaithirai Pattu',
     description: 'Tharakai Pattu places luminous star-inspired motifs across silk for elegant evening occasions.',
     cardImage: kaithiraiProductImages.tharakai.card,
-    heroImage: kaithiraiProductImages.tharakai.hero,
+    heroImage: kaithiraiProductImages.tharakai.card,
+    heroImages: [kaithiraiProductImages.tharakai.card],
     designs: [
       {
         slug: 'royal-tharakai-silk',
@@ -206,7 +215,8 @@ export const kaithiraiPattuCollections = [
     eyebrow: 'Golden Leaf Silks - Kaithirai Pattu',
     description: 'Kanagathalir Pattu combines tender leaf motifs with a rich golden zari finish.',
     cardImage: kaithiraiProductImages.kanagathalir.card,
-    heroImage: kaithiraiProductImages.kanagathalir.hero,
+    heroImage: kaithiraiProductImages.kanagathalir.card,
+    heroImages: [kaithiraiProductImages.kanagathalir.card],
     designs: [
       {
         slug: 'gold-kanagathalir-silk',

@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { getEzhilPattuCollection, getEzhilPattuDesign } from '../data/ezhilPattuProducts'
 import { addDesignToCartAndOpenCart } from '../utils/cart'
 
@@ -24,7 +24,8 @@ export default function EzhilDesignDetail({ collectionSlug, designSlug }) {
 
   const galleryImages = useMemo(() => {
     if (!collection || !design) return []
-    return [...new Set([design.image, ...(design.images || []), collection.heroImage])].filter(Boolean).slice(0, 4)
+    if (design.images?.length) return [...new Set(design.images)].filter(Boolean)
+    return [...new Set([design.image, collection.heroImage])].filter(Boolean).slice(0, 4)
   }, [collection, design])
 
   const [selectedImage, setSelectedImage] = useState(() => design?.image || '')
