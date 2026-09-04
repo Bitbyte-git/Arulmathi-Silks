@@ -11,9 +11,9 @@ const collectionCards = [
   { title: 'Vaibhava Pattu', count: '9 Designs', image: '/Images/nav-5.png', href: '/vaibhava-pattu', desc: 'Grand bridal silks for auspicious celebrations.' },
   { title: 'Noolisai Pattu', count: '9 Designs', image: '/Images/nav-6.png', href: '/noolisai-pattu', desc: 'Thread-inspired woven textures for festive wear.' },
   { title: 'Sezhinool Pattu', count: '9 Designs', image: '/Images/nav-7.png', href: '/sezhinool-pattu', desc: 'Jewel-toned sarees with rich heritage motifs.' },
-  { title: 'Velora Pattu', count: '9 Designs', image: '/Images/nav-8.png', href: '/velora-pattu', desc: 'Refined silk sarees with polished festive appeal.' },
-  { title: 'Ezhil Pattu', count: '9 Designs', image: '/Images/nav-9.png', href: '/ezhil-pattu', desc: 'Graceful silk drapes with timeless traditional charm.' },
-  { title: 'Kaithirai Pattu', count: '9 Designs', image: '/Images/nav-10.png', href: '/kaithirai-pattu', desc: 'Nature-inspired motifs with soft luxury finishes.' },
+  { title: 'Velora Pattu', count: '5 Designs', image: '/velora-pattu/VL-VM-0101-3.png', href: '/velora-pattu', desc: 'Refined silk sarees with polished festive appeal.' },
+  { title: 'Ezhil Pattu', count: '4 Designs', image: '/ezhil-pattu/EZ-TT-0101-3.png', href: '/ezhil-pattu', desc: 'Graceful silk drapes with timeless traditional charm.' },
+  { title: 'Kaithirai Pattu', count: '6 Designs', image: '/kaithirai-pattu/KT-PP-0101-1.png', href: '/kaithirai-pattu', desc: 'Nature-inspired motifs with soft luxury finishes.' },
   { title: 'Varnika Pattu', count: '1 Design', image: '/Images/nav-11.png', href: '/varnika-pattu', desc: 'Color-rich pattu sarees for statement occasions.' },
   { title: 'Mangai Pattu', count: '9 Designs', image: '/Images/nav-12.png', href: '/mangai-pattu', desc: 'Bold festive silks with ornate woven detailing.' },
 ]

@@ -1,12 +1,20 @@
 import { veloraPattuCollections } from '../data/veloraPattuProducts'
 
-const veloraDesigns = [
-  { name: 'வெள்ளி மலர் பட்டு', slug: 'velli-border', href: '/velora-pattu/velli-border', desc: 'Silver contrast border silk with lustrous zari', img: veloraPattuCollections[0].cardImage, badge: 'Popular', badgeIcon: 'fa-star' },
-  { name: 'வஞ்சி பட்டு', slug: 'vanji-pattu', href: '/velora-pattu/vanji-pattu', desc: 'Graceful vine-inspired silk with refined zari', img: '/velora-pattu/VP-VM-2.png', badge: 'New', badgeIcon: 'fa-leaf' },
-  { name: 'நெய்தல் பட்டு', slug: 'neythal-pattu', href: '/velora-pattu/neythal-pattu', desc: 'Coastal floral silk with a luminous festive finish', img: '/velora-pattu/VP-VM-3.png', badge: 'New', badgeIcon: 'fa-water' },
-  { name: 'கோதை பட்டு', slug: 'gothai-pattu', href: '/velora-pattu/gothai-pattu', desc: 'Garland-inspired silk woven with elegant zari', img: '/velora-pattu/VP-VM-4.png', badge: 'New', badgeIcon: 'fa-spa' },
-  { name: 'குரவம் பட்டு', slug: 'kuravam-pattu', href: '/velora-pattu/kuravam-pattu', desc: 'Heritage floral silk with rich traditional accents', img: '/velora-pattu/VP-VM-5.png', badge: 'New', badgeIcon: 'fa-fan' },
-]
+const veloraDesignMeta = {
+  'velli-border': { desc: 'Silver contrast border silk with lustrous zari', badge: 'Popular', badgeIcon: 'fa-star' },
+  'vanji-pattu': { desc: 'Graceful vine-inspired silk with refined zari', badge: 'New', badgeIcon: 'fa-leaf' },
+  'naidhal-pattu': { desc: 'Coastal floral silk with a luminous festive finish', badge: 'New', badgeIcon: 'fa-water' },
+  'gulabbi-pattu': { desc: 'Rose-inspired silk woven with elegant zari', badge: 'New', badgeIcon: 'fa-spa' },
+  'kuravam-pattu': { desc: 'Heritage floral silk with rich traditional accents', badge: 'New', badgeIcon: 'fa-fan' },
+}
+
+const veloraDesigns = veloraPattuCollections.map((collection) => ({
+  name: collection.name,
+  slug: collection.slug,
+  href: `/velora-pattu/${collection.slug}`,
+  img: collection.cardImage || collection.designs[0]?.cardImage || collection.designs[0]?.image || collection.heroImage,
+  ...veloraDesignMeta[collection.slug],
+}))
 
 const veloraNotes = [
   'Silver and gold contrast borders with geometric and floral motifs',
@@ -15,8 +23,8 @@ const veloraNotes = [
 ]
 
 const veloraStats = [
-  { value: '5', label: 'collections' },
-  { value: '5', label: 'saree designs' },
+  { value: String(veloraPattuCollections.length), label: 'collections' },
+  { value: String(veloraPattuCollections.reduce((total, collection) => total + collection.designs.length, 0)), label: 'saree designs' },
   { value: '1:1', label: 'selection support' },
 ]
 
@@ -86,31 +94,31 @@ export default function VeloraPattu() {
           <div className="relative">
             <div className="hidden h-[620px] translate-x-[20px] grid-cols-12 grid-rows-10 gap-3 lg:grid xl:h-[700px]">
               <div className="hero-box-image hero-frame-gold col-start-1 col-end-4 row-start-3 row-end-6 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_18px_42px_rgba(0,0,0,0.36)]" style={{ '--frame-delay': '80ms' }}>
-                <img src="/Images/4-pose3.png" alt="Velora Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/Vanji-Pattu/VL-VJ-0201-3.png" alt="Vanji Pattu silk" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-4 col-end-9 row-start-1 row-end-5 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_66px_rgba(0,0,0,0.46)]" style={{ '--frame-delay': '0ms' }}>
-                <img src="/velora-pattu/VP-VM-5.png" alt="Velora Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
+                <img src="/velora-pattu/VL-VM-0101-7.png" alt="Velli Malar Pattu main" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.92]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-9 col-end-12 row-start-1 row-end-3 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '160ms' }}>
-                <img src="/Images/sec-pose4.png" alt="Velora Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/Naidhal-Pattu/VL-NP-0301-2.png" alt="Naidhal Pattu detail" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-2 col-end-7 row-start-5 row-end-10 overflow-hidden rounded-sm bg-[#eadfce] p-2 shadow-[0_24px_62px_rgba(0,0,0,0.44)]" style={{ '--frame-delay': '240ms' }}>
-                <img src="/velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/Gulabbi-Pattu/VL-GP-0401-3.png" alt="Gulabbi Pattu festive" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
               <div className="hero-box-image hero-frame-gold col-start-7 col-end-10 row-start-5 row-end-8 overflow-hidden rounded-sm bg-[#eadfce] p-1.5 shadow-[0_16px_38px_rgba(0,0,0,0.34)]" style={{ '--frame-delay': '320ms' }}>
-                <img src="/Images/sec-pose5.png" alt="Velora Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
+                <img src="/velora-pattu/Kuravam-Pattu/VL-KR-0501-2.png" alt="Kuravam Pattu classic" className="h-full w-full rounded-[2px] object-cover object-top brightness-[0.9]" />
               </div>
             </div>
             <div className="grid gap-4 lg:hidden">
               <div className="hero-box-image overflow-hidden rounded-lg border border-[#c9933a]/34 bg-[#0d0d1a] shadow-[0_26px_70px_rgba(0,0,0,0.42)]">
-                <img src="/velora-pattu/VP-VM-5.png" alt="Velora Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
+                <img src="/velora-pattu/VL-VM-0101-7.png" alt="Velora Pattu" className="h-[440px] w-full object-cover object-top brightness-[0.88]" />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/Images/sec-pose4.png" alt="Velora Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
+                  <img src="/velora-pattu/Naidhal-Pattu/VL-NP-0301-2.png" alt="Velora Pattu detail" className="h-[180px] w-full object-cover object-top brightness-[0.84]" />
                 </div>
                 <div className="overflow-hidden rounded-lg border border-[#c9933a]/24 bg-[#0d0d1a]">
-                  <img src="/velora-pattu/VP-VM-2.png" alt="Velora Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
+                  <img src="/velora-pattu/Gulabbi-Pattu/VL-GP-0401-3.png" alt="Velora Pattu festive" className="h-[180px] w-full object-cover object-top brightness-[0.88]" />
                 </div>
               </div>
               <div className="hero-box-info rounded-lg border border-[#c9933a]/28 bg-[#1b1930]/78 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] backdrop-blur-sm">

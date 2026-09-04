@@ -87,15 +87,18 @@ export default function VeloraCollectionPage({ collectionSlug }) {
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {collection.designs.map((design, index) => (
-              <article
-                key={design.slug}
-                className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]"
-                style={{ animationDelay: `${index * 90}ms` }}
-              >
+            {collection.designs.map((design, index) => {
+              const cardImage = design.cardImage || design.image
+
+              return (
+                <article
+                  key={design.slug}
+                  className="collection-card premium-saree-card overflow-hidden rounded-lg border border-[#e1c7a0] bg-[#fffaf2] shadow-[0_18px_44px_rgba(74,45,18,0.12)]"
+                  style={{ animationDelay: `${index * 90}ms` }}
+                >
                   <a href={`/velora-pattu/${collection.slug}/${design.slug}`} aria-label={`View ${design.name} details`} className="premium-saree-media group relative block h-[290px] overflow-hidden bg-[#e8ddcf]">
                   <img
-                    src={design.image}
+                    src={cardImage}
                     alt={design.name}
                     loading="lazy"
                     decoding="async"
@@ -125,7 +128,8 @@ export default function VeloraCollectionPage({ collectionSlug }) {
                   </a>
                 </div>
               </article>
-            ))}
+              )
+            })}
           </div>
         </div>
       </div>

@@ -311,26 +311,30 @@ export default function KaithiraiDesignDetail({ collectionSlug, designSlug }) {
             <p className="font-sans text-[10px] font-bold uppercase tracking-[3px] text-[#b57922]">More from this collection</p>
             <h2 className="mt-3 font-serif text-[38px] font-normal text-[#17131c]">Other Sarees in <span className="mixed-heading-tamil">{collection.name}</span></h2>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedDesigns.slice(0, 3).map((item) => (
-                <a key={item.slug} href={`/kaithirai-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
-                  <div className="h-[310px] overflow-hidden bg-[#eadfce]">
-                    <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-serif text-[21px] font-normal leading-tight text-[#17131c]">{item.name}</h3>
-                    <p className="mt-2 font-sans text-[12px] text-[#6b6470]">{item.color} | {item.fabric}</p>
-                    <div className="mt-3 flex flex-wrap items-end gap-2 font-sans">
-                      <span className="text-[18px] font-bold leading-none text-[#17131c]">{item.price}</span>
-                      <span className="text-[11px] text-[#8a8089] line-through">{item.oldPrice}</span>
-                      <span className="rounded-full bg-[#eff7ed] px-2 py-1 text-[9px] font-bold uppercase tracking-[1px] text-[#24763a]">{item.discount}</span>
+              {relatedDesigns.slice(0, 3).map((item) => {
+                const cardImage = item.cardImage || item.image
+
+                return (
+                  <a key={item.slug} href={`/kaithirai-pattu/${collection.slug}/${item.slug}`} className="group overflow-hidden saree-info-card rounded-lg border border-[#d9b77d] bg-[#fffaf2]/92 shadow-[0_20px_50px_rgba(116,73,28,0.12)] transition-transform hover:-translate-y-1">
+                    <div className="h-[310px] overflow-hidden bg-[#eadfce]">
+                      <img src={cardImage} alt={item.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                     </div>
-                    <div className="mt-4 flex items-center justify-between border-t border-[#e5ceb0] pt-4">
-                      <span className="font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#b57922]">View Saree</span>
-                      <i className="fas fa-arrow-right text-[#b57922]" />
+                    <div className="p-5">
+                      <h3 className="font-serif text-[21px] font-normal leading-tight text-[#17131c]">{item.name}</h3>
+                      <p className="mt-2 font-sans text-[12px] text-[#6b6470]">{item.color} | {item.fabric}</p>
+                      <div className="mt-3 flex flex-wrap items-end gap-2 font-sans">
+                        <span className="text-[18px] font-bold leading-none text-[#17131c]">{item.price}</span>
+                        <span className="text-[11px] text-[#8a8089] line-through">{item.oldPrice}</span>
+                        <span className="rounded-full bg-[#eff7ed] px-2 py-1 text-[9px] font-bold uppercase tracking-[1px] text-[#24763a]">{item.discount}</span>
+                      </div>
+                      <div className="mt-4 flex items-center justify-between border-t border-[#e5ceb0] pt-4">
+                        <span className="font-sans text-[10px] font-bold uppercase tracking-[2px] text-[#b57922]">View Saree</span>
+                        <i className="fas fa-arrow-right text-[#b57922]" />
+                      </div>
                     </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                )
+              })}
             </div>
           </div>
         )}

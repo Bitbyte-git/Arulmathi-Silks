@@ -1,22 +1,71 @@
+const ezhilProductImages = {
+  amberThangaThorana: {
+    card: '/ezhil-pattu/EZ-TT-0101-3.png',
+    hero: '/ezhil-pattu/EP-TT-2.png',
+    gallery: [
+      '/ezhil-pattu/EZ-TT-0101-1.png',
+      '/ezhil-pattu/EZ-TT-0101-2.png',
+      '/ezhil-pattu/EZ-TT-0101-3.png',
+      '/ezhil-pattu/EZ-TT-0101-4.png',
+    ],
+  },
+  rubyThangaThorana: {
+    card: '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-3.png',
+    hero: '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-3.png',
+    gallery: [
+      '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-1.png',
+      '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-2.png',
+      '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-3.png',
+      '/ezhil-pattu/thangathoranai-4/EZ-TT-0102-4.png',
+    ],
+  },
+  tealThangaThorana: {
+    card: '/ezhil-pattu/thangathorana-3/EZ-TT-0103-3.png',
+    hero: '/ezhil-pattu/thangathorana-3/EZ-TT-0103-3.png',
+    gallery: [
+      '/ezhil-pattu/thangathorana-3/EZ-TT-0103-1.png',
+      '/ezhil-pattu/thangathorana-3/EZ-TT-0103-2.png',
+      '/ezhil-pattu/thangathorana-3/EZ-TT-0103-3.png',
+      '/ezhil-pattu/thangathorana-3/EZ-TT-0103-4.png',
+    ],
+  },
+  violetThangaThorana: {
+    card: '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-3.png',
+    hero: '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-3.png',
+    gallery: [
+      '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-1.png',
+      '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-2.png',
+      '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-3.png',
+      '/ezhil-pattu/thangathoranai-2/EZ-TT-0104-4.png',
+    ],
+  },
+}
+
 export const ezhilPattuCollections = [
   {
     slug: 'azhagu-pattu',
+    altSlugs: ['thanga-thorana-pattu', 'thanga-thoranai-pattu'],
     name: 'தங்க தோரண பட்டு',
     eyebrow: 'Golden Festive Borders - Ezhil Pattu',
     description: 'Thanga Thorana Pattu features warm festive silk shades, paisley-inspired woven motifs, and gold zari borders made for celebrations, gifting, and graceful traditional draping.',
-    heroImage: '/ezhil-pattu/EP-TT-2.png',
+    cardImage: ezhilProductImages.amberThangaThorana.card,
+    heroImage: ezhilProductImages.amberThangaThorana.hero,
     heroImages: [
       '/ezhil-pattu/EP-TT-1.png',
       '/ezhil-pattu/EP-TT-2.png',
-      
+      '/ezhil-pattu/EP-TT-3.png',
+      '/ezhil-pattu/EP-TT-4.png',
+      '/ezhil-pattu/EP-TT-5.png',
     ],
     designs: [
       {
-        slug: 'teal-azhagu-silk',
+        slug: 'amber-thanga-thorana-silk',
+        altSlugs: ['teal-azhagu-silk'],
         name: 'Amber Thanga Thorana Silk',
         code: 'EZ-TT-0101',
-        image: '/ezhil-pattu/EZ-TT-0101-1.png',
-        images: ['/ezhil-pattu/EZ-TT-0101-1.png', '/ezhil-pattu/EZ-TT-0101-2.png', '/ezhil-pattu/EZ-TT-0101-3.png', '/ezhil-pattu/EZ-TT-0101-4.png'],
+        cardImage: ezhilProductImages.amberThangaThorana.card,
+        image: ezhilProductImages.amberThangaThorana.gallery[0],
+        images: ezhilProductImages.amberThangaThorana.gallery,
         price: 'Rs. 17,200',
         oldPrice: 'Rs. 23,900',
         discount: '28% off',
@@ -33,8 +82,9 @@ export const ezhilPattuCollections = [
         slug: 'ruby-thanga-thorana-silk',
         name: 'Ruby Thanga Thorana Silk',
         code: 'EZ-TT-0102',
-        image: '/Images/red-pose4.png',
-        images: ['/Images/red-pose4.png', '/Images/red-pose3.png', '/Images/red-pose5.png', '/Images/red-pose2.png'],
+        cardImage: ezhilProductImages.rubyThangaThorana.card,
+        image: ezhilProductImages.rubyThangaThorana.gallery[0],
+        images: ezhilProductImages.rubyThangaThorana.gallery,
         price: 'Rs. 18,400',
         oldPrice: 'Rs. 25,600',
         discount: '28% off',
@@ -51,8 +101,9 @@ export const ezhilPattuCollections = [
         slug: 'teal-thanga-thorana-silk',
         name: 'Teal Thanga Thorana Silk',
         code: 'EZ-TT-0103',
-        image: '/Images/sec-pose3.png',
-        images: ['/Images/sec-pose3.png', '/Images/sec-pose2.png', '/Images/sec-pose4.png', '/Images/sec-pose5.png'],
+        cardImage: ezhilProductImages.tealThangaThorana.card,
+        image: ezhilProductImages.tealThangaThorana.gallery[0],
+        images: ezhilProductImages.tealThangaThorana.gallery,
         price: 'Rs. 17,900',
         oldPrice: 'Rs. 24,900',
         discount: '28% off',
@@ -69,8 +120,9 @@ export const ezhilPattuCollections = [
         slug: 'violet-thanga-thorana-silk',
         name: 'Violet Thanga Thorana Silk',
         code: 'EZ-TT-0104',
-        image: '/Images/3-pose1.png',
-        images: ['/Images/3-pose1.png', '/Images/3-pose3.png', '/Images/3-pose4.png', '/Images/3-pose5.png'],
+        cardImage: ezhilProductImages.violetThangaThorana.card,
+        image: ezhilProductImages.violetThangaThorana.gallery[0],
+        images: ezhilProductImages.violetThangaThorana.gallery,
         price: 'Rs. 18,200',
         oldPrice: 'Rs. 25,300',
         discount: '28% off',
@@ -87,8 +139,10 @@ export const ezhilPattuCollections = [
   },
 ]
 
-export const getEzhilPattuCollection = (slug) => ezhilPattuCollections.find((c) => c.slug === slug)
+export const getEzhilPattuCollection = (slug) =>
+  ezhilPattuCollections.find((c) => c.slug === slug || c.altSlugs?.includes(slug))
+
 export const getEzhilPattuDesign = (collectionSlug, designSlug) => {
   const collection = getEzhilPattuCollection(collectionSlug)
-  return collection?.designs.find((d) => d.slug === designSlug)
+  return collection?.designs.find((d) => d.slug === designSlug || d.altSlugs?.includes(designSlug))
 }
