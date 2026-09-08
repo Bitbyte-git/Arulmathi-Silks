@@ -1,0 +1,60 @@
+service: arulmathi-silks-visitor-counter
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ${opt:region, 'ap-south-1'}
+  stage: ${opt:stage, 'production'}
+  httpApi:
+    cors:
+      allowedOrigins:
+        - '*'
+      allowedHeaders:
+        - Content-Type
+        - Authorization
+        - X-Requested-With
+        - X-Api-Key
+      allowedMethods:
+        - GET
+        - POST
+        - OPTIONS
+      maxAge: 86400
+  environment:
+    DYNAMODB_TABLE_NAME: ${self:custom.tableName}
+    VISITOR_COUNTER_ID: arulmathi-silks
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+            - dynamodb:UpdateItem
+          Resource:
+            - !GetAtt VisitCounterTable.Arn
+
+custom:
+  tableName: SiteVisitCounter
+
+functions:
+  visitorCounter:
+    handler: serverless/lambda/index.handler
+    events:
+      - httpApi:
+          path: /visitor
+          method: '*'
+
+resources:
+  Resources:
+    VisitCounterTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST

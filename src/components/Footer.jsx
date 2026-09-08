@@ -96,8 +96,9 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 flex flex-col gap-4 py-5 font-sans text-[14px] font-semibold tracking-[1.5px] text-[#2d1811]/54 sm:flex-row sm:items-center sm:justify-between">
-        <div>
+        <div className="flex flex-wrap items-center gap-4">
           <p>&copy; 2026 Arulmathi Silk Sarees</p>
+          <VisitorCounter />
         </div>
         <div className="text-[13px] tracking-[0.6px] text-[#2d1811]/68">
           Designed, Developed, Hosted and Maintained by{' '}
@@ -117,3 +118,5 @@ export default function Footer() {
   )
 }
 import DeferredImage from './DeferredImage'
+import VisitorCounter from './VisitorCounter'
+

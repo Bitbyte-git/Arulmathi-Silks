@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Production AWS Infrastructure for Arulmathi Silks Site Visit Counter (DynamoDB + Lambda + API Gateway)
+
+Globals:
+  Function:
+    Timeout: 10
+    MemorySize: 256
+    Runtime: nodejs18.x
+    Environment:
+      Variables:
+        DYNAMODB_TABLE_NAME: !Ref VisitCounterTable
+        VISITOR_COUNTER_ID: arulmathi-silks
+        AWS_NODEJS_CONNECTION_REUSE_ENABLED: '1'
+
+Resources:
+  # 1. DynamoDB Table for Visit Count
+  VisitCounterTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: SiteVisitCounter
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+
+  # 2. Production HTTP API Gateway with full CORS configured
+  VisitorCounterHttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      Name: ArulmathiSilksVisitorApi
+      CorsConfiguration:
+        AllowOrigins:
+          - "*"
+        AllowMethods:
+          - GET
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - Content-Type
+          - Authorization
+          - X-Requested-With
+          - X-Api-Key
+        MaxAge: 86400
+
+  # 3. AWS Lambda Function
+  VisitorCounterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ArulmathiSilksVisitCounter
+      CodeUri: ./lambda/
+      Handler: index.handler
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref VisitCounterTable
+      Events:
+        VisitorApiRoute:
+          Type: HttpApi
+          Properties:
+            Path: /visitor
+            Method: ANY
+            ApiId: !Ref VisitorCounterHttpApi
+
+Outputs:
+  ProductionApiEndpoint:
+    Description: "Production AWS API Gateway HTTP Endpoint URL"
+    Value: !Sub "https://${VisitorCounterHttpApi}.execute-api.${AWS::Region}.amazonaws.com/visitor"
+  DynamoDBTableName:
+    Description: "AWS DynamoDB Table Name"
+    Value: !Ref VisitCounterTable
