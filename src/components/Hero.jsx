@@ -80,11 +80,9 @@ export default function Hero() {
       <picture>
         <source media="(max-width: 767px)" srcSet="/Images/mob-view.png" />
         <img
-          src="/Images/heroimg-1600.jpg"
-          srcSet="/Images/heroimg-960.jpg 960w, /Images/heroimg-1600.jpg 1600w"
-          sizes="100vw"
-          width="1600"
-          height="900"
+          src="/Images/pasapukali.png"
+          width="6400"
+          height="3572"
           alt="Woman wearing a traditional Arulmathi pure silk saree"
           loading="eager"
           decoding="async"

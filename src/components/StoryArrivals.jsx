@@ -1,7 +1,7 @@
 const arrivals = [
   {
     name: 'Parrot Green Floral Bloom',
-    price: 'Rs. 32,900',
+    price: 'Rs. 6,300',
     note: 'Pushpanjali Pure Silk',
     img: '/izhamathi-sarees/Pushpa/IZ-PA-2601-2.png',
     fallbackImg: '/izhamathi-sarees/Pushpa/IZ-PA-2.png',
@@ -9,7 +9,7 @@ const arrivals = [
   },
   {
     name: 'Emerald Paisley Zari Saree',
-    price: 'Rs. 28,500',
+    price: 'Rs. 6,300',
     note: 'Suvarna Thuli Silk',
     img: '/izhamathi-sarees/IZ-Green-1.png',
     fallbackImg: '/izhamathi-sarees/IZ-Green-2.png',
@@ -17,7 +17,7 @@ const arrivals = [
   },
   {
     name: 'Bridal Red Temple Zari',
-    price: 'Rs. 28,500',
+    price: 'Rs. 8,500',
     note: 'Vaibhava Thirumanam',
     img: '/vaibhava-pattu/VB-TM-0101-2.png',
     fallbackImg: '/vaibhava-pattu/VP-TM-Red1.png',
@@ -25,7 +25,7 @@ const arrivals = [
   },
   {
     name: 'Royal Magenta Lotus Silk',
-    price: 'Rs. 18,600',
+    price: 'Rs. 6,800',
     note: 'Kaithirai Poigai Silk',
     img: '/kaithirai-pattu/KP-PP-1.png',
     fallbackImg: '/kaithirai-pattu/KT-PP-0101-1.png',
@@ -33,7 +33,7 @@ const arrivals = [
   },
   {
     name: 'Amber Mustard Gold Silk',
-    price: 'Rs. 17,200',
+    price: 'Rs. 6,000',
     note: 'Ezhil Thanga Thorana',
     img: '/ezhil-pattu/EZ-TT-0101-2.png',
     fallbackImg: '/ezhil-pattu/EP-TT-2.png',
@@ -41,7 +41,7 @@ const arrivals = [
   },
   {
     name: 'Honey Amudha Soft Silk',
-    price: 'Rs. 15,600',
+    price: 'Rs. 5,500',
     note: 'Mangai Amudha Pattu',
     img: '/mangai-pattu/MG-AM-0101-3.png',
     fallbackImg: '/mangai-pattu/MG-AM-0101-2.png',

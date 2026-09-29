@@ -109,7 +109,7 @@ export default function AboutUs() {
             <p className="font-sans text-[14px] font-bold uppercase tracking-[4px] text-[#d2a24f] sm:text-[15px]">
               About Arulmathi Silks
             </p>
-            <h1 className="mt-6 font-serif text-[56px] font-normal leading-[1.04] text-white sm:text-[76px] lg:text-[92px]">
+            <h1 className="mt-6 font-serif text-[48px] font-normal leading-[1.04] text-white sm:text-[60px] lg:text-[72px]">
               Crafted in Tradition.<br />
               Trusted for <em className="italic text-[#d2a24f]">Generations.</em>
             </h1>
